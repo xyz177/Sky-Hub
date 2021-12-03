@@ -1,0 +1,49 @@
+{
+  "scripts":{
+        "DEX":{
+            "Name":"White Dex",
+            "Desc":"this is Dex but white version.",
+            "Picture":"https://imgur.com/KpvYgd5.png",
+            "Script":"loadstring(game:HttpGet('https://pastebin.com/raw/sUSn58Ya', true))()"},
+        "Decent":{
+            "Name":"Decent Explorer",
+            "Desc":"This script is similar to Dex Explorer.",
+            "Picture":"https://imgur.com/m4ZDXLp.png",
+            "Script":"loadstring(game:HttpGet('https://pastebin.com/raw/b2wCaRrP', true))()"},
+        "Sky":{
+            "Name":"SkyHub",
+            "Desc":"SkyHub.",
+            "Picture":"https://cdn.discordapp.com/attachments/839264531775356958/913623889479860234/unknown.png",
+            "Script":"loadstring(game:HttpGet('https://raw.githubusercontent.com/SkyIsntFound1/I-Quit-GT-Modding./main/SkyHub.txt', true))()"},
+	"Rose":{
+            "Name":"RoseHub",
+            "Desc":"RoseHub.",
+            "Picture":"https://cdn.discordapp.com/attachments/839264531775356958/913623889479860234/unknown.png",
+            "Script":"loadstring(game:HttpGet(('https://pastebin.com/raw/1BJj0fB4'),true))())"},
+	"Remote2Script":{
+            "Name":"Remote2Script",
+            "Desc":"Captures all RemoteEvent/RemoteFunction calls.",
+            "Picture":"https://i.imgur.com/TMuUSN0.png",
+            "Script":"loadstring(game:HttpGet('https://pastebin.com/raw/JZaJe9Sg', true))()"},
+        "Hydroxide":{
+            "Name":"Hydroxide",
+            "Desc":"Best remote spy",
+            "Picture":"https://i.imgur.com/TS9FSlI.png",
+            "Script":"loadstring(game:HttpGet('https://raw.githubusercontent.com/plumkungzaza/plumkungzaza/master/Hydroxide%20Remote%20Spy.lua', true))()"},
+        "FrostHook":{
+            "Name":"FrostHook_Spy",
+            "Desc":"A Remote Spy",
+            "Picture":"https://i.imgur.com/TS9FSlI.png",
+            "Script":"loadstring(game:HttpGet('https://raw.githubusercontent.com/Nootchtai/FrostHook_Spy/master/Spy.lua', true))()"},
+        "DarkDex":{
+            "Name":"Dark Dex V4",
+            "Desc":"Best dex",
+            "Picture":"https://imgur.com/KpvYgd5.png",
+            "Script":"loadstring(game:HttpGet('https://pastebin.com/raw/fPP8bZ8Z', true))()"},
+        "Bullshit":{
+            "Name":"Project Bull-Shit",
+            "Desc":"Project Bull-Shit is a multi-functional ESP created by Racist Dolphin.",
+            "Picture":"https://i.imgur.com/Fz5tMrm.png",
+            "Script":"loadstring(game:HttpGet('https://pastebin.com/raw/gFMcpgvq', true))()"}
+     }
+}
