@@ -3,6 +3,19 @@ Rebuilt On IllusionHub
 Press "R" to reset Character
 Press "U" for Univeral gui
 ]]--
+
+local h = Instance.new("Hint")
+ h.Parent = Workspace
+ h.Text = "LOL Loadstring thx for using my hub"
+ wait(3)
+ h:Remove()
+ 
+ local h = Instance.new("Hint")
+ h.Parent = Workspace
+ h.Text = "games it supports Da Hood, Arsenal, Tower of Hell, KAT!, Fencing, Work At A Pizza Place, VR Hands, Adopt Me, and Jailbreak"
+ wait(7)
+ h:Remove()
+
 getgenv().uisss = true -- set  to false to turn off Univeral Menu and R to reset
 local string = "https://discord.gg/A6HQQXvwNs"
 local string2 = "https://discord.com/invite/jVf7eSrED9"
