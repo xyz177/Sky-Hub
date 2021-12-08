@@ -3,19 +3,6 @@ Rebuilt On IllusionHub
 Press "R" to reset Character
 Press "U" for Univeral gui
 ]]--
-
-local h = Instance.new("Hint")
- h.Parent = Workspace
- h.Text = "LOL Loadstring thx for using my hub"
- wait(3)
- h:Remove()
- 
- local h = Instance.new("Hint")
- h.Parent = Workspace
- h.Text = "games it supports Da Hood, Arsenal, Tower of Hell, KAT!, Fencing, Work At A Pizza Place, VR Hands, Adopt Me, and Jailbreak"
- wait(7)
- h:Remove()
-
 getgenv().uisss = true -- set  to false to turn off Univeral Menu and R to reset
 local string = "https://discord.gg/A6HQQXvwNs"
 local string2 = "https://discord.com/invite/jVf7eSrED9"
@@ -71,6 +58,10 @@ game:getService("RunService"):BindToRenderStep("",0,function()
                 c.BinType = 4
             end)
     
+	   MainSection:NewButton("Owl Hub", "46+ how", function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+            end)
+
 
         MainSection:NewButton("Infinite Yield FE", "Admin", function()
             loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
@@ -149,6 +140,10 @@ end)
 MainSection:NewButton("MonkeThing", "idk", function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeHub/main/arsenal.lua"))()
 end)
+
+MainSection:NewButton("Owl Hub", "46+ how", function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+            end)
 
 MainSection:NewButton("Arsenal FE audio + more!", "NOTE: you can get banned from some of these scripts", function()
  value = "2038227137" --song id here
@@ -233,6 +228,10 @@ end)
    setclipboard(string2)
 end)
 
+
+MainSection:NewButton("Owl Hub", "46+ how", function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+            end)
 
 MainSection:NewButton("KAT!", "auto throws knife", function()
    --Subscribe to Ducky Exploits
@@ -2750,6 +2749,10 @@ end)
 MainSection:NewButton("Auto Rob", "Rob stores", function()
    loadstring(game:HttpGet('https://raw.githubusercontent.com/wawsdasdacx/ohascriptnrrewading/main/jbsaxcriptidk1'))()
 end)
+
+MainSection:NewButton("Owl Hub", "46+ how", function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+            end)
 
 MainSection:NewButton("ESP/Aimbot", "bro", function()
    local ScreenGui = Instance.new("ScreenGui")
