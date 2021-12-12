@@ -3,7 +3,7 @@
 Rebuilt On IllusionHub
 Press "R" to reset Character
 Press "U" for Universal gui
-Last Updated 12/10/2021
+Last Updated 12/12/2021
 ]]--
 getgenv().uisss = true -- set  to false to turn off Universal Menu and R to reset
 local string = "https://discord.gg/A6HQQXvwNs"
@@ -119,6 +119,10 @@ end)
 MainSection:NewButton("Dex", "Explorer", function()
 loadstring(game:GetObjects("rbxassetid://418957341")[1].Source)()
 end)
+
+MainSection:NewButton("VG Hub", "60+", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+ end)
 
 MainSection:NewButton("Remote Spy", "Find remotes press F9", function()
 loadstring(game:HttpGet('https://pastebin.com/raw/b33cjh0p'))()
@@ -332,6 +336,10 @@ MainSection:NewButton("Cattori Hub", "idk", function()
                 _G.ToggleKeyBind = "g"
 loadstring(game:HttpGet('https://cattori.xyz/main.lua'))()
 end)
+
+MainSection:NewButton("VG Hub", "60+", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+ end)
 
             MainSection:NewButton("Ezhub", "130+ games", function()
                 --[[ this is there cmds list
@@ -559,6 +567,10 @@ end)
 MainSection:NewButton("Owl Hub", "46+ how", function()
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
             end)
+
+MainSection:NewButton("VG Hub", "60+", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+ end)
 
 MainSection:NewButton("Cattori Hub", "idk", function()
                 _G.ToggleKeyBind = "g"
@@ -2654,6 +2666,10 @@ https://pastebin.com/vavZfexv
 ]]--
  end)
 
+MainSection:NewButton("VG Hub", "60+", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+ end)
+
 MainSection:NewButton("GabX", "GabX", function()
    --// GabX, the script hub that has all you need! \\--
 -- Made by Darion#8863
@@ -3366,6 +3382,10 @@ loadstring(game:HttpGet(('https://raw.githubusercontent.com/debug420/Ez-Industri
 --[[this is there thing idk
 https://pastebin.com/vavZfexv
 ]]--
+ end)
+
+MainSection:NewButton("VG Hub", "60+", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
  end)
 
 MainSection:NewButton("Auto Rob", "Rob stores", function()
