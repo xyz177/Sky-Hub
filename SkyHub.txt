@@ -3,7 +3,7 @@
 Rebuilt On IllusionHub
 Press "R" to reset Character
 Press "U" for Universal gui
-Last Updated 12/12/2021
+Last Updated 12/13/2021
 ]]--
 getgenv().uisss = true -- set  to false to turn off Universal Menu and R to reset
 local string = "https://discord.gg/A6HQQXvwNs"
@@ -129,6 +129,10 @@ MainSection:NewButton("Zyrex-Hub", "10+", function()
 
 loadstring(game:HttpGet(("https://raw.githubusercontent.com/NotZyrex/Zyrex-Hub/master/Main.lua"), true))();
 end)
+
+MainSection:NewButton("Psyhub", "idk", function()
+loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
+ end)
 
 MainSection:NewButton("VG Hub", "60+", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
