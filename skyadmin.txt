@@ -1,9 +1,9 @@
-if SY_LOADED and not _G.SY_DEBUG == true then
+if IY_LOADED and not _G.IY_DEBUG == true then
 	error("Sky Admin is already running!",0)
 	return
 end
 
-pcall(function() getgenv().SY_LOADED  = true end)
+pcall(function() getgenv().IY_LOADED  = true end)
 
 if not game:IsLoaded() then
 	local notLoaded = Instance.new("Message", game:GetService("CoreGui"))
@@ -166,10 +166,10 @@ end
 
 COREGUI = game:GetService("CoreGui")
 PARENT = nil
-if (not is_sirhurt_closure) and (syn and syn.protect_gui) then --sirhurt is retarded
+if (not is_sirhurt_closure) and (IYn and IYn.protect_gui) then --sirhurt is retarded
 	local Main = Instance.new("ScreenGui")
 	Main.Name = randomString()
-	syn.protect_gui(Main)
+	IYn.protect_gui(Main)
 	Main.Parent = COREGUI
 	PARENT = Main
 elseif get_hidden_gui or gethui then
@@ -1928,7 +1928,7 @@ end)()
 ViewportTextBox.convert(Cmdbar).View.ZIndex = 10
 ViewportTextBox.convert(Cmdbar_2).View.ZIndex = 10
 
-SYMouse = Players.LocalPlayer:GetMouse()
+IYMouse = Players.LocalPlayer:GetMouse()
 UserInputService = game:GetService("UserInputService")
 
 local sethidden = sethiddenproperty or set_hidden_property or set_hidden_prop
@@ -2729,7 +2729,7 @@ reference = (function()
 		{111,"TextLabel",{BackgroundColor3=Color3.new(1,1,1),BackgroundTransparency=1,Font=3,Name="Text",Parent={105},Position=UDim2.new(0,8,0,148),Size=UDim2.new(1,-8,0,16),Text="Setting up 'goto $1' on the OnChatted event will teleport you to any player that chats.",TextColor3=Color3.new(1,1,1),TextSize=14,TextWrapped=true,TextXAlignment=0,TextYAlignment=0,ZIndex=10,}},
 		{112,"Frame",{BackgroundColor3=Color3.new(1,1,1),BackgroundTransparency=1,Name="Section",Parent={7},Size=UDim2.new(1,0,0,105),ZIndex=10,}},
 		{113,"TextLabel",{BackgroundColor3=Color3.new(1,1,1),BackgroundTransparency=1,Font=4,Name="Header",Parent={112},Position=UDim2.new(0,8,0,5),Size=UDim2.new(1,-8,0,20),Text="Get Further Help",TextColor3=Color3.new(1,1,1),TextSize=20,TextXAlignment=0,ZIndex=10,}},
-		{114,"TextLabel",{BackgroundColor3=Color3.new(1,1,1),BackgroundTransparency=1,Font=3,Name="Text",Parent={112},Position=UDim2.new(0,8,0,30),Size=UDim2.new(1,-8,0,32),Text="You can join the Discord server to get support with SY,  and read up on more documentation such as the API.",TextColor3=Color3.new(1,1,1),TextSize=14,TextWrapped=true,TextXAlignment=0,ZIndex=10,}},
+		{114,"TextLabel",{BackgroundColor3=Color3.new(1,1,1),BackgroundTransparency=1,Font=3,Name="Text",Parent={112},Position=UDim2.new(0,8,0,30),Size=UDim2.new(1,-8,0,32),Text="You can join the Discord server to get support with IY,  and read up on more documentation such as the API.",TextColor3=Color3.new(1,1,1),TextSize=14,TextWrapped=true,TextXAlignment=0,ZIndex=10,}},
 		{115,"Frame",{BackgroundColor3=Color3.new(0.1803921610117,0.1803921610117,0.1843137294054),BorderSizePixel=0,Name="Line",Parent={112},Position=UDim2.new(0,10,1,-1),Size=UDim2.new(1,-20,0,1),Visible=false,ZIndex=10,}},
 		{116,"TextButton",{BackgroundColor3=Color3.new(0.48627451062202,0.61960786581039,0.85098040103912),BorderColor3=Color3.new(0.1803921610117,0.1803921610117,0.1843137294054),Font=4,Name="InviteButton",Parent={112},Position=UDim2.new(0,5,0,75),Size=UDim2.new(1,-10,0,25),Text="Copy Discord Invite Link (https://discord.com/invite/jVf7eSrED9)",TextColor3=Color3.new(0.1803921610117,0.1803921610117,0.1843137294054),TextSize=16,ZIndex=10,}},
 	})
@@ -2779,7 +2779,7 @@ currentScroll = Color3.fromRGB(78,78,79)
 defaultsettings = {
 	prefix = ';';
 	StayOpen = false;
-	keepSY = false;
+	keepIY = false;
 	logsEnabled = false;
 	jLogsEnabled = false;
 	aliases = {};
@@ -2802,13 +2802,13 @@ nosaves = false
 local loadedEventData = nil
 function saves()
 	if writefileExploit() then
-		if pcall(function() readfile("SY_FE.SY") end) then
-			if readfile("SY_FE.SY") ~= nil then
+		if pcall(function() readfile("IY_FE.IY") end) then
+			if readfile("IY_FE.IY") ~= nil then
 				local success, response = pcall(function()
-					local json = game:GetService("HttpService"):JSONDecode(readfile("SY_FE.SY"))
+					local json = game:GetService("HttpService"):JSONDecode(readfile("IY_FE.IY"))
 					if json.prefix ~= nil then prefix = json.prefix else prefix = ';' end
 					if json.StayOpen ~= nil then StayOpen = json.StayOpen else StayOpen = false end
-					if json.keepSY ~= nil then KeepInfYield = json.keepSY else KeepInfYield = false end
+					if json.keepIY ~= nil then KeepInfYield = json.keepIY else KeepInfYield = false end
 					if json.logsEnabled ~= nil then logsEnabled = json.logsEnabled else logsEnabled = false end
 					if json.jLogsEnabled ~= nil then jLogsEnabled = json.jLogsEnabled else jLogsEnabled = false end
 					if json.aliases ~= nil then aliases = json.aliases else aliases = {} end
@@ -2826,19 +2826,19 @@ function saves()
 				if not success then
 					warn("Save Json Error:", response)
 					warn("Overwriting Save File")
-					writefileCooldown("SY_FE.SY", defaults)
+					writefileCooldown("IY_FE.IY", defaults)
 					wait()
 					saves()
 				end
 			else
-				writefileCooldown("SY_FE.SY", defaults)
+				writefileCooldown("IY_FE.IY", defaults)
 				wait()
 				saves()
 			end
 		else
-			writefileCooldown("SY_FE.SY", defaults)
+			writefileCooldown("IY_FE.IY", defaults)
 			wait()
-			if pcall(function() readfile("SY_FE.SY") end) then
+			if pcall(function() readfile("IY_FE.IY") end) then
 				saves()
 			else
 				nosaves = true
@@ -2949,7 +2949,7 @@ function updatesaves()
 		local update = {
 			prefix = prefix;
 			StayOpen = StayOpen;
-			keepSY = KeepInfYield;
+			keepIY = KeepInfYield;
 			logsEnabled = logsEnabled;
 			jLogsEnabled = jLogsEnabled;
 			aliases = aliases;
@@ -2963,7 +2963,7 @@ function updatesaves()
 			currentScroll = {currentScroll.R,currentScroll.G,currentScroll.B};
 			eventBinds = eventEditor.SaveData()
 		}
-		writefileCooldown("SY_FE.SY", game:GetService("HttpService"):JSONEncode(update))
+		writefileCooldown("IY_FE.IY", game:GetService("HttpService"):JSONEncode(update))
 	end
 end
 
@@ -3177,7 +3177,7 @@ function CreateJoinLabel(plr,ID)
 	ImageLabel_3.BackgroundTransparency = 1
 	ImageLabel_3.BorderSizePixel = 0
 	ImageLabel_3.Size = UDim2.new(0, 45, 1, 0)
-	ImageLabel_3.Image = game.Players:GetUserThumbnailAsync(ID, Enum.ThumbnailType.AvatarThumbnail, Enum.ThumbnailSize.Size420x420)
+	ImageLabel_3.Image = game.Players:GetUserThumbnailAIYnc(ID, Enum.ThumbnailType.AvatarThumbnail, Enum.ThumbnailSize.Size420x420)
 	scroll_3.CanvasSize = UDim2.new(0, 0, 0, listlayout.AbsoluteContentSize.Y)
 	scroll_3.CanvasPosition = Vector2.new(0,scroll_2.CanvasPosition.Y+infoFrame.AbsoluteSize.Y)
 	wait()
@@ -3188,7 +3188,7 @@ function CreateJoinLabel(plr,ID)
 	info2.Text = string.gsub(info2.Text, "Loading...",splitDates[2].."/"..splitDates[3].."/"..splitDates[1])
 end
 
-SYMouse.KeyDown:Connect(function(Key)
+IYMouse.KeyDown:Connect(function(Key)
 	if (Key==prefix) then
 		Cmdbar:CaptureFocus()
 		spawn(function()
@@ -3304,7 +3304,7 @@ ColorsButton.MouseButton1Click:Connect(function()
 				local greenInput = pickerFrame.Green.Input
 				local blueInput = pickerFrame.Blue.Input
 
-				local mouse = SYMouse
+				local mouse = IYMouse
 
 				local hue,sat,val = 0,0,1
 				local red,green,blue = 1,1,1
@@ -3913,20 +3913,20 @@ local ClickSelect = nil
 function selectPart()
 	ToPartFrame:TweenPosition(UDim2.new(0.5, -180, 0, 335), "InOut", "Quart", 0.5, true, nil)
 	local function HighlightPart()
-		if selected.Adornee ~= SYMouse.Target then
-			selectionBox.Adornee = SYMouse.Target
+		if selected.Adornee ~= IYMouse.Target then
+			selectionBox.Adornee = IYMouse.Target
 		else
 			selectionBox.Adornee = nil
 		end
 	end
-	ActivateHighlight = SYMouse.Move:Connect(HighlightPart)
+	ActivateHighlight = IYMouse.Move:Connect(HighlightPart)
 	local function SelectPart()
-		if SYMouse.Target ~= nil then
-			selected.Adornee = SYMouse.Target
-			Path.Text = getHierarchy(SYMouse.Target)
+		if IYMouse.Target ~= nil then
+			selected.Adornee = IYMouse.Target
+			Path.Text = getHierarchy(IYMouse.Target)
 		end
 	end
-	ClickSelect = SYMouse.Button1Down:Connect(SelectPart)
+	ClickSelect = IYMouse.Button1Down:Connect(SelectPart)
 end
 
 Part.MouseButton1Click:Connect(function()
@@ -4252,11 +4252,11 @@ CMDs[#CMDs + 1] = {NAME = 'hideguis', DESC = 'Hides any GUIs in PlayerGui'}
 CMDs[#CMDs + 1] = {NAME = 'unhideguis', DESC = 'Undoes hideguis'}
 CMDs[#CMDs + 1] = {NAME = 'guidelete', DESC = 'Enables backspace to delete GUI'}
 CMDs[#CMDs + 1] = {NAME = 'unguidelete / noguidelete', DESC = 'Disables guidelete'}
-CMDs[#CMDs + 1] = {NAME = 'hideSY', DESC = 'Hides the main SY GUI'}
-CMDs[#CMDs + 1] = {NAME = 'showSY / unhideSY', DESC = 'Shows SY again'}
-CMDs[#CMDs + 1] = {NAME = 'keepSY', DESC = 'Auto execute SY when you teleport through servers'}
-CMDs[#CMDs + 1] = {NAME = 'unkeepSY', DESC = 'Disable keepSY'}
-CMDs[#CMDs + 1] = {NAME = 'togglekeepSY', DESC = 'Toggle keepSY'}
+CMDs[#CMDs + 1] = {NAME = 'hideIY', DESC = 'Hides the main IY GUI'}
+CMDs[#CMDs + 1] = {NAME = 'showIY / unhideIY', DESC = 'Shows IY again'}
+CMDs[#CMDs + 1] = {NAME = 'keepIY', DESC = 'Auto execute IY when you teleport through servers'}
+CMDs[#CMDs + 1] = {NAME = 'unkeepIY', DESC = 'Disable keepIY'}
+CMDs[#CMDs + 1] = {NAME = 'togglekeepIY', DESC = 'Toggle keepIY'}
 CMDs[#CMDs + 1] = {NAME = 'savegame / saveplace', DESC = 'Uses saveinstance to save the game'}
 CMDs[#CMDs + 1] = {NAME = 'clearerror', DESC = 'Clears the annoying box and blur when a game kicks you'}
 CMDs[#CMDs + 1] = {NAME = 'clientantikick / antikick (CLIENT)', DESC = 'Prevents localscripts from kicking you'}
@@ -4614,7 +4614,7 @@ IndexContents('',true)
 
 function checkTT()
 	local t
-	local guisAtPosition = COREGUI:GetGuiObjectsAtPosition(SYMouse.X, SYMouse.Y)
+	local guisAtPosition = COREGUI:GetGuiObjectsAtPosition(IYMouse.X, IYMouse.Y)
 
 	for _, gui in pairs(guisAtPosition) do
 		if gui.Parent == CMDsF then
@@ -4623,16 +4623,16 @@ function checkTT()
 	end
 
 	if t ~= nil and t:GetAttribute("Title") ~= nil then
-		local x = SYMouse.X
-		local y = SYMouse.Y
+		local x = IYMouse.X
+		local y = IYMouse.Y
 		local xP
 		local yP
-		if SYMouse.X > 200 then
+		if IYMouse.X > 200 then
 			xP = x - 201
 		else
 			xP = x + 21
 		end
-		if SYMouse.Y > (SYMouse.ViewSizeY-96) then
+		if IYMouse.Y > (IYMouse.ViewSizeY-96) then
 			yP = y - 97
 		else
 			yP = y
@@ -4832,7 +4832,7 @@ function execCmd(cmdStr,speaker,store)
 				if infTimes then
 					while lastBreakTime < cmdStartTime do
 						local success,err = pcall(cmd.FUNC,args, speaker)
-						if not success and _G.SY_DEBUG then
+						if not success and _G.IY_DEBUG then
 							warn("Command Error:", cmdName, err)
 						end
 						wait(cmdDelay)
@@ -4843,7 +4843,7 @@ function execCmd(cmdStr,speaker,store)
 						local success,err = pcall(function()
 							cmd.FUNC(args, speaker)
 						end)
-						if not success and _G.SY_DEBUG then
+						if not success and _G.IY_DEBUG then
 							warn("Command Error:", cmdName, err)
 						end
 						if cmdDelay ~= 0 then wait(cmdDelay) end
@@ -5940,11 +5940,11 @@ local function clicktpFunc()
 			Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid').Sit = false
 			wait(.1)
 		end
-		getRoot(Players.LocalPlayer.Character).CFrame = SYMouse.Hit + Vector3.new(0,7,0)
+		getRoot(Players.LocalPlayer.Character).CFrame = IYMouse.Hit + Vector3.new(0,7,0)
 	end)
 end
 
-SYMouse.Button1Down:Connect(function()
+IYMouse.Button1Down:Connect(function()
 	for i,v in pairs(binds) do
 		if v.COMMAND == 'clicktp' then
 			local input = v.KEY
@@ -5958,11 +5958,11 @@ SYMouse.Button1Down:Connect(function()
 		elseif v.COMMAND == 'clickdel' then
 			local input = v.KEY
 			if input == 'RightClick' and UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton2) then
-				pcall(function() SYMouse.Target:Destroy() end)
+				pcall(function() IYMouse.Target:Destroy() end)
 			elseif input == 'LeftClick' and UserInputService:IsMouseButtonPressed(Enum.UserInputType.MouseButton1) then
-				pcall(function() SYMouse.Target:Destroy() end)
+				pcall(function() IYMouse.Target:Destroy() end)
 			elseif UserInputService:IsKeyDown(Enum.KeyCode[input:sub(14)]) then
-				pcall(function() SYMouse.Target:Destroy() end)
+				pcall(function() IYMouse.Target:Destroy() end)
 			end
 		end
 	end
@@ -5971,9 +5971,9 @@ end)
 game:GetService("Players").LocalPlayer.OnTeleport:Connect(function(State)
 	if State == Enum.TeleportState.Started then
 		if KeepInfYield == true then
-			local queueteleport = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
+			local queueteleport = IYn and IYn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
 			if queueteleport then
-				queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeSY/infiniteyield/master/source'))()")
+				queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()")
 			end
 		end
 	end
@@ -6028,7 +6028,7 @@ addcmd('discord', {'support', 'help'}, function(args, speaker)
 	else
 		notify('Discord Invite', 'https://discord.com/invite/jVf7eSrED9')
 	end
-	local req = syn and syn.request or http and http.request or http_request or fluxus and fluxus.request or getgenv().request or request
+	local req = IYn and IYn.request or http and http.request or http_request or fluxus and fluxus.request or getgenv().request or request
 	if req then
 		req({
 			Url = 'http://127.0.0.1:6463/rpc?v=1',
@@ -6046,8 +6046,8 @@ addcmd('discord', {'support', 'help'}, function(args, speaker)
 	end
 end)
 
-addcmd('keepSY', {}, function(args, speaker)
-	local queueteleport = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
+addcmd('keepIY', {}, function(args, speaker)
+	local queueteleport = IYn and IYn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
 	if queueteleport then
 		KeepInfYield = true
 		updatesaves()
@@ -6056,8 +6056,8 @@ addcmd('keepSY', {}, function(args, speaker)
 	end
 end)
 
-addcmd('unkeepSY', {}, function(args, speaker)
-	local queueteleport = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
+addcmd('unkeepIY', {}, function(args, speaker)
+	local queueteleport = IYn and IYn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
 	if queueteleport then
 		KeepInfYield = false
 		updatesaves()
@@ -6066,8 +6066,8 @@ addcmd('unkeepSY', {}, function(args, speaker)
 	end
 end)
 
-addcmd('toggleunkeepSY', {}, function(args, speaker)
-	local queueteleport = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
+addcmd('toggleunkeepIY', {}, function(args, speaker)
+	local queueteleport = IYn and IYn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
 	if queueteleport then
 		KeepInfYield = not KeepInfYield
 		updatesaves()
@@ -6431,7 +6431,7 @@ end)
 
 addcmd('serverhop',{'shop'},function(args, speaker)
 	local x = {}
-	for _, v in ipairs(game:GetService("HttpService"):JSONDecode(game:HttpGetAsync("https://games.roblox.com/v1/games/" .. game.PlaceId .. "/servers/Public?sortOrder=Asc&limit=100")).data) do
+	for _, v in ipairs(game:GetService("HttpService"):JSONDecode(game:HttpGetAIYnc("https://games.roblox.com/v1/games/" .. game.PlaceId .. "/servers/Public?sortOrder=Asc&limit=100")).data) do
 		if type(v) == "table" and v.maxPlayers > v.playing and v.id ~= game.JobId then
 			x[#x + 1] = v.id
 		end
@@ -6453,7 +6453,7 @@ addcmd('joinplayer',{'joinp'},function(args, speaker)
 						return tonumber(User)
 					end
 
-					return Players:GetUserIdFromNameAsync(User)
+					return Players:GetUserIdFromNameAIYnc(User)
 				end)
 				if not FoundUser then
 					notify('Join Error','Username/UserID does not exist')
@@ -6540,11 +6540,11 @@ end)
 
 FLYING = false
 QEfly = true
-SYflyspeed = 1
+IYflyspeed = 1
 vehicleflyspeed = 1
 function sFLY(vfly)
 	repeat wait() until Players.LocalPlayer and Players.LocalPlayer.Character and getRoot(Players.LocalPlayer.Character) and Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
-	repeat wait() until SYMouse
+	repeat wait() until IYMouse
 	if flyKeyDown or flyKeyUp then flyKeyDown:Disconnect() flyKeyUp:Disconnect() end
 
 	local T = getRoot(Players.LocalPlayer.Character)
@@ -6593,23 +6593,23 @@ function sFLY(vfly)
 			end
 		end)
 	end
-	flyKeyDown = SYMouse.KeyDown:Connect(function(KEY)
+	flyKeyDown = IYMouse.KeyDown:Connect(function(KEY)
 		if KEY:lower() == 'w' then
-			CONTROL.F = (vfly and vehicleflyspeed or SYflyspeed)
+			CONTROL.F = (vfly and vehicleflyspeed or IYflyspeed)
 		elseif KEY:lower() == 's' then
-			CONTROL.B = - (vfly and vehicleflyspeed or SYflyspeed)
+			CONTROL.B = - (vfly and vehicleflyspeed or IYflyspeed)
 		elseif KEY:lower() == 'a' then
-			CONTROL.L = - (vfly and vehicleflyspeed or SYflyspeed)
+			CONTROL.L = - (vfly and vehicleflyspeed or IYflyspeed)
 		elseif KEY:lower() == 'd' then 
-			CONTROL.R = (vfly and vehicleflyspeed or SYflyspeed)
+			CONTROL.R = (vfly and vehicleflyspeed or IYflyspeed)
 		elseif QEfly and KEY:lower() == 'e' then
-			CONTROL.Q = (vfly and vehicleflyspeed or SYflyspeed)*2
+			CONTROL.Q = (vfly and vehicleflyspeed or IYflyspeed)*2
 		elseif QEfly and KEY:lower() == 'q' then
-			CONTROL.E = -(vfly and vehicleflyspeed or SYflyspeed)*2
+			CONTROL.E = -(vfly and vehicleflyspeed or IYflyspeed)*2
 		end
 		pcall(function() workspace.CurrentCamera.CameraType = Enum.CameraType.Track end)
 	end)
-	flyKeyUp = SYMouse.KeyUp:Connect(function(KEY)
+	flyKeyUp = IYMouse.KeyUp:Connect(function(KEY)
 		if KEY:lower() == 'w' then
 			CONTROL.F = 0
 		elseif KEY:lower() == 's' then
@@ -6641,14 +6641,14 @@ addcmd('fly',{},function(args, speaker)
 	wait()
 	sFLY()
 	if args[1] and isNumber(args[1]) then
-		SYflyspeed = args[1]
+		IYflyspeed = args[1]
 	end
 end)
 
 addcmd('flyspeed',{'flysp'},function(args, speaker)
 	local speed = args[1] or 1
 	if isNumber(speed) then
-		SYflyspeed = speed
+		IYflyspeed = speed
 	end
 end)
 
@@ -6765,22 +6765,22 @@ addcmd('float', {'platform'},function(args, speaker)
 			if r15(speaker) then FloatValue = -3.65 end
 			Float.CFrame = getRoot(pchar).CFrame * CFrame.new(0,FloatValue,0)
 			notify('Float','Float Enabled (Q = down & E = up)')
-			qUp = SYMouse.KeyUp:Connect(function(KEY)
+			qUp = IYMouse.KeyUp:Connect(function(KEY)
 				if KEY == 'q' then
 					FloatValue = FloatValue + 0.5
 				end
 			end)
-			eUp = SYMouse.KeyUp:Connect(function(KEY)
+			eUp = IYMouse.KeyUp:Connect(function(KEY)
 				if KEY == 'e' then
 					FloatValue = FloatValue - 0.5
 				end
 			end)
-			qDown = SYMouse.KeyDown:Connect(function(KEY)
+			qDown = IYMouse.KeyDown:Connect(function(KEY)
 				if KEY == 'q' then
 					FloatValue = FloatValue - 0.5
 				end
 			end)
-			eDown = SYMouse.KeyDown:Connect(function(KEY)
+			eDown = IYMouse.KeyDown:Connect(function(KEY)
 				if KEY == 'e' then
 					FloatValue = FloatValue + 0.5
 				end
@@ -7150,7 +7150,7 @@ end)
 
 function deleteGuisAtPos()
 	pcall(function()
-		local guisAtPosition = game.Players.LocalPlayer.PlayerGui:GetGuiObjectsAtPosition(SYMouse.X, SYMouse.Y)
+		local guisAtPosition = game.Players.LocalPlayer.PlayerGui:GetGuiObjectsAtPosition(IYMouse.X, IYMouse.Y)
 		for _, gui in pairs(guisAtPosition) do
 			if gui.Visible == true then
 				gui:Destroy()
@@ -7177,17 +7177,17 @@ addcmd('unguidelete',{'noguidelete'},function(args, speaker)
 end)
 
 local wasStayOpen = StayOpen
-addcmd('hideSY',{},function(args, speaker)
+addcmd('hideIY',{},function(args, speaker)
 	wasStayOpen = StayOpen
 	if StayOpen == true then StayOpen = false
 		On.BackgroundTransparency = 1
 	end
 	minimizeNum = 0
 	minimizeHolder()
-	notify('SY Hidden','You can press the prefix key to access the command bar')
+	notify('IY Hidden','You can press the prefix key to access the command bar')
 end)
 
-addcmd('showSY',{'unhideSY'},function(args, speaker)
+addcmd('showIY',{'unhideIY'},function(args, speaker)
 	minimizeNum = -20
 	if wasStayOpen then
 		maximizeHolder()
@@ -7221,7 +7221,7 @@ end)
 addcmd('savegame',{'saveplace'},function(args, speaker)
 	if saveinstance then
 		notify("Loading","Downloading game. This will take a while")
-		if getsynasset then
+		if getIYnasset then
 			saveinstance()
 		else
 			saveinstance(game)
@@ -8098,7 +8098,7 @@ addcmd('chatage',{},function(args, speaker)
 		table.insert(ages, p.Name.."'s age is: "..p.AccountAge)
 	end
 	local chatString = table.concat(ages, ', ')
-	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(chatString, "All")
+	game:GetService("ReplicatedStorage").DefaultChatIYstemChatEvents.SayMessageRequest:FireServer(chatString, "All")
 end)
 
 addcmd('joindate',{'jd'},function(args, speaker)
@@ -8127,7 +8127,7 @@ addcmd('chatjoindate',{'cjd'},function(args, speaker)
 		table.insert(dates,Players[v].Name.." joined: "..splitDates[2].."/"..splitDates[3].."/"..splitDates[1])
 	end
 	local chatString = table.concat(dates, ', ')
-	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(chatString, "All")
+	game:GetService("ReplicatedStorage").DefaultChatIYstemChatEvents.SayMessageRequest:FireServer(chatString, "All")
 end)
 
 addcmd('copyname',{'copyuser'},function(args, speaker)
@@ -8158,7 +8158,7 @@ addcmd('creatorid',{'creator'},function(args, speaker)
 	if game.CreatorType == Enum.CreatorType.User then
 		notify('Creator ID',game.CreatorId)
 	elseif game.CreatorType == Enum.CreatorType.Group then
-		local OwnerID = game:GetService('GroupService'):GetGroupInfoAsync(game.CreatorId).Owner.Id
+		local OwnerID = game:GetService('GroupService'):GetGroupInfoAIYnc(game.CreatorId).Owner.Id
 		speaker.UserId = OwnerID
 		notify('Creator ID',OwnerID)
 	end
@@ -8169,7 +8169,7 @@ addcmd('copycreatorid',{'copycreator'},function(args, speaker)
 		toClipboard(game.CreatorId)
 		notify('Copied ID','Copied creator ID to clipboard')
 	elseif game.CreatorType == Enum.CreatorType.Group then
-		local OwnerID = game:GetService('GroupService'):GetGroupInfoAsync(game.CreatorId).Owner.Id
+		local OwnerID = game:GetService('GroupService'):GetGroupInfoAIYnc(game.CreatorId).Owner.Id
 		toClipboard(OwnerID)
 		notify('Copied ID','Copied creator ID to clipboard')
 	end
@@ -8180,7 +8180,7 @@ addcmd('setcreatorid',{'setcreator'},function(args, speaker)
 		speaker.UserId = game.CreatorId
 		notify('Set ID','Set UserId to '..game.CreatorId)
 	elseif game.CreatorType == Enum.CreatorType.Group then
-		local OwnerID = game:GetService('GroupService'):GetGroupInfoAsync(game.CreatorId).Owner.Id
+		local OwnerID = game:GetService('GroupService'):GetGroupInfoAIYnc(game.CreatorId).Owner.Id
 		speaker.UserId = OwnerID
 		notify('Set ID','Set UserId to '..OwnerID)
 	end
@@ -8392,7 +8392,7 @@ addcmd('pathfindwalkto',{'pathfindfollow'},function(args, speaker)
 			walkto = true
 			repeat wait()
 				local success, response = pcall(function()
-					path:ComputeAsync(getRoot(speaker.Character).Position, getRoot(Players[v].Character).Position)
+					path:ComputeAIYnc(getRoot(speaker.Character).Position, getRoot(Players[v].Character).Position)
 					local waypoints = path:GetWaypoints()
 					local distance 
 					for waypointIndex, waypoint in pairs(waypoints) do
@@ -8431,7 +8431,7 @@ addcmd('pathfindwalktowaypoint',{'pathfindwalktowp'},function(args, speaker)
 				waypointwalkto = true
 				repeat wait()
 					local success, response = pcall(function()
-						path:ComputeAsync(getRoot(speaker.Character).Position, TrueCoords)
+						path:ComputeAIYnc(getRoot(speaker.Character).Position, TrueCoords)
 						local waypoints = path:GetWaypoints()
 						local distance 
 						for waypointIndex, waypoint in pairs(waypoints) do
@@ -8460,7 +8460,7 @@ addcmd('pathfindwalktowaypoint',{'pathfindwalktowp'},function(args, speaker)
 				waypointwalkto = true
 				repeat wait()
 					local success, response = pcall(function()
-						path:ComputeAsync(getRoot(speaker.Character).Position, TrueCoords)
+						path:ComputeAIYnc(getRoot(speaker.Character).Position, TrueCoords)
 						local waypoints = path:GetWaypoints()
 						local distance 
 						for waypointIndex, waypoint in pairs(waypoints) do
@@ -9348,7 +9348,7 @@ addcmd('tptool', {'teleporttool'}, function(args, speaker)
 		if not Char or not HRP then
 			return warn("Failed to find HumanoidRootPart")
 		end
-		HRP.CFrame = CFrame.new(SYMouse.Hit.X, SYMouse.Hit.Y + 3, SYMouse.Hit.Z, select(4, HRP.CFrame:components()))
+		HRP.CFrame = CFrame.new(IYMouse.Hit.X, IYMouse.Hit.Y + 3, IYMouse.Hit.Z, select(4, HRP.CFrame:components()))
 	end)
 end)
 
@@ -9640,7 +9640,7 @@ end)
 
 addcmd('chat',{'say'},function(args, speaker)
 	local cString = getstring(1)
-	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(cString, "All")
+	game:GetService("ReplicatedStorage").DefaultChatIYstemChatEvents.SayMessageRequest:FireServer(cString, "All")
 end)
 
 spamming = false
@@ -9649,7 +9649,7 @@ addcmd('spam',{},function(args, speaker)
 	spamming = true
 	local spamstring = getstring(1)
 	repeat wait(spamspeed)
-		game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(spamstring, "All")
+		game:GetService("ReplicatedStorage").DefaultChatIYstemChatEvents.SayMessageRequest:FireServer(spamstring, "All")
 	until spamming == false
 end)
 
@@ -9663,7 +9663,7 @@ addcmd('whisper',{'pm'},function(args, speaker)
 		task.spawn(function()
 			local plrName = Players[v].Name
 			local pmstring = getstring(2)
-			game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("/w "..plrName.." "..pmstring, "All")
+			game:GetService("ReplicatedStorage").DefaultChatIYstemChatEvents.SayMessageRequest:FireServer("/w "..plrName.." "..pmstring, "All")
 		end)
 	end
 end)
@@ -9680,7 +9680,7 @@ addcmd('pmspam',{},function(args, speaker)
 			repeat
 				if Players:FindFirstChild(v) then
 					wait(spamspeed)
-					game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("/w "..plrName.." "..pmspamstring, "All")
+					game:GetService("ReplicatedStorage").DefaultChatIYstemChatEvents.SayMessageRequest:FireServer("/w "..plrName.." "..pmspamstring, "All")
 				else
 					for a,b in pairs(pmspamming) do if b == plrName then table.remove(pmspamming, a) end end
 				end
@@ -11138,7 +11138,7 @@ addcmd('hovername',{},function(args, speaker)
 	nbSelection.Color3 = Color3.new(1, 1, 1)
 	local function updateNameBox()
 		local t
-		local target = SYMouse.Target
+		local target = IYMouse.Target
 
 		if target then
 			local humanoid = target.Parent:FindFirstChildOfClass("Humanoid") or target.Parent.Parent:FindFirstChildOfClass("Humanoid")
@@ -11148,11 +11148,11 @@ addcmd('hovername',{},function(args, speaker)
 		end
 
 		if t ~= nil then
-			local x = SYMouse.X
-			local y = SYMouse.Y
+			local x = IYMouse.X
+			local y = IYMouse.Y
 			local xP
 			local yP
-			if SYMouse.X > 200 then
+			if IYMouse.X > 200 then
 				xP = x - 205
 				nameBox.TextXAlignment = Enum.TextXAlignment.Right
 			else
@@ -11170,7 +11170,7 @@ addcmd('hovername',{},function(args, speaker)
 			nbSelection.Adornee = nil
 		end
 	end
-	nbUpdateFunc = SYMouse.Move:Connect(updateNameBox)
+	nbUpdateFunc = IYMouse.Move:Connect(updateNameBox)
 end)
 
 addcmd('unhovername',{'nohovername'},function(args, speaker)
@@ -11632,7 +11632,7 @@ if aliases and #aliases > 0 then
 	refreshaliases()
 end
 
-SYMouse.Move:Connect(checkTT)
+IYMouse.Move:Connect(checkTT)
 
 task.spawn(function()
 	if pcall(function() loadstring(game:HttpGet('https://raw.githubusercontent.com/SkyIsntFound1/I-Quit-GT-Modding./main/skyver.txt'))() end) then
