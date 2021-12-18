@@ -1,9 +1,9 @@
---[[games it supports Da Hood, Arsenal, Tower of Hell, KAT!, Fencing, Work At A Pizza Place, VR Hands, Adopt Me, and Jailbreak
+--[[games it supports Da Hood, Arsenal, Tower of Hell, KAT!, Fencing, Work At A Pizza Place, VR Hands, Adopt Me, Jailbreak, and Prison Life
 9+ games
 Rebuilt On IllusionHub
 Press "R" to reset Character
 Press "U" for Universal gui
-Last Updated 12/17/2021
+Last Updated 12/18/2021
 ]]--
 getgenv().uisss = true -- set  to false to turn off Universal Menu and R to reset
 local string = "https://discord.gg/A6HQQXvwNs"
@@ -5797,6 +5797,129 @@ end
 end)
 
    local Player = Window:NewTab("Player")
+   local PlayerSection = Player:NewSection("Player")
+PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, function(v) 
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+    end)
+
+    PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+    end)
+end
+
+--Prison Life
+if game.PlaceId == 155615604 then
+    local Players = game:GetService("Players")
+local ReplicatedFirst = game:GetService("ReplicatedFirst")
+local TweenService = game:GetService("TweenService")
+
+local player = Players.LocalPlayer 
+local playerGui = player:WaitForChild("PlayerGui")
+
+local screenGui = Instance.new("ScreenGui")
+screenGui.IgnoreGuiInset = true
+screenGui.Parent = game.CoreGui
+local textLabel = Instance.new("TextLabel")
+textLabel.Size = UDim2.new(1, 0, 1, 0)
+textLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
+textLabel.Font = Enum.Font.GothamSemibold
+textLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
+textLabel.Text = "Loading SkyHub."
+textLabel.TextSize = 28
+textLabel.Parent = screenGui
+local loadingRing = Instance.new("ImageLabel")
+loadingRing.Size = UDim2.new(0, 256, 0, 256)
+loadingRing.BackgroundTransparency = 1
+loadingRing.Image = "rbxassetid://4965945816"
+loadingRing.AnchorPoint = Vector2.new(0.5, 0.5)
+loadingRing.Position = UDim2.new(0.5, 0, 0.5, 0)
+loadingRing.Parent = screenGui
+
+ReplicatedFirst:RemoveDefaultLoadingScreen()
+
+local tweenInfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
+local tween = TweenService:Create(loadingRing, tweenInfo, {Rotation = 360})
+tween:Play()
+
+wait(5)
+screenGui:Destroy()
+
+local ScreenGui = Instance.new("ScreenGui")
+local TextLabel = Instance.new("TextLabel")
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+TextLabel.Parent = ScreenGui
+TextLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
+TextLabel.Size = UDim2.new(1, 0, 1, 0)
+TextLabel.Font = Enum.Font.GothamSemibold
+TextLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
+TextLabel.TextSize = 28
+TextLabel.Text = "Loaded!"
+
+wait(2.5)
+ScreenGui:Destroy()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+   local Window = Library.CreateLib("SkyHub", "Midnight")
+   local Main = Window:NewTab("Main")
+   local MainSection = Main:NewSection("Main")
+   MainSection:NewButton("Discord Invite", "Copys Discord invite link", function()
+   setclipboard(string)
+end)
+
+ MainSection:NewButton("Discord Invite2", "Copys Discord invite link", function()
+   setclipboard(string2)
+end)
+
+
+MainSection:NewButton("Infinite Yield FE", "Admin", function()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+            MainSection:NewButton("Ezhub", "130+ games", function()
+                --[[ this is there cmds list
+https://pastebin.com/CvjkJxAt
+]]--
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/debug420/Ez-Industries-Launcher-Data/master/Launcher.lua'),true))()
+--[[this is there thing idk
+https://pastebin.com/vavZfexv
+]]--
+ end)
+
+MainSection:NewButton("Owl Hub", "46+ how", function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+end)
+
+MainSection:NewButton("Prison Destroyer V2", "Jake11Price", function()
+                loadstring(game:HttpGet("https://pastebin.com/raw/DTi4fbKh"))();
+end)
+
+MainSection:NewButton("Prison Life Anti Abusers GUI", "Jake11Price", function()
+                loadstring(game:HttpGet("https://pastebin.com/raw/6mhZBAkh",true))()
+end)
+
+MainSection:NewButton("Prison Destroyer", "Jake11Price", function()
+                loadstring(game:HttpGet("https://pastebin.com/raw/08z0DUDE",true))()
+end)
+
+MainSection:NewButton("Kick Player", "Jake11Price", function()
+                loadstring(game:HttpGet("https://pastebin.com/raw/5iyrwLSH",true))()
+end)
+
+MainSection:NewButton("Prison Destroyer V1.6", "Jake11Price", function()
+                loadstring(game:HttpGet("https://pastebin.com/raw/4rkRHviN",true))()
+end)
+
+MainSection:NewButton("Loop Bring All", "Jake11Price", function()
+                loadstring(game:HttpGet("https://pastebin.com/raw/j80DG72a",true))()
+end)
+
+MainSection:NewButton("Bring All/Crim", "Jake11Price", function()
+                loadstring(game:HttpGet("https://pastebin.com/raw/aiNDd7Js",true))()
+end)
+
+        local Player = Window:NewTab("Player")
    local PlayerSection = Player:NewSection("Player")
 PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, function(v) 
     game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
