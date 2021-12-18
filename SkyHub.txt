@@ -5918,7 +5918,7 @@ end)
 MainSection:NewButton("Bring All/Crim", "Jake11Price", function()
                 loadstring(game:HttpGet("https://pastebin.com/raw/aiNDd7Js",true))()
 end)
-
+game.Players.LocalPlayer.PlayerGui.Home.fadeFrame:Destroy()
         local Player = Window:NewTab("Player")
    local PlayerSection = Player:NewSection("Player")
 PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, function(v) 
