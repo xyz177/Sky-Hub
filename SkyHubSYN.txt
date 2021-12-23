@@ -3,7 +3,7 @@ Work At A Pizza Place, VR Hands, Adopt Me, Jailbreak, Prison Life, and
 Build A Boat For Treasure.
 11+ games
 Rebuilt On IllusionHub
-Last Updated 12/22/2021
+Last Updated 12/23/2021
 ]]--
 local OptTheme = "Synapse"
 local string = "https://discord.gg/A6HQQXvwNs"
@@ -5987,7 +5987,8 @@ end)
         
          Playerinform:NewButton(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name, (game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Description), function()
 end)
-Playerinform:NewButton(game:GetService("Players"):GetNameFromUserIdAsync(game.CreatorId), "Creator"), function()
+Playerinform:NewButton(game:GetService("Players"):GetNameFromUserIdAsync(game.CreatorId), (game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Description), function()
+
 end)
        Playerinform:NewButton("FilterEnabled/Repesect Is: (Click dots)", ("Click on the button and press F9"), function()
        print(game.Workspace.FilteringEnabled, "If it says true it means its on if it says false then it means its off")
