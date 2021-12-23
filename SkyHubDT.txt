@@ -5,7 +5,7 @@ Build A Boat For Treasure.
 Rebuilt On IllusionHub
 Last Updated 12/22/2021
 ]]--
-local OptTheme = "LightTheme"
+local OptTheme = "DarkTheme"
 local string = "https://discord.gg/A6HQQXvwNs"
 local string2 = "https://discord.com/invite/jVf7eSrED9"
 -- Da Hood
