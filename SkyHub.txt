@@ -5,6 +5,590 @@ Build A Boat For Treasure.
 Rebuilt On IllusionHub
 Last Updated 12/23/2021
 ]]--
+if syn and syn.cache_replace and syn.cache_invalidate and syn.is_cached and syn.write_clipboard and syn.set_thread_identity then
+local ScreenGui = Instance.new("ScreenGui")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local SkyOG = Instance.new("ImageLabel")
+local SkyOGbut = Instance.new("TextButton")
+local Themes = Instance.new("TextLabel")
+local hint = Instance.new("TextLabel")
+local SkyBT = Instance.new("ImageLabel")
+local SkyBTBut = Instance.new("TextButton")
+local SkyDTBut = Instance.new("TextButton")
+local SkyGT = Instance.new("ImageLabel")
+local SkyGTBut = Instance.new("TextButton")
+local SkyLT = Instance.new("ImageLabel")
+local SkyLTBut = Instance.new("TextButton")
+local SkyOcean = Instance.new("ImageLabel")
+local SkyOceanBut = Instance.new("TextButton")
+local SkyST = Instance.new("ImageLabel")
+local SkySTBut = Instance.new("TextButton")
+local SkySerpent = Instance.new("ImageLabel")
+local SkySerpentBut = Instance.new("TextButton")
+local SkySYNBut = Instance.new("TextButton")
+syn.protect_gui(ScreenGui)
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.Name = "LOL542"
+
+ScrollingFrame.Parent = ScreenGui
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(92, 190, 255)
+ScrollingFrame.Position = UDim2.new(0.169960469, 0, 0.17546013, 0)
+ScrollingFrame.Size = UDim2.new(0, 1146, 0, 608)
+
+SkyOG.Name = "SkyOG"
+SkyOG.Parent = ScrollingFrame
+SkyOG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SkyOG.Position = UDim2.new(-0.000593361852, 0, 0.060740456, 0)
+SkyOG.Size = UDim2.new(0, 470, 0, 277)
+SkyOG.Image = "http://www.roblox.com/asset/?id=8327246855"
+
+SkyOGbut.Name = "SkyOGbut"
+SkyOGbut.Parent = SkyOG
+SkyOGbut.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SkyOGbut.BackgroundTransparency = 9.000
+SkyOGbut.Size = UDim2.new(0, 470, 0, 276)
+SkyOGbut.Font = Enum.Font.SourceSans
+SkyOGbut.Text = ""
+SkyOGbut.TextColor3 = Color3.fromRGB(0, 0, 0)
+SkyOGbut.TextSize = 14.000
+
+Themes.Name = "Themes"
+Themes.Parent = ScrollingFrame
+Themes.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Themes.BackgroundTransparency = 9.000
+Themes.Size = UDim2.new(0, 1133, 0, 50)
+Themes.Font = Enum.Font.SourceSans
+Themes.Text = "Themes - Synapse X"
+Themes.TextColor3 = Color3.fromRGB(0, 0, 0)
+Themes.TextSize = 14.000
+
+hint.Name = "hint"
+hint.Parent = ScrollingFrame
+hint.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+hint.BackgroundTransparency = 9.000
+hint.Position = UDim2.new(0, 0, 0.0306748468, 0)
+hint.Size = UDim2.new(0, 1133, 0, 50)
+hint.Font = Enum.Font.SourceSans
+hint.Text = "Just click on the theme you want"
+hint.TextColor3 = Color3.fromRGB(0, 0, 0)
+hint.TextSize = 14.000
+
+SkyBT.Name = "SkyBT"
+SkyBT.Parent = ScrollingFrame
+SkyBT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SkyBT.Position = UDim2.new(0.580401063, 0, 0.0531983748, 0)
+SkyBT.Size = UDim2.new(0, 470, 0, 277)
+SkyBT.Image = "http://www.roblox.com/asset/?id=8327268677"
+
+SkyBTBut.Name = "SkyBTBut"
+SkyBTBut.Parent = SkyBT
+SkyBTBut.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SkyBTBut.BackgroundTransparency = 9.000
+SkyBTBut.Size = UDim2.new(0, 470, 0, 276)
+SkyBTBut.Font = Enum.Font.SourceSans
+SkyBTBut.Text = ""
+SkyBTBut.TextColor3 = Color3.fromRGB(0, 0, 0)
+SkyBTBut.TextSize = 14.000
+
+SkyDTBut.Name = "SkyDTBut"
+SkyDTBut.Parent = ScrollingFrame
+SkyDTBut.BackgroundColor3 = Color3.fromRGB(29, 28, 26)
+SkyDTBut.Position = UDim2.new(0.406631768, 0, 0.148466244, 0)
+SkyDTBut.Size = UDim2.new(0, 200, 0, 50)
+SkyDTBut.Font = Enum.Font.SourceSans
+SkyDTBut.Text = "DarkTheme"
+SkyDTBut.TextColor3 = Color3.fromRGB(42, 57, 46)
+SkyDTBut.TextSize = 14.000
+
+SkyGT.Name = "SkyGT"
+SkyGT.Parent = ScrollingFrame
+SkyGT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SkyGT.Position = UDim2.new(-0.00424112193, 0, 0.245222926, 0)
+SkyGT.Size = UDim2.new(0, 470, 0, 277)
+SkyGT.Image = "http://www.roblox.com/asset/?id=8327397638"
+
+SkyGTBut.Name = "SkyGTBut"
+SkyGTBut.Parent = SkyGT
+SkyGTBut.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SkyGTBut.BackgroundTransparency = 9.000
+SkyGTBut.Size = UDim2.new(0, 470, 0, 276)
+SkyGTBut.Font = Enum.Font.SourceSans
+SkyGTBut.Text = ""
+SkyGTBut.TextColor3 = Color3.fromRGB(0, 0, 0)
+SkyGTBut.TextSize = 14.000
+
+SkyLT.Name = "SkyLT"
+SkyLT.Parent = ScrollingFrame
+SkyLT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SkyLT.Position = UDim2.new(0.577783346, 0, 0.245222926, 0)
+SkyLT.Size = UDim2.new(0, 470, 0, 277)
+SkyLT.Image = "http://www.roblox.com/asset/?id=8327412443"
+
+SkyLTBut.Name = "SkyLTBut"
+SkyLTBut.Parent = SkyLT
+SkyLTBut.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SkyLTBut.BackgroundTransparency = 9.000
+SkyLTBut.Size = UDim2.new(0, 470, 0, 276)
+SkyLTBut.Font = Enum.Font.SourceSans
+SkyLTBut.Text = ""
+SkyLTBut.TextColor3 = Color3.fromRGB(0, 0, 0)
+SkyLTBut.TextSize = 14.000
+
+SkyOcean.Name = "SkyOcean"
+SkyOcean.Parent = ScrollingFrame
+SkyOcean.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SkyOcean.Position = UDim2.new(-0.000750714913, 0, 0.454425395, 0)
+SkyOcean.Size = UDim2.new(0, 470, 0, 277)
+SkyOcean.Image = "http://www.roblox.com/asset/?id=8327432053"
+
+SkyOceanBut.Name = "SkyOceanBut"
+SkyOceanBut.Parent = SkyOcean
+SkyOceanBut.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SkyOceanBut.BackgroundTransparency = 9.000
+SkyOceanBut.Size = UDim2.new(0, 470, 0, 276)
+SkyOceanBut.Font = Enum.Font.SourceSans
+SkyOceanBut.Text = ""
+SkyOceanBut.TextColor3 = Color3.fromRGB(0, 0, 0)
+SkyOceanBut.TextSize = 14.000
+
+SkyST.Name = "SkyST"
+SkyST.Parent = ScrollingFrame
+SkyST.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SkyST.Position = UDim2.new(0.589127064, 0, 0.44154191, 0)
+SkyST.Size = UDim2.new(0, 470, 0, 277)
+SkyST.Image = "http://www.roblox.com/asset/?id=8327453778"
+
+SkySTBut.Name = "SkySTBut"
+SkySTBut.Parent = SkyST
+SkySTBut.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SkySTBut.BackgroundTransparency = 9.000
+SkySTBut.Size = UDim2.new(0, 470, 0, 276)
+SkySTBut.Font = Enum.Font.SourceSans
+SkySTBut.Text = "CantLoadImage - Sentinel"
+SkySTBut.TextColor3 = Color3.fromRGB(0, 0, 0)
+SkySTBut.TextSize = 14.000
+
+SkySerpent.Name = "SkySerpent"
+SkySerpent.Parent = SkyST
+SkySerpent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SkySerpent.Position = UDim2.new(-1.40874529, 0, 1.18883431, 0)
+SkySerpent.Size = UDim2.new(0, 470, 0, 277)
+SkySerpent.Image = "http://www.roblox.com/asset/?id=8327523939"
+
+SkySerpentBut.Name = "SkySerpentBut"
+SkySerpentBut.Parent = SkySerpent
+SkySerpentBut.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SkySerpentBut.BackgroundTransparency = 9.000
+SkySerpentBut.Size = UDim2.new(0, 470, 0, 276)
+SkySerpentBut.Font = Enum.Font.SourceSans
+SkySerpentBut.Text = "CantLoadImage - Serpent"
+SkySerpentBut.TextColor3 = Color3.fromRGB(0, 0, 0)
+SkySerpentBut.TextSize = 14.000
+
+SkySYNBut.Name = "SkySYNBut"
+SkySYNBut.Parent = ScrollingFrame
+SkySYNBut.BackgroundColor3 = Color3.fromRGB(29, 28, 26)
+SkySYNBut.Position = UDim2.new(0.414485186, 0, 0.607361913, 0)
+SkySYNBut.Size = UDim2.new(0, 200, 0, 50)
+SkySYNBut.Font = Enum.Font.SourceSans
+SkySYNBut.Text = "Synapse Theme"
+SkySYNBut.TextColor3 = Color3.fromRGB(42, 57, 46)
+SkySYNBut.TextSize = 14.000
+
+local function BSTNUWG_fake_script() -- SkyOGbut.SkyOGscript 
+	local script = Instance.new('LocalScript', SkyOGbut)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkyIsntFound1/I-Quit-GT-Modding./main/SkyHubOG.txt'),true))()
+		game.CoreGui.LOL542:Destroy()
+	end)
+	
+	
+end
+coroutine.wrap(BSTNUWG_fake_script)()
+local function ZEECQJZ_fake_script() -- SkyBTBut.SkyBTscript 
+	local script = Instance.new('LocalScript', SkyBTBut)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkyIsntFound1/I-Quit-GT-Modding./main/SkyHubBT.txt'),true))()
+		game.CoreGui.LOL542:Destroy()
+	end)
+	
+	
+end
+coroutine.wrap(ZEECQJZ_fake_script)()
+local function HDGAGZF_fake_script() -- SkyDTBut.SkyDTscript 
+	local script = Instance.new('LocalScript', SkyDTBut)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkyIsntFound1/I-Quit-GT-Modding./main/SkyHubDT.txt'),true))()
+		game.CoreGui.LOL542:Destroy()
+	end)
+	
+end
+coroutine.wrap(HDGAGZF_fake_script)()
+local function JVJR_fake_script() -- SkyGTBut.SkyGTscript 
+	local script = Instance.new('LocalScript', SkyGTBut)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkyIsntFound1/I-Quit-GT-Modding./main/SkyHubGT.txt'),true))()
+		game.CoreGui.LOL542:Destroy()
+	end)
+	
+	
+end
+coroutine.wrap(JVJR_fake_script)()
+local function QEKGU_fake_script() -- SkyLTBut.SkyLTscript 
+	local script = Instance.new('LocalScript', SkyLTBut)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkyIsntFound1/I-Quit-GT-Modding./main/SkyHubLT.txt'),true))()
+		game.CoreGui.LOL542:Destroy()
+	end)
+	
+	
+end
+coroutine.wrap(QEKGU_fake_script)()
+local function CNXIVVE_fake_script() -- SkyOceanBut.SkyOceanscript 
+	local script = Instance.new('LocalScript', SkyOceanBut)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkyIsntFound1/I-Quit-GT-Modding./main/SkyHubOcean.txt'),true))()
+		game.CoreGui.LOL542:Destroy()
+	end)
+	
+	
+end
+coroutine.wrap(CNXIVVE_fake_script)()
+local function UIZBED_fake_script() -- SkySTBut.SkySTscript 
+	local script = Instance.new('LocalScript', SkySTBut)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkyIsntFound1/I-Quit-GT-Modding./main/SkyHubST.txt'),true))()
+		game.CoreGui.LOL542:Destroy()
+	end)
+	
+	
+end
+coroutine.wrap(UIZBED_fake_script)()
+local function IJQJA_fake_script() -- SkySerpentBut.SkySerpentscript 
+	local script = Instance.new('LocalScript', SkySerpentBut)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkyIsntFound1/I-Quit-GT-Modding./main/SkyHubSerpent.txt'),true))()
+		game.CoreGui.LOL542:Destroy()
+	end)
+	
+	
+end
+coroutine.wrap(IJQJA_fake_script)()
+local function YWQGCSB_fake_script() -- SkySYNBut.SkySYNscript 
+	local script = Instance.new('LocalScript', SkySYNBut)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkyIsntFound1/I-Quit-GT-Modding./main/SkyHubSYN.txt'),true))()
+		game.CoreGui.LOL542:Destroy()
+	end)
+	
+end
+coroutine.wrap(YWQGCSB_fake_script)()
+end
+local S = ""
+if identifyexecutor then
+	S = select(1, identifyexecutor())
+end
+if S == "ScriptWare" then
+local ScreenGui = Instance.new("ScreenGui")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local SkyOG = Instance.new("ImageLabel")
+local SkyOGbut = Instance.new("TextButton")
+local Themes = Instance.new("TextLabel")
+local hint = Instance.new("TextLabel")
+local SkyBT = Instance.new("ImageLabel")
+local SkyBTBut = Instance.new("TextButton")
+local SkyDTBut = Instance.new("TextButton")
+local SkyGT = Instance.new("ImageLabel")
+local SkyGTBut = Instance.new("TextButton")
+local SkyLT = Instance.new("ImageLabel")
+local SkyLTBut = Instance.new("TextButton")
+local SkyOcean = Instance.new("ImageLabel")
+local SkyOceanBut = Instance.new("TextButton")
+local SkyST = Instance.new("ImageLabel")
+local SkySTBut = Instance.new("TextButton")
+local SkySerpent = Instance.new("ImageLabel")
+local SkySerpentBut = Instance.new("TextButton")
+local SkySYNBut = Instance.new("TextButton")
+
+ScreenGui.Parent = gethui()
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.Name = "LOL542"
+
+ScrollingFrame.Parent = ScreenGui
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(92, 190, 255)
+ScrollingFrame.Position = UDim2.new(0.169960469, 0, 0.17546013, 0)
+ScrollingFrame.Size = UDim2.new(0, 1146, 0, 608)
+
+SkyOG.Name = "SkyOG"
+SkyOG.Parent = ScrollingFrame
+SkyOG.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SkyOG.Position = UDim2.new(-0.000593361852, 0, 0.060740456, 0)
+SkyOG.Size = UDim2.new(0, 470, 0, 277)
+SkyOG.Image = "http://www.roblox.com/asset/?id=8327246855"
+
+SkyOGbut.Name = "SkyOGbut"
+SkyOGbut.Parent = SkyOG
+SkyOGbut.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SkyOGbut.BackgroundTransparency = 9.000
+SkyOGbut.Size = UDim2.new(0, 470, 0, 276)
+SkyOGbut.Font = Enum.Font.SourceSans
+SkyOGbut.Text = ""
+SkyOGbut.TextColor3 = Color3.fromRGB(0, 0, 0)
+SkyOGbut.TextSize = 14.000
+
+Themes.Name = "Themes"
+Themes.Parent = ScrollingFrame
+Themes.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Themes.BackgroundTransparency = 9.000
+Themes.Size = UDim2.new(0, 1133, 0, 50)
+Themes.Font = Enum.Font.SourceSans
+Themes.Text = "Themes - Script-Ware"
+Themes.TextColor3 = Color3.fromRGB(0, 0, 0)
+Themes.TextSize = 14.000
+
+hint.Name = "hint"
+hint.Parent = ScrollingFrame
+hint.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+hint.BackgroundTransparency = 9.000
+hint.Position = UDim2.new(0, 0, 0.0306748468, 0)
+hint.Size = UDim2.new(0, 1133, 0, 50)
+hint.Font = Enum.Font.SourceSans
+hint.Text = "Just click on the theme you want"
+hint.TextColor3 = Color3.fromRGB(0, 0, 0)
+hint.TextSize = 14.000
+
+SkyBT.Name = "SkyBT"
+SkyBT.Parent = ScrollingFrame
+SkyBT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SkyBT.Position = UDim2.new(0.580401063, 0, 0.0531983748, 0)
+SkyBT.Size = UDim2.new(0, 470, 0, 277)
+SkyBT.Image = "http://www.roblox.com/asset/?id=8327268677"
+
+SkyBTBut.Name = "SkyBTBut"
+SkyBTBut.Parent = SkyBT
+SkyBTBut.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SkyBTBut.BackgroundTransparency = 9.000
+SkyBTBut.Size = UDim2.new(0, 470, 0, 276)
+SkyBTBut.Font = Enum.Font.SourceSans
+SkyBTBut.Text = ""
+SkyBTBut.TextColor3 = Color3.fromRGB(0, 0, 0)
+SkyBTBut.TextSize = 14.000
+
+SkyDTBut.Name = "SkyDTBut"
+SkyDTBut.Parent = ScrollingFrame
+SkyDTBut.BackgroundColor3 = Color3.fromRGB(29, 28, 26)
+SkyDTBut.Position = UDim2.new(0.406631768, 0, 0.148466244, 0)
+SkyDTBut.Size = UDim2.new(0, 200, 0, 50)
+SkyDTBut.Font = Enum.Font.SourceSans
+SkyDTBut.Text = "DarkTheme"
+SkyDTBut.TextColor3 = Color3.fromRGB(42, 57, 46)
+SkyDTBut.TextSize = 14.000
+
+SkyGT.Name = "SkyGT"
+SkyGT.Parent = ScrollingFrame
+SkyGT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SkyGT.Position = UDim2.new(-0.00424112193, 0, 0.245222926, 0)
+SkyGT.Size = UDim2.new(0, 470, 0, 277)
+SkyGT.Image = "http://www.roblox.com/asset/?id=8327397638"
+
+SkyGTBut.Name = "SkyGTBut"
+SkyGTBut.Parent = SkyGT
+SkyGTBut.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SkyGTBut.BackgroundTransparency = 9.000
+SkyGTBut.Size = UDim2.new(0, 470, 0, 276)
+SkyGTBut.Font = Enum.Font.SourceSans
+SkyGTBut.Text = ""
+SkyGTBut.TextColor3 = Color3.fromRGB(0, 0, 0)
+SkyGTBut.TextSize = 14.000
+
+SkyLT.Name = "SkyLT"
+SkyLT.Parent = ScrollingFrame
+SkyLT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SkyLT.Position = UDim2.new(0.577783346, 0, 0.245222926, 0)
+SkyLT.Size = UDim2.new(0, 470, 0, 277)
+SkyLT.Image = "http://www.roblox.com/asset/?id=8327412443"
+
+SkyLTBut.Name = "SkyLTBut"
+SkyLTBut.Parent = SkyLT
+SkyLTBut.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SkyLTBut.BackgroundTransparency = 9.000
+SkyLTBut.Size = UDim2.new(0, 470, 0, 276)
+SkyLTBut.Font = Enum.Font.SourceSans
+SkyLTBut.Text = ""
+SkyLTBut.TextColor3 = Color3.fromRGB(0, 0, 0)
+SkyLTBut.TextSize = 14.000
+
+SkyOcean.Name = "SkyOcean"
+SkyOcean.Parent = ScrollingFrame
+SkyOcean.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SkyOcean.Position = UDim2.new(-0.000750714913, 0, 0.454425395, 0)
+SkyOcean.Size = UDim2.new(0, 470, 0, 277)
+SkyOcean.Image = "http://www.roblox.com/asset/?id=8327432053"
+
+SkyOceanBut.Name = "SkyOceanBut"
+SkyOceanBut.Parent = SkyOcean
+SkyOceanBut.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SkyOceanBut.BackgroundTransparency = 9.000
+SkyOceanBut.Size = UDim2.new(0, 470, 0, 276)
+SkyOceanBut.Font = Enum.Font.SourceSans
+SkyOceanBut.Text = ""
+SkyOceanBut.TextColor3 = Color3.fromRGB(0, 0, 0)
+SkyOceanBut.TextSize = 14.000
+
+SkyST.Name = "SkyST"
+SkyST.Parent = ScrollingFrame
+SkyST.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SkyST.Position = UDim2.new(0.589127064, 0, 0.44154191, 0)
+SkyST.Size = UDim2.new(0, 470, 0, 277)
+SkyST.Image = "http://www.roblox.com/asset/?id=8327453778"
+
+SkySTBut.Name = "SkySTBut"
+SkySTBut.Parent = SkyST
+SkySTBut.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SkySTBut.BackgroundTransparency = 9.000
+SkySTBut.Size = UDim2.new(0, 470, 0, 276)
+SkySTBut.Font = Enum.Font.SourceSans
+SkySTBut.Text = "CantLoadImage - Sentinel"
+SkySTBut.TextColor3 = Color3.fromRGB(0, 0, 0)
+SkySTBut.TextSize = 14.000
+
+SkySerpent.Name = "SkySerpent"
+SkySerpent.Parent = SkyST
+SkySerpent.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SkySerpent.Position = UDim2.new(-1.40874529, 0, 1.18883431, 0)
+SkySerpent.Size = UDim2.new(0, 470, 0, 277)
+SkySerpent.Image = "http://www.roblox.com/asset/?id=8327523939"
+
+SkySerpentBut.Name = "SkySerpentBut"
+SkySerpentBut.Parent = SkySerpent
+SkySerpentBut.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SkySerpentBut.BackgroundTransparency = 9.000
+SkySerpentBut.Size = UDim2.new(0, 470, 0, 276)
+SkySerpentBut.Font = Enum.Font.SourceSans
+SkySerpentBut.Text = "CantLoadImage - Serpent"
+SkySerpentBut.TextColor3 = Color3.fromRGB(0, 0, 0)
+SkySerpentBut.TextSize = 14.000
+
+SkySYNBut.Name = "SkySYNBut"
+SkySYNBut.Parent = ScrollingFrame
+SkySYNBut.BackgroundColor3 = Color3.fromRGB(29, 28, 26)
+SkySYNBut.Position = UDim2.new(0.414485186, 0, 0.607361913, 0)
+SkySYNBut.Size = UDim2.new(0, 200, 0, 50)
+SkySYNBut.Font = Enum.Font.SourceSans
+SkySYNBut.Text = "Synapse Theme"
+SkySYNBut.TextColor3 = Color3.fromRGB(42, 57, 46)
+SkySYNBut.TextSize = 14.000
+
+local function BSTNUWG_fake_script() -- SkyOGbut.SkyOGscript 
+	local script = Instance.new('LocalScript', SkyOGbut)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkyIsntFound1/I-Quit-GT-Modding./main/SkyHubOG.txt'),true))()
+		script.Parent.Parent.Parent:Destroy()
+	end)
+	
+	
+end
+coroutine.wrap(BSTNUWG_fake_script)()
+local function ZEECQJZ_fake_script() -- SkyBTBut.SkyBTscript 
+	local script = Instance.new('LocalScript', SkyBTBut)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkyIsntFound1/I-Quit-GT-Modding./main/SkyHubBT.txt'),true))()
+		script.Parent.Parent.Parent:Destroy()
+	end)
+	
+	
+end
+coroutine.wrap(ZEECQJZ_fake_script)()
+local function HDGAGZF_fake_script() -- SkyDTBut.SkyDTscript 
+	local script = Instance.new('LocalScript', SkyDTBut)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkyIsntFound1/I-Quit-GT-Modding./main/SkyHubDT.txt'),true))()
+		script.Parent.Parent.Parent:Destroy()
+	end)
+	
+end
+coroutine.wrap(HDGAGZF_fake_script)()
+local function JVJR_fake_script() -- SkyGTBut.SkyGTscript 
+	local script = Instance.new('LocalScript', SkyGTBut)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkyIsntFound1/I-Quit-GT-Modding./main/SkyHubGT.txt'),true))()
+		script.Parent.Parent.Parent:Destroy()
+	end)
+	
+	
+end
+coroutine.wrap(JVJR_fake_script)()
+local function QEKGU_fake_script() -- SkyLTBut.SkyLTscript 
+	local script = Instance.new('LocalScript', SkyLTBut)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkyIsntFound1/I-Quit-GT-Modding./main/SkyHubLT.txt'),true))()
+		script.Parent.Parent.Parent:Destroy()
+	end)
+	
+	
+end
+coroutine.wrap(QEKGU_fake_script)()
+local function CNXIVVE_fake_script() -- SkyOceanBut.SkyOceanscript 
+	local script = Instance.new('LocalScript', SkyOceanBut)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkyIsntFound1/I-Quit-GT-Modding./main/SkyHubOcean.txt'),true))()
+		script.Parent.Parent.Parent:Destroy()
+	end)
+	
+	
+end
+coroutine.wrap(CNXIVVE_fake_script)()
+local function UIZBED_fake_script() -- SkySTBut.SkySTscript 
+	local script = Instance.new('LocalScript', SkySTBut)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkyIsntFound1/I-Quit-GT-Modding./main/SkyHubST.txt'),true))()
+		script.Parent.Parent.Parent:Destroy()
+	end)
+	
+	
+end
+coroutine.wrap(UIZBED_fake_script)()
+local function IJQJA_fake_script() -- SkySerpentBut.SkySerpentscript 
+	local script = Instance.new('LocalScript', SkySerpentBut)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkyIsntFound1/I-Quit-GT-Modding./main/SkyHubSerpent.txt'),true))()
+		script.Parent.Parent.Parent:Destroy()
+	end)
+	
+	
+end
+coroutine.wrap(IJQJA_fake_script)()
+local function YWQGCSB_fake_script() -- SkySYNBut.SkySYNscript 
+	local script = Instance.new('LocalScript', SkySYNBut)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkyIsntFound1/I-Quit-GT-Modding./main/SkyHubSYN.txt'),true))()
+		script.Parent.Parent.Parent:Destroy()
+	end)
+	end
+coroutine.wrap(YWQGCSB_fake_script)()
+else
 local ScreenGui = Instance.new("ScreenGui")
 local ScrollingFrame = Instance.new("ScrollingFrame")
 local SkyOG = Instance.new("ImageLabel")
@@ -293,3 +877,4 @@ local function YWQGCSB_fake_script() -- SkySYNBut.SkySYNscript
 	
 end
 coroutine.wrap(YWQGCSB_fake_script)()
+end
