@@ -203,7 +203,7 @@ local function BSTNUWG_fake_script() -- SkyOGbut.SkyOGscript
 
 	script.Parent.MouseButton1Down:Connect(function()
 		loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkyIsntFound1/I-Quit-GT-Modding./main/SkyHubOG.txt'),true))()
-		game.CoreGui.LOL542:Destroy()
+		script.Parent.Parent.Parent:Destroy()
 	end)
 	
 	
@@ -214,7 +214,7 @@ local function ZEECQJZ_fake_script() -- SkyBTBut.SkyBTscript
 
 	script.Parent.MouseButton1Down:Connect(function()
 		loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkyIsntFound1/I-Quit-GT-Modding./main/SkyHubBT.txt'),true))()
-		game.CoreGui.LOL542:Destroy()
+		script.Parent.Parent.Parent:Destroy()
 	end)
 	
 	
@@ -225,7 +225,7 @@ local function HDGAGZF_fake_script() -- SkyDTBut.SkyDTscript
 
 	script.Parent.MouseButton1Down:Connect(function()
 		loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkyIsntFound1/I-Quit-GT-Modding./main/SkyHubDT.txt'),true))()
-		game.CoreGui.LOL542:Destroy()
+		script.Parent.Parent.Parent:Destroy()
 	end)
 	
 end
@@ -235,7 +235,7 @@ local function JVJR_fake_script() -- SkyGTBut.SkyGTscript
 
 	script.Parent.MouseButton1Down:Connect(function()
 		loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkyIsntFound1/I-Quit-GT-Modding./main/SkyHubGT.txt'),true))()
-		game.CoreGui.LOL542:Destroy()
+		script.Parent.Parent.Parent:Destroy()
 	end)
 	
 	
@@ -246,7 +246,7 @@ local function QEKGU_fake_script() -- SkyLTBut.SkyLTscript
 
 	script.Parent.MouseButton1Down:Connect(function()
 		loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkyIsntFound1/I-Quit-GT-Modding./main/SkyHubLT.txt'),true))()
-		game.CoreGui.LOL542:Destroy()
+		script.Parent.Parent.Parent:Destroy()
 	end)
 	
 	
@@ -257,7 +257,7 @@ local function CNXIVVE_fake_script() -- SkyOceanBut.SkyOceanscript
 
 	script.Parent.MouseButton1Down:Connect(function()
 		loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkyIsntFound1/I-Quit-GT-Modding./main/SkyHubOcean.txt'),true))()
-		game.CoreGui.LOL542:Destroy()
+		script.Parent.Parent.Parent:Destroy()
 	end)
 	
 	
@@ -268,7 +268,7 @@ local function UIZBED_fake_script() -- SkySTBut.SkySTscript
 
 	script.Parent.MouseButton1Down:Connect(function()
 		loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkyIsntFound1/I-Quit-GT-Modding./main/SkyHubST.txt'),true))()
-		game.CoreGui.LOL542:Destroy()
+		script.Parent.Parent.Parent:Destroy()
 	end)
 	
 	
@@ -279,7 +279,7 @@ local function IJQJA_fake_script() -- SkySerpentBut.SkySerpentscript
 
 	script.Parent.MouseButton1Down:Connect(function()
 		loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkyIsntFound1/I-Quit-GT-Modding./main/SkyHubSerpent.txt'),true))()
-		game.CoreGui.LOL542:Destroy()
+		script.Parent.Parent.Parent:Destroy()
 	end)
 	
 	
@@ -290,7 +290,7 @@ local function YWQGCSB_fake_script() -- SkySYNBut.SkySYNscript
 
 	script.Parent.MouseButton1Down:Connect(function()
 		loadstring(game:HttpGet(('https://raw.githubusercontent.com/SkyIsntFound1/I-Quit-GT-Modding./main/SkyHubSYN.txt'),true))()
-		game.CoreGui.LOL542:Destroy()
+		script.Parent.Parent.Parent:Destroy()
 	end)
 	
 end
