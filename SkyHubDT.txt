@@ -1,10 +1,10 @@
 if syn and syn.cache_replace and syn.cache_invalidate and syn.is_cached and syn.write_clipboard and syn.set_thread_identity then
 --[[games it supports Da Hood, Arsenal, Tower of Hell, KAT!, Fencing,
 Work At A Pizza Place, VR Hands, Adopt Me, Jailbreak, Prison Life, and
-Build A Boat For Treasure.
-11+ games
+Build A Boat For Treasure, and Gorrila Tag Professional.
+12+ games
 Rebuilt On IllusionHub
-Last Updated 1/6/2022
+Last Updated 2/17/2022
 ]]--
 local OptTheme = "DarkTheme"
 local string = "https://discord.gg/A6HQQXvwNs"
@@ -4985,6 +4985,114 @@ PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, functi
     PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
     end)
+-- Gorilla Tag Professional
+elseif game.PlaceId == 8690998110 then
+local Players = game:GetService("Players")
+local ReplicatedFirst = game:GetService("ReplicatedFirst")
+local TweenService = game:GetService("TweenService")
+
+
+
+
+local screenGui = Instance.new("ScreenGui")
+syn.protect_gui(screenGui)
+screenGui.IgnoreGuiInset = true
+screenGui.Parent = game.CoreGui
+local textLabel = Instance.new("TextLabel")
+textLabel.Size = UDim2.new(1, 0, 1, 0)
+textLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
+textLabel.Font = Enum.Font.GothamSemibold
+textLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
+textLabel.Text = "Loading SkyHub."
+textLabel.TextSize = 28
+textLabel.Parent = screenGui
+local loadingRing = Instance.new("ImageLabel")
+loadingRing.Size = UDim2.new(0, 256, 0, 256)
+loadingRing.BackgroundTransparency = 1
+loadingRing.Image = "rbxassetid://4965945816"
+loadingRing.AnchorPoint = Vector2.new(0.5, 0.5)
+loadingRing.Position = UDim2.new(0.5, 0, 0.5, 0)
+loadingRing.Parent = screenGui
+
+ReplicatedFirst:RemoveDefaultLoadingScreen()
+
+local tweenInfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
+local tween = TweenService:Create(loadingRing, tweenInfo, {Rotation = 360})
+tween:Play()
+
+wait(5)
+screenGui:Destroy()
+
+local ScreenGui = Instance.new("ScreenGui")
+local TextLabel = Instance.new("TextLabel")
+syn.protect_gui(ScreenGui)
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.IgnoreGuiInset = true
+
+TextLabel.Parent = ScreenGui
+TextLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
+TextLabel.Size = UDim2.new(1, 0, 1, 0)
+TextLabel.Font = Enum.Font.GothamSemibold
+TextLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
+TextLabel.TextSize = 28
+TextLabel.Text = "Loaded!"
+
+wait(2.5)
+ScreenGui:Destroy()
+	    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+            local Window = Library.CreateLib("SkyHub Universal", OptTheme)
+            local Main = Window:NewTab("Main")
+            local MainSection = Main:NewSection("Main")
+            MainSection:NewButton("Discord Invite", "Copys Discord invite link", function()
+                setclipboard(string)
+            end)
+	 MainSection:NewButton("V3rm Script", "Copys Discord invite link", function()
+                -- Made by 13 YOLD
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/miroeramaa/TurtleLib/main/TurtleUiLib.lua"))()
+local window1 = library:Window("Scripts")
+local window2 = library:Window("Teleport Areas")
+window1:Button("Infinite Wins", function()
+    spawn(function()
+while true do
+   local dec = game:GetService("Workspace"):FindFirstChild("ClickToGetCash").ClickDetector
+   fireclickdetector(dec)
+   local fun = game:GetService("Workspace"):FindFirstChild("ClickToGetCash").ClickDetector
+   fireclickdetector(fun)
+   wait(0.1)
+end
+end)
+end)
+window2:Button("Spectate (Easy Win)", function()
+    spawn(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-39.386, 59.2163, -102.248)
+
+end)
+end)
+window1:Button("TP All to You (Use Lava)", function()
+    spawn(function()
+  for _, player in pairs(game.Players:GetPlayers()) do
+player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
+      end
+    end)
+end)
+window2:Button("Become a Lava Monke", function()
+    spawn(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(79.2755, 71.1624, -54.2756)
+end)
+end)
+window1:Slider("Walkspeed",16,70,5, function(value)
+  game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = value
+end)
+window1:Slider("JumpPower",50,150,20, function(value)
+  game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = value
+end)
+library:Keybind("Tab")
+game:GetService("StarterGui"):SetCore("SendNotification",{     
+Title = "Important!",     
+Text = "Infinite Wins is patched",
+Button1 = "unpatch pls?",Button2 = "no",     Duration = 20, })
+            end)
 -- Universal
 else
 local Players = game:GetService("Players")
@@ -6005,10 +6113,10 @@ end
 if S == "ScriptWare" then
 --[[games it supports Da Hood, Arsenal, Tower of Hell, KAT!, Fencing,
 Work At A Pizza Place, VR Hands, Adopt Me, Jailbreak, Prison Life, and
-Build A Boat For Treasure.
-11+ games
+Build A Boat For Treasure, and Gorrila Tag Professional.
+12+ games
 Rebuilt On IllusionHub
-Last Updated 1/6/2022
+Last Updated 2/17/2022
 ]]--
 local OptTheme = "DarkTheme"
 local string = "https://discord.gg/A6HQQXvwNs"
@@ -11004,6 +11112,114 @@ PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, functi
     PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
     end)
+-- Gorilla Tag Professional
+elseif game.PlaceId == 8690998110 then
+local Players = game:GetService("Players")
+local ReplicatedFirst = game:GetService("ReplicatedFirst")
+local TweenService = game:GetService("TweenService")
+
+
+
+
+local screenGui = Instance.new("ScreenGui")
+syn.protect_gui(screenGui)
+screenGui.IgnoreGuiInset = true
+screenGui.Parent = game.CoreGui
+local textLabel = Instance.new("TextLabel")
+textLabel.Size = UDim2.new(1, 0, 1, 0)
+textLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
+textLabel.Font = Enum.Font.GothamSemibold
+textLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
+textLabel.Text = "Loading SkyHub."
+textLabel.TextSize = 28
+textLabel.Parent = screenGui
+local loadingRing = Instance.new("ImageLabel")
+loadingRing.Size = UDim2.new(0, 256, 0, 256)
+loadingRing.BackgroundTransparency = 1
+loadingRing.Image = "rbxassetid://4965945816"
+loadingRing.AnchorPoint = Vector2.new(0.5, 0.5)
+loadingRing.Position = UDim2.new(0.5, 0, 0.5, 0)
+loadingRing.Parent = screenGui
+
+ReplicatedFirst:RemoveDefaultLoadingScreen()
+
+local tweenInfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
+local tween = TweenService:Create(loadingRing, tweenInfo, {Rotation = 360})
+tween:Play()
+
+wait(5)
+screenGui:Destroy()
+
+local ScreenGui = Instance.new("ScreenGui")
+local TextLabel = Instance.new("TextLabel")
+syn.protect_gui(ScreenGui)
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.IgnoreGuiInset = true
+
+TextLabel.Parent = ScreenGui
+TextLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
+TextLabel.Size = UDim2.new(1, 0, 1, 0)
+TextLabel.Font = Enum.Font.GothamSemibold
+TextLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
+TextLabel.TextSize = 28
+TextLabel.Text = "Loaded!"
+
+wait(2.5)
+ScreenGui:Destroy()
+	    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+            local Window = Library.CreateLib("SkyHub Universal", OptTheme)
+            local Main = Window:NewTab("Main")
+            local MainSection = Main:NewSection("Main")
+            MainSection:NewButton("Discord Invite", "Copys Discord invite link", function()
+                setclipboard(string)
+            end)
+	 MainSection:NewButton("V3rm Script", "Copys Discord invite link", function()
+                -- Made by 13 YOLD
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/miroeramaa/TurtleLib/main/TurtleUiLib.lua"))()
+local window1 = library:Window("Scripts")
+local window2 = library:Window("Teleport Areas")
+window1:Button("Infinite Wins", function()
+    spawn(function()
+while true do
+   local dec = game:GetService("Workspace"):FindFirstChild("ClickToGetCash").ClickDetector
+   fireclickdetector(dec)
+   local fun = game:GetService("Workspace"):FindFirstChild("ClickToGetCash").ClickDetector
+   fireclickdetector(fun)
+   wait(0.1)
+end
+end)
+end)
+window2:Button("Spectate (Easy Win)", function()
+    spawn(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-39.386, 59.2163, -102.248)
+
+end)
+end)
+window1:Button("TP All to You (Use Lava)", function()
+    spawn(function()
+  for _, player in pairs(game.Players:GetPlayers()) do
+player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
+      end
+    end)
+end)
+window2:Button("Become a Lava Monke", function()
+    spawn(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(79.2755, 71.1624, -54.2756)
+end)
+end)
+window1:Slider("Walkspeed",16,70,5, function(value)
+  game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = value
+end)
+window1:Slider("JumpPower",50,150,20, function(value)
+  game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = value
+end)
+library:Keybind("Tab")
+game:GetService("StarterGui"):SetCore("SendNotification",{     
+Title = "Important!",     
+Text = "Infinite Wins is patched",
+Button1 = "unpatch pls?",Button2 = "no",     Duration = 20, })
+            end)
 -- Universal
 else
 local Players = game:GetService("Players")
@@ -12018,10 +12234,10 @@ end)
     else
     --[[games it supports Da Hood, Arsenal, Tower of Hell, KAT!, Fencing,
 Work At A Pizza Place, VR Hands, Adopt Me, Jailbreak, Prison Life, and
-Build A Boat For Treasure.
-11+ games
+Build A Boat For Treasure, and Gorrila Tag Professional.
+12+ games
 Rebuilt On IllusionHub
-Last Updated 1/6/2022
+Last Updated 2/17/2022
 ]]--
 local OptTheme = "DarkTheme"
 local string = "https://discord.gg/A6HQQXvwNs"
@@ -17017,6 +17233,114 @@ PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, functi
     PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
     end)
+-- Gorilla Tag Professional
+elseif game.PlaceId == 8690998110 then
+local Players = game:GetService("Players")
+local ReplicatedFirst = game:GetService("ReplicatedFirst")
+local TweenService = game:GetService("TweenService")
+
+
+
+
+local screenGui = Instance.new("ScreenGui")
+syn.protect_gui(screenGui)
+screenGui.IgnoreGuiInset = true
+screenGui.Parent = game.CoreGui
+local textLabel = Instance.new("TextLabel")
+textLabel.Size = UDim2.new(1, 0, 1, 0)
+textLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
+textLabel.Font = Enum.Font.GothamSemibold
+textLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
+textLabel.Text = "Loading SkyHub."
+textLabel.TextSize = 28
+textLabel.Parent = screenGui
+local loadingRing = Instance.new("ImageLabel")
+loadingRing.Size = UDim2.new(0, 256, 0, 256)
+loadingRing.BackgroundTransparency = 1
+loadingRing.Image = "rbxassetid://4965945816"
+loadingRing.AnchorPoint = Vector2.new(0.5, 0.5)
+loadingRing.Position = UDim2.new(0.5, 0, 0.5, 0)
+loadingRing.Parent = screenGui
+
+ReplicatedFirst:RemoveDefaultLoadingScreen()
+
+local tweenInfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
+local tween = TweenService:Create(loadingRing, tweenInfo, {Rotation = 360})
+tween:Play()
+
+wait(5)
+screenGui:Destroy()
+
+local ScreenGui = Instance.new("ScreenGui")
+local TextLabel = Instance.new("TextLabel")
+syn.protect_gui(ScreenGui)
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.IgnoreGuiInset = true
+
+TextLabel.Parent = ScreenGui
+TextLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
+TextLabel.Size = UDim2.new(1, 0, 1, 0)
+TextLabel.Font = Enum.Font.GothamSemibold
+TextLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
+TextLabel.TextSize = 28
+TextLabel.Text = "Loaded!"
+
+wait(2.5)
+ScreenGui:Destroy()
+	    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+            local Window = Library.CreateLib("SkyHub Universal", OptTheme)
+            local Main = Window:NewTab("Main")
+            local MainSection = Main:NewSection("Main")
+            MainSection:NewButton("Discord Invite", "Copys Discord invite link", function()
+                setclipboard(string)
+            end)
+	 MainSection:NewButton("V3rm Script", "Copys Discord invite link", function()
+                -- Made by 13 YOLD
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/miroeramaa/TurtleLib/main/TurtleUiLib.lua"))()
+local window1 = library:Window("Scripts")
+local window2 = library:Window("Teleport Areas")
+window1:Button("Infinite Wins", function()
+    spawn(function()
+while true do
+   local dec = game:GetService("Workspace"):FindFirstChild("ClickToGetCash").ClickDetector
+   fireclickdetector(dec)
+   local fun = game:GetService("Workspace"):FindFirstChild("ClickToGetCash").ClickDetector
+   fireclickdetector(fun)
+   wait(0.1)
+end
+end)
+end)
+window2:Button("Spectate (Easy Win)", function()
+    spawn(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-39.386, 59.2163, -102.248)
+
+end)
+end)
+window1:Button("TP All to You (Use Lava)", function()
+    spawn(function()
+  for _, player in pairs(game.Players:GetPlayers()) do
+player.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.HumanoidRootPart.Position)
+      end
+    end)
+end)
+window2:Button("Become a Lava Monke", function()
+    spawn(function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(79.2755, 71.1624, -54.2756)
+end)
+end)
+window1:Slider("Walkspeed",16,70,5, function(value)
+  game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = value
+end)
+window1:Slider("JumpPower",50,150,20, function(value)
+  game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = value
+end)
+library:Keybind("Tab")
+game:GetService("StarterGui"):SetCore("SendNotification",{     
+Title = "Important!",     
+Text = "Infinite Wins is patched",
+Button1 = "unpatch pls?",Button2 = "no",     Duration = 20, })
+            end)
 -- Universal
 else
 local Players = game:GetService("Players")
