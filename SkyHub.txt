@@ -1,9 +1,9 @@
 --[[games it supports Da Hood, Arsenal, Tower of Hell, KAT!, Fencing,
 Work At A Pizza Place, VR Hands, Adopt Me, Jailbreak, Prison Life, and
-Build A Boat For Treasure.
-11+ games
+Build A Boat For Treasure, and Gorilla Tag Professional.
+12+ games
 Rebuilt On IllusionHub
-Last Updated 12/23/2021
+Last Updated 2/18/2021
 ]]--
 if syn and syn.cache_replace and syn.cache_invalidate and syn.is_cached and syn.write_clipboard and syn.set_thread_identity then
 local ScreenGui = Instance.new("ScreenGui")
