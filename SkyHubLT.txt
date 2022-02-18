@@ -4,7 +4,7 @@ Work At A Pizza Place, VR Hands, Adopt Me, Jailbreak, Prison Life, and
 Build A Boat For Treasure, and Gorrila Tag Professional.
 12+ games
 Rebuilt On IllusionHub
-Last Updated 2/17/2022
+Last Updated 2/18/2022
 ]]--
 local OptTheme = "LightTheme"
 local string = "https://discord.gg/A6HQQXvwNs"
@@ -6116,7 +6116,7 @@ Work At A Pizza Place, VR Hands, Adopt Me, Jailbreak, Prison Life, and
 Build A Boat For Treasure, and Gorrila Tag Professional.
 12+ games
 Rebuilt On IllusionHub
-Last Updated 2/17/2022
+Last Updated 2/18/2022
 ]]--
 local OptTheme = "LightTheme"
 local string = "https://discord.gg/A6HQQXvwNs"
@@ -12231,13 +12231,14 @@ end)
                 end
        end)
     end
-    else
+    end
+    if not syn and not S == "Scriptware" then
     --[[games it supports Da Hood, Arsenal, Tower of Hell, KAT!, Fencing,
 Work At A Pizza Place, VR Hands, Adopt Me, Jailbreak, Prison Life, and
 Build A Boat For Treasure, and Gorrila Tag Professional.
 12+ games
 Rebuilt On IllusionHub
-Last Updated 2/17/2022
+Last Updated 2/18/2022
 ]]--
 local OptTheme = "LightTheme"
 local string = "https://discord.gg/A6HQQXvwNs"
