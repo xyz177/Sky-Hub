@@ -12231,6 +12231,7 @@ end)
                 end
        end)
     end
+    end
     if not syn and not S == "Scriptware" then
     --[[games it supports Da Hood, Arsenal, Tower of Hell, KAT!, Fencing,
 Work At A Pizza Place, VR Hands, Adopt Me, Jailbreak, Prison Life, and
