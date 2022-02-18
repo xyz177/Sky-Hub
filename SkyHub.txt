@@ -588,7 +588,8 @@ local function YWQGCSB_fake_script() -- SkySYNBut.SkySYNscript
 	end)
 	end
 coroutine.wrap(YWQGCSB_fake_script)()
-else
+end
+if not syn and not S == "Scriptware" then
 local ScreenGui = Instance.new("ScreenGui")
 local ScrollingFrame = Instance.new("ScrollingFrame")
 local SkyOG = Instance.new("ImageLabel")
