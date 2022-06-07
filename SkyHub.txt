@@ -5,11 +5,6 @@ Build A Boat For Treasure, and Gorilla Tag Professional.
 Rebuilt On IllusionHub
 Last Updated 3/10/2021
 ]]--
-local lolcheck = game.CoreGui.LOL542
-if lolcheck then
-lolcheck:Destroy()
-warn("Why would you execute twice lmao\n")
-end
 if syn and syn.cache_replace and syn.cache_invalidate and syn.is_cached and syn.write_clipboard and syn.set_thread_identity then
 local ScreenGui = Instance.new("ScreenGui")
 local ScrollingFrame = Instance.new("ScrollingFrame")
