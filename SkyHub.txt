@@ -7,7 +7,7 @@ Last Updated 2/2/2024
 didnt add any games or anything just added so it would work on mobile and fixed the script from not loading
 ]]--
 local OptTheme = "Midnight"
-local string = "https://discord.gg/A6HQQXvwNs"
+local string = "https://discord.gg/xwy5Cu62Vw"
 local string2 = "https://discord.com/invite/jVf7eSrED9"
 -- Da Hood
 if game.PlaceId == 2788229376 then
@@ -63,6 +63,17 @@ TextLabel.Text = "Loaded!"
 
 wait(2.5)
 ScreenGui:Destroy()
+game.StarterGui:SetCore("SendNotification",  {
+	Title = "Do You want to join the discord?";
+	Text = "Copy Discord Link";
+	Icon = "";
+	Duration = 5;
+	Button1 = "Yes";
+	Button2 = "No";
+	Callback = NotificationBindable;
+	if Button1 = true then 
+		setclipboard(2)
+	end
    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
    local Window = Library.CreateLib("SkyHub", OptTheme)
    local Main = Window:NewTab("Main")
@@ -5169,6 +5180,19 @@ ScreenGui:Destroy()
             MainSection:NewButton("Discord Invite", "Copys Discord invite link", function()
                 setclipboard(string)
             end)
+			wait(2.5)
+ScreenGui:Destroy()
+game.StarterGui:SetCore("SendNotification",  {
+	Title = "Do You want to join the discord?";
+	Text = "Copy Discord Link";
+	Icon = "";
+	Duration = 5;
+	Button1 = "Yes";
+	Button2 = "No";
+	Callback = NotificationBindable;
+	if Button1 = true then 
+		setclipboard(2)
+	end
 
             MainSection:NewButton("NoClip", "Walk Through Walls Hold V", function()
                 local h,char,play
