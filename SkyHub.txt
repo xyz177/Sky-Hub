@@ -80,6 +80,11 @@ MainSection:NewButton("Infinite Yield FE", "Admin", function()
    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
+
+MainSection:NewButton("fates admin", "Admin", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+ end)
+
  MainSection:NewButton("Discord Invite2", "Copys Discord invite link", function()
    setclipboard(string2)
 end)
@@ -163,6 +168,10 @@ end)
 MainSection:NewButton("Infinite Yield FE", "Admin", function()
    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
+
+MainSection:NewButton("fates admin", "Admin", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+ end)
 
 MainSection:NewButton("Cattori Hub", "idk", function()
                 _G.ToggleKeyBind = "g"
@@ -338,6 +347,10 @@ MainSection:NewButton("Infinite Yield FE", "Admin", function()
    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
+MainSection:NewButton("fates admin", "Admin", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+ end)
+
 local Player = Window:NewTab("Player")
    local PlayerSection = Player:NewSection("Player")
 PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, function(v) 
@@ -510,6 +523,10 @@ end)
 MainSection:NewButton("Infinite Yield FE", "Admin", function()
    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
+
+MainSection:NewButton("fates admin", "Admin", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+ end)
 
 
 local Player = Window:NewTab("Player")
@@ -1117,6 +1134,10 @@ end)
 MainSection:NewButton("Infinite Yield FE", "Admin", function()
    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
+
+MainSection:NewButton("fates admin", "Admin", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+ end)
 
 local Player = Window:NewTab("Player")
    local PlayerSection = Player:NewSection("Player")
@@ -1862,6 +1883,10 @@ MainSection:NewButton("Infinite Yield FE", "Admin", function()
    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
+MainSection:NewButton("fates admin", "Admin", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+ end)
+
 local Player = Window:NewTab("Player")
    local PlayerSection = Player:NewSection("Player")
 PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, function(v) 
@@ -2437,6 +2462,10 @@ end)
 MainSection:NewButton("Infinite Yield FE", "Admin", function()
    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
+
+MainSection:NewButton("fates admin", "Admin", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+ end)
 
 local Player = Window:NewTab("Player")
    local PlayerSection = Player:NewSection("Player")
@@ -3155,6 +3184,10 @@ end)
 MainSection:NewButton("Infinite Yield FE", "Admin", function()
    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
+
+MainSection:NewButton("fates admin", "Admin", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+ end)
 
  MainSection:NewButton("Discord Invite2", "Copys Discord invite link", function()
    setclipboard(string2)
@@ -4138,6 +4171,10 @@ MainSection:NewButton("Infinite Yield FE", "Admin", function()
    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
+MainSection:NewButton("fates admin", "Admin", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+ end)
+
 MainSection:NewButton("JailMonkey", "MASSIVE FPS DROP", function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeyScripts/main/JailMonkey.lua"))()
 end)
@@ -4847,6 +4884,10 @@ MainSection:NewButton("Infinite Yield FE", "Admin", function()
    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
+MainSection:NewButton("fates admin", "Admin", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+ end)
+
             MainSection:NewButton("Ezhub", "130+ games", function()
                 --[[ this is there cmds list
 https://pastebin.com/CvjkJxAt
@@ -4990,6 +5031,10 @@ end)
 MainSection:NewButton("Infinite Yield FE", "Admin", function()
    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
+
+MainSection:NewButton("fates admin", "Admin", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+ end)
 
 local Player = Window:NewTab("Player")
    local PlayerSection = Player:NewSection("Player")
