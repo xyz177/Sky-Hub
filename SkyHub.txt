@@ -63,17 +63,7 @@ TextLabel.Text = "Loaded!"
 
 wait(2.5)
 ScreenGui:Destroy()
-game.StarterGui:SetCore("SendNotification",  {
-	Title = "Do You want to join the discord?";
-	Text = "Copy Discord Link";
-	Icon = "";
-	Duration = 5;
-	Button1 = "Yes";
-	Button2 = "No";
-	Callback = NotificationBindable;
-	if Button1 = true then 
-		setclipboard(2)
-	end
+g
    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
    local Window = Library.CreateLib("SkyHub", OptTheme)
    local Main = Window:NewTab("Main")
@@ -5182,17 +5172,7 @@ ScreenGui:Destroy()
             end)
 			wait(2.5)
 ScreenGui:Destroy()
-game.StarterGui:SetCore("SendNotification",  {
-	Title = "Do You want to join the discord?";
-	Text = "Copy Discord Link";
-	Icon = "";
-	Duration = 5;
-	Button1 = "Yes";
-	Button2 = "No";
-	Callback = NotificationBindable;
-	if Button1 = true then 
-		setclipboard(2)
-	end
+
 
             MainSection:NewButton("NoClip", "Walk Through Walls Hold V", function()
                 local h,char,play
