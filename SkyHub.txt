@@ -4,6 +4,7 @@ Build A Boat For Treasure, Gorrila Tag Professional, and Murder Mystery 2.
 10+ games
 Rebuilt On IllusionHub
 Last Updated 2/12/2024
+works with Any executor AKA mobile or windows or wtv
 Added Murder Mystery 2
 ]]--
 local OptTheme = "Midnight"
