@@ -1,10 +1,10 @@
 --[[games it supports Da Hood, Arsenal, Tower of Hell, KAT!, Fencing,
-Work At A Pizza Place, VR Hands, Adopt Me, Jailbreak, Prison Life, and
-Build A Boat For Treasure, and Gorrila Tag Professional.
-12+ games
+Work At A Pizza Place, VR Hands, Adopt Me, Jailbreak, Prison Life,
+Build A Boat For Treasure, Gorrila Tag Professional, and Murder Mystery 2.
+10+ games
 Rebuilt On IllusionHub
 Last Updated 2/12/2024
-FINALLY FIXED DRAGGABLE ON MOBILEEEE!!!11!!
+Added Murder Mystery 2
 ]]--
 local OptTheme = "Midnight"
 local string = "https://discord.gg/xwy5Cu62Vw"
@@ -5153,8 +5153,208 @@ Title = "Important!",
 Text = "Infinite Wins is patched",
 Button1 = "unpatch pls?",Button2 = "no",     Duration = 20, })
             end)
--- Universal
-else
+-- Murder Mystery 2 or MM2
+elseif game.PlaceId == 142823291 then
+
+local Players = game:GetService("Players")
+local ReplicatedFirst = game:GetService("ReplicatedFirst")
+local TweenService = game:GetService("TweenService")
+
+local player = Players.LocalPlayer 
+local playerGui = player:WaitForChild("PlayerGui")
+
+local screenGui = Instance.new("ScreenGui")
+screenGui.IgnoreGuiInset = true
+screenGui.Parent = game.CoreGui
+local textLabel = Instance.new("TextLabel")
+textLabel.Size = UDim2.new(1, 0, 1, 0)
+textLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
+textLabel.Font = Enum.Font.GothamSemibold
+textLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
+textLabel.Text = "Loading SkyHub."
+textLabel.TextSize = 28
+textLabel.Parent = screenGui
+local loadingRing = Instance.new("ImageLabel")
+loadingRing.Size = UDim2.new(0, 256, 0, 256)
+loadingRing.BackgroundTransparency = 1
+loadingRing.Image = "rbxassetid://4965945816"
+loadingRing.AnchorPoint = Vector2.new(0.5, 0.5)
+loadingRing.Position = UDim2.new(0.5, 0, 0.5, 0)
+loadingRing.Parent = screenGui
+
+ReplicatedFirst:RemoveDefaultLoadingScreen()
+
+local tweenInfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
+local tween = TweenService:Create(loadingRing, tweenInfo, {Rotation = 360})
+tween:Play()
+
+wait(5)
+screenGui:Destroy()
+
+local ScreenGui = Instance.new("ScreenGui")
+local TextLabel = Instance.new("TextLabel")
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.IgnoreGuiInset = true
+
+TextLabel.Parent = ScreenGui
+TextLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
+TextLabel.Size = UDim2.new(1, 0, 1, 0)
+TextLabel.Font = Enum.Font.GothamSemibold
+TextLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
+TextLabel.TextSize = 28
+TextLabel.Text = "Loaded!"
+
+wait(2.5)
+ScreenGui:Destroy()
+	    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Kavolibupdate"))()
+            local Window = Library.CreateLib("SkyHub", OptTheme)
+            local Main = Window:NewTab("Main")
+            local MainSection = Main:NewSection("Main")
+            MainSection:NewButton("Discord Invite", "Copys Discord invite link", function()
+                setclipboard(string)
+            end)
+			wait(2.5)
+ScreenGui:Destroy()
+
+
+            MainSection:NewButton("MM2 Admin Panel", "not real admin stu", function()
+				loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/ScriptHubScripts/master/MM2%20Admin%20Panel'),true))()
+            end)
+
+            MainSection:NewButton("MM2 Vynixu", "Btools lol", function()
+				loadstring(game:GetObjects("rbxassetid://4001118261")[1].Source)()
+            end)
+ 
+MainSection:NewButton("XennyWare", "Takes Up hella space", function()
+	repeat wait() until game.Players.LocalPlayer.Character
+	url = "https://raw.githubusercontent.com/xennyy/Xenny-Ware/main/loader.lua"
+	loadstring(game:HttpGet(url))()
+	 end)    
+
+
+    MainSection:NewButton("MM2 AutoFarm V2", "idk", function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/L6CBWNYa",true))()
+end)
+
+MainSection:NewButton("tp coins to u", "idk", function()
+	while true do
+		wait()
+		local children = game.Workspace:GetChildren()
+		for _, child in pairs(children) do
+		for _, child in pairs(child:GetChildren()) do
+		table.insert(children, child)
+		end
+		
+		if child:IsA("BasePart") and child.Name == "Coin" then
+		child.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+		end
+		end
+		end
+		
+end)
+
+
+MainSection:NewButton("Psyhub", "idk", function()
+loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
+ end)
+
+MainSection:NewButton("VG Hub", "60+", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+ end)
+
+MainSection:NewButton("Remote Spy", "Find remotes press F9", function()
+loadstring(game:HttpGet('https://pastebin.com/raw/b33cjh0p'))()
+end)
+
+            MainSection:NewButton("Owl Hub", "46+ how", function()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+            end)
+
+        MainSection:NewButton("Infinite Yield FE", "Admin", function()
+            loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+        end)
+
+		MainSection:NewButton("fates admin", "adnim", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))()
+		 end)
+
+        MainSection:NewButton("Discord Invite2", "Copys Discord invite link", function()
+            setclipboard(string2)
+        end)
+        
+        MainSection:NewButton("Destroy GUIS", "CLCK A LOT OF TIMES", function()
+                for i, v in pairs(game:GetService("CoreGui"):GetDescendants()) do
+            if v.Name == "Main" and v.Parent then
+                v.Parent:Destroy()
+                wait(0.1)
+                v.Parent:Destroy()
+                wait(0.1)
+                v.Parent:Destroy()
+                wait(0.1)
+                v.Parent:Destroy()
+                wait(0.1)
+                v.Parent:Destroy()
+                wait(0.1)
+                v.Parent:Destroy()
+                wait(0.1)
+                v.Parent:Destroy()
+                wait(0.1)
+                v.Parent:Destroy()
+                wait(0.1)
+                v.Parent:Destroy()
+                wait(0.1)
+                v.Parent:Destroy()
+                wait(0.1)
+                v.Parent:Destroy()
+                wait(0.1)
+                v.Parent:Destroy()
+                wait(0.1)
+                v.Parent:Destroy()
+                wait(0.1)
+                v.Parent:Destroy()
+                wait(0.1)
+                v.Parent:Destroy()
+                wait(0.1)
+                v.Parent:Destroy()
+                wait(0.1)
+                v.Parent:Destroy()
+                break
+            end
+        end
+end)
+        
+        local Player = Window:NewTab("Player")
+        local PlayerSection = Player:NewSection("Player")
+        PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, function(v) 
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+        end)
+
+        PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
+            game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+        end)
+        
+        local Placeinfo = Window:NewTab("Place Info")
+        local Playerinform = Placeinfo:NewSection("Place Info")
+        
+         Playerinform:NewButton(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name, (game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Description), function()
+end)
+Playerinform:NewButton(game:GetService("Players"):GetNameFromUserIdAsync(game.CreatorId), (game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Description), function()
+
+end)
+       Playerinform:NewButton("FilterEnabled/Repesect Is: (Click dots)", ("Click on the button and press F9"), function()
+       print(game.Workspace.FilteringEnabled, "If it says true it means its on if it says false then it means its off")
+        if game:GetService("SoundService").RespectFilteringEnabled == true then
+                    print("RespectFilteringEnabled is enabled")
+                else
+                    print("RespectFilteringEnabled is disabled")
+                end
+       end)
+    end
+
+	-- Universal
+else 
 local Players = game:GetService("Players")
 local ReplicatedFirst = game:GetService("ReplicatedFirst")
 local TweenService = game:GetService("TweenService")
