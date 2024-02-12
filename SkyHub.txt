@@ -64,6 +64,7 @@ TextLabel.Text = "Loaded!"
 wait(2.5)
 ScreenGui:Destroy()
    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+   dragging = true
    local Window = Library.CreateLib("SkyHub", OptTheme)
    local Main = Window:NewTab("Main")
    local MainSection = Main:NewSection("Main")
@@ -5208,6 +5209,7 @@ TextLabel.Text = "Loaded!"
 wait(2.5)
 ScreenGui:Destroy()
 	    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+            dragging = true
             local Window = Library.CreateLib("SkyHub Universal", OptTheme)
             local Main = Window:NewTab("Main")
             local MainSection = Main:NewSection("Main")
