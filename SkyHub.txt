@@ -5352,7 +5352,6 @@ end)
                     print("RespectFilteringEnabled is disabled")
                 end
        end)
-    end
 
 	-- Universal
 else 
