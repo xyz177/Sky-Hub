@@ -1,6 +1,6 @@
 --[[games it supports Da Hood, Arsenal, Tower of Hell, KAT!, Fencing,
 Work At A Pizza Place, VR Hands, Adopt Me, Jailbreak, Prison Life,
-Build A Boat For Treasure, Gorrila Tag Professional, and Murder Mystery 2.
+Build A Boat For Treasure, Gorrila Tag Professional, and Murder Mystery 2. Universal
 10+ games
 Rebuilt On IllusionHub
 Last Updated 2/12/2024
