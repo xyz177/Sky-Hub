@@ -3,8 +3,8 @@ Work At A Pizza Place, VR Hands, Adopt Me, Jailbreak, Prison Life,
 Build A Boat For Treasure, Gorrila Tag Professional, and Murder Mystery 2. Universal
 10+ games
 Rebuilt On IllusionHub
-Last Updated 2/12/2024
-works with Any executor AKA mobile or windows or wtv
+Last Updated 2/13/2024
+Added Nameless admin and added inf yield mobile or normal depending on platform
 Added Murder Mystery 2
 ]]--
 local OptTheme = "Midnight"
