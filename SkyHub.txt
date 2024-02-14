@@ -1,10 +1,10 @@
 --[[games it supports Da Hood, Arsenal, Tower of Hell, KAT!, Fencing,
 Work At A Pizza Place, VR Hands, Adopt Me, Jailbreak, Prison Life,
-Build A Boat For Treasure, Gorrila Tag Professional, and Murder Mystery 2. Universal
+Build A Boat For Treasure, Gorrila Tag Professional, and Murder Mystery 2 and Universal.
 10+ games
 Rebuilt On IllusionHub
 Last Updated 2/13/2024
-Added Nameless admin and added inf yield mobile or normal depending on platform
+Added Nameless admin and added inf yield mobile or normal depending on platform and added hat hub too and FE spam sound in sum games
 Added Murder Mystery 2
 ]]--
 local OptTheme = "Midnight"
@@ -19,7 +19,7 @@ _G.infydtype = "https://raw.githubusercontent.com/yofriendfromschool1/mobile-del
 else
    _G.infydtype = "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"
 end
-print(_G.infydtype)
+
 -- Da Hood
 if game.PlaceId == 2788229376 then
 local Players = game:GetService("Players")
@@ -91,6 +91,9 @@ MainSection:NewButton("Infinite Yield FE", "Admin", function()
    loadstring(game:HttpGet(_G.infydtype))()
 end)
 
+MainSection:NewButton("Nameless Admin", "Admin", function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+ end)
 
 MainSection:NewButton("fates admin", "Admin", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
@@ -179,6 +182,10 @@ end)
 MainSection:NewButton("Infinite Yield FE", "Admin", function()
    loadstring(game:HttpGet(_G.infydtype))()
 end)
+
+MainSection:NewButton("Nameless Admin", "Admin", function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+ end)
 
 MainSection:NewButton("fates admin", "Admin", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
@@ -358,6 +365,10 @@ MainSection:NewButton("Infinite Yield FE", "Admin", function()
    loadstring(game:HttpGet(_G.infydtype))()
 end)
 
+MainSection:NewButton("Nameless Admin", "Admin", function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+ end)
+
 MainSection:NewButton("fates admin", "Admin", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
  end)
@@ -535,6 +546,10 @@ MainSection:NewButton("Infinite Yield FE", "Admin", function()
    loadstring(game:HttpGet(_G.infydtype))()
 end)
 
+MainSection:NewButton("Nameless Admin", "Admin", function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+ end)
+
 MainSection:NewButton("fates admin", "Admin", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
  end)
@@ -614,6 +629,16 @@ end)
  MainSection:NewButton("Discord Invite2", "Copys Discord invite link", function()
    setclipboard(string2)
 end)
+
+MainSection:NewButton("Hat Hub", "need hats for this or items", function()
+	loadstring(game:HttpGet(('https://pastebin.com/raw/GQ7VPnbz'),true))()
+ end)
+
+ MainSection:NewButton("FE spam sound", "if it says yes than everyone can hear if no then no one can hear", function()
+	local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/Jxereas/UI-Libraries/main/notification_gui_library.lua", true))() local SoundService = game:GetService("SoundService") if SoundService.RespectFilteringEnabled == false then Notification.new("success", "Success", "Everyone can hear the sounds in this game!") Notification.new("message", "YouTube : darkModz", "YouTube - darkmodz") else Notification.new("warning", "Warning", "Unfortunately no one else can hear it in this game, try a different one.\nMaybe an older game will work.") end while wait() do for _, sound in next, workspace:GetDescendants() do if sound:IsA("Sound") then sound.Volume = 10 sound:Play() end end end
+ end)
+
+ 
 
 MainSection:NewButton("Cattori Hub", "idk", function()
                 _G.ToggleKeyBind = "g"
@@ -1146,6 +1171,10 @@ MainSection:NewButton("Infinite Yield FE", "Admin", function()
    loadstring(game:HttpGet(_G.infydtype))()
 end)
 
+MainSection:NewButton("Nameless Admin", "Admin", function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+ end)
+
 MainSection:NewButton("fates admin", "Admin", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
  end)
@@ -1227,6 +1256,10 @@ end)
 MainSection:NewButton("IDK", "script", function()
    loadstring(game:HttpGet("https://pastebin.com/raw/cEwtwKZR",true))()
 end)
+
+MainSection:NewButton("FE spam sound", "if it says yes than everyone can hear if no then no one can hear", function()
+	local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/Jxereas/UI-Libraries/main/notification_gui_library.lua", true))() local SoundService = game:GetService("SoundService") if SoundService.RespectFilteringEnabled == false then Notification.new("success", "Success", "Everyone can hear the sounds in this game!") Notification.new("message", "YouTube : darkModz", "YouTube - darkmodz") else Notification.new("warning", "Warning", "Unfortunately no one else can hear it in this game, try a different one.\nMaybe an older game will work.") end while wait() do for _, sound in next, workspace:GetDescendants() do if sound:IsA("Sound") then sound.Volume = 10 sound:Play() end end end
+ end)
 
 MainSection:NewButton("FE Open Manager's Door", "Opens Manager's Door", function()
    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(43,5,7)
@@ -1894,6 +1927,10 @@ MainSection:NewButton("Infinite Yield FE", "Admin", function()
    loadstring(game:HttpGet(_G.infydtype))()
 end)
 
+MainSection:NewButton("Nameless Admin", "Admin", function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+ end)
+
 MainSection:NewButton("fates admin", "Admin", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
  end)
@@ -2473,6 +2510,10 @@ end)
 MainSection:NewButton("Infinite Yield FE", "Admin", function()
    loadstring(game:HttpGet(_G.infydtype))()
 end)
+
+MainSection:NewButton("Nameless Admin", "Admin", function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+ end)
 
 MainSection:NewButton("fates admin", "Admin", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
@@ -3195,6 +3236,10 @@ end)
 MainSection:NewButton("Infinite Yield FE", "Admin", function()
    loadstring(game:HttpGet(_G.infydtype))()
 end)
+
+MainSection:NewButton("Nameless Admin", "Admin", function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+ end)
 
 MainSection:NewButton("fates admin", "Admin", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
@@ -4182,6 +4227,10 @@ MainSection:NewButton("Infinite Yield FE", "Admin", function()
    loadstring(game:HttpGet(_G.infydtype))()
 end)
 
+MainSection:NewButton("Nameless Admin", "Admin", function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+ end)
+
 MainSection:NewButton("fates admin", "Admin", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
  end)
@@ -4895,8 +4944,16 @@ MainSection:NewButton("Infinite Yield FE", "Admin", function()
    loadstring(game:HttpGet(_G.infydtype))()
 end)
 
+MainSection:NewButton("Nameless Admin", "Admin", function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+ end)
+
 MainSection:NewButton("fates admin", "Admin", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+ end)
+
+ MainSection:NewButton("FE spam sound", "if it says yes than everyone can hear if no then no one can hear", function()
+	local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/Jxereas/UI-Libraries/main/notification_gui_library.lua", true))() local SoundService = game:GetService("SoundService") if SoundService.RespectFilteringEnabled == false then Notification.new("success", "Success", "Everyone can hear the sounds in this game!") Notification.new("message", "YouTube : darkModz", "YouTube - darkmodz") else Notification.new("warning", "Warning", "Unfortunately no one else can hear it in this game, try a different one.\nMaybe an older game will work.") end while wait() do for _, sound in next, workspace:GetDescendants() do if sound:IsA("Sound") then sound.Volume = 10 sound:Play() end end end
  end)
 
             MainSection:NewButton("Ezhub", "130+ games", function()
@@ -5043,6 +5100,10 @@ MainSection:NewButton("Infinite Yield FE", "Admin", function()
    loadstring(game:HttpGet(_G.infydtype))()
 end)
 
+MainSection:NewButton("Nameless Admin", "Admin", function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+ end)
+
 MainSection:NewButton("fates admin", "Admin", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
  end)
@@ -5112,7 +5173,7 @@ TextLabel.Text = "Loaded!"
 wait(2.5)
 ScreenGui:Destroy()
 	    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Kavolibupdate"))()
-            local Window = Library.CreateLib("SkyHub Universal", OptTheme)
+            local Window = Library.CreateLib("SkyHub", OptTheme)
             local Main = Window:NewTab("Main")
             local MainSection = Main:NewSection("Main")
             MainSection:NewButton("Discord Invite", "Copys Discord invite link", function()
@@ -5286,6 +5347,10 @@ end)
         MainSection:NewButton("Infinite Yield FE", "Admin", function()
             loadstring(game:HttpGet(_G.infydtype))()
         end)
+
+		MainSection:NewButton("Nameless Admin", "Admin", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+		 end)
 
 		MainSection:NewButton("fates admin", "adnim", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))()
@@ -6304,6 +6369,20 @@ https://pastebin.com/vavZfexv
         MainSection:NewButton("Infinite Yield FE", "Admin", function()
             loadstring(game:HttpGet(_G.infydtype))()
         end)
+
+		MainSection:NewButton("Hat Hub", "need hats for this or items", function()
+			loadstring(game:HttpGet(('https://pastebin.com/raw/GQ7VPnbz'),true))()
+		 end)
+
+
+		 MainSection:NewButton("FE spam sound", "if it says yes than everyone can hear if no then no one can hear", function()
+			local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/Jxereas/UI-Libraries/main/notification_gui_library.lua", true))() local SoundService = game:GetService("SoundService") if SoundService.RespectFilteringEnabled == false then Notification.new("success", "Success", "Everyone can hear the sounds in this game!") Notification.new("message", "YouTube : darkModz", "YouTube - darkmodz") else Notification.new("warning", "Warning", "Unfortunately no one else can hear it in this game, try a different one.\nMaybe an older game will work.") end while wait() do for _, sound in next, workspace:GetDescendants() do if sound:IsA("Sound") then sound.Volume = 10 sound:Play() end end end
+		 end)
+
+
+		MainSection:NewButton("Nameless Admin", "Admin", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+		 end)
 
 		MainSection:NewButton("fates admin", "adnim", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))()
