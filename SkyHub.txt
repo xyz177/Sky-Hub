@@ -10,15 +10,16 @@ Added Murder Mystery 2
 local OptTheme = "Midnight"
 local string = "https://discord.gg/xwy5Cu62Vw"
 local string2 = "https://discord.com/invite/jVf7eSrED9"
-local string3 = 1
+local string3 = 12
 UserInputService = game:GetService("UserInputService")
 local IsOnMobile = table.find({Enum.Platform.IOS, Enum.Platform.Android}, UserInputService:GetPlatform())
 
 if IsOnMobile then
-print("on mobile")
+string3 = 1
 else
-   print("nah")
+   string3 = 44
 end
+print(string3)
 -- Da Hood
 if game.PlaceId == 2788229376 then
 local Players = game:GetService("Players")
