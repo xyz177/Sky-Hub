@@ -15,7 +15,7 @@ local UserInputService = game:GetService("UserInputService")
 local function isMobile()
     return UserInputService.TouchEnabled
 end
-if isMobile then
+if isMobile() then
 string3 = "https://github.com/yofriendfromschool1/mobile-delta-inf-yield"
 else
 	string3 = "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"
