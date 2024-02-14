@@ -13,7 +13,11 @@ local string2 = "https://discord.com/invite/jVf7eSrED9"
 local string3
 local UserInputService = game:GetService("UserInputService")
 local function isMobile()
-    return UserInputService.TouchEnabled
+    if UserInputService then
+        return UserInputService.TouchEnabled or false
+    else
+        return false
+    end
 end
 
 if isMobile() then
