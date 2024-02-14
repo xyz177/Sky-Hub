@@ -10,6 +10,13 @@ Added Murder Mystery 2
 local OptTheme = "Midnight"
 local string = "https://discord.gg/xwy5Cu62Vw"
 local string2 = "https://discord.com/invite/jVf7eSrED9"
+local string3 = ""
+local IsOnMobile = table.find({Enum.Platform.IOS, Enum.Platform.Android}, UserInputService:GetPlatform())
+if IsOnMobile then
+string3 = "https://github.com/yofriendfromschool1/mobile-delta-inf-yield"
+else
+	string3 = "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"
+end
 -- Da Hood
 if game.PlaceId == 2788229376 then
 local Players = game:GetService("Players")
@@ -78,7 +85,7 @@ end)
 
 
 MainSection:NewButton("Infinite Yield FE", "Admin", function()
-   loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+   loadstring(game:HttpGet(string3))()
 end)
 
 
@@ -167,7 +174,7 @@ end)
 
 
 MainSection:NewButton("Infinite Yield FE", "Admin", function()
-   loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+   loadstring(game:HttpGet(string3))()
 end)
 
 MainSection:NewButton("fates admin", "Admin", function()
@@ -345,7 +352,7 @@ MainSection:NewButton("Tower of hell script2", "idka", function()
 end)
 
 MainSection:NewButton("Infinite Yield FE", "Admin", function()
-   loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+   loadstring(game:HttpGet(string3))()
 end)
 
 MainSection:NewButton("fates admin", "Admin", function()
@@ -522,7 +529,7 @@ game.Players.LocalPlayer.CharacterAdded:connect(function()
 end)
 
 MainSection:NewButton("Infinite Yield FE", "Admin", function()
-   loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+   loadstring(game:HttpGet(string3))()
 end)
 
 MainSection:NewButton("fates admin", "Admin", function()
@@ -1133,7 +1140,7 @@ game.Lighting["LinkedSword"]:Clone().Parent = game.Players.LocalPlayer.Backpack
 end)
 
 MainSection:NewButton("Infinite Yield FE", "Admin", function()
-   loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+   loadstring(game:HttpGet(string3))()
 end)
 
 MainSection:NewButton("fates admin", "Admin", function()
@@ -1881,7 +1888,7 @@ MainSection:NewButton("FE Teleport To manager chair", "it tps to manager chair",
   end)
 
 MainSection:NewButton("Infinite Yield FE", "Admin", function()
-   loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+   loadstring(game:HttpGet(string3))()
 end)
 
 MainSection:NewButton("fates admin", "Admin", function()
@@ -2461,7 +2468,7 @@ end)
  
 
 MainSection:NewButton("Infinite Yield FE", "Admin", function()
-   loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+   loadstring(game:HttpGet(string3))()
 end)
 
 MainSection:NewButton("fates admin", "Admin", function()
@@ -3183,7 +3190,7 @@ end
 end)
 
 MainSection:NewButton("Infinite Yield FE", "Admin", function()
-   loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+   loadstring(game:HttpGet(string3))()
 end)
 
 MainSection:NewButton("fates admin", "Admin", function()
@@ -4169,7 +4176,7 @@ end)
 end)
 
 MainSection:NewButton("Infinite Yield FE", "Admin", function()
-   loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+   loadstring(game:HttpGet(string3))()
 end)
 
 MainSection:NewButton("fates admin", "Admin", function()
@@ -4882,7 +4889,7 @@ end)
 
 
 MainSection:NewButton("Infinite Yield FE", "Admin", function()
-   loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+   loadstring(game:HttpGet(string3))()
 end)
 
 MainSection:NewButton("fates admin", "Admin", function()
@@ -5030,7 +5037,7 @@ MainSection:NewButton("scriptt", "just a gui", function()
 end)
 
 MainSection:NewButton("Infinite Yield FE", "Admin", function()
-   loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+   loadstring(game:HttpGet(string3))()
 end)
 
 MainSection:NewButton("fates admin", "Admin", function()
@@ -5274,7 +5281,7 @@ end)
             end)
 
         MainSection:NewButton("Infinite Yield FE", "Admin", function()
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+            loadstring(game:HttpGet(string3))()
         end)
 
 		MainSection:NewButton("fates admin", "adnim", function()
@@ -6292,7 +6299,7 @@ https://pastebin.com/vavZfexv
             end)
 
         MainSection:NewButton("Infinite Yield FE", "Admin", function()
-            loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+            loadstring(game:HttpGet(string3))()
         end)
 
 		MainSection:NewButton("fates admin", "adnim", function()
