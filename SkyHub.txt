@@ -7182,8 +7182,6 @@ else
             MainSection:NewButton("Discord Invite", "Copys Discord invite link", function()
                 setclipboard(string)
             end)
-			wait(2.5)
-ScreenGui:Destroy()
 
 
             MainSection:NewButton("NoClip", "Walk Through Walls Hold V", function()
