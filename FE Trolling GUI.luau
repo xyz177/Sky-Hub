@@ -1,3 +1,4 @@
+-- Made on 2/17/2024
 local Library = loadstring(game:HttpGet(_G.guidragtype))()
    local Window = Library.CreateLib("SkyHub", OptTheme)
    local Main = Window:NewTab("Main")
@@ -7,7 +8,7 @@ local Library = loadstring(game:HttpGet(_G.guidragtype))()
 end)
 
 MainSection:NewButton("Infinite Yield FE", "Admin", function()
-   loadstring(game:HttpGet(_G.infydtype))()
+   loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
 MainSection:NewButton("Nameless Admin", "Admin", function()
