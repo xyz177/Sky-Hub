@@ -1,4 +1,7 @@
 -- Made on 2/17/2024
+local OptTheme = "Midnight"
+local string = "https://discord.gg/xwy5Cu62Vw"
+local string2 = "https://discord.com/invite/jVf7eSrED9"
 _G.guidragtype = 1
 UserInputService = game:GetService("UserInputService")
 local IsOnMobile = table.find({Enum.Platform.IOS, Enum.Platform.Android}, UserInputService:GetPlatform())
