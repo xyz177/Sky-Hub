@@ -11,7 +11,7 @@ _G.guidragtype = "https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/
 else
    _G.guidragtype = "https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"
 end
-local Library = loadstring(game:HttpGet(_G.guidragtype))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Kavolibupdate"))()
    local Window = Library.CreateLib("SkyHub", OptTheme)
    local Main = Window:NewTab("Main")
    local MainSection = Main:NewSection("Main")
