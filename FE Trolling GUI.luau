@@ -199,7 +199,31 @@ RunService.Heartbeat:Connect(function()
     end
 end)
 end)
+
+MainSection:NewButton("FE Mic Up kill all", "kill all yall", function()
+   for i, v in pairs(game:GetService("Players"):GetPlayers()) do
+      if v ~= game.Players.LocalPlayer then
+      local function tp()
+      v.Character.HumanoidRootPart.CFrame = game.workspace["Guest 666"].HumanoidRootPart.CFrame
+      end
+      pcall(tp)
+      end
+      end
+      wait()
+end)
  
+MainSection:NewButton("FE Mic Up lag and noise spam", "yu", function()
+   for i,v in pairs(workspace:GetDescendants()) do
+      if v:IsA('ClickDetector') and not v.Parent.Name:match('Purchase') then
+          spawn(function()
+              for i=1, 20 do
+                  fireclickdetector(v)
+                  task.wait(.01)
+              end
+          end)
+      end
+   end
+end)
 
    local Player = Window:NewTab("Player")
    local PlayerSection = Player:NewSection("Player")
