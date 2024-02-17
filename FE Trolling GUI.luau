@@ -2,7 +2,18 @@
 local OptTheme = "Midnight"
 local string = "https://discord.gg/xwy5Cu62Vw"
 local string2 = "https://discord.com/invite/jVf7eSrED9"
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+_G.guidragtype = 1
+UserInputService = game:GetService("UserInputService")
+local IsOnMobile = table.find({Enum.Platform.IOS, Enum.Platform.Android}, UserInputService:GetPlatform())
+
+if IsOnMobile then
+    _G.infydtype = "https://raw.githubusercontent.com/yofriendfromschool1/mobile-delta-inf-yield/main/deltainfyield.txt"
+    _G.guidragtype = "https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Kavolibupdate"
+    else
+       _G.infydtype = "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"
+       _G.guidragtype = "https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"
+    end
+local Library = loadstring(game:HttpGet(_G.guidragtype))()
    local Window = Library.CreateLib("SkyHub", OptTheme)
    local Main = Window:NewTab("Main")
    local MainSection = Main:NewSection("Main")
@@ -11,7 +22,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHept
 end)
 
 MainSection:NewButton("Infinite Yield FE", "Admin", function()
-   loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+   loadstring(game:HttpGet(_G.infydtype))()
 end)
 
 MainSection:NewButton("Nameless Admin", "Admin", function()
@@ -69,60 +80,6 @@ MainSection:NewButton("Netless V2", "need to do i think every time u reset", fun
   loadstring(game:HttpGet("https://gist.githubusercontent.com/dark-modz/74581bf579eea6313bc234d2808a14bc/raw/8a38ca0f328c91b6f358ad9df2413fabed213b2a/ppscriptv2", true))()
  end)
 
- MainSection:NewButton("FE Big Player Script R15", "Makes your player taller also make sure your scale/proportions are max on everything besides proportions", function()
-    local LocalPlayer = game:GetService("Players").LocalPlayer
-    local Character = LocalPlayer.Character
-    local Humanoid = Character:FindFirstChildOfClass("Humanoid")
-    
-    function rm()
-        for i,v in pairs(Character:GetDescendants()) do
-            if v:IsA("BasePart") then
-                if v.Name == "Handle" or v.Name == "Head" then
-                    if Character.Head:FindFirstChild("OriginalSize") then
-                        Character.Head.OriginalSize:Destroy()
-                    end
-                else
-                    for i,cav in pairs(v:GetDescendants()) do
-                        if cav:IsA("Attachment") then
-                            if cav:FindFirstChild("OriginalPosition") then
-                                cav.OriginalPosition:Destroy()  
-                            end
-                        end
-                    end
-                    v:FindFirstChild("OriginalSize"):Destroy()
-                    if v:FindFirstChild("AvatarPartScaleType") then
-                        v:FindFirstChild("AvatarPartScaleType"):Destroy()
-                    end
-                end
-            end
-        end
-    end
-    
-    rm()
-    wait(0.5)
-    Humanoid:FindFirstChild("BodyProportionScale"):Destroy()
-    wait(1)
-    
-    rm()
-    wait(0.5)
-    Humanoid:FindFirstChild("BodyHeightScale"):Destroy()
-    wait(1)
-    
-    rm()
-    wait(0.5)
-    Humanoid:FindFirstChild("BodyWidthScale"):Destroy()
-    wait(1)
-    
-    rm()
-    wait(0.5)
-    Humanoid:FindFirstChild("BodyDepthScale"):Destroy()
-    wait(1)
-    
-    rm()
-    wait(0.5)
-    Humanoid:FindFirstChild("HeadScale"):Destroy()
-    wait(1)
- end)
 
  MainSection:NewButton("FE Friend Script", "Need hats", function()
     --made by 1+1=2/rouxhaver
