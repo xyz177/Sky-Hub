@@ -1,79 +1,31 @@
 --[[games it supports Da Hood, Arsenal, Tower of Hell, KAT!, Fencing,
 Work At A Pizza Place, VR Hands, Adopt Me, Jailbreak, Prison Life,
-Build A Boat For Treasure, Gorrila Tag Professional, and Murder Mystery 2 and Universal.
+Build A Boat For Treasure, Gorilla Tag Professional, and Murder Mystery 2 and Universal.
 10+ games
 Rebuilt On IllusionHub
 Last Updated 2/17/2024
-Added VFly and Hoho hub
+Removed annoying loading thing and fixed pc/emulator gui drag and added FE Trolling GUI 
+and removed cattori hub since its deleted/discountined and Fixed jailbreak script not loading
 ]]--
 local OptTheme = "Midnight"
 local string = "https://discord.gg/xwy5Cu62Vw"
 local string2 = "https://discord.com/invite/jVf7eSrED9"
 _G.infydtype = 1
+_G.guidragtype = 1
 UserInputService = game:GetService("UserInputService")
 local IsOnMobile = table.find({Enum.Platform.IOS, Enum.Platform.Android}, UserInputService:GetPlatform())
 
 if IsOnMobile then
 _G.infydtype = "https://raw.githubusercontent.com/yofriendfromschool1/mobile-delta-inf-yield/main/deltainfyield.txt"
+_G.guidragtype = "https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Kavolibupdate"
 else
    _G.infydtype = "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"
+   _G.guidragtype = "https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"
 end
 
 -- Da Hood
 if game.PlaceId == 2788229376 then
-local Players = game:GetService("Players")
-local ReplicatedFirst = game:GetService("ReplicatedFirst")
-local TweenService = game:GetService("TweenService")
-
-local player = Players.LocalPlayer 
-local playerGui = player:WaitForChild("PlayerGui")
-
-local screenGui = Instance.new("ScreenGui")
-screenGui.IgnoreGuiInset = true
-screenGui.Parent = game.CoreGui
-local textLabel = Instance.new("TextLabel")
-textLabel.Size = UDim2.new(1, 0, 1, 0)
-textLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
-textLabel.Font = Enum.Font.GothamSemibold
-textLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-textLabel.Text = "Loading SkyHub."
-textLabel.TextSize = 28
-textLabel.Parent = screenGui
-local loadingRing = Instance.new("ImageLabel")
-loadingRing.Size = UDim2.new(0, 256, 0, 256)
-loadingRing.BackgroundTransparency = 1
-loadingRing.Image = "rbxassetid://4965945816"
-loadingRing.AnchorPoint = Vector2.new(0.5, 0.5)
-loadingRing.Position = UDim2.new(0.5, 0, 0.5, 0)
-loadingRing.Parent = screenGui
-
-ReplicatedFirst:RemoveDefaultLoadingScreen()
-
-local tweenInfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
-local tween = TweenService:Create(loadingRing, tweenInfo, {Rotation = 360})
-tween:Play()
-
-wait(5)
-screenGui:Destroy()
-
-local ScreenGui = Instance.new("ScreenGui")
-local TextLabel = Instance.new("TextLabel")
-
-ScreenGui.Parent = game.CoreGui
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ScreenGui.IgnoreGuiInset = true
-
-TextLabel.Parent = ScreenGui
-TextLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
-TextLabel.Size = UDim2.new(1, 0, 1, 0)
-TextLabel.Font = Enum.Font.GothamSemibold
-TextLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-TextLabel.TextSize = 28
-TextLabel.Text = "Loaded!"
-
-wait(2.5)
-ScreenGui:Destroy()
-   local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Kavolibupdate"))()
+   local Library = loadstring(game:HttpGet(_G.guidragtype))()
    local Window = Library.CreateLib("SkyHub", OptTheme)
    local Main = Window:NewTab("Main")
    local MainSection = Main:NewSection("Main")
@@ -221,59 +173,7 @@ PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, functi
     end)
 --Arsenal
 elseif game.PlaceId == 286090429 then
-local Players = game:GetService("Players")
-local ReplicatedFirst = game:GetService("ReplicatedFirst")
-local TweenService = game:GetService("TweenService")
-
-local player = Players.LocalPlayer 
-local playerGui = player:WaitForChild("PlayerGui")
-
-local screenGui = Instance.new("ScreenGui")
-screenGui.IgnoreGuiInset = true
-screenGui.Parent = game.CoreGui
-local textLabel = Instance.new("TextLabel")
-textLabel.Size = UDim2.new(1, 0, 1, 0)
-textLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
-textLabel.Font = Enum.Font.GothamSemibold
-textLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-textLabel.Text = "Loading SkyHub."
-textLabel.TextSize = 28
-textLabel.Parent = screenGui
-local loadingRing = Instance.new("ImageLabel")
-loadingRing.Size = UDim2.new(0, 256, 0, 256)
-loadingRing.BackgroundTransparency = 1
-loadingRing.Image = "rbxassetid://4965945816"
-loadingRing.AnchorPoint = Vector2.new(0.5, 0.5)
-loadingRing.Position = UDim2.new(0.5, 0, 0.5, 0)
-loadingRing.Parent = screenGui
-
-ReplicatedFirst:RemoveDefaultLoadingScreen()
-
-local tweenInfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
-local tween = TweenService:Create(loadingRing, tweenInfo, {Rotation = 360})
-tween:Play()
-
-wait(5)
-screenGui:Destroy()
-
-local ScreenGui = Instance.new("ScreenGui")
-local TextLabel = Instance.new("TextLabel")
-
-ScreenGui.Parent = game.CoreGui
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ScreenGui.IgnoreGuiInset = true
-
-TextLabel.Parent = ScreenGui
-TextLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
-TextLabel.Size = UDim2.new(1, 0, 1, 0)
-TextLabel.Font = Enum.Font.GothamSemibold
-TextLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-TextLabel.TextSize = 28
-TextLabel.Text = "Loaded!"
-
-wait(2.5)
-ScreenGui:Destroy()
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Kavolibupdate"))()
+local Library = loadstring(game:HttpGet(_G.guidragtype))()
    local Window = Library.CreateLib("SkyHub", OptTheme)
    local Main = Window:NewTab("Main")
    local MainSection = Main:NewSection("Main")
@@ -410,10 +310,7 @@ end
 end)
 end)
 
-MainSection:NewButton("Cattori Hub", "idk", function()
-                _G.ToggleKeyBind = "g"
-loadstring(game:HttpGet('https://cattori.xyz/main.lua'))()
-end)
+
 
 MainSection:NewButton("CocoHub", "idk", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/CocoHub/master/CocoZHub'),true))()
@@ -489,59 +386,7 @@ end
   end)
 -- Tower Of Hell
 elseif game.PlaceId == 1962086868 then
-local Players = game:GetService("Players")
-local ReplicatedFirst = game:GetService("ReplicatedFirst")
-local TweenService = game:GetService("TweenService")
-
-local player = Players.LocalPlayer 
-local playerGui = player:WaitForChild("PlayerGui")
-
-local screenGui = Instance.new("ScreenGui")
-screenGui.IgnoreGuiInset = true
-screenGui.Parent = game.CoreGui
-local textLabel = Instance.new("TextLabel")
-textLabel.Size = UDim2.new(1, 0, 1, 0)
-textLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
-textLabel.Font = Enum.Font.GothamSemibold
-textLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-textLabel.Text = "Loading SkyHub."
-textLabel.TextSize = 28
-textLabel.Parent = screenGui
-local loadingRing = Instance.new("ImageLabel")
-loadingRing.Size = UDim2.new(0, 256, 0, 256)
-loadingRing.BackgroundTransparency = 1
-loadingRing.Image = "rbxassetid://4965945816"
-loadingRing.AnchorPoint = Vector2.new(0.5, 0.5)
-loadingRing.Position = UDim2.new(0.5, 0, 0.5, 0)
-loadingRing.Parent = screenGui
-
-ReplicatedFirst:RemoveDefaultLoadingScreen()
-
-local tweenInfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
-local tween = TweenService:Create(loadingRing, tweenInfo, {Rotation = 360})
-tween:Play()
-
-wait(5)
-screenGui:Destroy()
-
-local ScreenGui = Instance.new("ScreenGui")
-local TextLabel = Instance.new("TextLabel")
-
-ScreenGui.Parent = game.CoreGui
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ScreenGui.IgnoreGuiInset = true
-
-TextLabel.Parent = ScreenGui
-TextLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
-TextLabel.Size = UDim2.new(1, 0, 1, 0)
-TextLabel.Font = Enum.Font.GothamSemibold
-TextLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-TextLabel.TextSize = 28
-TextLabel.Text = "Loaded!"
-
-wait(2.5)
-ScreenGui:Destroy()
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Kavolibupdate"))()
+local Library = loadstring(game:HttpGet(_G.guidragtype))()
    local Window = Library.CreateLib("SkyHub", OptTheme)
    local Main = Window:NewTab("Main")
    local MainSection = Main:NewSection("Main")
@@ -557,10 +402,7 @@ MainSection:NewButton("CocoHub", "idk", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/CocoHub/master/CocoZHub'),true))()
  end)
 
-MainSection:NewButton("Cattori Hub", "idk", function()
-                _G.ToggleKeyBind = "g"
-loadstring(game:HttpGet('https://cattori.xyz/main.lua'))()
-end)
+
 
             MainSection:NewButton("Ezhub", "130+ games", function()
                 --[[ this is there cmds list
@@ -607,59 +449,7 @@ PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, functi
     end)
 -- KAT!
 elseif game.PlaceId == 621129760 then 
-local Players = game:GetService("Players")
-local ReplicatedFirst = game:GetService("ReplicatedFirst")
-local TweenService = game:GetService("TweenService")
-
-local player = Players.LocalPlayer 
-local playerGui = player:WaitForChild("PlayerGui")
-
-local screenGui = Instance.new("ScreenGui")
-screenGui.IgnoreGuiInset = true
-screenGui.Parent = game.CoreGui
-local textLabel = Instance.new("TextLabel")
-textLabel.Size = UDim2.new(1, 0, 1, 0)
-textLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
-textLabel.Font = Enum.Font.GothamSemibold
-textLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-textLabel.Text = "Loading SkyHub."
-textLabel.TextSize = 28
-textLabel.Parent = screenGui
-local loadingRing = Instance.new("ImageLabel")
-loadingRing.Size = UDim2.new(0, 256, 0, 256)
-loadingRing.BackgroundTransparency = 1
-loadingRing.Image = "rbxassetid://4965945816"
-loadingRing.AnchorPoint = Vector2.new(0.5, 0.5)
-loadingRing.Position = UDim2.new(0.5, 0, 0.5, 0)
-loadingRing.Parent = screenGui
-
-ReplicatedFirst:RemoveDefaultLoadingScreen()
-
-local tweenInfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
-local tween = TweenService:Create(loadingRing, tweenInfo, {Rotation = 360})
-tween:Play()
-
-wait(5)
-screenGui:Destroy()
-
-local ScreenGui = Instance.new("ScreenGui")
-local TextLabel = Instance.new("TextLabel")
-
-ScreenGui.Parent = game.CoreGui
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ScreenGui.IgnoreGuiInset = true
-
-TextLabel.Parent = ScreenGui
-TextLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
-TextLabel.Size = UDim2.new(1, 0, 1, 0)
-TextLabel.Font = Enum.Font.GothamSemibold
-TextLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-TextLabel.TextSize = 28
-TextLabel.Text = "Loaded!"
-
-wait(2.5)
-ScreenGui:Destroy()
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Kavolibupdate"))()
+local Library = loadstring(game:HttpGet(_G.guidragtype))()
    local Window = Library.CreateLib("SkyHub", OptTheme)
    local Main = Window:NewTab("Main")
    local MainSection = Main:NewSection("Main")
@@ -788,10 +578,7 @@ MainSection:NewButton("VG Hub", "60+", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
  end)
 
-MainSection:NewButton("Cattori Hub", "idk", function()
-                _G.ToggleKeyBind = "g"
-loadstring(game:HttpGet('https://cattori.xyz/main.lua'))()
-end)
+
 
             MainSection:NewButton("Ezhub", "130+ games", function()
                 --[[ this is there cmds list
@@ -897,59 +684,7 @@ PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, functi
     end)
  -- Fencing
  elseif game.PlaceId == 12109643 then
-local Players = game:GetService("Players")
-local ReplicatedFirst = game:GetService("ReplicatedFirst")
-local TweenService = game:GetService("TweenService")
-
-local player = Players.LocalPlayer 
-local playerGui = player:WaitForChild("PlayerGui")
-
-local screenGui = Instance.new("ScreenGui")
-screenGui.IgnoreGuiInset = true
-screenGui.Parent = game.CoreGui
-local textLabel = Instance.new("TextLabel")
-textLabel.Size = UDim2.new(1, 0, 1, 0)
-textLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
-textLabel.Font = Enum.Font.GothamSemibold
-textLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-textLabel.Text = "Loading SkyHub."
-textLabel.TextSize = 28
-textLabel.Parent = screenGui
-local loadingRing = Instance.new("ImageLabel")
-loadingRing.Size = UDim2.new(0, 256, 0, 256)
-loadingRing.BackgroundTransparency = 1
-loadingRing.Image = "rbxassetid://4965945816"
-loadingRing.AnchorPoint = Vector2.new(0.5, 0.5)
-loadingRing.Position = UDim2.new(0.5, 0, 0.5, 0)
-loadingRing.Parent = screenGui
-
-ReplicatedFirst:RemoveDefaultLoadingScreen()
-
-local tweenInfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
-local tween = TweenService:Create(loadingRing, tweenInfo, {Rotation = 360})
-tween:Play()
-
-wait(5)
-screenGui:Destroy()
-
-local ScreenGui = Instance.new("ScreenGui")
-local TextLabel = Instance.new("TextLabel")
-
-ScreenGui.Parent = game.CoreGui
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ScreenGui.IgnoreGuiInset = true
-
-TextLabel.Parent = ScreenGui
-TextLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
-TextLabel.Size = UDim2.new(1, 0, 1, 0)
-TextLabel.Font = Enum.Font.GothamSemibold
-TextLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-TextLabel.TextSize = 28
-TextLabel.Text = "Loaded!"
-
-wait(2.5)
-ScreenGui:Destroy()
- local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Kavolibupdate"))()
+ local Library = loadstring(game:HttpGet(_G.guidragtype))()
    local Window = Library.CreateLib("SkyHub", OptTheme)
    local Main = Window:NewTab("Main")
    local MainSection = Main:NewSection("Main")
@@ -971,10 +706,7 @@ MainSection:NewButton("Hat Hub", "need hats for this or items", function()
 
  
 
-MainSection:NewButton("Cattori Hub", "idk", function()
-                _G.ToggleKeyBind = "g"
-loadstring(game:HttpGet('https://cattori.xyz/main.lua'))()
-end)
+
 
    MainSection:NewButton("FE Brick Spam", "spams bricks", function()
    -- https://www.roblox.com/games/12109643/Fencing
@@ -1521,58 +1253,7 @@ PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, functi
     end)
 -- Work at a Pizza Place
  elseif game.PlaceId == 192800 then
-local Players = game:GetService("Players")
-local ReplicatedFirst = game:GetService("ReplicatedFirst")
-local TweenService = game:GetService("TweenService")
-
-local player = Players.LocalPlayer 
-local playerGui = player:WaitForChild("PlayerGui")
-
-local screenGui = Instance.new("ScreenGui")
-screenGui.IgnoreGuiInset = true
-screenGui.Parent = game.CoreGui
-local textLabel = Instance.new("TextLabel")
-textLabel.Size = UDim2.new(1, 0, 1, 0)
-textLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
-textLabel.Font = Enum.Font.GothamSemibold
-textLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-textLabel.Text = "Loading SkyHub."
-textLabel.TextSize = 28
-textLabel.Parent = screenGui
-local loadingRing = Instance.new("ImageLabel")
-loadingRing.Size = UDim2.new(0, 256, 0, 256)
-loadingRing.BackgroundTransparency = 1
-loadingRing.Image = "rbxassetid://4965945816"
-loadingRing.AnchorPoint = Vector2.new(0.5, 0.5)
-loadingRing.Position = UDim2.new(0.5, 0, 0.5, 0)
-loadingRing.Parent = screenGui
-
-ReplicatedFirst:RemoveDefaultLoadingScreen()
-
-local tweenInfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
-local tween = TweenService:Create(loadingRing, tweenInfo, {Rotation = 360})
-tween:Play()
-
-wait(5)
-screenGui:Destroy()
-
-local ScreenGui = Instance.new("ScreenGui")
-local TextLabel = Instance.new("TextLabel")
-
-ScreenGui.Parent = game.CoreGui
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-TextLabel.Parent = ScreenGui
-TextLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
-TextLabel.Size = UDim2.new(1, 0, 1, 0)
-TextLabel.Font = Enum.Font.GothamSemibold
-TextLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-TextLabel.TextSize = 28
-TextLabel.Text = "Loaded!"
-
-wait(2.5)
-ScreenGui:Destroy()
- local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Kavolibupdate"))()
+ local Library = loadstring(game:HttpGet(_G.guidragtype))()
    local Window = Library.CreateLib("SkyHub", OptTheme)
    local Main = Window:NewTab("Main")
    local MainSection = Main:NewSection("Main")
@@ -2632,59 +2313,7 @@ PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, functi
     end)
  -- VR Hands
 elseif game.PlaceId == 4832438542 then
-local Players = game:GetService("Players")
-local ReplicatedFirst = game:GetService("ReplicatedFirst")
-local TweenService = game:GetService("TweenService")
-
-local player = Players.LocalPlayer 
-local playerGui = player:WaitForChild("PlayerGui")
-
-local screenGui = Instance.new("ScreenGui")
-screenGui.IgnoreGuiInset = true
-screenGui.Parent = game.CoreGui
-local textLabel = Instance.new("TextLabel")
-textLabel.Size = UDim2.new(1, 0, 1, 0)
-textLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
-textLabel.Font = Enum.Font.GothamSemibold
-textLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-textLabel.Text = "Loading SkyHub."
-textLabel.TextSize = 28
-textLabel.Parent = screenGui
-local loadingRing = Instance.new("ImageLabel")
-loadingRing.Size = UDim2.new(0, 256, 0, 256)
-loadingRing.BackgroundTransparency = 1
-loadingRing.Image = "rbxassetid://4965945816"
-loadingRing.AnchorPoint = Vector2.new(0.5, 0.5)
-loadingRing.Position = UDim2.new(0.5, 0, 0.5, 0)
-loadingRing.Parent = screenGui
-
-ReplicatedFirst:RemoveDefaultLoadingScreen()
-
-local tweenInfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
-local tween = TweenService:Create(loadingRing, tweenInfo, {Rotation = 360})
-tween:Play()
-
-wait(5)
-screenGui:Destroy()
-
-local ScreenGui = Instance.new("ScreenGui")
-local TextLabel = Instance.new("TextLabel")
-
-ScreenGui.Parent = game.CoreGui
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ScreenGui.IgnoreGuiInset = true
-
-TextLabel.Parent = ScreenGui
-TextLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
-TextLabel.Size = UDim2.new(1, 0, 1, 0)
-TextLabel.Font = Enum.Font.GothamSemibold
-TextLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-TextLabel.TextSize = 28
-TextLabel.Text = "Loaded!"
-
-wait(2.5)
-ScreenGui:Destroy()
- local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Kavolibupdate"))()
+ local Library = loadstring(game:HttpGet(_G.guidragtype))()
    local Window = Library.CreateLib("SkyHub", OptTheme)
    local Main = Window:NewTab("Main")
    local MainSection = Main:NewSection("Main")
@@ -3216,59 +2845,7 @@ PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, functi
     end)
 -- Adopt me
 elseif game.PlaceId == 920587237 then
-local Players = game:GetService("Players")
-local ReplicatedFirst = game:GetService("ReplicatedFirst")
-local TweenService = game:GetService("TweenService")
-
-local player = Players.LocalPlayer 
-local playerGui = player:WaitForChild("PlayerGui")
-
-local screenGui = Instance.new("ScreenGui")
-screenGui.IgnoreGuiInset = true
-screenGui.Parent = game.CoreGui
-local textLabel = Instance.new("TextLabel")
-textLabel.Size = UDim2.new(1, 0, 1, 0)
-textLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
-textLabel.Font = Enum.Font.GothamSemibold
-textLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-textLabel.Text = "Loading SkyHub."
-textLabel.TextSize = 28
-textLabel.Parent = screenGui
-local loadingRing = Instance.new("ImageLabel")
-loadingRing.Size = UDim2.new(0, 256, 0, 256)
-loadingRing.BackgroundTransparency = 1
-loadingRing.Image = "rbxassetid://4965945816"
-loadingRing.AnchorPoint = Vector2.new(0.5, 0.5)
-loadingRing.Position = UDim2.new(0.5, 0, 0.5, 0)
-loadingRing.Parent = screenGui
-
-ReplicatedFirst:RemoveDefaultLoadingScreen()
-
-local tweenInfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
-local tween = TweenService:Create(loadingRing, tweenInfo, {Rotation = 360})
-tween:Play()
-
-wait(5)
-screenGui:Destroy()
-
-local ScreenGui = Instance.new("ScreenGui")
-local TextLabel = Instance.new("TextLabel")
-
-ScreenGui.Parent = game.CoreGui
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ScreenGui.IgnoreGuiInset = true
-
-TextLabel.Parent = ScreenGui
-TextLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
-TextLabel.Size = UDim2.new(1, 0, 1, 0)
-TextLabel.Font = Enum.Font.GothamSemibold
-TextLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-TextLabel.TextSize = 28
-TextLabel.Text = "Loaded!"
-
-wait(2.5)
-ScreenGui:Destroy()
-   local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Kavolibupdate"))()
+   local Library = loadstring(game:HttpGet(_G.guidragtype))()
    local Window = Library.CreateLib("SkyHub", OptTheme)
    local Main = Window:NewTab("Main")
    local MainSection = Main:NewSection("Main")
@@ -4301,59 +3878,7 @@ PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, functi
     end)
 -- JailBreak
 elseif game.PlaceId == 606849621 then
-local Players = game:GetService("Players")
-local ReplicatedFirst = game:GetService("ReplicatedFirst")
-local TweenService = game:GetService("TweenService")
-
-local player = Players.LocalPlayer 
-local playerGui = player:WaitForChild("PlayerGui")
-
-local screenGui = Instance.new("ScreenGui")
-screenGui.IgnoreGuiInset = true
-screenGui.Parent = game.CoreGui
-local textLabel = Instance.new("TextLabel")
-textLabel.Size = UDim2.new(1, 0, 1, 0)
-textLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
-textLabel.Font = Enum.Font.GothamSemibold
-textLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-textLabel.Text = "Loading SkyHub."
-textLabel.TextSize = 28
-textLabel.Parent = screenGui
-local loadingRing = Instance.new("ImageLabel")
-loadingRing.Size = UDim2.new(0, 256, 0, 256)
-loadingRing.BackgroundTransparency = 1
-loadingRing.Image = "rbxassetid://4965945816"
-loadingRing.AnchorPoint = Vector2.new(0.5, 0.5)
-loadingRing.Position = UDim2.new(0.5, 0, 0.5, 0)
-loadingRing.Parent = screenGui
-
-ReplicatedFirst:RemoveDefaultLoadingScreen()
-
-local tweenInfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
-local tween = TweenService:Create(loadingRing, tweenInfo, {Rotation = 360})
-tween:Play()
-
-wait(5)
-screenGui:Destroy()
-
-local ScreenGui = Instance.new("ScreenGui")
-local TextLabel = Instance.new("TextLabel")
-
-ScreenGui.Parent = game.CoreGui
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ScreenGui.IgnoreGuiInset = true
-
-TextLabel.Parent = ScreenGui
-TextLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
-TextLabel.Size = UDim2.new(1, 0, 1, 0)
-TextLabel.Font = Enum.Font.GothamSemibold
-TextLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-TextLabel.TextSize = 28
-TextLabel.Text = "Loaded!"
-
-wait(2.5)
-ScreenGui:Destroy()
-   local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Kavolibupdate"))()
+   local Library = loadstring(game:HttpGet(_G.guidragtype))()
    local Window = Library.CreateLib("SkyHub", OptTheme)
    local Main = Window:NewTab("Main")
    local MainSection = Main:NewSection("Main")
@@ -6379,59 +5904,7 @@ PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, functi
     end)
 --Prison Life
 elseif game.PlaceId == 155615604 then
-    local Players = game:GetService("Players")
-local ReplicatedFirst = game:GetService("ReplicatedFirst")
-local TweenService = game:GetService("TweenService")
-
-local player = Players.LocalPlayer 
-local playerGui = player:WaitForChild("PlayerGui")
-
-local screenGui = Instance.new("ScreenGui")
-screenGui.IgnoreGuiInset = true
-screenGui.Parent = game.CoreGui
-local textLabel = Instance.new("TextLabel")
-textLabel.Size = UDim2.new(1, 0, 1, 0)
-textLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
-textLabel.Font = Enum.Font.GothamSemibold
-textLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-textLabel.Text = "Loading SkyHub."
-textLabel.TextSize = 28
-textLabel.Parent = screenGui
-local loadingRing = Instance.new("ImageLabel")
-loadingRing.Size = UDim2.new(0, 256, 0, 256)
-loadingRing.BackgroundTransparency = 1
-loadingRing.Image = "rbxassetid://4965945816"
-loadingRing.AnchorPoint = Vector2.new(0.5, 0.5)
-loadingRing.Position = UDim2.new(0.5, 0, 0.5, 0)
-loadingRing.Parent = screenGui
-
-ReplicatedFirst:RemoveDefaultLoadingScreen()
-
-local tweenInfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
-local tween = TweenService:Create(loadingRing, tweenInfo, {Rotation = 360})
-tween:Play()
-
-wait(5)
-screenGui:Destroy()
-
-local ScreenGui = Instance.new("ScreenGui")
-local TextLabel = Instance.new("TextLabel")
-
-ScreenGui.Parent = game.CoreGui
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ScreenGui.IgnoreGuiInset = true
-
-TextLabel.Parent = ScreenGui
-TextLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
-TextLabel.Size = UDim2.new(1, 0, 1, 0)
-TextLabel.Font = Enum.Font.GothamSemibold
-TextLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-TextLabel.TextSize = 28
-TextLabel.Text = "Loaded!"
-
-wait(2.5)
-ScreenGui:Destroy()
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Kavolibupdate"))()
+local Library = loadstring(game:HttpGet(_G.guidragtype))()
    local Window = Library.CreateLib("SkyHub", OptTheme)
    local Main = Window:NewTab("Main")
    local MainSection = Main:NewSection("Main")
@@ -6975,59 +6448,7 @@ PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, functi
     end)
     -- Build A Boat
 elseif game.PlaceId == 537413528 then
-local Players = game:GetService("Players")
-local ReplicatedFirst = game:GetService("ReplicatedFirst")
-local TweenService = game:GetService("TweenService")
-
-local player = Players.LocalPlayer 
-local playerGui = player:WaitForChild("PlayerGui")
-
-local screenGui = Instance.new("ScreenGui")
-screenGui.IgnoreGuiInset = true
-screenGui.Parent = game.CoreGui
-local textLabel = Instance.new("TextLabel")
-textLabel.Size = UDim2.new(1, 0, 1, 0)
-textLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
-textLabel.Font = Enum.Font.GothamSemibold
-textLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-textLabel.Text = "Loading SkyHub."
-textLabel.TextSize = 28
-textLabel.Parent = screenGui
-local loadingRing = Instance.new("ImageLabel")
-loadingRing.Size = UDim2.new(0, 256, 0, 256)
-loadingRing.BackgroundTransparency = 1
-loadingRing.Image = "rbxassetid://4965945816"
-loadingRing.AnchorPoint = Vector2.new(0.5, 0.5)
-loadingRing.Position = UDim2.new(0.5, 0, 0.5, 0)
-loadingRing.Parent = screenGui
-
-ReplicatedFirst:RemoveDefaultLoadingScreen()
-
-local tweenInfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
-local tween = TweenService:Create(loadingRing, tweenInfo, {Rotation = 360})
-tween:Play()
-
-wait(5)
-screenGui:Destroy()
-
-local ScreenGui = Instance.new("ScreenGui")
-local TextLabel = Instance.new("TextLabel")
-
-ScreenGui.Parent = game.CoreGui
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ScreenGui.IgnoreGuiInset = true
-
-TextLabel.Parent = ScreenGui
-TextLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
-TextLabel.Size = UDim2.new(1, 0, 1, 0)
-TextLabel.Font = Enum.Font.GothamSemibold
-TextLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-TextLabel.TextSize = 28
-TextLabel.Text = "Loaded!"
-
-wait(2.5)
-ScreenGui:Destroy()
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Kavolibupdate"))()
+local Library = loadstring(game:HttpGet(_G.guidragtype))()
    local Window = Library.CreateLib("SkyHub", OptTheme)
    local Main = Window:NewTab("Main")
    local MainSection = Main:NewSection("Main")
@@ -7043,10 +6464,7 @@ MainSection:NewButton("CocoHub", "idk", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/CocoHub/master/CocoZHub'),true))()
  end)
 
-MainSection:NewButton("Cattori Hub", "idk", function()
-                _G.ToggleKeyBind = "g"
-loadstring(game:HttpGet('https://cattori.xyz/main.lua'))()
-end)
+
 
 MainSection:NewButton("Mobile VFly", "title explains", function()
 --MADE BY WARRIOR ROBERR
@@ -7440,60 +6858,7 @@ PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, functi
     end)
 -- Gorilla Tag Professional
 elseif game.PlaceId == 8690998110 then
-local Players = game:GetService("Players")
-local ReplicatedFirst = game:GetService("ReplicatedFirst")
-local TweenService = game:GetService("TweenService")
-
-
-
-
-local screenGui = Instance.new("ScreenGui")
-syn.protect_gui(screenGui)
-screenGui.IgnoreGuiInset = true
-screenGui.Parent = game.CoreGui
-local textLabel = Instance.new("TextLabel")
-textLabel.Size = UDim2.new(1, 0, 1, 0)
-textLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
-textLabel.Font = Enum.Font.GothamSemibold
-textLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-textLabel.Text = "Loading SkyHub."
-textLabel.TextSize = 28
-textLabel.Parent = screenGui
-local loadingRing = Instance.new("ImageLabel")
-loadingRing.Size = UDim2.new(0, 256, 0, 256)
-loadingRing.BackgroundTransparency = 1
-loadingRing.Image = "rbxassetid://4965945816"
-loadingRing.AnchorPoint = Vector2.new(0.5, 0.5)
-loadingRing.Position = UDim2.new(0.5, 0, 0.5, 0)
-loadingRing.Parent = screenGui
-
-ReplicatedFirst:RemoveDefaultLoadingScreen()
-
-local tweenInfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
-local tween = TweenService:Create(loadingRing, tweenInfo, {Rotation = 360})
-tween:Play()
-
-wait(5)
-screenGui:Destroy()
-
-local ScreenGui = Instance.new("ScreenGui")
-local TextLabel = Instance.new("TextLabel")
-syn.protect_gui(ScreenGui)
-ScreenGui.Parent = game.CoreGui
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ScreenGui.IgnoreGuiInset = true
-
-TextLabel.Parent = ScreenGui
-TextLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
-TextLabel.Size = UDim2.new(1, 0, 1, 0)
-TextLabel.Font = Enum.Font.GothamSemibold
-TextLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-TextLabel.TextSize = 28
-TextLabel.Text = "Loaded!"
-
-wait(2.5)
-ScreenGui:Destroy()
-	    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Kavolibupdate"))()
+	    local Library = loadstring(game:HttpGet(_G.guidragtype))()
             local Window = Library.CreateLib("SkyHub", OptTheme)
             local Main = Window:NewTab("Main")
             local MainSection = Main:NewSection("Main")
@@ -7548,60 +6913,7 @@ Button1 = "unpatch pls?",Button2 = "no",     Duration = 20, })
             end)
 -- Murder Mystery 2 or MM2
 elseif game.PlaceId == 142823291 then
-
-local Players = game:GetService("Players")
-local ReplicatedFirst = game:GetService("ReplicatedFirst")
-local TweenService = game:GetService("TweenService")
-
-local player = Players.LocalPlayer 
-local playerGui = player:WaitForChild("PlayerGui")
-
-local screenGui = Instance.new("ScreenGui")
-screenGui.IgnoreGuiInset = true
-screenGui.Parent = game.CoreGui
-local textLabel = Instance.new("TextLabel")
-textLabel.Size = UDim2.new(1, 0, 1, 0)
-textLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
-textLabel.Font = Enum.Font.GothamSemibold
-textLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-textLabel.Text = "Loading SkyHub."
-textLabel.TextSize = 28
-textLabel.Parent = screenGui
-local loadingRing = Instance.new("ImageLabel")
-loadingRing.Size = UDim2.new(0, 256, 0, 256)
-loadingRing.BackgroundTransparency = 1
-loadingRing.Image = "rbxassetid://4965945816"
-loadingRing.AnchorPoint = Vector2.new(0.5, 0.5)
-loadingRing.Position = UDim2.new(0.5, 0, 0.5, 0)
-loadingRing.Parent = screenGui
-
-ReplicatedFirst:RemoveDefaultLoadingScreen()
-
-local tweenInfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
-local tween = TweenService:Create(loadingRing, tweenInfo, {Rotation = 360})
-tween:Play()
-
-wait(5)
-screenGui:Destroy()
-
-local ScreenGui = Instance.new("ScreenGui")
-local TextLabel = Instance.new("TextLabel")
-
-ScreenGui.Parent = game.CoreGui
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ScreenGui.IgnoreGuiInset = true
-
-TextLabel.Parent = ScreenGui
-TextLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
-TextLabel.Size = UDim2.new(1, 0, 1, 0)
-TextLabel.Font = Enum.Font.GothamSemibold
-TextLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-TextLabel.TextSize = 28
-TextLabel.Text = "Loaded!"
-
-wait(2.5)
-ScreenGui:Destroy()
-	    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Kavolibupdate"))()
+	    local Library = loadstring(game:HttpGet(_G.guidragtype))()
             local Window = Library.CreateLib("SkyHub", OptTheme)
             local Main = Window:NewTab("Main")
             local MainSection = Main:NewSection("Main")
@@ -7863,59 +7175,7 @@ end)
 
 	-- Universal
 else 
-local Players = game:GetService("Players")
-local ReplicatedFirst = game:GetService("ReplicatedFirst")
-local TweenService = game:GetService("TweenService")
-
-local player = Players.LocalPlayer 
-local playerGui = player:WaitForChild("PlayerGui")
-
-local screenGui = Instance.new("ScreenGui")
-screenGui.IgnoreGuiInset = true
-screenGui.Parent = game.CoreGui
-local textLabel = Instance.new("TextLabel")
-textLabel.Size = UDim2.new(1, 0, 1, 0)
-textLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
-textLabel.Font = Enum.Font.GothamSemibold
-textLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-textLabel.Text = "Loading SkyHub."
-textLabel.TextSize = 28
-textLabel.Parent = screenGui
-local loadingRing = Instance.new("ImageLabel")
-loadingRing.Size = UDim2.new(0, 256, 0, 256)
-loadingRing.BackgroundTransparency = 1
-loadingRing.Image = "rbxassetid://4965945816"
-loadingRing.AnchorPoint = Vector2.new(0.5, 0.5)
-loadingRing.Position = UDim2.new(0.5, 0, 0.5, 0)
-loadingRing.Parent = screenGui
-
-ReplicatedFirst:RemoveDefaultLoadingScreen()
-
-local tweenInfo = TweenInfo.new(4, Enum.EasingStyle.Linear, Enum.EasingDirection.In, -1)
-local tween = TweenService:Create(loadingRing, tweenInfo, {Rotation = 360})
-tween:Play()
-
-wait(5)
-screenGui:Destroy()
-
-local ScreenGui = Instance.new("ScreenGui")
-local TextLabel = Instance.new("TextLabel")
-
-ScreenGui.Parent = game.CoreGui
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-ScreenGui.IgnoreGuiInset = true
-
-TextLabel.Parent = ScreenGui
-TextLabel.BackgroundColor3 = Color3.fromRGB(51, 255, 153)
-TextLabel.Size = UDim2.new(1, 0, 1, 0)
-TextLabel.Font = Enum.Font.GothamSemibold
-TextLabel.TextColor3 = Color3.new(0.8, 0.8, 0.8)
-TextLabel.TextSize = 28
-TextLabel.Text = "Loaded!"
-
-wait(2.5)
-ScreenGui:Destroy()
-	    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Kavolibupdate"))()
+	    local Library = loadstring(game:HttpGet(_G.guidragtype))()
             local Window = Library.CreateLib("SkyHub Universal", OptTheme)
             local Main = Window:NewTab("Main")
             local MainSection = Main:NewSection("Main")
@@ -9221,10 +8481,7 @@ coroutine.wrap(ACHGC_fake_script)()
             end)    
 
 
-    MainSection:NewButton("Cattori Hub", "idk", function()
-                _G.ToggleKeyBind = "g"
-loadstring(game:HttpGet('https://cattori.xyz/main.lua'))()
-end)
+  
 
 MainSection:NewButton("Dex", "Explorer", function()
 loadstring(game:GetObjects("rbxassetid://418957341")[1].Source)()
