@@ -14,7 +14,7 @@ if IsOnMobile then
        _G.guidragtype = "https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"
     end
 local Library = loadstring(game:HttpGet(_G.guidragtype))()
-   local Window = Library.CreateLib("SkyHub", OptTheme)
+   local Window = Library.CreateLib("FE Troll GUI", OptTheme)
    local Main = Window:NewTab("Main")
    local MainSection = Main:NewSection("Main")
    MainSection:NewButton("Discord Invite", "Copys Discord invite link", function()
