@@ -1,4 +1,13 @@
 -- Made on 2/17/2024
+_G.guidragtype = 1
+UserInputService = game:GetService("UserInputService")
+local IsOnMobile = table.find({Enum.Platform.IOS, Enum.Platform.Android}, UserInputService:GetPlatform())
+
+if IsOnMobile then
+_G.guidragtype = "https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Kavolibupdate"
+else
+   _G.guidragtype = "https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"
+end
 local Library = loadstring(game:HttpGet(_G.guidragtype))()
    local Window = Library.CreateLib("SkyHub", OptTheme)
    local Main = Window:NewTab("Main")
