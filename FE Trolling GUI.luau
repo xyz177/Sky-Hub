@@ -83,7 +83,7 @@ MainSection:NewButton("Netless V2", "need to do i think every time u reset", fun
  MainSection:NewButton("FE Fling Mic Up", "idk if works on mobile", function()
     -- | Made by GR0UD
  local User  = game:GetService("Players").LocalPlayer
- local Ball  = game:GetService("Workspace").SoccerBall
+ local Ball  = game:GetService("Workspace").SoccerBall0
  local Mouse = User:GetMouse()
  
  function Align(Part0, Part1, Position, Angle)
@@ -143,7 +143,7 @@ local RunService = game:GetService("RunService")
 local Workspace = game:GetService("Workspace")
 
 local User = Players.LocalPlayer
-local Ball = Workspace.SoccerBall
+local Ball = Workspace.SoccerBall0
 
 -- Function to align parts (unchanged)
 function Align(Part0, Part1, Position, Angle)
