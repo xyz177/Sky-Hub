@@ -6920,8 +6920,6 @@ elseif game.PlaceId == 142823291 then
             MainSection:NewButton("Discord Invite", "Copys Discord invite link", function()
                 setclipboard(string)
             end)
-			wait(2.5)
-ScreenGui:Destroy()
 
 
             MainSection:NewButton("MM2 Admin Panel", "not real admin stu", function()
