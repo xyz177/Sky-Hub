@@ -135,6 +135,70 @@ MainSection:NewButton("Netless V2", "need to do i think every time u reset", fun
  end)
  end)
 
+ MainSection:NewButton("FE Fling Mic Up Mobile", "mobile version", function()
+   -- Initialize services and objects
+local Players = game:GetService("Players")
+local UserInputService = game:GetService("UserInputService")
+local RunService = game:GetService("RunService")
+local Workspace = game:GetService("Workspace")
+
+local User = Players.LocalPlayer
+local Ball = Workspace.SoccerBall
+
+-- Function to align parts (unchanged)
+function Align(Part0, Part1, Position, Angle)
+    -- Your existing align function code here...
+end
+
+-- Align the ball with the humanoid root part initially
+Align(User.Character.HumanoidRootPart, Ball, Vector3.new(0, -20, 0), Vector3.new(0, 0, 0))
+
+-- Variable to keep track of touch position
+local touchPosition = nil
+
+-- Function to handle touch events
+local function onTouchStart(touch, gameProcessed)
+    if not gameProcessed then
+        touchPosition = touch.Position
+    end
+end
+
+local function onTouchMove(touch)
+    touchPosition = touch.Position
+end
+
+local function onTouchEnd(touch)
+    touchPosition = nil
+end
+
+-- Connecting touch events
+UserInputService.TouchStarted:Connect(onTouchStart)
+UserInputService.TouchMoved:Connect(onTouchMove)
+UserInputService.TouchEnded:Connect(onTouchEnd)
+
+-- Key press handling for mobile, triggering goal interaction
+UserInputService.InputBegan:Connect(function(input, gameProcessed)
+    if not gameProcessed and input.KeyCode == Enum.KeyCode.E then
+        firetouchinterest(Ball, Workspace.goal, 1)
+        wait(0.25)
+        firetouchinterest(Ball, Workspace.goal, 0)
+    end
+end)
+
+-- Continuously update the ball's position based on touch
+RunService.Heartbeat:Connect(function()
+    Ball.CustomPhysicalProperties = PhysicalProperties.new(0, 0, 0, 0, 0)
+    Ball.Velocity = Vector3.new(25.75, 25.75, 25.75)
+
+    if touchPosition then
+        -- Convert the 2D touch position to a 3D world position
+        local camera = Workspace.CurrentCamera
+        local worldPosition = camera:ScreenPointToRay(touchPosition.X, touchPosition.Y).Origin
+        -- Update the ball's position to follow the touch (adjust Z coordinate as needed)
+        Ball.Position = Vector3.new(worldPosition.X, worldPosition.Y, Ball.Position.Z)
+    end
+end)
+end)
  
 
    local Player = Window:NewTab("Player")
