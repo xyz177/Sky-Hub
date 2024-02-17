@@ -162,6 +162,10 @@ MainSection:NewButton("FE Mic Up lag and noise spam", "yu", function()
    end
 end)
 
+MainSection:NewButton("Hat Hub", "hub that needs hats", function()
+   loadstring(game:HttpGet(('https://pastebin.com/raw/GQ7VPnbz'),true))()
+end)
+
    local Player = Window:NewTab("Player")
    local PlayerSection = Player:NewSection("Player")
 PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, function(v) 
