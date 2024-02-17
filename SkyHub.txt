@@ -4,7 +4,7 @@ Build A Boat For Treasure, Gorilla Tag Professional, and Murder Mystery 2 and Un
 10+ games
 Rebuilt On IllusionHub
 Last Updated 2/17/2024
-Removed annoying loading thing and fixed pc/emulator gui drag and added FE Trolling GUI 
+Removed annoying loading thing and fixed pc gui drag idk abt emulator tho and added FE Trolling GUI 
 and removed cattori hub since its deleted/discountined and Fixed jailbreak script not loading
 ]]--
 local OptTheme = "Midnight"
@@ -3905,7 +3905,7 @@ PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, functi
     end)
 -- JailBreak
 elseif game.PlaceId == 606849621 then
-   local Library = loadstring(game:HttpGet(_G.guidragtype))()
+	local Library = loadstring(game:HttpGet(_G.guidragtype))()
    local Window = Library.CreateLib("SkyHub", OptTheme)
    local Main = Window:NewTab("Main")
    local MainSection = Main:NewSection("Main")
