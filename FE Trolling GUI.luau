@@ -59,7 +59,17 @@ MainSection:NewButton("Netless V2", "need to do i think every time u reset", fun
  end)
 
  MainSection:NewButton("FE Big Head Rthro R15", "dont use hats/hair also scale head to max in avatar", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/sysGhost-aka-BiKode/BigHeadV2/main/BigHeadV2-r15", true))()
+    --  ((Packed with care by sysGhost/BiKode))
+--  Remember to use R15 with Rthro avatar(head) and scale ur head at max
+
+for i,v in pairs(game.Players.LocalPlayer.Character.Humanoid:GetChildren()) do
+   if string.find(v.Name,"Scale") and v.Name ~= "HeadScale" then
+       repeat wait(HeadGrowSpeed) until game.Players.LocalPlayer.Character.Head:FindFirstChild("OriginalSize")
+       game.Players.LocalPlayer.Character.Head.OriginalSize:Destroy()
+       v:Destroy()
+       game.Players.LocalPlayer.Character.Head:WaitForChild("OriginalSize")
+   end
+end
  end)
 
  MainSection:NewButton("FE Pp script", "im not explaining this time", function()
