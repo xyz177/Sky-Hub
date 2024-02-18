@@ -58,6 +58,10 @@ MainSection:NewButton("Netless V2", "need to do i think every time u reset", fun
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_8u7A6D92KJWJXgB4btM3lJNPDy2mCi61S191KbGF2EfX9621qbXQg0tBivwEi0Kr.lua.txt'),true))()
  end)
 
+ MainSection:NewButton("Sushi X", "idk", function()
+   loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/sushi/main/X'),true))()
+end)
+
  MainSection:NewButton("FE Big Head Rthro R15", "dont use hats/hair also scale head to max in avatar", function()
     --  ((Packed with care by sysGhost/BiKode))
 --  Remember to use R15 with Rthro avatar(head) and scale ur head at max
