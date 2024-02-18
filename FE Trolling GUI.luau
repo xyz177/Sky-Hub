@@ -1,4 +1,4 @@
--- Made on 2/17/2024
+-- Made on 2/18/2024
 local OptTheme = "Midnight"
 local string = "https://discord.gg/xwy5Cu62Vw"
 local string2 = "https://discord.com/invite/jVf7eSrED9"
@@ -35,6 +35,10 @@ MainSection:NewButton("fates admin", "Admin", function()
 
  MainSection:NewButton("Discord Invite2", "Copys Discord invite link", function()
    setclipboard(string2)
+end)
+
+MainSection:NewButton("Walk on Walls FE", "kinda buggy if execute more than once", function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Walk%20On%20Walls%20Script%20(R6%2615).txt"))()
 end)
 
 MainSection:NewButton("Netless V2", "need to do i think every time u reset", function()
