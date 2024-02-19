@@ -1,7 +1,7 @@
 --[[
 Last Updated on 2/19/2024 
-Added Neighbor scripts and Mic up scripts and more just trying to make this script have more functions since it doesnt really 
-have many just trying yk.
+Removed Some functions and added them into Sky Hub.
+and organized ui a bit added black hole
 ]]--
 local OptTheme = "Midnight"
 local string = "https://discord.gg/xwy5Cu62Vw"
@@ -21,49 +21,41 @@ local Library = loadstring(game:HttpGet(_G.guidragtype))()
    local Window = Library.CreateLib("FE Troll GUI", OptTheme)
    local Main = Window:NewTab("Main")
    local MainSection = Main:NewSection("Main")
-   MainSection:NewButton("Discord Invite", "Copys Discord invite link", function()
-   setclipboard(string)
-end)
-MainSection:NewButton("Mic up anti kick if u dont got mic", "execute fast", function()
-	local mt = getrawmetatable(game)
-local namecall = mt.__namecall
-setreadonly(mt, false)
-mt.__namecall = newcclosure(function(self, ...)
-if getnamecallmethod() == "IsVoiceEnabledForUserIdAsync" then
-return true;
-end
-return namecall(self, ...)
-end)
-setreadonly(mt, true)
- end)
+   local Discord = Window:NewTab("Discords")
+			local DiscordSection = Discord:NewSection("Discords")
+            DiscordSection:NewButton("Discord Invite", "Copys Discord invite link", function()
+                setclipboard(string)
+            end)
+			DiscordSection:NewButton("Discord Invite OLD", "Copys Discord invite link", function()
+                setclipboard(string2)
+            end)
+            local Admins = Window:NewTab("Admins")
+            local AdminsSection = Admins:NewSection("Admins")
 
-MainSection:NewButton("Infinite Yield FE", "Admin", function()
-   loadstring(game:HttpGet(_G.infydtype))()
-end)
-
-MainSection:NewButton("Nameless Admin", "Admin", function()
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
- end)
-
-MainSection:NewButton("fates admin", "Admin", function()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
- end)
-
- MainSection:NewButton("Proton Free Admin", "Admin", function()
-	_G.UI_Id = "default" --set this to "default" for the default ui
-loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Proton%20Free'))()
-	 end)
-
-	 MainSection:NewButton("Proton 2 free Admin", "Admin", function()
--- DEFAULT CMD BAR PREFIX IS ;
--- DEFAULT CHAT PREFIX IS /
-_G.UI_Id = "default" --set this to "default" for the default ui
-loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
-		 end)
-
- MainSection:NewButton("Discord Invite2", "Copys Discord invite link", function()
-   setclipboard(string2)
-end)
+			AdminsSection:NewButton("Infinite Yield FE", "Admin", function()
+				loadstring(game:HttpGet(_G.infydtype))()
+			 end)
+			 
+			 AdminsSection:NewButton("Nameless Admin", "Admin", function()
+				 loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+			  end)
+			 
+			 AdminsSection:NewButton("fates admin", "Admin", function()
+				 loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+			  end)
+			 
+			  AdminsSection:NewButton("Proton Free Admin", "Admin", function()
+				 _G.UI_Id = "default" --set this to "default" for the default ui
+			 loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Proton%20Free'))()
+				  end)
+			 
+				  AdminsSection:NewButton("Proton 2 free Admin", "Admin", function()
+			 -- DEFAULT CMD BAR PREFIX IS ;
+			 -- DEFAULT CHAT PREFIX IS /
+			 _G.UI_Id = "default" --set this to "default" for the default ui
+			 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
+					  end)
+					 
 
 MainSection:NewButton("Walk on Walls FE", "kinda buggy if execute more than once", function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Walk%20On%20Walls%20Script%20(R6%2615).txt"))()
@@ -109,20 +101,9 @@ MainSection:NewButton("BackDoor.exe", "scan for backdoors", function()
  MainSection:NewButton("BackDoor.exe V8", "scan for backdoors", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/iK4oS/backdoor.exe/v8/src/main.lua"))();
  end)
-
- 
- MainSection:NewButton("Can Walk on Grass Neighbors", "Deletes all Touch Intrests", function()
-	for i,v in pairs(game.Workspace:GetDescendants()) do
-		if v.Name == "TouchInterest" then
-			v:Destroy()
-		end
-	end
+ MainSection:NewButton("BlackHole", "unacnhored objects", function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/qRvKHjVN"))();
  end)
-
- MainSection:NewButton("Skip Player Neighbors", "if you run out of skips Basically just tps to sum and kills you", function()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Terrain.CFrame
- end)
-
 
 MainSection:NewButton("FE BackFlip", "Z X C", function()
    wait(5)
@@ -6324,127 +6305,6 @@ end
   loadstring(game:HttpGet("https://gist.githubusercontent.com/dark-modz/74581bf579eea6313bc234d2808a14bc/raw/8a38ca0f328c91b6f358ad9df2413fabed213b2a/ppscriptv2", true))()
  end)
 
- MainSection:NewButton("FE Fling Mic Up", "idk if works on mobile", function()
-    -- | Made by GR0UD
- local User  = game:GetService("Players").LocalPlayer
- local Ball  = game:GetService("Workspace").SoccerBall0
- local Mouse = User:GetMouse()
- 
- function Align(Part0, Part1, Position, Angle)
-     local AttachmentA = Instance.new("Attachment", Part1)
-     local AttachmentB = Instance.new("Attachment", Part0)
-     local AlignPos = Instance.new("AlignPosition", AttachmentA)
-     local BodyPos = Instance.new("BodyPosition", AlignPos)
-     local BodyAngularVelocity = Instance.new("BodyAngularVelocity", Part1)
- 
-     AlignPos.Parent.Parent.CanCollide = false
-     AlignPos.Parent.Parent.Massless = true
-     AlignPos.ApplyAtCenterOfMass = true
-     AlignPos.MaxForce = 9e9
-     AlignPos.MaxVelocity = 9e9
-     AlignPos.ReactionForceEnabled = false
-     AlignPos.Responsiveness = 200
-     AlignPos.RigidityEnabled = false
-     BodyPos.D = 0
-     BodyPos.P = 3e8
-     BodyPos.MaxForce = Vector3.new(9e9, 9e9, 9e9)
-     BodyAngularVelocity.AngularVelocity = Vector3.new(9e9, 9e9, 9e9)
-     AttachmentA.Name = "BruhA"
-     AttachmentB.Name = "BruhB"
-     AttachmentB.Orientation = Angle
-     AttachmentB.Position = Position
-     AlignPos.Attachment0 = AttachmentA
-     AlignPos.Attachment1 = AttachmentB
- end
- 
- Align(User.Character.HumanoidRootPart,Ball,Vector3.new(0,-20,0),Vector3.new(0,0,0))
- 
- Mouse.KeyDown:connect(function(key) if key == "e" then
-      firetouchinterest(Ball, workspace.goal, 1)
-      task.wait(.25)
-      firetouchinterest(Ball, workspace.goal, 0)
-     end
- end)
- 
- Mouse.Button1Down:Connect(function() MouseDown = true; BodyPos = Ball end)
- Mouse.Button1Up:Connect(function() MouseDown = false; BodyPos = AlignPos end)
- 
- game:GetService("RunService").Heartbeat:connect(function(t)
-    Ball.CustomPhysicalProperties = PhysicalProperties.new(0,0,0,0,0)
-    Ball.Velocity = Vector3.new(25.75,25.75,25.75)
- 
-    if MouseDown then
-        BodyPos.Position = Mouse.Hit.Position + Vector3.new(0,0,0) else return
-    end
- end)
- end)
-
- MainSection:NewButton("my 500 lb life go walk to someone and click", "needs tool", function()
-	_G.specifictoolname = false
-	_G.toolname = "Sword"
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/500%20Pounds%20Converted%20%5B1%20Tool%5D.lua'))()
-	 end)
-
-
- MainSection:NewButton("Mic up remove buy things and bypass", "idk", function()
-	game.Players.LocalPlayer.UserId = 25335555
-	for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
-		if v:IsA("Part") and v.Name == "VIP Door" or v.Name == "ProximityAndTouchGamepassPurchase" then
-		v:Destroy()
-		end
-		end
- end)
-
- MainSection:NewButton("Show admin gui Mic Up", "should be at middle right guy pose", function()
-	game.Players.LocalPlayer.PlayerGui.Admin.Enabled = true
-	game.Players.LocalPlayer.PlayerGui.Admin.Frame.Visible = true
-	game.Players.LocalPlayer.PlayerGui.Admin.OpenClose.Visible = true
-end)
-
- MainSection:NewButton("FE Mic Up grab Coil Tool", "Grabs coil", function()
-
-	local active = true
-	local player = game:GetService("Players").LocalPlayer
-	
-	local function getCoilPart()
-		for i, v in pairs(game:GetService("Workspace"):GetChildren()) do
-			if v.ClassName == "MeshPart" and v.Name == "ToolGrab" and v.MeshId == "rbxassetid://16606212" then
-				return v -- Script by Amph#5896
-			end
-		end
-	end
-	
-	if _G.running then _G.running = false task.wait(0.1) end  _G.running = active
-	while _G.running do task.wait(1) pcall(function()
-		repeat wait() until player.Character and player.Character:FindFirstChild("Humanoid") and player.Character.Humanoid.Health > 1
-		if not player.Character:FindFirstChild("coil") and not player.Backpack:FindFirstChild("coil") then
-			local coiL = getCoilPart()
-			local currentPos = player.Character.HumanoidRootPart.CFrame task.wait(0.1)
-	
-			repeat 
-				player.Character.HumanoidRootPart.CFrame = coiL.CFrame - Vector3.new(0, 5, 0)
-				fireproximityprompt(coiL.ProximityPrompt, 0) task.wait()
-			until player.Character:FindFirstChild("coil") or player.Backpack:FindFirstChild("coil")
-	
-			player.Character.HumanoidRootPart.CFrame = currentPos
-		end
-	end) end
- end)
-
-
- 
-MainSection:NewButton("FE Mic Up lag and noise spam", "yu", function()
-   for i,v in pairs(workspace:GetDescendants()) do
-      if v:IsA('ClickDetector') and not v.Parent.Name:match('Purchase') then
-          spawn(function()
-              for i=1, 20 do
-                  fireclickdetector(v)
-                  task.wait(.01)
-              end
-          end)
-      end
-   end
-end)
 
 MainSection:NewButton("Hat Hub", "hub that needs hats", function()
    loadstring(game:HttpGet(('https://pastebin.com/raw/GQ7VPnbz'),true))()
