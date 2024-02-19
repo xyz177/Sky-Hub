@@ -3,9 +3,9 @@ Work At A Pizza Place, VR Hands, Adopt Me, Jailbreak, Prison Life,
 Build A Boat For Treasure, Gorilla Tag Professional, and Murder Mystery 2 and Universal.
 10+ games
 Rebuilt On IllusionHub
-Last Updated 2/17/2024
-Removed annoying loading thing and fixed pc gui drag idk abt emulator tho and added FE Trolling GUI 
-and removed cattori hub since its deleted/discountined also idk why jailbreak doesnt load im still trying to fix.
+Last Updated 2/18/2024
+Removed scripts that dont work anymore like noclip in universal and zyrex  hub and impulse hub also added Dex, SimpleSpy V3 and Hydroxide in universal
+if you want to make your own script.
 ]]--
 local OptTheme = "Midnight"
 local string = "https://discord.gg/xwy5Cu62Vw"
@@ -320,15 +320,6 @@ MainSection:NewButton("CocoHub", "idk", function()
 loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/CocoHub/master/CocoZHub'),true))()
  end)
 
-MainSection:NewButton("Impluse hub", "idk", function()
-loadstring(game:HttpGet('http://impulse-hub.xyz/ImpulseHub',true))()
- end)
-
-MainSection:NewButton("Zyrex-Hub", "10+", function()
-   _G.Toggle_GUI = Enum.KeyCode.RightControl --Right Ctrl
-
-loadstring(game:HttpGet(("https://raw.githubusercontent.com/NotZyrex/Zyrex-Hub/master/Main.lua"), true))();
-end)
 
 MainSection:NewButton("VG Hub", "60+", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
@@ -7223,20 +7214,26 @@ else
                 setclipboard(string)
             end)
 
+			MainSection:NewButton("Dex", "Make ur own script then", function()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/dex.lua"))()
+			 end)
+			
+			 MainSection:NewButton("SimpleSpy V3", "Make ur own script then", function()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/SimpleSpyV3/main.lua"))()
+			 end)
+			
+			 MainSection:NewButton("Hydroxide", "Make ur own script then", function()
+				local owner = "Upbolt"
+			local branch = "revision"
+			
+			local function webImport(file)
+				return loadstring(game:HttpGetAsync(("https://raw.githubusercontent.com/%s/Hydroxide/%s/%s.lua"):format(owner, branch, file)), file .. '.lua')()
+			end
+			
+			webImport("init")
+			webImport("ui/main")
+			 end)
 
-            MainSection:NewButton("NoClip", "Walk Through Walls Hold V", function()
-                local h,char,play
-                play = game.Players.LocalPlayer
-                local uisss = game:getService("UserInputService")
-                game:getService("RunService"):BindToRenderStep("",0,function()
-                    char = play.Character
-	                if char then h = char:findFirstChildOfClass("Humanoid") end
-	               if not h then return end
-	               if uisss:IsKeyDown(Enum.KeyCode.V) then
-		                h:ChangeState(11)
-	                end
-                end)
-            end)
 
 			MainSection:NewButton("FE Trolling GUI", "troll", function()
 				loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau"))()
@@ -8529,15 +8526,6 @@ MainSection:NewButton("Dex", "Explorer", function()
 loadstring(game:GetObjects("rbxassetid://418957341")[1].Source)()
 end)
 
-MainSection:NewButton("Impluse hub", "idk", function()
-loadstring(game:HttpGet('http://impulse-hub.xyz/ImpulseHub',true))()
- end)
-
-MainSection:NewButton("Zyrex-Hub", "10+", function()
-   _G.Toggle_GUI = Enum.KeyCode.RightControl --Right Ctrl
-
-loadstring(game:HttpGet(("https://raw.githubusercontent.com/NotZyrex/Zyrex-Hub/master/Main.lua"), true))();
-end)
 
 MainSection:NewButton("Psyhub", "idk", function()
 loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
