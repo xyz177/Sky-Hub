@@ -1,4 +1,8 @@
--- Made on 2/18/2024
+--[[
+Last Updated on 2/18/2024 Also btw most, if not all "FE Bring" Scripts using tools
+are broken so don't bother also added backdoor scanners and if you don't have
+any require scripts join the discord server theres plenty.
+]]--
 local OptTheme = "Midnight"
 local string = "https://discord.gg/xwy5Cu62Vw"
 local string2 = "https://discord.com/invite/jVf7eSrED9"
@@ -65,6 +69,22 @@ MainSection:NewButton("Netless V2", "need to do i think every time u reset", fun
  MainSection:NewButton("Sushi X", "idk", function()
    loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/sushi/main/X'),true))()
 end)
+
+MainSection:NewButton("BackDoor.exe", "scan for backdoors", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/iK4oS/backdoor.exe/master/source.lua"))()
+ end)
+
+ MainSection:NewButton("BackDoor.exe V6", "scan for backdoors", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/iK4oS/backdoor.exe/v6/source.lua"))()
+ end)
+
+ MainSection:NewButton("BackDoor.exe V6x", "scan for backdoors", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/iK4oS/backdoor.exe/v6x/source.lua"))()
+ end)
+
+ MainSection:NewButton("BackDoor.exe V8", "scan for backdoors", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/iK4oS/backdoor.exe/v8/src/main.lua"))();
+ end)
 
 MainSection:NewButton("FE BackFlip", "Z X C", function()
    wait(5)
