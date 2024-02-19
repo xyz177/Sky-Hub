@@ -3,7 +3,7 @@ Work At A Pizza Place, VR Hands, Adopt Me, Jailbreak, Prison Life,
 Build A Boat For Treasure, Gorilla Tag Professional, and Murder Mystery 2 and Universal.
 10+ games
 Rebuilt On IllusionHub
-Last Updated 2/18/2024
+Last Updated 2/19/2024
 Removed scripts that dont work anymore like noclip in universal and zyrex  hub and impulse hub also added Dex, SimpleSpy V3 and Hydroxide in universal
 if you want to make your own script.
 ]]--
@@ -7239,6 +7239,30 @@ else
 				loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau"))()
 			end)
 
+			MainSection:NewButton("Infinite Yield FE", "Admin", function()
+				loadstring(game:HttpGet(_G.infydtype))()
+			 end)
+			 
+			 MainSection:NewButton("Nameless Admin", "Admin", function()
+				 loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+			  end)
+			 
+			 MainSection:NewButton("fates admin", "Admin", function()
+				 loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+			  end)
+			 
+			  MainSection:NewButton("Proton Free Admin", "Admin", function()
+				 _G.UI_Id = "default" --set this to "default" for the default ui
+			 loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Proton%20Free'))()
+				  end)
+			 
+				  MainSection:NewButton("Proton 2 free Admin", "Admin", function()
+			 -- DEFAULT CMD BAR PREFIX IS ;
+			 -- DEFAULT CHAT PREFIX IS /
+			 _G.UI_Id = "default" --set this to "default" for the default ui
+			 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
+					  end)
+
 			MainSection:NewButton("Hoho Hub", "key should be and if not then do it urself", function()
 				loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HohoV2/main/ScriptLoad.lua"))()
 			end)
@@ -8553,10 +8577,7 @@ https://pastebin.com/vavZfexv
                 loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
             end)
 
-        MainSection:NewButton("Infinite Yield FE", "Admin", function()
-            loadstring(game:HttpGet(_G.infydtype))()
-        end)
-
+       
 		MainSection:NewButton("Hat Hub", "need hats for this or items", function()
 			loadstring(game:HttpGet(('https://pastebin.com/raw/GQ7VPnbz'),true))()
 		 end)
@@ -8567,14 +8588,7 @@ https://pastebin.com/vavZfexv
 		 end)
 
 
-		MainSection:NewButton("Nameless Admin", "Admin", function()
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
-		 end)
-
-		MainSection:NewButton("fates admin", "adnim", function()
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))()
-		 end)
-
+		
         MainSection:NewButton("Discord Invite2", "Copys Discord invite link", function()
             setclipboard(string2)
         end)
