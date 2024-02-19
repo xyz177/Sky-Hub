@@ -6396,7 +6396,9 @@ end
  end)
 
  MainSection:NewButton("Show admin gui Mic Up", "should be at middle right guy pose", function()
-game.Players.LocalPlayer.PlayerGui.Admin.Enabled = true
+	game.Players.LocalPlayer.PlayerGui.Admin.Enabled = true
+	game.Players.LocalPlayer.PlayerGui.Admin.Frame.Visible = true
+	game.Players.LocalPlayer.PlayerGui.Admin.OpenClose.Visible = true
 end)
 
  MainSection:NewButton("FE Mic Up grab Coil Tool", "Grabs coil", function()
