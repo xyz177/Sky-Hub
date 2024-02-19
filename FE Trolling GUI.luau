@@ -1,7 +1,7 @@
 --[[
-Last Updated on 2/18/2024 Also btw most, if not all "FE Bring" Scripts using tools
-are broken so don't bother also added backdoor scanners and if you don't have
-any require scripts join the discord server theres plenty.
+Last Updated on 2/19/2024 
+Added Neighbor scripts and Mic up scripts and more just trying to make this script have more functions since it doesnt really 
+have many just trying yk.
 ]]--
 local OptTheme = "Midnight"
 local string = "https://discord.gg/xwy5Cu62Vw"
@@ -24,6 +24,18 @@ local Library = loadstring(game:HttpGet(_G.guidragtype))()
    MainSection:NewButton("Discord Invite", "Copys Discord invite link", function()
    setclipboard(string)
 end)
+MainSection:NewButton("Mic up anti kick if u dont got mic", "execute fast", function()
+	local mt = getrawmetatable(game)
+local namecall = mt.__namecall
+setreadonly(mt, false)
+mt.__namecall = newcclosure(function(self, ...)
+if getnamecallmethod() == "IsVoiceEnabledForUserIdAsync" then
+return true;
+end
+return namecall(self, ...)
+end)
+setreadonly(mt, true)
+ end)
 
 MainSection:NewButton("Infinite Yield FE", "Admin", function()
    loadstring(game:HttpGet(_G.infydtype))()
@@ -36,6 +48,18 @@ MainSection:NewButton("Nameless Admin", "Admin", function()
 MainSection:NewButton("fates admin", "Admin", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
  end)
+
+ MainSection:NewButton("Proton Free Admin", "Admin", function()
+	_G.UI_Id = "default" --set this to "default" for the default ui
+loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Proton%20Free'))()
+	 end)
+
+	 MainSection:NewButton("Proton 2 free Admin", "Admin", function()
+-- DEFAULT CMD BAR PREFIX IS ;
+-- DEFAULT CHAT PREFIX IS /
+_G.UI_Id = "default" --set this to "default" for the default ui
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
+		 end)
 
  MainSection:NewButton("Discord Invite2", "Copys Discord invite link", function()
    setclipboard(string2)
@@ -85,6 +109,20 @@ MainSection:NewButton("BackDoor.exe", "scan for backdoors", function()
  MainSection:NewButton("BackDoor.exe V8", "scan for backdoors", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/iK4oS/backdoor.exe/v8/src/main.lua"))();
  end)
+
+ 
+ MainSection:NewButton("Can Walk on Grass Neighbors", "Deletes all Touch Intrests", function()
+	for i,v in pairs(game.Workspace:GetDescendants()) do
+		if v.Name == "TouchInterest" then
+			v:Destroy()
+		end
+	end
+ end)
+
+ MainSection:NewButton("Skip Player Neighbors", "if you run out of skips Basically just tps to sum and kills you", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.Terrain.CFrame
+ end)
+
 
 MainSection:NewButton("FE BackFlip", "Z X C", function()
    wait(5)
@@ -6241,6 +6279,19 @@ end)
 
 end)
 
+
+MainSection:NewButton("FE Fling GUI", "fling players", function()
+	--[[Fling GUI]]--
+--[[Made by topit]]--
+loadstring(game:HttpGet('https://pastebin.com/raw/r97d7dS0', true))()
+--This link auto updates, so there's no need to update this file.
+
+ end)
+
+ MainSection:NewButton("Super fling", "fling players", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/superfling', true))()
+ end)
+
  MainSection:NewButton("FE Big Head Rthro R15", "dont use hats/hair also scale head to max in avatar", function()
     --  ((Packed with care by sysGhost/BiKode))
 --  Remember to use R15 with Rthro avatar(head) and scale ur head at max
@@ -6328,19 +6379,57 @@ end
  end)
  end)
 
+ MainSection:NewButton("my 500 lb life go walk to someone and click", "needs tool", function()
+	_G.specifictoolname = false
+	_G.toolname = "Sword"
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/500%20Pounds%20Converted%20%5B1%20Tool%5D.lua'))()
+	 end)
 
 
-MainSection:NewButton("FE Mic Up kill all", "kill all yall", function()
-   for i, v in pairs(game:GetService("Players"):GetPlayers()) do
-      if v ~= game.Players.LocalPlayer then
-      local function tp()
-      v.Character.HumanoidRootPart.CFrame = game.workspace["Guest 666"].HumanoidRootPart.CFrame
-      end
-      pcall(tp)
-      end
-      end
-      wait()
+ MainSection:NewButton("Mic up remove buy things and bypass", "idk", function()
+	game.Players.LocalPlayer.UserId = 25335555
+	for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+		if v:IsA("Part") and v.Name == "VIP Door" or v.Name == "ProximityAndTouchGamepassPurchase" then
+		v:Destroy()
+		end
+		end
+ end)
+
+ MainSection:NewButton("Show admin gui Mic Up", "should be at middle right guy pose", function()
+game.Players.LocalPlayer.PlayerGui.Admin.Enabled = true
 end)
+
+ MainSection:NewButton("FE Mic Up grab Coil Tool", "Grabs coil", function()
+
+	local active = true
+	local player = game:GetService("Players").LocalPlayer
+	
+	local function getCoilPart()
+		for i, v in pairs(game:GetService("Workspace"):GetChildren()) do
+			if v.ClassName == "MeshPart" and v.Name == "ToolGrab" and v.MeshId == "rbxassetid://16606212" then
+				return v -- Script by Amph#5896
+			end
+		end
+	end
+	
+	if _G.running then _G.running = false task.wait(0.1) end  _G.running = active
+	while _G.running do task.wait(1) pcall(function()
+		repeat wait() until player.Character and player.Character:FindFirstChild("Humanoid") and player.Character.Humanoid.Health > 1
+		if not player.Character:FindFirstChild("coil") and not player.Backpack:FindFirstChild("coil") then
+			local coiL = getCoilPart()
+			local currentPos = player.Character.HumanoidRootPart.CFrame task.wait(0.1)
+	
+			repeat 
+				player.Character.HumanoidRootPart.CFrame = coiL.CFrame - Vector3.new(0, 5, 0)
+				fireproximityprompt(coiL.ProximityPrompt, 0) task.wait()
+			until player.Character:FindFirstChild("coil") or player.Backpack:FindFirstChild("coil")
+	
+			player.Character.HumanoidRootPart.CFrame = currentPos
+		end
+	end) end
+ end)
+
+
  
 MainSection:NewButton("FE Mic Up lag and noise spam", "yu", function()
    for i,v in pairs(workspace:GetDescendants()) do
@@ -6358,6 +6447,339 @@ end)
 MainSection:NewButton("Hat Hub", "hub that needs hats", function()
    loadstring(game:HttpGet(('https://pastebin.com/raw/GQ7VPnbz'),true))()
 end)
+
+MainSection:NewButton("Fling Click on person you want", "makes ur character a kinda shaky on other ppls screens", function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/fe/main/obf_5wpM7bBcOPspmX7lQ3m75SrYNWqxZ858ai3tJdEAId6jSI05IOUB224FQ0VSAswH.lua.txt'),true))()
+ end)
+
+ MainSection:NewButton("FE Teleknis script v2 only works on unachorned parts", "use while moving Q E R T Y", function()
+	-- Q & E - bring closer and further
+-- R - Roates Block
+-- T - Tilts Block
+-- Y - Throws Block
+local function a(b, c)
+    local d = getfenv(c)
+    local e =
+        setmetatable(
+        {},
+        {__index = function(self, f)
+                if f == "script" then
+                    return b
+                else
+                    return d[f]
+                end
+            end}
+    )
+    setfenv(c, e)
+    return c
+end
+local g = {}
+local h = Instance.new("Model", game:GetService("Lighting"))
+local i = Instance.new("Tool")
+local j = Instance.new("Part")
+local k = Instance.new("Script")
+local l = Instance.new("LocalScript")
+local m = sethiddenproperty or set_hidden_property
+i.Name = "Telekinesis"
+i.Parent = h
+i.Grip = CFrame.new(0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+i.GripForward = Vector3.new(-0, -1, -0)
+i.GripRight = Vector3.new(0, 0, 1)
+i.GripUp = Vector3.new(1, 0, 0)
+j.Name = "Handle"
+j.Parent = i
+j.CFrame = CFrame.new(-17.2635937, 15.4915619, 46, 0, 1, 0, 1, 0, 0, 0, 0, -1)
+j.Orientation = Vector3.new(0, 180, 90)
+j.Position = Vector3.new(-17.2635937, 15.4915619, 46)
+j.Rotation = Vector3.new(-180, 0, -90)
+j.Color = Color3.new(0.0666667, 0.0666667, 0.0666667)
+j.Transparency = 1
+j.Size = Vector3.new(1, 1.20000005, 1)
+j.BottomSurface = Enum.SurfaceType.Weld
+j.BrickColor = BrickColor.new("Really black")
+j.Material = Enum.Material.Metal
+j.TopSurface = Enum.SurfaceType.Smooth
+j.brickColor = BrickColor.new("Really black")
+k.Name = "LineConnect"
+k.Parent = i
+table.insert(
+    g,
+    a(
+        k,
+        function()
+            wait()
+            local n = script.Part2
+            local o = script.Part1.Value
+            local p = script.Part2.Value
+            local q = script.Par.Value
+            local color = script.Color
+            local r = Instance.new("Part")
+            r.TopSurface = 0
+            r.BottomSurface = 0
+            r.Reflectance = .5
+            r.Name = "Laser"
+            r.Locked = true
+            r.CanCollide = false
+            r.Anchored = true
+            r.formFactor = 0
+            r.Size = Vector3.new(1, 1, 1)
+            local s = Instance.new("BlockMesh")
+            s.Parent = r
+            while true do
+                if n.Value == nil then
+                    break
+                end
+                if o == nil or p == nil or q == nil then
+                    break
+                end
+                if o.Parent == nil or p.Parent == nil then
+                    break
+                end
+                if q.Parent == nil then
+                    break
+                end
+                local t = CFrame.new(o.Position, p.Position)
+                local dist = (o.Position - p.Position).magnitude
+                r.Parent = q
+                r.BrickColor = color.Value.BrickColor
+                r.Reflectance = color.Value.Reflectance
+                r.Transparency = color.Value.Transparency
+                r.CFrame = CFrame.new(o.Position + t.lookVector * dist / 2)
+                r.CFrame = CFrame.new(r.Position, p.Position)
+                s.Scale = Vector3.new(.25, .25, dist)
+                wait()
+            end
+            r:remove()
+            script:remove()
+        end
+    )
+)
+k.Disabled = true
+l.Name = "MainScript"
+l.Parent = i
+table.insert(
+    g,
+    a(
+        l,
+        function()
+            wait()
+            tool = script.Parent
+            lineconnect = tool.LineConnect
+            object = nil
+            mousedown = false
+            found = false
+            BP = Instance.new("BodyPosition")
+            BP.maxForce = Vector3.new(math.huge * math.huge, math.huge * math.huge, math.huge * math.huge)
+            BP.P = BP.P * 1.1
+            dist = nil
+            point = Instance.new("Part")
+            point.Locked = true
+            point.Anchored = true
+            point.formFactor = 0
+            point.Shape = 0
+            point.BrickColor = BrickColor.Black()
+            point.Size = Vector3.new(1, 1, 1)
+            point.CanCollide = false
+            local s = Instance.new("SpecialMesh")
+            s.MeshType = "Sphere"
+            s.Scale = Vector3.new(.7, .7, .7)
+            s.Parent = point
+            handle = tool.Handle
+            front = tool.Handle
+            color = tool.Handle
+            objval = nil
+            local u = false
+            local v = BP:clone()
+            v.maxForce = Vector3.new(30000, 30000, 30000)
+            function LineConnect(o, p, q)
+                local w = Instance.new("ObjectValue")
+                w.Value = o
+                w.Name = "Part1"
+                local x = Instance.new("ObjectValue")
+                x.Value = p
+                x.Name = "Part2"
+                local y = Instance.new("ObjectValue")
+                y.Value = q
+                y.Name = "Par"
+                local z = Instance.new("ObjectValue")
+                z.Value = color
+                z.Name = "Color"
+                local A = lineconnect:clone()
+                A.Disabled = false
+                w.Parent = A
+                x.Parent = A
+                y.Parent = A
+                z.Parent = A
+                A.Parent = workspace
+                if p == object then
+                    objval = x
+                end
+            end
+            function onButton1Down(B)
+                if mousedown == true then
+                    return
+                end
+                mousedown = true
+                coroutine.resume(
+                    coroutine.create(
+                        function()
+                            local C = point:clone()
+                            C.Parent = tool
+                            LineConnect(front, C, workspace)
+                            while mousedown == true do
+                                C.Parent = tool
+                                if object == nil then
+                                    if B.Target == nil then
+                                        local t = CFrame.new(front.Position, B.Hit.p)
+                                        C.CFrame = CFrame.new(front.Position + t.lookVector * 1000)
+                                    else
+                                        C.CFrame = CFrame.new(B.Hit.p)
+                                    end
+                                else
+                                    LineConnect(front, object, workspace)
+                                    break
+                                end
+                                wait()
+                            end
+                            C:remove()
+                        end
+                    )
+                )
+                while mousedown == true do
+                    if B.Target ~= nil then
+                        local D = B.Target
+                        if D.Anchored == false then
+                            object = D
+                            dist = (object.Position - front.Position).magnitude
+                            break
+                        end
+                    end
+                    wait()
+                end
+                while mousedown == true do
+                    if object.Parent == nil then
+                        break
+                    end
+                    local t = CFrame.new(front.Position, B.Hit.p)
+                    BP.Parent = object
+                    BP.position = front.Position + t.lookVector * dist
+                    wait()
+                end
+                BP:remove()
+                object = nil
+                objval.Value = nil
+            end
+            function onKeyDown(E, B)
+                local E = E:lower()
+                local F = false
+                if E == "q" then
+                    if dist >= 5 then
+                        dist = dist - 10
+                    end
+                end
+                if E == "r" then
+                    if object == nil then
+                        return
+                    end
+                    for G, H in pairs(object:children()) do
+                        if H.className == "BodyGyro" then
+                            return nil
+                        end
+                    end
+                    BG = Instance.new("BodyGyro")
+                    BG.maxTorque = Vector3.new(math.huge, math.huge, math.huge)
+                    BG.cframe = CFrame.new(object.CFrame.p)
+                    BG.Parent = object
+                    repeat
+                        wait()
+                    until object.CFrame == CFrame.new(object.CFrame.p)
+                    BG.Parent = nil
+                    if object == nil then
+                        return
+                    end
+                    for G, H in pairs(object:children()) do
+                        if H.className == "BodyGyro" then
+                            H.Parent = nil
+                        end
+                    end
+                    object.Velocity = Vector3.new(0, 0, 0)
+                    object.RotVelocity = Vector3.new(0, 0, 0)
+                    object.Orientation = Vector3.new(0, 0, 0)
+                end
+                if E == "e" then
+                    dist = dist + 10
+                end
+                if E == "t" then
+                    if dist ~= 10 then
+                        dist = 10
+                    end
+                end
+                if E == "y" then
+                    if dist ~= 200 then
+                        dist = 200
+                    end
+                end
+                if E == "=" then
+                    BP.P = BP.P * 1.5
+                end
+                if E == "-" then
+                    BP.P = BP.P * 0.5
+                end
+            end
+            function onEquipped(B)
+                keymouse = B
+                local I = tool.Parent
+                human = I.Humanoid
+                human.Changed:connect(
+                    function()
+                        if human.Health == 0 then
+                            mousedown = false
+                            BP:remove()
+                            point:remove()
+                            tool:remove()
+                        end
+                    end
+                )
+                B.Button1Down:connect(
+                    function()
+                        onButton1Down(B)
+                    end
+                )
+                B.Button1Up:connect(
+                    function()
+                        mousedown = false
+                    end
+                )
+                B.KeyDown:connect(
+                    function(E)
+                        onKeyDown(E, B)
+                    end
+                )
+                B.Icon = "rbxasset://textures\\GunCursor.png"
+            end
+            tool.Equipped:connect(onEquipped)
+        end
+    )
+)
+for J, H in pairs(h:GetChildren()) do
+    H.Parent = game:GetService("Players").LocalPlayer.Backpack
+    pcall(
+        function()
+            H:MakeJoints()
+        end
+    )
+end
+h:Destroy()
+for J, H in pairs(g) do
+    spawn(
+        function()
+            pcall(H)
+        end
+    )
+end
+
+ end)
+ 
 
 MainSection:NewButton("Nullware Hub V3", "Reanimations", function()
    local LocalPlayer = game:GetService("Players").LocalPlayer
