@@ -8652,7 +8652,13 @@ end)
 Playerinform:NewButton(game:GetService("Players"):GetNameFromUserIdAsync(game.CreatorId), (game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Description), function()
 
 end)
-       Playerinform:NewButton("FilterEnabled/Repesect Is: (Click dots)", ("Click on the button and press F9"), function()
+_G.lmao24
+if game:GetService("SoundService").RespectFilteringEnabled == true then
+_G.lmao24 = "Enabled"
+else
+_G.lmao24 = "Disabled"
+end
+       Playerinform:NewButton("RepesectFilteringEnabled Is ".._G.lmao24, ("Click on the button and press F9"), function()
        print(game.Workspace.FilteringEnabled, "If it says true it means its on if it says false then it means its off")
         if game:GetService("SoundService").RespectFilteringEnabled == true then
                     print("RespectFilteringEnabled is enabled")
