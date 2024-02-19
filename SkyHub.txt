@@ -8174,6 +8174,9 @@ _G.Theme = "Dark" -- Must disable or remove _G.RedGUI to use
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord.gg-rips/main/NaturalDisasterSurvival.lua"))()
 		end)
+		MainSection:NewButton("FE Trolling GUI", "troll", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau"))()
+		end)
 		MainSection:NewButton("NDS Gui", "idk", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/2dgeneralspam1/scripts-and-stuff/master/scripts/LoadstringUjHI6RQpz2o8", true))()
 		end)
