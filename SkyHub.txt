@@ -1,11 +1,13 @@
 --[[games it supports Da Hood, Arsenal, Tower of Hell, KAT!, Fencing,
 Work At A Pizza Place, VR Hands, Adopt Me, Jailbreak, Prison Life,
-Build A Boat For Treasure, Gorilla Tag Professional, Murder Mystery 2, Blox fruits, Counter Blox, Mic Up, Neighbors, Natural Diaster Survival and Universal.
-10+ games
+Build A Boat For Treasure, Gorilla Tag Professional, Murder Mystery 2, Blox fruits, Counter Blox, Mic Up, Neighbors, Natural Diaster Survival, Ro-Ghoul, Blade Ball, Pet Simulator X,
+Pet Simulator 99, Legends of Speed, BrookHaven RP, Bedwars, and Universal.
+25+ games
 Rebuilt On IllusionHub
 Last Updated 2/19/2024
-ADDED 5 MORE GAMES AND ORGANIZED UIS AND ADDED SEARCHING ONLINE TO UNIVERSAL USING SCRIPTBLOX.COM
-BIGG UPDATEEE!!!
+ADDED 7 MORE GAMES AND ADDED ANOTHER HUB
+IF YOU WANT ME TO ADD A GAME JOIN MY DISCORD SERVER
+https://discord.gg/xwy5Cu62Vw
 sadly jailbreak still no work just use fe trolling gui or sum
 ]]--
 local OptTheme = "Midnight"
@@ -8269,7 +8271,760 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord
 						 PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
 							 game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
 						 end)
-				    				    
+-- Ro-Ghoul
+elseif game.PlaceId == 914010731 then
+	local Library = loadstring(game:HttpGet(_G.guidragtype))()
+		local Window = Library.CreateLib("SkyHub", OptTheme)
+		local Main = Window:NewTab("Main")
+		local MainSection = Main:NewSection("Main")
+		MainSection:NewButton("Auto farm", "yuh", function()
+			loadstring(game:HttpGet('https://pastebin.com/raw/2uF3iQAf', true))()
+		end)
+		MainSection:NewButton("Auto farmm", "yuh", function()
+			--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+loadstring(game:HttpGetAsync(("https://raw.githubusercontent.com/z4gs/scripts/master/Ro-Ghoul%20Auto%20Farm.lua")))()
+		end)
+		MainSection:NewButton("Trap Hub", "yuh", function()
+			local repo = "https://raw.githubusercontent.com/TrapstarKSSKSKSKKS/Main/main/"
+			local Id = game.PlaceId
+			local GameId = game.GameId
+			
+			local Games = {
+				["AA"] = {
+					FileName = getgenv().BetaScript and "AnimeAdventures-Rewrite" or "Anime%20Adventures",
+					PlaceId = { 3183403065 },
+					GameName = "Anime Adventures",
+				},
+				["RoGhoul"] = {
+					FileName = "RoGhoul",
+					PlaceId = { 380704901 },
+					GameName = "RoGhoul",
+				},
+				["Blade Ball"] = {
+					FileName = "BladeBall",
+					PlaceId = { 4777817887 },
+					GameName = "Blade Ball",
+				},
+				["ASX"] = {
+					FileName = "AnimeSouls",
+					PlaceId = { 5300677688 },
+					GameName = "Anime Souls Simulator X",  
+					},
+				["ALS"] = {
+					FileName = "AnimeLast",
+					PlaceId = { 4509896324 },
+					GameName = "Anime Last",  
+				},
+			}
+			
+			local function LoadScript(name)
+				local data = Games[name]
+				getgenv().GameName = data.GameName
+			
+				loadstring(game:HttpGet(repo .. data.FileName .. ".lua"))()
+			end
+			
+			for name, data in next, Games do
+				for _, v in next, data.PlaceId do
+					if Id == v or GameId == v then LoadScript(name) end
+				end
+			end
+		end)
+		local Discord = Window:NewTab("Discords")
+		local DiscordSection = Discord:NewSection("Discords")
+		DiscordSection:NewButton("Discord Invite", "Copys Discord invite link", function()
+			setclipboard(string)
+		end)
+		DiscordSection:NewButton("Discord Invite OLD", "Copys Discord invite link", function()
+			setclipboard(string2)
+		end)
+		local Admins = Window:NewTab("Admins")
+		local AdminsSection = Admins:NewSection("Admins")
+
+		AdminsSection:NewButton("Infinite Yield FE", "Admin", function()
+			loadstring(game:HttpGet(_G.infydtype))()
+		 end)
+		 
+		 AdminsSection:NewButton("Nameless Admin", "Admin", function()
+			 loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+		  end)
+		 
+		 AdminsSection:NewButton("fates admin", "Admin", function()
+			 loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+		  end)
+		 
+		  AdminsSection:NewButton("Proton Free Admin", "Admin", function()
+			 _G.UI_Id = "default" --set this to "default" for the default ui
+		 loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Proton%20Free'))()
+			  end)
+		 
+			  AdminsSection:NewButton("Proton 2 free Admin", "Admin", function()
+		 -- DEFAULT CMD BAR PREFIX IS ;
+		 -- DEFAULT CHAT PREFIX IS /
+		 _G.UI_Id = "default" --set this to "default" for the default ui
+		 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
+				  end)
+				 
+		local Hubs = Window:NewTab("Hubs")
+		local HubsSection = Hubs:NewSection("Hubs")
+		HubsSection:NewButton("Hoho Hub", "key should be and if not then do it urself", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HohoV2/main/ScriptLoad.lua"))()
+		end)
+		HubsSection:NewButton("Psyhub", "idk", function()
+			loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
+			 end)
+			
+			HubsSection:NewButton("VG Hub", "60+", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+			 end)
+			
+			
+						HubsSection:NewButton("Ezhub", "130+ games", function()
+							--[[ this is there cmds list
+			https://pastebin.com/CvjkJxAt
+			]]--
+			loadstring(game:HttpGet(('https://raw.githubusercontent.com/debug420/Ez-Industries-Launcher-Data/master/Launcher.lua'),true))()
+			--[[this is there thing idk
+			https://pastebin.com/vavZfexv
+			]]--
+			 end)
+				
+				   HubsSection:NewButton("Owl Hub", "46+ how", function()
+							loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+						end)
+
+						HubsSection:NewButton("CocoHub", "idk", function()
+							loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/CocoHub/master/CocoZHub'),true))()
+							 end)
+
+						HubsSection:NewButton("MonkeHub", "idk", function()
+							loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeHub/main/Loader.lua"))()
+						 end)
+
+						 local Player = Window:NewTab("Player")
+						 local PlayerSection = Player:NewSection("Player")
+						 PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, function(v) 
+							 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+						 end)
+				 
+						 PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
+							 game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+						 end)
+-- Blade Ball
+elseif game.PlaceId == 13772394625 then
+	local Library = loadstring(game:HttpGet(_G.guidragtype))()
+		local Window = Library.CreateLib("SkyHub", OptTheme)
+		local Main = Window:NewTab("Main")
+		local MainSection = Main:NewSection("Main")
+		MainSection:NewButton("Trap Hub", "yuh", function()
+			local repo = "https://raw.githubusercontent.com/TrapstarKSSKSKSKKS/Main/main/"
+			local Id = game.PlaceId
+			local GameId = game.GameId
+			
+			local Games = {
+				["AA"] = {
+					FileName = getgenv().BetaScript and "AnimeAdventures-Rewrite" or "Anime%20Adventures",
+					PlaceId = { 3183403065 },
+					GameName = "Anime Adventures",
+				},
+				["RoGhoul"] = {
+					FileName = "RoGhoul",
+					PlaceId = { 380704901 },
+					GameName = "RoGhoul",
+				},
+				["Blade Ball"] = {
+					FileName = "BladeBall",
+					PlaceId = { 4777817887 },
+					GameName = "Blade Ball",
+				},
+				["ASX"] = {
+					FileName = "AnimeSouls",
+					PlaceId = { 5300677688 },
+					GameName = "Anime Souls Simulator X",  
+					},
+				["ALS"] = {
+					FileName = "AnimeLast",
+					PlaceId = { 4509896324 },
+					GameName = "Anime Last",  
+				},
+			}
+			
+			local function LoadScript(name)
+				local data = Games[name]
+				getgenv().GameName = data.GameName
+			
+				loadstring(game:HttpGet(repo .. data.FileName .. ".lua"))()
+			end
+			
+			for name, data in next, Games do
+				for _, v in next, data.PlaceId do
+					if Id == v or GameId == v then LoadScript(name) end
+				end
+			end
+		end)
+		local Discord = Window:NewTab("Discords")
+		local DiscordSection = Discord:NewSection("Discords")
+		DiscordSection:NewButton("Discord Invite", "Copys Discord invite link", function()
+			setclipboard(string)
+		end)
+		DiscordSection:NewButton("Discord Invite OLD", "Copys Discord invite link", function()
+			setclipboard(string2)
+		end)
+		local Admins = Window:NewTab("Admins")
+		local AdminsSection = Admins:NewSection("Admins")
+
+		AdminsSection:NewButton("Infinite Yield FE", "Admin", function()
+			loadstring(game:HttpGet(_G.infydtype))()
+		 end)
+		 
+		 AdminsSection:NewButton("Nameless Admin", "Admin", function()
+			 loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+		  end)
+		 
+		 AdminsSection:NewButton("fates admin", "Admin", function()
+			 loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+		  end)
+		 
+		  AdminsSection:NewButton("Proton Free Admin", "Admin", function()
+			 _G.UI_Id = "default" --set this to "default" for the default ui
+		 loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Proton%20Free'))()
+			  end)
+		 
+			  AdminsSection:NewButton("Proton 2 free Admin", "Admin", function()
+		 -- DEFAULT CMD BAR PREFIX IS ;
+		 -- DEFAULT CHAT PREFIX IS /
+		 _G.UI_Id = "default" --set this to "default" for the default ui
+		 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
+				  end)
+				 
+		local Hubs = Window:NewTab("Hubs")
+		local HubsSection = Hubs:NewSection("Hubs")
+		MainSection:NewButton("Hoho Hub", "key should be and if not then do it urself", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HohoV2/main/ScriptLoad.lua"))()
+		end)
+		HubsSection:NewButton("Psyhub", "idk", function()
+			loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
+			 end)
+			
+			HubsSection:NewButton("VG Hub", "60+", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+			 end)
+			
+			
+						HubsSection:NewButton("Ezhub", "130+ games", function()
+							--[[ this is there cmds list
+			https://pastebin.com/CvjkJxAt
+			]]--
+			loadstring(game:HttpGet(('https://raw.githubusercontent.com/debug420/Ez-Industries-Launcher-Data/master/Launcher.lua'),true))()
+			--[[this is there thing idk
+			https://pastebin.com/vavZfexv
+			]]--
+			 end)
+				
+				   HubsSection:NewButton("Owl Hub", "46+ how", function()
+							loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+						end)
+
+						HubsSection:NewButton("CocoHub", "idk", function()
+							loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/CocoHub/master/CocoZHub'),true))()
+							 end)
+
+						HubsSection:NewButton("MonkeHub", "idk", function()
+							loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeHub/main/Loader.lua"))()
+						 end)
+
+						 local Player = Window:NewTab("Player")
+						 local PlayerSection = Player:NewSection("Player")
+						 PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, function(v) 
+							 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+						 end)
+				 
+						 PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
+							 game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+						 end)
+
+-- Pet Simulator X
+elseif game.PlaceId == 6284583030 then
+	local Library = loadstring(game:HttpGet(_G.guidragtype))()
+		local Window = Library.CreateLib("SkyHub", OptTheme)
+		local Main = Window:NewTab("Main")
+		local MainSection = Main:NewSection("Main")
+		MainSection:NewButton("Auto farm", "yuh", function()
+			loadstring(game:HttpGet('https://pastebin.com/raw/2uF3iQAf', true))()
+		end)
+		local Discord = Window:NewTab("Discords")
+		local DiscordSection = Discord:NewSection("Discords")
+		DiscordSection:NewButton("Discord Invite", "Copys Discord invite link", function()
+			setclipboard(string)
+		end)
+		DiscordSection:NewButton("Discord Invite OLD", "Copys Discord invite link", function()
+			setclipboard(string2)
+		end)
+		local Admins = Window:NewTab("Admins")
+		local AdminsSection = Admins:NewSection("Admins")
+
+		AdminsSection:NewButton("Infinite Yield FE", "Admin", function()
+			loadstring(game:HttpGet(_G.infydtype))()
+		 end)
+		 
+		 AdminsSection:NewButton("Nameless Admin", "Admin", function()
+			 loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+		  end)
+		 
+		 AdminsSection:NewButton("fates admin", "Admin", function()
+			 loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+		  end)
+		 
+		  AdminsSection:NewButton("Proton Free Admin", "Admin", function()
+			 _G.UI_Id = "default" --set this to "default" for the default ui
+		 loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Proton%20Free'))()
+			  end)
+		 
+			  AdminsSection:NewButton("Proton 2 free Admin", "Admin", function()
+		 -- DEFAULT CMD BAR PREFIX IS ;
+		 -- DEFAULT CHAT PREFIX IS /
+		 _G.UI_Id = "default" --set this to "default" for the default ui
+		 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
+				  end)
+				 
+		local Hubs = Window:NewTab("Hubs")
+		local HubsSection = Hubs:NewSection("Hubs")
+		HubsSection:NewButton("Hoho Hub", "key should be and if not then do it urself", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HohoV2/main/ScriptLoad.lua"))()
+		end)
+		HubsSection:NewButton("Psyhub", "idk", function()
+			loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
+			 end)
+			
+			MainSection:NewButton("VG Hub", "60+", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+			 end)
+			
+			
+						HubsSection:NewButton("Ezhub", "130+ games", function()
+							--[[ this is there cmds list
+			https://pastebin.com/CvjkJxAt
+			]]--
+			loadstring(game:HttpGet(('https://raw.githubusercontent.com/debug420/Ez-Industries-Launcher-Data/master/Launcher.lua'),true))()
+			--[[this is there thing idk
+			https://pastebin.com/vavZfexv
+			]]--
+			 end)
+				
+				   HubsSection:NewButton("Owl Hub", "46+ how", function()
+							loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+						end)
+
+						HubsSection:NewButton("CocoHub", "idk", function()
+							loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/CocoHub/master/CocoZHub'),true))()
+							 end)
+
+						HubsSection:NewButton("MonkeHub", "idk", function()
+							loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeHub/main/Loader.lua"))()
+						 end)
+
+						 local Player = Window:NewTab("Player")
+						 local PlayerSection = Player:NewSection("Player")
+						 PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, function(v) 
+							 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+						 end)
+				 
+						 PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
+							 game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+						 end)						 
+
+-- Pet Simulator 99
+elseif game.PlaceId == 8737899170 then
+	local Library = loadstring(game:HttpGet(_G.guidragtype))()
+		local Window = Library.CreateLib("SkyHub", OptTheme)
+		local Main = Window:NewTab("Main")
+		local MainSection = Main:NewSection("Main")
+		MainSection:NewButton("RedZ Hub BETA", "yuh", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/PetSimulator99/main/redz9999.lua"))()
+		end)
+		local Discord = Window:NewTab("Discords")
+		local DiscordSection = Discord:NewSection("Discords")
+		DiscordSection:NewButton("Discord Invite", "Copys Discord invite link", function()
+			setclipboard(string)
+		end)
+		DiscordSection:NewButton("Discord Invite OLD", "Copys Discord invite link", function()
+			setclipboard(string2)
+		end)
+		local Admins = Window:NewTab("Admins")
+		local AdminsSection = Admins:NewSection("Admins")
+
+		AdminsSection:NewButton("Infinite Yield FE", "Admin", function()
+			loadstring(game:HttpGet(_G.infydtype))()
+		 end)
+		 
+		 AdminsSection:NewButton("Nameless Admin", "Admin", function()
+			 loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+		  end)
+		 
+		 AdminsSection:NewButton("fates admin", "Admin", function()
+			 loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+		  end)
+		 
+		  AdminsSection:NewButton("Proton Free Admin", "Admin", function()
+			 _G.UI_Id = "default" --set this to "default" for the default ui
+		 loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Proton%20Free'))()
+			  end)
+		 
+			  AdminsSection:NewButton("Proton 2 free Admin", "Admin", function()
+		 -- DEFAULT CMD BAR PREFIX IS ;
+		 -- DEFAULT CHAT PREFIX IS /
+		 _G.UI_Id = "default" --set this to "default" for the default ui
+		 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
+				  end)
+				 
+		local Hubs = Window:NewTab("Hubs")
+		local HubsSection = Hubs:NewSection("Hubs")
+		MainSection:NewButton("Hoho Hub", "key should be and if not then do it urself", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HohoV2/main/ScriptLoad.lua"))()
+		end)
+		HubsSection:NewButton("Psyhub", "idk", function()
+			loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
+			 end)
+			
+			HubsSection:NewButton("VG Hub", "60+", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+			 end)
+			
+			
+						HubsSection:NewButton("Ezhub", "130+ games", function()
+							--[[ this is there cmds list
+			https://pastebin.com/CvjkJxAt
+			]]--
+			loadstring(game:HttpGet(('https://raw.githubusercontent.com/debug420/Ez-Industries-Launcher-Data/master/Launcher.lua'),true))()
+			--[[this is there thing idk
+			https://pastebin.com/vavZfexv
+			]]--
+			 end)
+				
+				   HubsSection:NewButton("Owl Hub", "46+ how", function()
+							loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+						end)
+
+						HubsSection:NewButton("CocoHub", "idk", function()
+							loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/CocoHub/master/CocoZHub'),true))()
+							 end)
+
+						HubsSection:NewButton("MonkeHub", "idk", function()
+							loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeHub/main/Loader.lua"))()
+						 end)
+
+						 local Player = Window:NewTab("Player")
+						 local PlayerSection = Player:NewSection("Player")
+						 PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, function(v) 
+							 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+						 end)
+				 
+						 PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
+							 game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+						 end)
+
+-- Legends of Speed
+elseif game.PlaceId == 3101667897 then
+	local Library = loadstring(game:HttpGet(_G.guidragtype))()
+		local Window = Library.CreateLib("SkyHub", OptTheme)
+		local Main = Window:NewTab("Main")
+		local MainSection = Main:NewSection("Main")
+		MainSection:NewButton("GUI", "yuh", function()
+			--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+-- Please Dont Steal The Script. --
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ReeAndArceus/Legends-Of-Speed-Gui/main/Gui"))() 
+		end)
+		MainSection:NewButton("GUI 2", "yuh", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/KrangH/ScriptsHub/main/Legends_Of_Speedv2"))()
+		end)
+		MainSection:NewButton("fire all orb touch interests", "yuh", function()
+			getgenv().collectOrbsToggle = true
+
+spawn(function()
+    while wait() do
+        if not getgenv().collectOrbsToggle then break end
+        for i, v in pairs(game:GetService("Workspace").orbFolder:GetDescendants()) do
+            if v.Name == "TouchInterest" and v.Parent then
+                firetouchinterest(game.Players.LocalPlayer.Character.Head, v.Parent, 0)
+                wait(0.1)
+                firetouchinterest(game.Players.LocalPlayer.Character.Head, v.Parent, 1)
+                break
+            end
+        end
+    end
+end)
+		end)
+		MainSection:NewButton("Ice Hub", "hub", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMae17/LegendOfSpeed/main/IceHub"))()
+		end)
+		local Discord = Window:NewTab("Discords")
+		local DiscordSection = Discord:NewSection("Discords")
+		DiscordSection:NewButton("Discord Invite", "Copys Discord invite link", function()
+			setclipboard(string)
+		end)
+		DiscordSection:NewButton("Discord Invite OLD", "Copys Discord invite link", function()
+			setclipboard(string2)
+		end)
+		local Admins = Window:NewTab("Admins")
+		local AdminsSection = Admins:NewSection("Admins")
+
+		AdminsSection:NewButton("Infinite Yield FE", "Admin", function()
+			loadstring(game:HttpGet(_G.infydtype))()
+		 end)
+		 
+		 AdminsSection:NewButton("Nameless Admin", "Admin", function()
+			 loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+		  end)
+		 
+		 AdminsSection:NewButton("fates admin", "Admin", function()
+			 loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+		  end)
+		 
+		  AdminsSection:NewButton("Proton Free Admin", "Admin", function()
+			 _G.UI_Id = "default" --set this to "default" for the default ui
+		 loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Proton%20Free'))()
+			  end)
+		 
+			  AdminsSection:NewButton("Proton 2 free Admin", "Admin", function()
+		 -- DEFAULT CMD BAR PREFIX IS ;
+		 -- DEFAULT CHAT PREFIX IS /
+		 _G.UI_Id = "default" --set this to "default" for the default ui
+		 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
+				  end)
+				 
+		local Hubs = Window:NewTab("Hubs")
+		local HubsSection = Hubs:NewSection("Hubs")
+		MainSection:NewButton("Hoho Hub", "key should be and if not then do it urself", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HohoV2/main/ScriptLoad.lua"))()
+		end)
+		HubsSection:NewButton("Psyhub", "idk", function()
+			loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
+			 end)
+			
+			HubsSection:NewButton("VG Hub", "60+", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+			 end)
+			
+			
+						HubsSection:NewButton("Ezhub", "130+ games", function()
+							--[[ this is there cmds list
+			https://pastebin.com/CvjkJxAt
+			]]--
+			loadstring(game:HttpGet(('https://raw.githubusercontent.com/debug420/Ez-Industries-Launcher-Data/master/Launcher.lua'),true))()
+			--[[this is there thing idk
+			https://pastebin.com/vavZfexv
+			]]--
+			 end)
+				
+				   HubsSection:NewButton("Owl Hub", "46+ how", function()
+							loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+						end)
+
+						HubsSection:NewButton("CocoHub", "idk", function()
+							loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/CocoHub/master/CocoZHub'),true))()
+							 end)
+
+						HubsSection:NewButton("MonkeHub", "idk", function()
+							loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeHub/main/Loader.lua"))()
+						 end)
+
+						 local Player = Window:NewTab("Player")
+						 local PlayerSection = Player:NewSection("Player")
+						 PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, function(v) 
+							 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+						 end)
+				 
+						 PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
+							 game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+						 end)
+
+-- Brookhaven RP
+elseif game.PlaceId == 4924922222 then
+	local Library = loadstring(game:HttpGet(_G.guidragtype))()
+		local Window = Library.CreateLib("SkyHub", OptTheme)
+		local Main = Window:NewTab("Main")
+		local MainSection = Main:NewSection("Main")
+		MainSection:NewButton("Ice Hub", "yuh", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMae17/NewIceHub/main/Brookhaven"))()
+		end)
+		local Discord = Window:NewTab("Discords")
+		local DiscordSection = Discord:NewSection("Discords")
+		DiscordSection:NewButton("Discord Invite", "Copys Discord invite link", function()
+			setclipboard(string)
+		end)
+		DiscordSection:NewButton("Discord Invite OLD", "Copys Discord invite link", function()
+			setclipboard(string2)
+		end)
+		local Admins = Window:NewTab("Admins")
+		local AdminsSection = Admins:NewSection("Admins")
+
+		AdminsSection:NewButton("Infinite Yield FE", "Admin", function()
+			loadstring(game:HttpGet(_G.infydtype))()
+		 end)
+		 
+		 AdminsSection:NewButton("Nameless Admin", "Admin", function()
+			 loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+		  end)
+		 
+		 AdminsSection:NewButton("fates admin", "Admin", function()
+			 loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+		  end)
+		 
+		  AdminsSection:NewButton("Proton Free Admin", "Admin", function()
+			 _G.UI_Id = "default" --set this to "default" for the default ui
+		 loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Proton%20Free'))()
+			  end)
+		 
+			  AdminsSection:NewButton("Proton 2 free Admin", "Admin", function()
+		 -- DEFAULT CMD BAR PREFIX IS ;
+		 -- DEFAULT CHAT PREFIX IS /
+		 _G.UI_Id = "default" --set this to "default" for the default ui
+		 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
+				  end)
+				 
+		local Hubs = Window:NewTab("Hubs")
+		local HubsSection = Hubs:NewSection("Hubs")
+		MainSection:NewButton("Hoho Hub", "key should be and if not then do it urself", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HohoV2/main/ScriptLoad.lua"))()
+		end)
+		HubsSection:NewButton("Psyhub", "idk", function()
+			loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
+			 end)
+			
+			HubsSection:NewButton("VG Hub", "60+", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+			 end)
+			
+			
+						HubsSection:NewButton("Ezhub", "130+ games", function()
+							--[[ this is there cmds list
+			https://pastebin.com/CvjkJxAt
+			]]--
+			loadstring(game:HttpGet(('https://raw.githubusercontent.com/debug420/Ez-Industries-Launcher-Data/master/Launcher.lua'),true))()
+			--[[this is there thing idk
+			https://pastebin.com/vavZfexv
+			]]--
+			 end)
+				
+				   HubsSection:NewButton("Owl Hub", "46+ how", function()
+							loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+						end)
+
+						HubsSection:NewButton("CocoHub", "idk", function()
+							loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/CocoHub/master/CocoZHub'),true))()
+							 end)
+
+						HubsSection:NewButton("MonkeHub", "idk", function()
+							loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeHub/main/Loader.lua"))()
+						 end)
+
+						 local Player = Window:NewTab("Player")
+						 local PlayerSection = Player:NewSection("Player")
+						 PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, function(v) 
+							 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+						 end)
+				 
+						 PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
+							 game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+						 end)
+-- Bedwars
+elseif game.PlaceId == 8560631822 then
+	local Library = loadstring(game:HttpGet(_G.guidragtype))()
+		local Window = Library.CreateLib("SkyHub", OptTheme)
+		local Main = Window:NewTab("Main")
+		local MainSection = Main:NewSection("Main")
+		MainSection:NewButton("Ice Hub", "yuh", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMae17/Bedwars/main/IceHub"))()
+		end)
+		MainSection:NewButton("Script", "yuh", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+		end)
+		local Discord = Window:NewTab("Discords")
+		local DiscordSection = Discord:NewSection("Discords")
+		DiscordSection:NewButton("Discord Invite", "Copys Discord invite link", function()
+			setclipboard(string)
+		end)
+		DiscordSection:NewButton("Discord Invite OLD", "Copys Discord invite link", function()
+			setclipboard(string2)
+		end)
+		local Admins = Window:NewTab("Admins")
+		local AdminsSection = Admins:NewSection("Admins")
+
+		AdminsSection:NewButton("Infinite Yield FE", "Admin", function()
+			loadstring(game:HttpGet(_G.infydtype))()
+		 end)
+		 
+		 AdminsSection:NewButton("Nameless Admin", "Admin", function()
+			 loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+		  end)
+		 
+		 AdminsSection:NewButton("fates admin", "Admin", function()
+			 loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+		  end)
+		 
+		  AdminsSection:NewButton("Proton Free Admin", "Admin", function()
+			 _G.UI_Id = "default" --set this to "default" for the default ui
+		 loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Proton%20Free'))()
+			  end)
+		 
+			  AdminsSection:NewButton("Proton 2 free Admin", "Admin", function()
+		 -- DEFAULT CMD BAR PREFIX IS ;
+		 -- DEFAULT CHAT PREFIX IS /
+		 _G.UI_Id = "default" --set this to "default" for the default ui
+		 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
+				  end)
+				 
+		local Hubs = Window:NewTab("Hubs")
+		local HubsSection = Hubs:NewSection("Hubs")
+		MainSection:NewButton("Hoho Hub", "key should be and if not then do it urself", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HohoV2/main/ScriptLoad.lua"))()
+		end)
+		HubsSection:NewButton("Psyhub", "idk", function()
+			loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
+			 end)
+			
+			HubsSection:NewButton("VG Hub", "60+", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+			 end)
+			
+			
+						HubsSection:NewButton("Ezhub", "130+ games", function()
+							--[[ this is there cmds list
+			https://pastebin.com/CvjkJxAt
+			]]--
+			loadstring(game:HttpGet(('https://raw.githubusercontent.com/debug420/Ez-Industries-Launcher-Data/master/Launcher.lua'),true))()
+			--[[this is there thing idk
+			https://pastebin.com/vavZfexv
+			]]--
+			 end)
+				
+				   HubsSection:NewButton("Owl Hub", "46+ how", function()
+							loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+						end)
+
+						HubsSection:NewButton("CocoHub", "idk", function()
+							loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/CocoHub/master/CocoZHub'),true))()
+							 end)
+
+						HubsSection:NewButton("MonkeHub", "idk", function()
+							loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeHub/main/Loader.lua"))()
+						 end)
+
+						 local Player = Window:NewTab("Player")
+						 local PlayerSection = Player:NewSection("Player")
+						 PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, function(v) 
+							 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+						 end)
+				 
+						 PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
+							 game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+						 end)
+
+
 	-- Universal
 else
 	    local Library = loadstring(game:HttpGet(_G.guidragtype))()
@@ -8383,6 +9138,58 @@ getgenv().mainKey = "nil"
 
 local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,tostring,"https://api.eclipsehub.xyz/auth"c(a and b,"Executor not Supported")a(b({Url=e.."\?\107e\121\61"..d(mainKey),Headers={["User-Agent"]="Eclipse"}}).Body)()
 								 end)
+
+								 HubsSection:NewButton("Trap hub", "idk", function()
+									MainSection:NewButton("Trap Hub", "yuh", function()
+										local repo = "https://raw.githubusercontent.com/TrapstarKSSKSKSKKS/Main/main/"
+										local Id = game.PlaceId
+										local GameId = game.GameId
+										
+										local Games = {
+											["AA"] = {
+												FileName = getgenv().BetaScript and "AnimeAdventures-Rewrite" or "Anime%20Adventures",
+												PlaceId = { 3183403065 },
+												GameName = "Anime Adventures",
+											},
+											["RoGhoul"] = {
+												FileName = "RoGhoul",
+												PlaceId = { 380704901 },
+												GameName = "RoGhoul",
+											},
+											["Blade Ball"] = {
+												FileName = "BladeBall",
+												PlaceId = { 4777817887 },
+												GameName = "Blade Ball",
+											},
+											["ASX"] = {
+												FileName = "AnimeSouls",
+												PlaceId = { 5300677688 },
+												GameName = "Anime Souls Simulator X",  
+												},
+											["ALS"] = {
+												FileName = "AnimeLast",
+												PlaceId = { 4509896324 },
+												GameName = "Anime Last",  
+											},
+										}
+										
+										local function LoadScript(name)
+											local data = Games[name]
+											getgenv().GameName = data.GameName
+										
+											loadstring(game:HttpGet(repo .. data.FileName .. ".lua"))()
+										end
+										
+										for name, data in next, Games do
+											for _, v in next, data.PlaceId do
+												if Id == v or GameId == v then LoadScript(name) end
+											end
+										end
+									end)
+	end)
+						HubsSection:NewButton("Ice Hub", "hub", function()
+							loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMae17/NewIceHub/main/Brookhaven"))()
+						end)
 					   
 						HubsSection:NewButton("Hat Hub", "need hats for this or items", function()
 							loadstring(game:HttpGet(('https://pastebin.com/raw/GQ7VPnbz'),true))()
