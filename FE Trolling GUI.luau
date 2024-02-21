@@ -1,7 +1,6 @@
 --[[
-Last Updated on 2/19/2024 
-Removed Some functions and added them into Sky Hub.
-and organized ui a bit added black hole
+Last Updated on 2/20/2024 
+Added FE Chat Bypass and organized more
 ]]--
 local OptTheme = "Midnight"
 local string = "https://discord.gg/xwy5Cu62Vw"
@@ -31,6 +30,9 @@ local Library = loadstring(game:HttpGet(_G.guidragtype))()
             end)
             local Admins = Window:NewTab("Admins")
             local AdminsSection = Admins:NewSection("Admins")
+
+			local GUISLOL = Window:NewTab("GUIS")
+            local GUISSection = GUISLOL:NewSection("GUIS")
 
 			AdminsSection:NewButton("Infinite Yield FE", "Admin", function()
 				loadstring(game:HttpGet(_G.infydtype))()
@@ -85,6 +87,10 @@ MainSection:NewButton("Netless V2", "need to do i think every time u reset", fun
  MainSection:NewButton("Sushi X", "idk", function()
    loadstring(game:HttpGet(('https://raw.githubusercontent.com/0Ben1/sushi/main/X'),true))()
 end)
+
+MainSection:NewButton("FE Chat Bypass", "bypasses chat filter can cuss", function()
+	loadstring(game:HttpGet('https://pastes.io/raw/lstrrfipqq'))();
+ end)
 
 MainSection:NewButton("BackDoor.exe", "scan for backdoors", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/iK4oS/backdoor.exe/master/source.lua"))()
@@ -192,10 +198,10 @@ notifSound:Destroy()
 game.StarterGui:SetCore("SendNotification", {Title = "feFlip", Text = "feFlip loaded successfully!", Icon = "rbxassetid://505845268", Duration = 5, Button1 = "Okay"})
 end)
 
-MainSection:NewButton("Arosia FE Gui", "idk", function()
+GUISSection:NewButton("Arosia FE Gui", "idk", function()
    loadstring(Game:GetObjects("rbxassetid://1255908305")[1].Source)()
 end)
-MainSection:NewButton("Animations FE Gui 1", "idk", function()
+GUISSection:NewButton("Animations FE Gui 1", "idk", function()
    local Gui = Instance.new("ScreenGui", game.CoreGui)
 Gui.Name = "FE Animations"
 local Background = Instance.new("Frame",Gui)
@@ -478,7 +484,7 @@ end
 end)
 end)
 
-MainSection:NewButton("Animations FE Gui 2", "idk", function()
+GUISSection:NewButton("Animations FE Gui 2", "idk", function()
    local Gui = Instance.new("ScreenGui", game.CoreGui)
 Gui.Name = "FE Animations"
 local Background = Instance.new("Frame",Gui)
@@ -752,7 +758,7 @@ end)
 
 
 
-MainSection:NewButton("Fuzk FE Gui", "idk", function()
+GUISSection:NewButton("Fuzk FE Gui", "idk", function()
    local lplayer = game:GetService('Players').LocalPlayer
 
 local killing = false
@@ -1446,7 +1452,7 @@ TextLabel_3.TextColor3 = Color3.new(0, 0, 0)
 TextLabel_3.TextSize = 40
 end)
 
-MainSection:NewButton("Yeet V3 FE Gui", "flings players", function()
+GUISSection:NewButton("Yeet V3 FE Gui", "flings players", function()
    local lplayer = game:GetService('Players').LocalPlayer
 
 local yeeting = false
@@ -1619,7 +1625,7 @@ TextLabel_3.Text = ahh('yeet gui')
 end
 end)
 
-MainSection:NewButton("Energize FE Gui", "animations", function()
+GUISSection:NewButton("Energize FE Gui", "animations", function()
    -- Energize by illremember, fe animations
 -- DO NOT COPY AND CLAIM AS OWN, if you are using some of the script for your own, credit is highly appreciated!
 -- Thank you, and enjoy.
@@ -3349,11 +3355,11 @@ end)
 -- Finished update!
 end)
 
-MainSection:NewButton("Atrava FE Gui", "idk", function()
+GUISSection:NewButton("Atrava FE Gui", "idk", function()
    loadstring(game:GetObjects("rbxassetid://1468845733")[1].Source)()
 end)
 
-MainSection:NewButton("Hyper Total FE Gui", "idk", function()
+GUISSection:NewButton("Hyper Total FE Gui", "idk", function()
   -- Credit to Timeless/xFunnieuss for the partial names/short names
 
 -- Objects
@@ -6261,7 +6267,7 @@ end)
 end)
 
 
-MainSection:NewButton("FE Fling GUI", "fling players", function()
+GUISSection:NewButton("FE Fling GUI", "fling players", function()
 	--[[Fling GUI]]--
 --[[Made by topit]]--
 loadstring(game:HttpGet('https://pastebin.com/raw/r97d7dS0', true))()
