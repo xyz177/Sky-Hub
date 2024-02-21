@@ -4,8 +4,9 @@ Build A Boat For Treasure, Gorilla Tag Professional, Murder Mystery 2, Blox frui
 Pet Simulator 99, Legends of Speed, BrookHaven RP, Bedwars, and Universal.
 25+ games
 Rebuilt On IllusionHub
-Last Updated 2/20/2024
-Added fpscap/unlock fps if your exploit supports it and added anti-lag and executor ui in universal and fencing ui made by espresso0069
+Last Updated 2/21/2024
+added icehub to adopt me and added httpspy in debuggers in universal
+executor ui in universal and fencing, ui made by espresso0069
 IF YOU WANT ME TO ADD A GAME OR REPORT A BUG JOIN MY DISCORD SERVER
 https://discord.gg/xwy5Cu62Vw
 sadly jailbreak still no work just use fe trolling gui or sum
@@ -10217,6 +10218,9 @@ else
 			
 			webImport("init")
 			webImport("ui/main")
+			 end)
+DebugsSection:NewButton("HttpSpy", "Make ur own script then", function()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Httpspy/main/httpspy.txt"))()
 			 end)
 			 local Admins = Window:NewTab("Admins")
             local AdminsSection = Admins:NewSection("Admins")
