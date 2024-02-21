@@ -4,9 +4,9 @@ Build A Boat For Treasure, Gorilla Tag Professional, Murder Mystery 2, Blox frui
 Pet Simulator 99, Legends of Speed, BrookHaven RP, Bedwars, and Universal.
 25+ games
 Rebuilt On IllusionHub
-Last Updated 2/19/2024
-ADDED 7 MORE GAMES AND ADDED ANOTHER HUB
-IF YOU WANT ME TO ADD A GAME JOIN MY DISCORD SERVER
+Last Updated 2/20/2024
+Added fpscap/unlock fps if your exploit supports it and added anti-lag and executor ui in universal and fencing ui made by espresso0069
+IF YOU WANT ME TO ADD A GAME OR REPORT A BUG JOIN MY DISCORD SERVER
 https://discord.gg/xwy5Cu62Vw
 sadly jailbreak still no work just use fe trolling gui or sum
 ]]--
@@ -234,6 +234,56 @@ PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, functi
     PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
     end)
+	local fpsloll = Window:NewTab("FPS")
+	local fpscapset = fpsloll:NewSection("FPS")
+	fpscapset:NewButton("Sets FPS Cap to 9999/unlock fps if ur exploit supports function","fps cap/unlock fps", function()
+		if setfpscap then
+			setfpscap(9999)
+		end
+	end)
+	fpscapset:NewButton("Anti-Lag","makes less laggy", function()
+		local Terrain = workspace:FindFirstChildOfClass('Terrain')
+        Lighting = game:GetService("Lighting")
+	Terrain.WaterWaveSize = 0
+	Terrain.WaterWaveSpeed = 0
+	Terrain.WaterReflectance = 0
+	Terrain.WaterTransparency = 0
+	Lighting.GlobalShadows = false
+	Lighting.FogEnd = 9e9
+	settings().Rendering.QualityLevel = 1
+	for i,v in pairs(game:GetDescendants()) do
+		if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+			v.Material = "Plastic"
+			v.Reflectance = 0
+		elseif v:IsA("Decal") then
+			v.Transparency = 1
+		elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+			v.Lifetime = NumberRange.new(0)
+		elseif v:IsA("Explosion") then
+			v.BlastPressure = 1
+			v.BlastRadius = 1
+		end
+	end
+	for i,v in pairs(Lighting:GetDescendants()) do
+		if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+			v.Enabled = false
+		end
+	end
+	workspace.DescendantAdded:Connect(function(child)
+		task.spawn(function()
+			if child:IsA('ForceField') then
+				RunService.Heartbeat:Wait()
+				child:Destroy()
+			elseif child:IsA('Sparkles') then
+				RunService.Heartbeat:Wait()
+				child:Destroy()
+			elseif child:IsA('Smoke') or child:IsA('Fire') then
+				RunService.Heartbeat:Wait()
+				child:Destroy()
+			end
+		end)
+	end)
+	end)
 --Arsenal
 elseif game.PlaceId == 286090429 then
 local Library = loadstring(game:HttpGet(_G.guidragtype))()
@@ -466,6 +516,56 @@ for i, player in pairs(Players:GetPlayers()) do
 }
 end
   end)
+  local fpsloll = Window:NewTab("FPS")
+  local fpscapset = fpsloll:NewSection("FPS")
+  fpscapset:NewButton("Sets FPS Cap to 9999/unlock fps if ur exploit supports function","fps cap/unlock fps", function()
+	  if setfpscap then
+		  setfpscap(9999)
+	  end
+  end)
+  fpscapset:NewButton("Anti-Lag","makes less laggy", function()
+	local Terrain = workspace:FindFirstChildOfClass('Terrain')
+	Lighting = game:GetService("Lighting")
+Terrain.WaterWaveSize = 0
+Terrain.WaterWaveSpeed = 0
+Terrain.WaterReflectance = 0
+Terrain.WaterTransparency = 0
+Lighting.GlobalShadows = false
+Lighting.FogEnd = 9e9
+settings().Rendering.QualityLevel = 1
+for i,v in pairs(game:GetDescendants()) do
+	if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+		v.Material = "Plastic"
+		v.Reflectance = 0
+	elseif v:IsA("Decal") then
+		v.Transparency = 1
+	elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+		v.Lifetime = NumberRange.new(0)
+	elseif v:IsA("Explosion") then
+		v.BlastPressure = 1
+		v.BlastRadius = 1
+	end
+end
+for i,v in pairs(Lighting:GetDescendants()) do
+	if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+		v.Enabled = false
+	end
+end
+workspace.DescendantAdded:Connect(function(child)
+	task.spawn(function()
+		if child:IsA('ForceField') then
+			RunService.Heartbeat:Wait()
+			child:Destroy()
+		elseif child:IsA('Sparkles') then
+			RunService.Heartbeat:Wait()
+			child:Destroy()
+		elseif child:IsA('Smoke') or child:IsA('Fire') then
+			RunService.Heartbeat:Wait()
+			child:Destroy()
+		end
+	end)
+end)
+end)
 -- Tower Of Hell
 elseif game.PlaceId == 1962086868 then
 local Library = loadstring(game:HttpGet(_G.guidragtype))()
@@ -562,6 +662,56 @@ PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, functi
     PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
     end)
+	local fpsloll = Window:NewTab("FPS")
+	local fpscapset = fpsloll:NewSection("FPS")
+	fpscapset:NewButton("Sets FPS Cap to 9999/unlock fps if ur exploit supports function","fps cap/unlock fps", function()
+		if setfpscap then
+			setfpscap(9999)
+		end
+	end)
+	fpscapset:NewButton("Anti-Lag","makes less laggy", function()
+		local Terrain = workspace:FindFirstChildOfClass('Terrain')
+        Lighting = game:GetService("Lighting")
+	Terrain.WaterWaveSize = 0
+	Terrain.WaterWaveSpeed = 0
+	Terrain.WaterReflectance = 0
+	Terrain.WaterTransparency = 0
+	Lighting.GlobalShadows = false
+	Lighting.FogEnd = 9e9
+	settings().Rendering.QualityLevel = 1
+	for i,v in pairs(game:GetDescendants()) do
+		if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+			v.Material = "Plastic"
+			v.Reflectance = 0
+		elseif v:IsA("Decal") then
+			v.Transparency = 1
+		elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+			v.Lifetime = NumberRange.new(0)
+		elseif v:IsA("Explosion") then
+			v.BlastPressure = 1
+			v.BlastRadius = 1
+		end
+	end
+	for i,v in pairs(Lighting:GetDescendants()) do
+		if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+			v.Enabled = false
+		end
+	end
+	workspace.DescendantAdded:Connect(function(child)
+		task.spawn(function()
+			if child:IsA('ForceField') then
+				RunService.Heartbeat:Wait()
+				child:Destroy()
+			elseif child:IsA('Sparkles') then
+				RunService.Heartbeat:Wait()
+				child:Destroy()
+			elseif child:IsA('Smoke') or child:IsA('Fire') then
+				RunService.Heartbeat:Wait()
+				child:Destroy()
+			end
+		end)
+	end)
+	end)
 -- KAT!
 elseif game.PlaceId == 621129760 then 
 local Library = loadstring(game:HttpGet(_G.guidragtype))()
@@ -830,6 +980,56 @@ PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, functi
     PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
     end)
+	local fpsloll = Window:NewTab("FPS")
+	local fpscapset = fpsloll:NewSection("FPS")
+	fpscapset:NewButton("Sets FPS Cap to 9999/unlock fps if ur exploit supports function","fps cap/unlock fps", function()
+		if setfpscap then
+			setfpscap(9999)
+		end
+	end)
+	fpscapset:NewButton("Anti-Lag","makes less laggy", function()
+		local Terrain = workspace:FindFirstChildOfClass('Terrain')
+        Lighting = game:GetService("Lighting")
+	Terrain.WaterWaveSize = 0
+	Terrain.WaterWaveSpeed = 0
+	Terrain.WaterReflectance = 0
+	Terrain.WaterTransparency = 0
+	Lighting.GlobalShadows = false
+	Lighting.FogEnd = 9e9
+	settings().Rendering.QualityLevel = 1
+	for i,v in pairs(game:GetDescendants()) do
+		if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+			v.Material = "Plastic"
+			v.Reflectance = 0
+		elseif v:IsA("Decal") then
+			v.Transparency = 1
+		elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+			v.Lifetime = NumberRange.new(0)
+		elseif v:IsA("Explosion") then
+			v.BlastPressure = 1
+			v.BlastRadius = 1
+		end
+	end
+	for i,v in pairs(Lighting:GetDescendants()) do
+		if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+			v.Enabled = false
+		end
+	end
+	workspace.DescendantAdded:Connect(function(child)
+		task.spawn(function()
+			if child:IsA('ForceField') then
+				RunService.Heartbeat:Wait()
+				child:Destroy()
+			elseif child:IsA('Sparkles') then
+				RunService.Heartbeat:Wait()
+				child:Destroy()
+			elseif child:IsA('Smoke') or child:IsA('Fire') then
+				RunService.Heartbeat:Wait()
+				child:Destroy()
+			end
+		end)
+	end)
+	end)
  -- Fencing
  elseif game.PlaceId == 12109643 then
  local Library = loadstring(game:HttpGet(_G.guidragtype))()
@@ -1444,6 +1644,12 @@ game.Lighting["LinkedSword2"]:Clone().Parent = game.Players.LocalPlayer.Backpack
 game.Lighting["LinkedSword"]:Clone().Parent = game.Players.LocalPlayer.Backpack
 end)
 
+local executors2345 = Window:NewTab("Executors")
+	local executorsexec2345 = executors2345:NewSection("Executors")
+    -- made by espresso0069
+     executorsexec2345:NewButton("Synapse X","only use once/ if ur on pc/emulator Execute Synapse X scripts that use old Synapse X functions or use if syn internal Synapse X UI made by espresso0069", function() 
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Synapse_UI.txt'))()
+     end)
 
 local Player = Window:NewTab("Player")
    local PlayerSection = Player:NewSection("Player")
@@ -1454,6 +1660,56 @@ PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, functi
     PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
     end)
+	local fpsloll = Window:NewTab("FPS")
+	local fpscapset = fpsloll:NewSection("FPS")
+	fpscapset:NewButton("Sets FPS Cap to 9999/unlock fps if ur exploit supports function","fps cap/unlock fps", function()
+		if setfpscap then
+			setfpscap(9999)
+		end
+	end)
+	fpscapset:NewButton("Anti-Lag","makes less laggy", function()
+		local Terrain = workspace:FindFirstChildOfClass('Terrain')
+        Lighting = game:GetService("Lighting")
+	Terrain.WaterWaveSize = 0
+	Terrain.WaterWaveSpeed = 0
+	Terrain.WaterReflectance = 0
+	Terrain.WaterTransparency = 0
+	Lighting.GlobalShadows = false
+	Lighting.FogEnd = 9e9
+	settings().Rendering.QualityLevel = 1
+	for i,v in pairs(game:GetDescendants()) do
+		if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+			v.Material = "Plastic"
+			v.Reflectance = 0
+		elseif v:IsA("Decal") then
+			v.Transparency = 1
+		elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+			v.Lifetime = NumberRange.new(0)
+		elseif v:IsA("Explosion") then
+			v.BlastPressure = 1
+			v.BlastRadius = 1
+		end
+	end
+	for i,v in pairs(Lighting:GetDescendants()) do
+		if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+			v.Enabled = false
+		end
+	end
+	workspace.DescendantAdded:Connect(function(child)
+		task.spawn(function()
+			if child:IsA('ForceField') then
+				RunService.Heartbeat:Wait()
+				child:Destroy()
+			elseif child:IsA('Sparkles') then
+				RunService.Heartbeat:Wait()
+				child:Destroy()
+			elseif child:IsA('Smoke') or child:IsA('Fire') then
+				RunService.Heartbeat:Wait()
+				child:Destroy()
+			end
+		end)
+	end)
+	end)
 -- Work at a Pizza Place
  elseif game.PlaceId == 192800 then
  local Library = loadstring(game:HttpGet(_G.guidragtype))()
@@ -3160,6 +3416,56 @@ PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, functi
     PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
     end)
+	local fpsloll = Window:NewTab("FPS")
+	local fpscapset = fpsloll:NewSection("FPS")
+	fpscapset:NewButton("Sets FPS Cap to 9999/unlock fps if ur exploit supports function","fps cap/unlock fps", function()
+		if setfpscap then
+			setfpscap(9999)
+		end
+	end)
+	fpscapset:NewButton("Anti-Lag","makes less laggy", function()
+		local Terrain = workspace:FindFirstChildOfClass('Terrain')
+        Lighting = game:GetService("Lighting")
+	Terrain.WaterWaveSize = 0
+	Terrain.WaterWaveSpeed = 0
+	Terrain.WaterReflectance = 0
+	Terrain.WaterTransparency = 0
+	Lighting.GlobalShadows = false
+	Lighting.FogEnd = 9e9
+	settings().Rendering.QualityLevel = 1
+	for i,v in pairs(game:GetDescendants()) do
+		if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+			v.Material = "Plastic"
+			v.Reflectance = 0
+		elseif v:IsA("Decal") then
+			v.Transparency = 1
+		elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+			v.Lifetime = NumberRange.new(0)
+		elseif v:IsA("Explosion") then
+			v.BlastPressure = 1
+			v.BlastRadius = 1
+		end
+	end
+	for i,v in pairs(Lighting:GetDescendants()) do
+		if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+			v.Enabled = false
+		end
+	end
+	workspace.DescendantAdded:Connect(function(child)
+		task.spawn(function()
+			if child:IsA('ForceField') then
+				RunService.Heartbeat:Wait()
+				child:Destroy()
+			elseif child:IsA('Sparkles') then
+				RunService.Heartbeat:Wait()
+				child:Destroy()
+			elseif child:IsA('Smoke') or child:IsA('Fire') then
+				RunService.Heartbeat:Wait()
+				child:Destroy()
+			end
+		end)
+	end)
+	end)
 -- Adopt me
 elseif game.PlaceId == 920587237 then
    local Library = loadstring(game:HttpGet(_G.guidragtype))()
@@ -4228,6 +4534,56 @@ PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, functi
     PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
     end)
+	local fpsloll = Window:NewTab("FPS")
+	local fpscapset = fpsloll:NewSection("FPS")
+	fpscapset:NewButton("Sets FPS Cap to 9999/unlock fps if ur exploit supports function","fps cap/unlock fps", function()
+		if setfpscap then
+			setfpscap(9999)
+		end
+	end)
+	fpscapset:NewButton("Anti-Lag","makes less laggy", function()
+		local Terrain = workspace:FindFirstChildOfClass('Terrain')
+        Lighting = game:GetService("Lighting")
+	Terrain.WaterWaveSize = 0
+	Terrain.WaterWaveSpeed = 0
+	Terrain.WaterReflectance = 0
+	Terrain.WaterTransparency = 0
+	Lighting.GlobalShadows = false
+	Lighting.FogEnd = 9e9
+	settings().Rendering.QualityLevel = 1
+	for i,v in pairs(game:GetDescendants()) do
+		if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+			v.Material = "Plastic"
+			v.Reflectance = 0
+		elseif v:IsA("Decal") then
+			v.Transparency = 1
+		elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+			v.Lifetime = NumberRange.new(0)
+		elseif v:IsA("Explosion") then
+			v.BlastPressure = 1
+			v.BlastRadius = 1
+		end
+	end
+	for i,v in pairs(Lighting:GetDescendants()) do
+		if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+			v.Enabled = false
+		end
+	end
+	workspace.DescendantAdded:Connect(function(child)
+		task.spawn(function()
+			if child:IsA('ForceField') then
+				RunService.Heartbeat:Wait()
+				child:Destroy()
+			elseif child:IsA('Sparkles') then
+				RunService.Heartbeat:Wait()
+				child:Destroy()
+			elseif child:IsA('Smoke') or child:IsA('Fire') then
+				RunService.Heartbeat:Wait()
+				child:Destroy()
+			end
+		end)
+	end)
+	end)
 -- JailBreak
 elseif game.PlaceId == 606849621 then
 	local Library2 = loadstring(game:HttpGet(_G.guidragtype))()
@@ -6285,6 +6641,56 @@ PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, functi
     PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
     end)
+	local fpsloll = Window:NewTab("FPS")
+	local fpscapset = fpsloll:NewSection("FPS")
+	fpscapset:NewButton("Sets FPS Cap to 9999/unlock fps if ur exploit supports function","fps cap/unlock fps", function()
+		if setfpscap then
+			setfpscap(9999)
+		end
+	end)
+	fpscapset:NewButton("Anti-Lag","makes less laggy", function()
+		local Terrain = workspace:FindFirstChildOfClass('Terrain')
+        Lighting = game:GetService("Lighting")
+	Terrain.WaterWaveSize = 0
+	Terrain.WaterWaveSpeed = 0
+	Terrain.WaterReflectance = 0
+	Terrain.WaterTransparency = 0
+	Lighting.GlobalShadows = false
+	Lighting.FogEnd = 9e9
+	settings().Rendering.QualityLevel = 1
+	for i,v in pairs(game:GetDescendants()) do
+		if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+			v.Material = "Plastic"
+			v.Reflectance = 0
+		elseif v:IsA("Decal") then
+			v.Transparency = 1
+		elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+			v.Lifetime = NumberRange.new(0)
+		elseif v:IsA("Explosion") then
+			v.BlastPressure = 1
+			v.BlastRadius = 1
+		end
+	end
+	for i,v in pairs(Lighting:GetDescendants()) do
+		if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+			v.Enabled = false
+		end
+	end
+	workspace.DescendantAdded:Connect(function(child)
+		task.spawn(function()
+			if child:IsA('ForceField') then
+				RunService.Heartbeat:Wait()
+				child:Destroy()
+			elseif child:IsA('Sparkles') then
+				RunService.Heartbeat:Wait()
+				child:Destroy()
+			elseif child:IsA('Smoke') or child:IsA('Fire') then
+				RunService.Heartbeat:Wait()
+				child:Destroy()
+			end
+		end)
+	end)
+	end)
 --Prison Life
 elseif game.PlaceId == 155615604 then
 local Library = loadstring(game:HttpGet(_G.guidragtype))()
@@ -6874,6 +7280,56 @@ PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, functi
     PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
     end)
+	local fpsloll = Window:NewTab("FPS")
+	local fpscapset = fpsloll:NewSection("FPS")
+	fpscapset:NewButton("Sets FPS Cap to 9999/unlock fps if ur exploit supports function","fps cap/unlock fps", function()
+		if setfpscap then
+			setfpscap(9999)
+		end
+	end)
+	fpscapset:NewButton("Anti-Lag","makes less laggy", function()
+		local Terrain = workspace:FindFirstChildOfClass('Terrain')
+        Lighting = game:GetService("Lighting")
+	Terrain.WaterWaveSize = 0
+	Terrain.WaterWaveSpeed = 0
+	Terrain.WaterReflectance = 0
+	Terrain.WaterTransparency = 0
+	Lighting.GlobalShadows = false
+	Lighting.FogEnd = 9e9
+	settings().Rendering.QualityLevel = 1
+	for i,v in pairs(game:GetDescendants()) do
+		if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+			v.Material = "Plastic"
+			v.Reflectance = 0
+		elseif v:IsA("Decal") then
+			v.Transparency = 1
+		elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+			v.Lifetime = NumberRange.new(0)
+		elseif v:IsA("Explosion") then
+			v.BlastPressure = 1
+			v.BlastRadius = 1
+		end
+	end
+	for i,v in pairs(Lighting:GetDescendants()) do
+		if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+			v.Enabled = false
+		end
+	end
+	workspace.DescendantAdded:Connect(function(child)
+		task.spawn(function()
+			if child:IsA('ForceField') then
+				RunService.Heartbeat:Wait()
+				child:Destroy()
+			elseif child:IsA('Sparkles') then
+				RunService.Heartbeat:Wait()
+				child:Destroy()
+			elseif child:IsA('Smoke') or child:IsA('Fire') then
+				RunService.Heartbeat:Wait()
+				child:Destroy()
+			end
+		end)
+	end)
+	end)
     -- Build A Boat
 elseif game.PlaceId == 537413528 then
 local Library = loadstring(game:HttpGet(_G.guidragtype))()
@@ -7324,6 +7780,56 @@ PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, functi
     PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
     game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
     end)
+	local fpsloll = Window:NewTab("FPS")
+	local fpscapset = fpsloll:NewSection("FPS")
+	fpscapset:NewButton("Sets FPS Cap to 9999/unlock fps if ur exploit supports function","fps cap/unlock fps", function()
+		if setfpscap then
+			setfpscap(9999)
+		end
+	end)
+	fpscapset:NewButton("Anti-Lag","makes less laggy", function()
+		local Terrain = workspace:FindFirstChildOfClass('Terrain')
+        Lighting = game:GetService("Lighting")
+	Terrain.WaterWaveSize = 0
+	Terrain.WaterWaveSpeed = 0
+	Terrain.WaterReflectance = 0
+	Terrain.WaterTransparency = 0
+	Lighting.GlobalShadows = false
+	Lighting.FogEnd = 9e9
+	settings().Rendering.QualityLevel = 1
+	for i,v in pairs(game:GetDescendants()) do
+		if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+			v.Material = "Plastic"
+			v.Reflectance = 0
+		elseif v:IsA("Decal") then
+			v.Transparency = 1
+		elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+			v.Lifetime = NumberRange.new(0)
+		elseif v:IsA("Explosion") then
+			v.BlastPressure = 1
+			v.BlastRadius = 1
+		end
+	end
+	for i,v in pairs(Lighting:GetDescendants()) do
+		if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+			v.Enabled = false
+		end
+	end
+	workspace.DescendantAdded:Connect(function(child)
+		task.spawn(function()
+			if child:IsA('ForceField') then
+				RunService.Heartbeat:Wait()
+				child:Destroy()
+			elseif child:IsA('Sparkles') then
+				RunService.Heartbeat:Wait()
+				child:Destroy()
+			elseif child:IsA('Smoke') or child:IsA('Fire') then
+				RunService.Heartbeat:Wait()
+				child:Destroy()
+			end
+		end)
+	end)
+	end)
 -- Gorilla Tag Professional
 elseif game.PlaceId == 8690998110 then
 	    local Library = loadstring(game:HttpGet(_G.guidragtype))()
@@ -7457,6 +7963,56 @@ Button1 = "unpatch pls?",Button2 = "no",     Duration = 20, })
         PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
             game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
         end)
+		local fpsloll = Window:NewTab("FPS")
+		local fpscapset = fpsloll:NewSection("FPS")
+		fpscapset:NewButton("Sets FPS Cap to 9999/unlock fps if ur exploit supports function","fps cap/unlock fps", function()
+			if setfpscap then
+				setfpscap(9999)
+			end
+		end)
+		fpscapset:NewButton("Anti-Lag","makes less laggy", function()
+			local Terrain = workspace:FindFirstChildOfClass('Terrain')
+			Lighting = game:GetService("Lighting")
+		Terrain.WaterWaveSize = 0
+		Terrain.WaterWaveSpeed = 0
+		Terrain.WaterReflectance = 0
+		Terrain.WaterTransparency = 0
+		Lighting.GlobalShadows = false
+		Lighting.FogEnd = 9e9
+		settings().Rendering.QualityLevel = 1
+		for i,v in pairs(game:GetDescendants()) do
+			if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+				v.Material = "Plastic"
+				v.Reflectance = 0
+			elseif v:IsA("Decal") then
+				v.Transparency = 1
+			elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+				v.Lifetime = NumberRange.new(0)
+			elseif v:IsA("Explosion") then
+				v.BlastPressure = 1
+				v.BlastRadius = 1
+			end
+		end
+		for i,v in pairs(Lighting:GetDescendants()) do
+			if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+				v.Enabled = false
+			end
+		end
+		workspace.DescendantAdded:Connect(function(child)
+			task.spawn(function()
+				if child:IsA('ForceField') then
+					RunService.Heartbeat:Wait()
+					child:Destroy()
+				elseif child:IsA('Sparkles') then
+					RunService.Heartbeat:Wait()
+					child:Destroy()
+				elseif child:IsA('Smoke') or child:IsA('Fire') then
+					RunService.Heartbeat:Wait()
+					child:Destroy()
+				end
+			end)
+		end)
+		end)
         
 -- Murder Mystery 2 or MM2
 elseif game.PlaceId == 142823291 then
@@ -7745,6 +8301,56 @@ end)
         PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
             game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
         end)
+		local fpsloll = Window:NewTab("FPS")
+		local fpscapset = fpsloll:NewSection("FPS")
+		fpscapset:NewButton("Sets FPS Cap to 9999/unlock fps if ur exploit supports function","fps cap/unlock fps", function()
+			if setfpscap then
+				setfpscap(9999)
+			end
+		end)
+		fpscapset:NewButton("Anti-Lag","makes less laggy", function()
+			local Terrain = workspace:FindFirstChildOfClass('Terrain')
+			Lighting = game:GetService("Lighting")
+		Terrain.WaterWaveSize = 0
+		Terrain.WaterWaveSpeed = 0
+		Terrain.WaterReflectance = 0
+		Terrain.WaterTransparency = 0
+		Lighting.GlobalShadows = false
+		Lighting.FogEnd = 9e9
+		settings().Rendering.QualityLevel = 1
+		for i,v in pairs(game:GetDescendants()) do
+			if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+				v.Material = "Plastic"
+				v.Reflectance = 0
+			elseif v:IsA("Decal") then
+				v.Transparency = 1
+			elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+				v.Lifetime = NumberRange.new(0)
+			elseif v:IsA("Explosion") then
+				v.BlastPressure = 1
+				v.BlastRadius = 1
+			end
+		end
+		for i,v in pairs(Lighting:GetDescendants()) do
+			if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+				v.Enabled = false
+			end
+		end
+		workspace.DescendantAdded:Connect(function(child)
+			task.spawn(function()
+				if child:IsA('ForceField') then
+					RunService.Heartbeat:Wait()
+					child:Destroy()
+				elseif child:IsA('Sparkles') then
+					RunService.Heartbeat:Wait()
+					child:Destroy()
+				elseif child:IsA('Smoke') or child:IsA('Fire') then
+					RunService.Heartbeat:Wait()
+					child:Destroy()
+				end
+			end)
+		end)
+		end)
         
 -- Blox Fruits
 elseif game.PlaceId == 2753915549 then
@@ -7832,6 +8438,56 @@ elseif game.PlaceId == 2753915549 then
 						 PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
 							 game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
 						 end)
+						 local fpsloll = Window:NewTab("FPS")
+						 local fpscapset = fpsloll:NewSection("FPS")
+						 fpscapset:NewButton("Sets FPS Cap to 9999/unlock fps if ur exploit supports function","fps cap/unlock fps", function()
+							 if setfpscap then
+								 setfpscap(9999)
+							 end
+						 end)
+						 fpscapset:NewButton("Anti-Lag","makes less laggy", function()
+							local Terrain = workspace:FindFirstChildOfClass('Terrain')
+							Lighting = game:GetService("Lighting")
+						Terrain.WaterWaveSize = 0
+						Terrain.WaterWaveSpeed = 0
+						Terrain.WaterReflectance = 0
+						Terrain.WaterTransparency = 0
+						Lighting.GlobalShadows = false
+						Lighting.FogEnd = 9e9
+						settings().Rendering.QualityLevel = 1
+						for i,v in pairs(game:GetDescendants()) do
+							if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+								v.Material = "Plastic"
+								v.Reflectance = 0
+							elseif v:IsA("Decal") then
+								v.Transparency = 1
+							elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+								v.Lifetime = NumberRange.new(0)
+							elseif v:IsA("Explosion") then
+								v.BlastPressure = 1
+								v.BlastRadius = 1
+							end
+						end
+						for i,v in pairs(Lighting:GetDescendants()) do
+							if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+								v.Enabled = false
+							end
+						end
+						workspace.DescendantAdded:Connect(function(child)
+							task.spawn(function()
+								if child:IsA('ForceField') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								elseif child:IsA('Sparkles') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								elseif child:IsA('Smoke') or child:IsA('Fire') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								end
+							end)
+						end)
+						end)
 			-- Counter Blox
 elseif game.PlaceId == 301549746 then
 	local Library = loadstring(game:HttpGet(_G.guidragtype))()
@@ -8056,6 +8712,56 @@ elseif game.PlaceId == 6884319169 then
 						 PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
 							 game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
 						 end)
+						 local fpsloll = Window:NewTab("FPS")
+						 local fpscapset = fpsloll:NewSection("FPS")
+						 fpscapset:NewButton("Sets FPS Cap to 9999/unlock fps if ur exploit supports function","fps cap/unlock fps", function()
+							 if setfpscap then
+								 setfpscap(9999)
+							 end
+						 end)
+						 fpscapset:NewButton("Anti-Lag","makes less laggy", function()
+							local Terrain = workspace:FindFirstChildOfClass('Terrain')
+							Lighting = game:GetService("Lighting")
+						Terrain.WaterWaveSize = 0
+						Terrain.WaterWaveSpeed = 0
+						Terrain.WaterReflectance = 0
+						Terrain.WaterTransparency = 0
+						Lighting.GlobalShadows = false
+						Lighting.FogEnd = 9e9
+						settings().Rendering.QualityLevel = 1
+						for i,v in pairs(game:GetDescendants()) do
+							if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+								v.Material = "Plastic"
+								v.Reflectance = 0
+							elseif v:IsA("Decal") then
+								v.Transparency = 1
+							elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+								v.Lifetime = NumberRange.new(0)
+							elseif v:IsA("Explosion") then
+								v.BlastPressure = 1
+								v.BlastRadius = 1
+							end
+						end
+						for i,v in pairs(Lighting:GetDescendants()) do
+							if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+								v.Enabled = false
+							end
+						end
+						workspace.DescendantAdded:Connect(function(child)
+							task.spawn(function()
+								if child:IsA('ForceField') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								elseif child:IsA('Sparkles') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								elseif child:IsA('Smoke') or child:IsA('Fire') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								end
+							end)
+						end)
+						end)
 				    	-- Neighbors
 elseif game.PlaceId == 12699642568 then
 	local Library = loadstring(game:HttpGet(_G.guidragtype))()
@@ -8156,6 +8862,56 @@ elseif game.PlaceId == 12699642568 then
 						 PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
 							 game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
 						 end)
+						 local fpsloll = Window:NewTab("FPS")
+						 local fpscapset = fpsloll:NewSection("FPS")
+						 fpscapset:NewButton("Sets FPS Cap to 9999/unlock fps if ur exploit supports function","fps cap/unlock fps", function()
+							 if setfpscap then
+								 setfpscap(9999)
+							 end
+						 end)
+						 fpscapset:NewButton("Anti-Lag","makes less laggy", function()
+							local Terrain = workspace:FindFirstChildOfClass('Terrain')
+							Lighting = game:GetService("Lighting")
+						Terrain.WaterWaveSize = 0
+						Terrain.WaterWaveSpeed = 0
+						Terrain.WaterReflectance = 0
+						Terrain.WaterTransparency = 0
+						Lighting.GlobalShadows = false
+						Lighting.FogEnd = 9e9
+						settings().Rendering.QualityLevel = 1
+						for i,v in pairs(game:GetDescendants()) do
+							if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+								v.Material = "Plastic"
+								v.Reflectance = 0
+							elseif v:IsA("Decal") then
+								v.Transparency = 1
+							elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+								v.Lifetime = NumberRange.new(0)
+							elseif v:IsA("Explosion") then
+								v.BlastPressure = 1
+								v.BlastRadius = 1
+							end
+						end
+						for i,v in pairs(Lighting:GetDescendants()) do
+							if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+								v.Enabled = false
+							end
+						end
+						workspace.DescendantAdded:Connect(function(child)
+							task.spawn(function()
+								if child:IsA('ForceField') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								elseif child:IsA('Sparkles') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								elseif child:IsA('Smoke') or child:IsA('Fire') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								end
+							end)
+						end)
+						end)
 -- Natural Diaster Survival
 elseif game.PlaceId == 189707 then
 	local Library = loadstring(game:HttpGet(_G.guidragtype))()
@@ -8271,6 +9027,56 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord
 						 PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
 							 game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
 						 end)
+						 local fpsloll = Window:NewTab("FPS")
+						 local fpscapset = fpsloll:NewSection("FPS")
+						 fpscapset:NewButton("Sets FPS Cap to 9999/unlock fps if ur exploit supports function","fps cap/unlock fps", function()
+							 if setfpscap then
+								 setfpscap(9999)
+							 end
+						 end)
+						 fpscapset:NewButton("Anti-Lag","makes less laggy", function()
+							local Terrain = workspace:FindFirstChildOfClass('Terrain')
+							Lighting = game:GetService("Lighting")
+						Terrain.WaterWaveSize = 0
+						Terrain.WaterWaveSpeed = 0
+						Terrain.WaterReflectance = 0
+						Terrain.WaterTransparency = 0
+						Lighting.GlobalShadows = false
+						Lighting.FogEnd = 9e9
+						settings().Rendering.QualityLevel = 1
+						for i,v in pairs(game:GetDescendants()) do
+							if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+								v.Material = "Plastic"
+								v.Reflectance = 0
+							elseif v:IsA("Decal") then
+								v.Transparency = 1
+							elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+								v.Lifetime = NumberRange.new(0)
+							elseif v:IsA("Explosion") then
+								v.BlastPressure = 1
+								v.BlastRadius = 1
+							end
+						end
+						for i,v in pairs(Lighting:GetDescendants()) do
+							if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+								v.Enabled = false
+							end
+						end
+						workspace.DescendantAdded:Connect(function(child)
+							task.spawn(function()
+								if child:IsA('ForceField') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								elseif child:IsA('Sparkles') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								elseif child:IsA('Smoke') or child:IsA('Fire') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								end
+							end)
+						end)
+						end)
 -- Ro-Ghoul
 elseif game.PlaceId == 914010731 then
 	local Library = loadstring(game:HttpGet(_G.guidragtype))()
@@ -8412,6 +9218,56 @@ loadstring(game:HttpGetAsync(("https://raw.githubusercontent.com/z4gs/scripts/ma
 						 PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
 							 game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
 						 end)
+						 local fpsloll = Window:NewTab("FPS")
+						 local fpscapset = fpsloll:NewSection("FPS")
+						 fpscapset:NewButton("Sets FPS Cap to 9999/unlock fps if ur exploit supports function","fps cap/unlock fps", function()
+							 if setfpscap then
+								 setfpscap(9999)
+							 end
+						 end)
+						 fpscapset:NewButton("Anti-Lag","makes less laggy", function()
+							local Terrain = workspace:FindFirstChildOfClass('Terrain')
+							Lighting = game:GetService("Lighting")
+						Terrain.WaterWaveSize = 0
+						Terrain.WaterWaveSpeed = 0
+						Terrain.WaterReflectance = 0
+						Terrain.WaterTransparency = 0
+						Lighting.GlobalShadows = false
+						Lighting.FogEnd = 9e9
+						settings().Rendering.QualityLevel = 1
+						for i,v in pairs(game:GetDescendants()) do
+							if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+								v.Material = "Plastic"
+								v.Reflectance = 0
+							elseif v:IsA("Decal") then
+								v.Transparency = 1
+							elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+								v.Lifetime = NumberRange.new(0)
+							elseif v:IsA("Explosion") then
+								v.BlastPressure = 1
+								v.BlastRadius = 1
+							end
+						end
+						for i,v in pairs(Lighting:GetDescendants()) do
+							if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+								v.Enabled = false
+							end
+						end
+						workspace.DescendantAdded:Connect(function(child)
+							task.spawn(function()
+								if child:IsA('ForceField') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								elseif child:IsA('Sparkles') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								elseif child:IsA('Smoke') or child:IsA('Fire') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								end
+							end)
+						end)
+						end)
 -- Blade Ball
 elseif game.PlaceId == 13772394625 then
 	local Library = loadstring(game:HttpGet(_G.guidragtype))()
@@ -8544,6 +9400,56 @@ elseif game.PlaceId == 13772394625 then
 						 PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
 							 game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
 						 end)
+						 local fpsloll = Window:NewTab("FPS")
+						 local fpscapset = fpsloll:NewSection("FPS")
+						 fpscapset:NewButton("Sets FPS Cap to 9999/unlock fps if ur exploit supports function","fps cap/unlock fps", function()
+							 if setfpscap then
+								 setfpscap(9999)
+							 end
+						 end)
+						 fpscapset:NewButton("Anti-Lag","makes less laggy", function()
+							local Terrain = workspace:FindFirstChildOfClass('Terrain')
+							Lighting = game:GetService("Lighting")
+						Terrain.WaterWaveSize = 0
+						Terrain.WaterWaveSpeed = 0
+						Terrain.WaterReflectance = 0
+						Terrain.WaterTransparency = 0
+						Lighting.GlobalShadows = false
+						Lighting.FogEnd = 9e9
+						settings().Rendering.QualityLevel = 1
+						for i,v in pairs(game:GetDescendants()) do
+							if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+								v.Material = "Plastic"
+								v.Reflectance = 0
+							elseif v:IsA("Decal") then
+								v.Transparency = 1
+							elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+								v.Lifetime = NumberRange.new(0)
+							elseif v:IsA("Explosion") then
+								v.BlastPressure = 1
+								v.BlastRadius = 1
+							end
+						end
+						for i,v in pairs(Lighting:GetDescendants()) do
+							if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+								v.Enabled = false
+							end
+						end
+						workspace.DescendantAdded:Connect(function(child)
+							task.spawn(function()
+								if child:IsA('ForceField') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								elseif child:IsA('Sparkles') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								elseif child:IsA('Smoke') or child:IsA('Fire') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								end
+							end)
+						end)
+						end)
 
 -- Pet Simulator X
 elseif game.PlaceId == 6284583030 then
@@ -8633,7 +9539,57 @@ elseif game.PlaceId == 6284583030 then
 				 
 						 PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
 							 game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
-						 end)						 
+						 end)		
+						 local fpsloll = Window:NewTab("FPS")
+						 local fpscapset = fpsloll:NewSection("FPS")
+						 fpscapset:NewButton("Sets FPS Cap to 9999/unlock fps if ur exploit supports function","fps cap/unlock fps", function()
+							 if setfpscap then
+								 setfpscap(9999)
+							 end
+						 end)
+						 fpscapset:NewButton("Anti-Lag","makes less laggy", function()
+							local Terrain = workspace:FindFirstChildOfClass('Terrain')
+							Lighting = game:GetService("Lighting")
+						Terrain.WaterWaveSize = 0
+						Terrain.WaterWaveSpeed = 0
+						Terrain.WaterReflectance = 0
+						Terrain.WaterTransparency = 0
+						Lighting.GlobalShadows = false
+						Lighting.FogEnd = 9e9
+						settings().Rendering.QualityLevel = 1
+						for i,v in pairs(game:GetDescendants()) do
+							if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+								v.Material = "Plastic"
+								v.Reflectance = 0
+							elseif v:IsA("Decal") then
+								v.Transparency = 1
+							elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+								v.Lifetime = NumberRange.new(0)
+							elseif v:IsA("Explosion") then
+								v.BlastPressure = 1
+								v.BlastRadius = 1
+							end
+						end
+						for i,v in pairs(Lighting:GetDescendants()) do
+							if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+								v.Enabled = false
+							end
+						end
+						workspace.DescendantAdded:Connect(function(child)
+							task.spawn(function()
+								if child:IsA('ForceField') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								elseif child:IsA('Sparkles') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								elseif child:IsA('Smoke') or child:IsA('Fire') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								end
+							end)
+						end)
+						end)			 
 
 -- Pet Simulator 99
 elseif game.PlaceId == 8737899170 then
@@ -8724,6 +9680,57 @@ elseif game.PlaceId == 8737899170 then
 						 PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
 							 game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
 						 end)
+
+						 local fpsloll = Window:NewTab("FPS")
+						 local fpscapset = fpsloll:NewSection("FPS")
+						 fpscapset:NewButton("Sets FPS Cap to 9999/unlock fps if ur exploit supports function","fps cap/unlock fps", function()
+							 if setfpscap then
+								 setfpscap(9999)
+							 end
+						 end)
+						 fpscapset:NewButton("Anti-Lag","makes less laggy", function()
+							local Terrain = workspace:FindFirstChildOfClass('Terrain')
+							Lighting = game:GetService("Lighting")
+						Terrain.WaterWaveSize = 0
+						Terrain.WaterWaveSpeed = 0
+						Terrain.WaterReflectance = 0
+						Terrain.WaterTransparency = 0
+						Lighting.GlobalShadows = false
+						Lighting.FogEnd = 9e9
+						settings().Rendering.QualityLevel = 1
+						for i,v in pairs(game:GetDescendants()) do
+							if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+								v.Material = "Plastic"
+								v.Reflectance = 0
+							elseif v:IsA("Decal") then
+								v.Transparency = 1
+							elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+								v.Lifetime = NumberRange.new(0)
+							elseif v:IsA("Explosion") then
+								v.BlastPressure = 1
+								v.BlastRadius = 1
+							end
+						end
+						for i,v in pairs(Lighting:GetDescendants()) do
+							if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+								v.Enabled = false
+							end
+						end
+						workspace.DescendantAdded:Connect(function(child)
+							task.spawn(function()
+								if child:IsA('ForceField') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								elseif child:IsA('Sparkles') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								elseif child:IsA('Smoke') or child:IsA('Fire') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								end
+							end)
+						end)
+						end)
 
 -- Legends of Speed
 elseif game.PlaceId == 3101667897 then
@@ -8842,6 +9849,57 @@ end)
 							 game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
 						 end)
 
+						 local fpsloll = Window:NewTab("FPS")
+						 local fpscapset = fpsloll:NewSection("FPS")
+						 fpscapset:NewButton("Sets FPS Cap to 9999/unlock fps if ur exploit supports function","fps cap/unlock fps", function()
+							 if setfpscap then
+								 setfpscap(9999)
+							 end
+						 end)
+						 fpscapset:NewButton("Anti-Lag","makes less laggy", function()
+							local Terrain = workspace:FindFirstChildOfClass('Terrain')
+							Lighting = game:GetService("Lighting")
+						Terrain.WaterWaveSize = 0
+						Terrain.WaterWaveSpeed = 0
+						Terrain.WaterReflectance = 0
+						Terrain.WaterTransparency = 0
+						Lighting.GlobalShadows = false
+						Lighting.FogEnd = 9e9
+						settings().Rendering.QualityLevel = 1
+						for i,v in pairs(game:GetDescendants()) do
+							if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+								v.Material = "Plastic"
+								v.Reflectance = 0
+							elseif v:IsA("Decal") then
+								v.Transparency = 1
+							elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+								v.Lifetime = NumberRange.new(0)
+							elseif v:IsA("Explosion") then
+								v.BlastPressure = 1
+								v.BlastRadius = 1
+							end
+						end
+						for i,v in pairs(Lighting:GetDescendants()) do
+							if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+								v.Enabled = false
+							end
+						end
+						workspace.DescendantAdded:Connect(function(child)
+							task.spawn(function()
+								if child:IsA('ForceField') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								elseif child:IsA('Sparkles') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								elseif child:IsA('Smoke') or child:IsA('Fire') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								end
+							end)
+						end)
+						end)
+
 -- Brookhaven RP
 elseif game.PlaceId == 4924922222 then
 	local Library = loadstring(game:HttpGet(_G.guidragtype))()
@@ -8931,6 +9989,57 @@ elseif game.PlaceId == 4924922222 then
 						 PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
 							 game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
 						 end)
+
+						 local fpsloll = Window:NewTab("FPS")
+						 local fpscapset = fpsloll:NewSection("FPS")
+						 fpscapset:NewButton("Sets FPS Cap to 9999/unlock fps if ur exploit supports function","fps cap/unlock fps", function()
+							 if setfpscap then
+								 setfpscap(9999)
+							 end
+						 end)
+						 fpscapset:NewButton("Anti-Lag","makes less laggy", function()
+							local Terrain = workspace:FindFirstChildOfClass('Terrain')
+							Lighting = game:GetService("Lighting")
+						Terrain.WaterWaveSize = 0
+						Terrain.WaterWaveSpeed = 0
+						Terrain.WaterReflectance = 0
+						Terrain.WaterTransparency = 0
+						Lighting.GlobalShadows = false
+						Lighting.FogEnd = 9e9
+						settings().Rendering.QualityLevel = 1
+						for i,v in pairs(game:GetDescendants()) do
+							if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+								v.Material = "Plastic"
+								v.Reflectance = 0
+							elseif v:IsA("Decal") then
+								v.Transparency = 1
+							elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+								v.Lifetime = NumberRange.new(0)
+							elseif v:IsA("Explosion") then
+								v.BlastPressure = 1
+								v.BlastRadius = 1
+							end
+						end
+						for i,v in pairs(Lighting:GetDescendants()) do
+							if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+								v.Enabled = false
+							end
+						end
+						workspace.DescendantAdded:Connect(function(child)
+							task.spawn(function()
+								if child:IsA('ForceField') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								elseif child:IsA('Sparkles') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								elseif child:IsA('Smoke') or child:IsA('Fire') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								end
+							end)
+						end)
+						end)
 -- Bedwars
 elseif game.PlaceId == 8560631822 then
 	local Library = loadstring(game:HttpGet(_G.guidragtype))()
@@ -9023,7 +10132,56 @@ elseif game.PlaceId == 8560631822 then
 						 PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
 							 game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
 						 end)
-
+						 local fpsloll = Window:NewTab("FPS")
+						 local fpscapset = fpsloll:NewSection("FPS")
+						 fpscapset:NewButton("Sets FPS Cap to 9999/unlock fps if ur exploit supports function","fps cap/unlock fps", function()
+							 if setfpscap then
+								 setfpscap(9999)
+							 end
+						 end)
+						 fpscapset:NewButton("Anti-Lag","makes less laggy", function()
+							local Terrain = workspace:FindFirstChildOfClass('Terrain')
+							Lighting = game:GetService("Lighting")
+						Terrain.WaterWaveSize = 0
+						Terrain.WaterWaveSpeed = 0
+						Terrain.WaterReflectance = 0
+						Terrain.WaterTransparency = 0
+						Lighting.GlobalShadows = false
+						Lighting.FogEnd = 9e9
+						settings().Rendering.QualityLevel = 1
+						for i,v in pairs(game:GetDescendants()) do
+							if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+								v.Material = "Plastic"
+								v.Reflectance = 0
+							elseif v:IsA("Decal") then
+								v.Transparency = 1
+							elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+								v.Lifetime = NumberRange.new(0)
+							elseif v:IsA("Explosion") then
+								v.BlastPressure = 1
+								v.BlastRadius = 1
+							end
+						end
+						for i,v in pairs(Lighting:GetDescendants()) do
+							if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+								v.Enabled = false
+							end
+						end
+						workspace.DescendantAdded:Connect(function(child)
+							task.spawn(function()
+								if child:IsA('ForceField') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								elseif child:IsA('Sparkles') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								elseif child:IsA('Smoke') or child:IsA('Fire') then
+									RunService.Heartbeat:Wait()
+									child:Destroy()
+								end
+							end)
+						end)
+						end)
 
 	-- Universal
 else
@@ -10528,6 +11686,64 @@ coroutine.wrap(ACHGC_fake_script)()
             end
         end
 end)
+
+	local executors2345 = Window:NewTab("Executors")
+	local executorsexec2345 = executors2345:NewSection("Executors")
+    -- made by espresso0069
+     executorsexec2345:NewButton("Synapse X","only use once/ if ur on pc/emulator Execute Synapse X scripts that use old Synapse X functions or use if syn internal Synapse X UI made by espresso0069", function() 
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Synapse_UI.txt'))()
+     end)
+-- ^^^ nade by espresso0069
+    local fpsloll = Window:NewTab("FPS")
+	local fpscapset = fpsloll:NewSection("FPS")
+	fpscapset:NewButton("Sets FPS Cap to 9999/unlock fps if ur exploit supports function","fps cap/unlock fps", function()
+		if setfpscap then
+			setfpscap(9999)
+		end
+	end)
+	fpscapset:NewButton("Anti-Lag","makes less laggy", function()
+		local Terrain = workspace:FindFirstChildOfClass('Terrain')
+        Lighting = game:GetService("Lighting")
+	Terrain.WaterWaveSize = 0
+	Terrain.WaterWaveSpeed = 0
+	Terrain.WaterReflectance = 0
+	Terrain.WaterTransparency = 0
+	Lighting.GlobalShadows = false
+	Lighting.FogEnd = 9e9
+	settings().Rendering.QualityLevel = 1
+	for i,v in pairs(game:GetDescendants()) do
+		if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+			v.Material = "Plastic"
+			v.Reflectance = 0
+		elseif v:IsA("Decal") then
+			v.Transparency = 1
+		elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+			v.Lifetime = NumberRange.new(0)
+		elseif v:IsA("Explosion") then
+			v.BlastPressure = 1
+			v.BlastRadius = 1
+		end
+	end
+	for i,v in pairs(Lighting:GetDescendants()) do
+		if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+			v.Enabled = false
+		end
+	end
+	workspace.DescendantAdded:Connect(function(child)
+		task.spawn(function()
+			if child:IsA('ForceField') then
+				RunService.Heartbeat:Wait()
+				child:Destroy()
+			elseif child:IsA('Sparkles') then
+				RunService.Heartbeat:Wait()
+				child:Destroy()
+			elseif child:IsA('Smoke') or child:IsA('Fire') then
+				RunService.Heartbeat:Wait()
+				child:Destroy()
+			end
+		end)
+	end)
+	end)
         
         local Player = Window:NewTab("Player")
         local PlayerSection = Player:NewSection("Player")
@@ -10538,16 +11754,19 @@ end)
         PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
             game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
         end)
-        
-        local Placeinfo = Window:NewTab("Place Info")
+
+     
+
+        	local Placeinfo = Window:NewTab("Place Info")
         local Playerinform = Placeinfo:NewSection("Place Info")
-        
+	
+      
          Playerinform:NewButton(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name, (game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Description), function()
 end)
 Playerinform:NewButton(game:GetService("Players"):GetNameFromUserIdAsync(game.CreatorId), (game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Description), function()
 
 end)
-       Playerinform:NewButton("RepesectFilteringEnabled Is ".._G.lmao24, ("Click on the button and press F9"), function()
+       Playerinform:NewButton("RepesectFilteringEnabled Is ".._G.lmao24, "Click on the button and press F9", function()
        print(game.Workspace.FilteringEnabled, "If it says true it means its on if it says false then it means its off")
         if game:GetService("SoundService").RespectFilteringEnabled == true then
                     print("RespectFilteringEnabled is enabled")
@@ -10555,4 +11774,6 @@ end)
                     print("RespectFilteringEnabled is disabled")
                 end
        end)
+  
     end
+    
