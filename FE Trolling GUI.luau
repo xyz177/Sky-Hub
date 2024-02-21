@@ -1,6 +1,6 @@
 --[[
 Last Updated on 2/20/2024 
-Added FE Chat Bypass and organized more
+Added System Broken
 ]]--
 local OptTheme = "Midnight"
 local string = "https://discord.gg/xwy5Cu62Vw"
@@ -57,7 +57,10 @@ local Library = loadstring(game:HttpGet(_G.guidragtype))()
 			 _G.UI_Id = "default" --set this to "default" for the default ui
 			 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
 					  end)
-					 
+					  MainSection:NewButton("System Broken FE", "w", function()
+						local credits = "SystemBroken made by system_calix"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/script"))()
+					 end)
 
 MainSection:NewButton("Walk on Walls FE", "kinda buggy if execute more than once", function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Walk%20On%20Walls%20Script%20(R6%2615).txt"))()
