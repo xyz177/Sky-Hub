@@ -3547,7 +3547,9 @@ elseif game.PlaceId == 920587237 then
  MainSection:NewButton("FE Trolling GUI", "troll", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau"))()
 end)
-
+MainSection:NewButton("Ice Hub", "hub", function()
+							loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMae17/NewIceHub/main/Brookhaven"))()
+						end)
 
  MainSection:NewButton("Mobile VFly", "title explains", function()
 	--MADE BY WARRIOR ROBERR
