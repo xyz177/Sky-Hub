@@ -360,12 +360,14 @@ local function PJZF_fake_script() -- Fake Script: StarterGui.blarg.Screen.main.T
 		btn.BackgroundColor3= Color3.fromRGB(45, 44, 45)
 	end)
 	btn.MouseButton1Down:Connect(function()
+httprequest = (http and http.request) or http_request or (fluxus and fluxus.request) or request
 syn = {
     cache_replace = function(da) cache.replace(da) end,
     cache_invalidate = function(ad) cache.invalidate(ad) end,
     is_cached = function(lol) cache.iscached(lol) end,
     write_clipboard = function(lol2) setclipboard(lol2) end,
-    set_thread_identity = function(fit) setthreadidentity(fit) end
+    set_thread_identity = function(fit) setthreadidentity(fit) end,
+request = function(lol6) httprequest(lol6) end
 }
 identifyexecutor = function()
 print("Synapse X")
