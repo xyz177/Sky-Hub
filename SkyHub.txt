@@ -1,14 +1,20 @@
 --[[games it supports Da Hood, Arsenal, Tower of Hell, KAT!, Fencing,
 Work At A Pizza Place, VR Hands, Adopt Me, Jailbreak, Prison Life,
 Build A Boat For Treasure, Gorilla Tag Professional, Murder Mystery 2, Blox fruits, Counter Blox, Mic Up, Neighbors, Natural Diaster Survival, Ro-Ghoul, Blade Ball, Pet Simulator X,
-Pet Simulator 99, Legends of Speed, BrookHaven RP, Bedwars, and Universal.
+Pet Simulator 99, Legends of Speed, BrookHaven RP, Bedwars, Chaos, and Universal.
 25+ games
 Rebuilt On IllusionHub
+
 Last Updated 2/21/2024
-added icehub to adopt me and added httpspy in debuggers in universal
-executor ui in universal and fencing, ui made by espresso0069
+
+Added Prisn Life Admin to prison life and added Chaos game and Reviz Admin V2 to admin tab
+
+executor ui in fencing and universal made by espresso0069
+
 IF YOU WANT ME TO ADD A GAME OR REPORT A BUG JOIN MY DISCORD SERVER
+
 https://discord.gg/xwy5Cu62Vw
+
 sadly jailbreak still no work just use fe trolling gui or sum
 ]]--
 local OptTheme = "Midnight"
@@ -74,6 +80,9 @@ if game.PlaceId == 2788229376 then
 			 _G.UI_Id = "default" --set this to "default" for the default ui
 			 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
 					  end)
+					  AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+						loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+						 end)
 					 
 			local Hubs = Window:NewTab("Hubs")
             local HubsSection = Hubs:NewSection("Hubs")
@@ -325,6 +334,9 @@ local Library = loadstring(game:HttpGet(_G.guidragtype))()
 	_G.UI_Id = "default" --set this to "default" for the default ui
 	loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
 			 end)
+			 AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+				 end)
 			
    local Hubs = Window:NewTab("Hubs")
    local HubsSection = Hubs:NewSection("Hubs")
@@ -607,6 +619,9 @@ local Library = loadstring(game:HttpGet(_G.guidragtype))()
 			 _G.UI_Id = "default" --set this to "default" for the default ui
 			 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
 					  end)
+					  AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+						loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+						 end)
 					 
 			local Hubs = Window:NewTab("Hubs")
             local HubsSection = Hubs:NewSection("Hubs")
@@ -753,6 +768,9 @@ local Library = loadstring(game:HttpGet(_G.guidragtype))()
 			 _G.UI_Id = "default" --set this to "default" for the default ui
 			 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
 					  end)
+					  AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+						loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+						 end)
 					 
 			local Hubs = Window:NewTab("Hubs")
             local HubsSection = Hubs:NewSection("Hubs")
@@ -1071,6 +1089,9 @@ PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, functi
 			 _G.UI_Id = "default" --set this to "default" for the default ui
 			 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
 					  end)
+					  AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+						loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+						 end)
 					 
 			local Hubs = Window:NewTab("Hubs")
             local HubsSection = Hubs:NewSection("Hubs")
@@ -1751,6 +1772,9 @@ PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, functi
 			 _G.UI_Id = "default" --set this to "default" for the default ui
 			 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
 					  end)
+					  AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+						loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+						 end)
 					 
 			local Hubs = Window:NewTab("Hubs")
             local HubsSection = Hubs:NewSection("Hubs")
@@ -2869,6 +2893,9 @@ elseif game.PlaceId == 4832438542 then
 			 _G.UI_Id = "default" --set this to "default" for the default ui
 			 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
 					  end)
+					  AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+						loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+						 end)
 					 
 			local Hubs = Window:NewTab("Hubs")
             local HubsSection = Hubs:NewSection("Hubs")
@@ -3507,6 +3534,9 @@ elseif game.PlaceId == 920587237 then
 	_G.UI_Id = "default" --set this to "default" for the default ui
 	loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
 			 end)
+			 AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+				 end)
 			
    local Hubs = Window:NewTab("Hubs")
    local HubsSection = Hubs:NewSection("Hubs")
@@ -4627,6 +4657,9 @@ elseif game.PlaceId == 606849621 then
 	_G.UI_Id = "default" --set this to "default" for the default ui
 	loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
 			 end)
+			 AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+				 end)
 			
    local Hubs = Window:NewTab("Hubs")
    local HubsSection = Hubs:NewSection("Hubs")
@@ -6734,6 +6767,9 @@ local Library = loadstring(game:HttpGet(_G.guidragtype))()
 			 _G.UI_Id = "default" --set this to "default" for the default ui
 			 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
 					  end)
+					  AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+						loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+						 end)
 					 
 			local Hubs = Window:NewTab("Hubs")
             local HubsSection = Hubs:NewSection("Hubs")
@@ -6775,6 +6811,9 @@ local Library = loadstring(game:HttpGet(_G.guidragtype))()
 
 MainSection:NewButton("FE Trolling GUI", "troll", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau"))()
+end)
+MainSection:NewButton("Prisn Life Admin", "idk", function()
+    loadstring(game:HttpGet("https://pastefy.app/rEIaHWFH/raw"))()
 end)
 
 MainSection:NewButton("Mobile VFly", "title explains", function()
@@ -7373,6 +7412,9 @@ local Library = loadstring(game:HttpGet(_G.guidragtype))()
 			 _G.UI_Id = "default" --set this to "default" for the default ui
 			 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
 					  end)
+					  AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+						loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+						 end)
 					 
 			local Hubs = Window:NewTab("Hubs")
             local HubsSection = Hubs:NewSection("Hubs")
@@ -7873,6 +7915,9 @@ elseif game.PlaceId == 8690998110 then
 			 _G.UI_Id = "default" --set this to "default" for the default ui
 			 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
 					  end)
+					  AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+						loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+						 end)
 					 
 			local Hubs = Window:NewTab("Hubs")
             local HubsSection = Hubs:NewSection("Hubs")
@@ -8057,6 +8102,9 @@ elseif game.PlaceId == 142823291 then
 			 _G.UI_Id = "default" --set this to "default" for the default ui
 			 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
 					  end)
+					  AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+						loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+						 end)
 					 
 			local Hubs = Window:NewTab("Hubs")
             local HubsSection = Hubs:NewSection("Hubs")
@@ -8395,6 +8443,9 @@ elseif game.PlaceId == 2753915549 then
 		 _G.UI_Id = "default" --set this to "default" for the default ui
 		 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
 				  end)
+				  AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+					 end)
 				 
 		local Hubs = Window:NewTab("Hubs")
 		local HubsSection = Hubs:NewSection("Hubs")
@@ -8534,6 +8585,9 @@ elseif game.PlaceId == 301549746 then
 		 _G.UI_Id = "default" --set this to "default" for the default ui
 		 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
 				  end)
+				  AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+					 end)
 				 
 		local Hubs = Window:NewTab("Hubs")
 		local HubsSection = Hubs:NewSection("Hubs")
@@ -8669,6 +8723,9 @@ elseif game.PlaceId == 6884319169 then
 		 _G.UI_Id = "default" --set this to "default" for the default ui
 		 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
 				  end)
+				  AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+					 end)
 				 
 		local Hubs = Window:NewTab("Hubs")
 		local HubsSection = Hubs:NewSection("Hubs")
@@ -8819,6 +8876,9 @@ elseif game.PlaceId == 12699642568 then
 		 _G.UI_Id = "default" --set this to "default" for the default ui
 		 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
 				  end)
+				  AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+					 end)
 				 
 		local Hubs = Window:NewTab("Hubs")
 		local HubsSection = Hubs:NewSection("Hubs")
@@ -8984,6 +9044,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord
 		 _G.UI_Id = "default" --set this to "default" for the default ui
 		 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
 				  end)
+				  AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+					 end)
 				 
 		local Hubs = Window:NewTab("Hubs")
 		local HubsSection = Hubs:NewSection("Hubs")
@@ -9175,6 +9238,9 @@ loadstring(game:HttpGetAsync(("https://raw.githubusercontent.com/z4gs/scripts/ma
 		 _G.UI_Id = "default" --set this to "default" for the default ui
 		 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
 				  end)
+				  AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+					 end)
 				 
 		local Hubs = Window:NewTab("Hubs")
 		local HubsSection = Hubs:NewSection("Hubs")
@@ -9357,6 +9423,9 @@ elseif game.PlaceId == 13772394625 then
 		 _G.UI_Id = "default" --set this to "default" for the default ui
 		 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
 				  end)
+				  AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+					 end)
 				 
 		local Hubs = Window:NewTab("Hubs")
 		local HubsSection = Hubs:NewSection("Hubs")
@@ -9497,6 +9566,9 @@ elseif game.PlaceId == 6284583030 then
 		 _G.UI_Id = "default" --set this to "default" for the default ui
 		 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
 				  end)
+				  AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+					 end)
 				 
 		local Hubs = Window:NewTab("Hubs")
 		local HubsSection = Hubs:NewSection("Hubs")
@@ -9637,6 +9709,9 @@ elseif game.PlaceId == 8737899170 then
 		 _G.UI_Id = "default" --set this to "default" for the default ui
 		 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
 				  end)
+				  AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+					 end)
 				 
 		local Hubs = Window:NewTab("Hubs")
 		local HubsSection = Hubs:NewSection("Hubs")
@@ -9805,6 +9880,9 @@ end)
 		 _G.UI_Id = "default" --set this to "default" for the default ui
 		 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
 				  end)
+				  AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+					 end)
 				 
 		local Hubs = Window:NewTab("Hubs")
 		local HubsSection = Hubs:NewSection("Hubs")
@@ -9946,6 +10024,9 @@ elseif game.PlaceId == 4924922222 then
 		 _G.UI_Id = "default" --set this to "default" for the default ui
 		 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
 				  end)
+				  AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+					 end)
 				 
 		local Hubs = Window:NewTab("Hubs")
 		local HubsSection = Hubs:NewSection("Hubs")
@@ -10089,6 +10170,9 @@ elseif game.PlaceId == 8560631822 then
 		 _G.UI_Id = "default" --set this to "default" for the default ui
 		 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
 				  end)
+				  AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+					loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+					 end)
 				 
 		local Hubs = Window:NewTab("Hubs")
 		local HubsSection = Hubs:NewSection("Hubs")
@@ -10185,6 +10269,147 @@ elseif game.PlaceId == 8560631822 then
 							end)
 						end)
 						end)
+					elseif game.PlaceId == 6441847031 then
+						local Library = loadstring(game:HttpGet(_G.guidragtype))()
+							local Window = Library.CreateLib("SkyHub", OptTheme)
+							local Main = Window:NewTab("Main")
+							local MainSection = Main:NewSection("Main")
+							MainSection:NewButton("Chaos Admin", "type in chat !kill player or a command", function()
+								loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+							end)
+							local Discord = Window:NewTab("Discords")
+							local DiscordSection = Discord:NewSection("Discords")
+							DiscordSection:NewButton("Discord Invite", "Copys Discord invite link", function()
+								setclipboard(string)
+							end)
+							DiscordSection:NewButton("Discord Invite OLD", "Copys Discord invite link", function()
+								setclipboard(string2)
+							end)
+							local Admins = Window:NewTab("Admins")
+							local AdminsSection = Admins:NewSection("Admins")
+					
+							AdminsSection:NewButton("Infinite Yield FE", "Admin", function()
+								loadstring(game:HttpGet(_G.infydtype))()
+							 end)
+							 
+							 AdminsSection:NewButton("Nameless Admin", "Admin", function()
+								 loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+							  end)
+							 
+							 AdminsSection:NewButton("fates admin", "Admin", function()
+								 loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+							  end)
+							 
+							  AdminsSection:NewButton("Proton Free Admin", "Admin", function()
+								 _G.UI_Id = "default" --set this to "default" for the default ui
+							 loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Proton%20Free'))()
+								  end)
+							 
+								  AdminsSection:NewButton("Proton 2 free Admin", "Admin", function()
+							 -- DEFAULT CMD BAR PREFIX IS ;
+							 -- DEFAULT CHAT PREFIX IS /
+							 _G.UI_Id = "default" --set this to "default" for the default ui
+							 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
+									  end)
+									  AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+										loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+										 end)
+									 
+							local Hubs = Window:NewTab("Hubs")
+							local HubsSection = Hubs:NewSection("Hubs")
+							MainSection:NewButton("Hoho Hub", "key should be and if not then do it urself", function()
+								loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HohoV2/main/ScriptLoad.lua"))()
+							end)
+							HubsSection:NewButton("Psyhub", "idk", function()
+								loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
+								 end)
+								
+								HubsSection:NewButton("VG Hub", "60+", function()
+								loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+								 end)
+								
+								
+											HubsSection:NewButton("Ezhub", "130+ games", function()
+												--[[ this is there cmds list
+								https://pastebin.com/CvjkJxAt
+								]]--
+								loadstring(game:HttpGet(('https://raw.githubusercontent.com/debug420/Ez-Industries-Launcher-Data/master/Launcher.lua'),true))()
+								--[[this is there thing idk
+								https://pastebin.com/vavZfexv
+								]]--
+								 end)
+									
+									   HubsSection:NewButton("Owl Hub", "46+ how", function()
+												loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+											end)
+					
+											HubsSection:NewButton("CocoHub", "idk", function()
+												loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/CocoHub/master/CocoZHub'),true))()
+												 end)
+					
+											HubsSection:NewButton("MonkeHub", "idk", function()
+												loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeHub/main/Loader.lua"))()
+											 end)
+					
+											 local Player = Window:NewTab("Player")
+											 local PlayerSection = Player:NewSection("Player")
+											 PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, function(v) 
+												 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+											 end)
+									 
+											 PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
+												 game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+											 end)
+											 local fpsloll = Window:NewTab("FPS")
+											 local fpscapset = fpsloll:NewSection("FPS")
+											 fpscapset:NewButton("Sets FPS Cap to 9999/unlock fps if ur exploit supports function","fps cap/unlock fps", function()
+												 if setfpscap then
+													 setfpscap(9999)
+												 end
+											 end)
+											 fpscapset:NewButton("Anti-Lag","makes less laggy", function()
+												local Terrain = workspace:FindFirstChildOfClass('Terrain')
+												Lighting = game:GetService("Lighting")
+											Terrain.WaterWaveSize = 0
+											Terrain.WaterWaveSpeed = 0
+											Terrain.WaterReflectance = 0
+											Terrain.WaterTransparency = 0
+											Lighting.GlobalShadows = false
+											Lighting.FogEnd = 9e9
+											settings().Rendering.QualityLevel = 1
+											for i,v in pairs(game:GetDescendants()) do
+												if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+													v.Material = "Plastic"
+													v.Reflectance = 0
+												elseif v:IsA("Decal") then
+													v.Transparency = 1
+												elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+													v.Lifetime = NumberRange.new(0)
+												elseif v:IsA("Explosion") then
+													v.BlastPressure = 1
+													v.BlastRadius = 1
+												end
+											end
+											for i,v in pairs(Lighting:GetDescendants()) do
+												if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+													v.Enabled = false
+												end
+											end
+											workspace.DescendantAdded:Connect(function(child)
+												task.spawn(function()
+													if child:IsA('ForceField') then
+														RunService.Heartbeat:Wait()
+														child:Destroy()
+													elseif child:IsA('Sparkles') then
+														RunService.Heartbeat:Wait()
+														child:Destroy()
+													elseif child:IsA('Smoke') or child:IsA('Fire') then
+														RunService.Heartbeat:Wait()
+														child:Destroy()
+													end
+												end)
+											end)
+											end)
 
 	-- Universal
 else
@@ -10248,6 +10473,9 @@ DebugsSection:NewButton("HttpSpy", "Make ur own script then", function()
 			 _G.UI_Id = "default" --set this to "default" for the default ui
 			 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
 					  end)
+					  AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+						loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+						 end)
 					  local Main = Window:NewTab("Main")
             local MainSection = Main:NewSection("Main")
 			MainSection:NewButton("FE Trolling GUI", "troll", function()
