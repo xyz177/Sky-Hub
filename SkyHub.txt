@@ -10269,6 +10269,7 @@ elseif game.PlaceId == 8560631822 then
 							end)
 						end)
 						end)
+						-- Chaos
 					elseif game.PlaceId == 6441847031 then
 						local Library = loadstring(game:HttpGet(_G.guidragtype))()
 							local Window = Library.CreateLib("SkyHub", OptTheme)
@@ -10317,7 +10318,7 @@ elseif game.PlaceId == 8560631822 then
 									 
 							local Hubs = Window:NewTab("Hubs")
 							local HubsSection = Hubs:NewSection("Hubs")
-							MainSection:NewButton("Hoho Hub", "key should be and if not then do it urself", function()
+							HubsSection:NewButton("Hoho Hub", "key should be and if not then do it urself", function()
 								loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HohoV2/main/ScriptLoad.lua"))()
 							end)
 							HubsSection:NewButton("Psyhub", "idk", function()
