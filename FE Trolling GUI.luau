@@ -1,6 +1,6 @@
 --[[
 Last Updated on 2/21/2024 
-Added System Broken
+Added FE Noob All on Auto Rap Battles by jxyserr
 ]]--
 local OptTheme = "Midnight"
 local string = "https://discord.gg/xwy5Cu62Vw"
@@ -6281,6 +6281,9 @@ loadstring(game:HttpGet('https://pastebin.com/raw/r97d7dS0', true))()
  MainSection:NewButton("Super fling", "fling players", function()
 loadstring(game:HttpGet('https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/superfling', true))()
  end)
+ MainSection:NewButton("FE Noob All Auto Rap Battles", "jxyserr", function()
+	loadstring(game:HttpGet('https://pastes.io/raw/1priqwpcnv'))();
+	 end)
 
  MainSection:NewButton("FE Big Head Rthro R15", "dont use hats/hair also scale head to max in avatar", function()
     --  ((Packed with care by sysGhost/BiKode))
