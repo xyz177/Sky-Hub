@@ -1401,8 +1401,7 @@ function Kavo.CreateLib(kavName, themeList)
                 end)()
 
                 local Value
-                sliderBtn.TouchLongPress:Connect(function(state)
-                    if state == Enum.UserInputState.Begin then
+                sliderBtn.MouseButton1Down:Connect(function()
                     if not focusing then
                         game.TweenService:Create(val, TweenInfo.new(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.In), {
                             TextTransparency = 0
@@ -1419,11 +1418,9 @@ function Kavo.CreateLib(kavName, themeList)
                                 callback(Value)
                             end)
                             sliderDrag:TweenSize(UDim2.new(0, math.clamp(mouse.X - sliderDrag.AbsolutePosition.X, 0, 149), 0, 6), "InOut", "Linear", 0.05, true)
-                        end
                         end)
-                    elseif state == Enum.UserInputState.End then
-                        releaseconnection = Enum.UserInputState.End:Connect(function(Mouse)
-                            if Mouse.UserInputType == Enum.UserInputType.Touch then
+                        releaseconnection = uis.InputEnded:Connect(function(Mouse)
+                            if Mouse.UserInputType == Enum.UserInputType.MouseButton1 then
                                 Value = math.floor((((tonumber(maxvalue) - tonumber(minvalue)) / 149) * sliderDrag.AbsoluteSize.X) + tonumber(minvalue))
                                 pcall(function()
                                     callback(Value)
@@ -1436,7 +1433,6 @@ function Kavo.CreateLib(kavName, themeList)
                                 moveconnection:Disconnect()
                                 releaseconnection:Disconnect()
                             end
-                        end
                         end)
                     else
                         for i,v in next, infoContainer:GetChildren() do
