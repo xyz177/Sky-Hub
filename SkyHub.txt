@@ -1,14 +1,13 @@
 --[[games it supports Da Hood, Arsenal, Tower of Hell, KAT!, Fencing,
 Work At A Pizza Place, VR Hands, Adopt Me, Jailbreak, Prison Life,
 Build A Boat For Treasure, Gorilla Tag Professional, Murder Mystery 2, Blox fruits, Counter Blox, Mic Up, Neighbors, Natural Diaster Survival, Ro-Ghoul, Blade Ball, Pet Simulator X,
-Pet Simulator 99, Legends of Speed, BrookHaven RP, Bedwars, Chaos, Ninja Legends, and Universal.
+Pet Simulator 99, Legends of Speed, BrookHaven RP, Bedwars, Chaos, Ninja Legends, Bayside High School and Universal.
 25+ games
 Rebuilt On IllusionHub
 
-Last Updated 2/22/2024
+Last Updated 2/23/2024
 
-Finally Fixed Jailbreak (sorry for bad gui but its either that or nothing)
-and added swag mode to Da Hood and added Chaos Hub and Astral Hub to universal and brookhaven, prison life, and chaos and added more chaos scripts and added Ninja Legends
+Added Bayside High School
 
 executor ui in fencing and universal made by espresso0069
 
@@ -8956,6 +8955,448 @@ elseif game.PlaceId == 3956818381 then
 																	end)
 																end)
 																end)
+-- Bayside High School
+elseif game.PlaceId == 12640491155 then
+	local Library = loadstring(game:HttpGet(_G.guidragtype))()
+	local Window = Library.CreateLib("SkyHub", OptTheme)
+	local Main = Window:NewTab("Main")
+	local MainSection = Main:NewSection("Main")
+	MainSection:NewDropdown("Teleports", "Teleports to Place", {"School", "Dorms", "Floor 1", "Floor 2", "Floor 3", "Floor 4", "Floor 5", "Penthouse", "Party", "Football Field", "Gym", "Principle Office", "Science/Boys Bathroom", "History/Girls Bathroom", "English", "Math", "Computer Lab", "Art", "Music", "Library", "Bus", "Aquatic Center"}, function(currentOption)
+		if currentOption == "School" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-511, 13, -24)
+		elseif currentOption == "Dorms" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-511, 13, 356)
+		elseif currentOption == "Floor 1" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-510, 13, 441)
+		elseif currentOption == "Floor 2" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-510, 31, 441)
+		elseif currentOption == "Floor 3" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-510, 48, 441)
+		elseif currentOption == "Floor 4" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-510, 66, 441)
+		elseif currentOption == "Floor 5" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-510, 83, 441)
+		elseif currentOption == "Penthouse" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-510, 101, 441)
+		elseif currentOption == "Party" then 
+			for i,v in pairs(workspace:GetDescendants()) do
+				if v.Name == "PartyParticle" then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
+				end
+			end
+		elseif currentOption == "Football Field" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-509, 17, -400)
+		elseif currentOption == "Gym" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-650, 17, -195)
+		elseif currentOption == "Principle Office" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-635, 17, -15)
+		elseif currentOption == "Science/Boys Bathroom" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-640, 46, -122)
+		elseif currentOption == "History/Girls Bathroom" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-379, 46, -49)
+		elseif currentOption == "English" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-641, 46, -48)
+		elseif currentOption == "Math" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-379, 46, -122)
+		elseif currentOption == "Computer Lab" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-580, 46, -114)
+		elseif currentOption == "Art" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-509, 46, -114)
+		elseif currentOption == "Music" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-440, 46, -116)
+		elseif currentOption == "Library" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-399, 17, -118)
+		elseif currentOption == "Bus" then
+			for i,v in pairs(workspace:GetDescendants()) do
+				if v.Name == "BusSeat" then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+				end
+			end
+		elseif currentOption == "Aquatic Center" then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-488, 20, -557)
+		end
+	end)
+	MainSection:NewDropdown("Spawn/despawns Vehicle/Cars", "spawns/despawns cars", {"Thunderbird", "Ladybug", "Offroader", "Golf Cart"}, function(currentOption2)
+		if currentOption2 == "Thunderbird" then
+			local args = {
+				[1] = "Spawn",
+				[2] = "Thunderbird"
+			}
+			
+			game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Vehicle"):FireServer(unpack(args))
+		elseif currentOption2 == "Ladybug" then		
+		local args = {
+			[1] = "Spawn",
+			[2] = "Ladybug"
+		}
+		
+		game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Vehicle"):FireServer(unpack(args))
+	elseif currentOption2 == "Offroader" then
+		local args = {
+			[1] = "Spawn",
+			[2] = "Offroader"
+		}
+		
+		game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Vehicle"):FireServer(unpack(args))
+	elseif currentOption2 == "Golf Cart" then
+		local args = {
+			[1] = "Spawn",
+			[2] = "Golf Cart"
+		}
+		
+		game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Vehicle"):FireServer(unpack(args))
+		end
+	end)	
+	local VehicleMods = Window:NewTab("Vehicle Mods")
+	local VehicleModsSection = VehicleMods:NewSection("Vehicle Mods")
+	VehicleModsSection:NewSlider("Vehicle Max Speed", "laggy idk why, Sets max speed of vehicle", 9999, 1, function(lol86)
+		for i,v in pairs(workspace:GetDescendants()) do
+			if v.Name == game.Players.LocalPlayer.Name then
+				for i,v in pairs(v:GetChildren()) do
+					if v.Name == "Stats" then
+						for i,v in pairs(v:GetChildren()) do
+							if v.Name == "MaxSpeed" then
+								v.Value = lol86
+							end
+						end
+					end
+				end
+			end
+		end
+	end)
+	VehicleModsSection:NewSlider("Vehicle Torque", "laggy idk why, Sets torque/horsepower/hp/Acceleration of vehicle", 9999, 1, function(lol86)
+		for i,v in pairs(workspace:GetDescendants()) do
+			if v.Name == game.Players.LocalPlayer.Name then
+				for i,v in pairs(v:GetChildren()) do
+					if v.Name == "Stats" then
+						for i,v in pairs(v:GetChildren()) do
+							if v.Name == "Torque" then
+								v.Value = lol86
+							end
+						end
+					end
+				end
+			end
+		end
+	end)
+	VehicleModsSection:NewSlider("Vehicle Max Turn Speed", "laggy idk why, Sets turn speed of vehicle", 9999, 1, function(lol86)
+		for i,v in pairs(workspace:GetDescendants()) do
+			if v.Name == game.Players.LocalPlayer.Name then
+				for i,v in pairs(v:GetChildren()) do
+					if v.Name == "Stats" then
+						for i,v in pairs(v:GetChildren()) do
+							if v.Name == "TurnSpeed" then
+								v.Value = lol86
+							end
+						end
+					end
+				end
+			end
+		end
+	end)
+	VehicleModsSection:NewToggle("FE Rainbow Car", "rainbow car", function(state)
+		if state then
+			getgenv().whaterv = true -- set to false when you want it to stop and true when you want it to start again
+
+			spawn(function()
+				while wait() do
+					if not getgenv().whaterv then break end
+				local args = {
+				[1] = "Paint",
+				[2] = Color3.new(math.random(), math.random(), math.random())
+			}
+			
+			game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Vehicle"):FireServer(unpack(args))
+					end
+				end)	
+		else
+			getgenv().whaterv = false -- set to false when you want it to stop and true when you want it to start again
+
+spawn(function()
+    while wait() do
+        if not getgenv().whaterv then break end
+	local args = {
+    [1] = "Paint",
+    [2] = Color3.new(math.random(), math.random(), math.random())
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Vehicle"):FireServer(unpack(args))
+		end
+	end)
+		end
+	end)
+	VehicleModsSection:NewToggle("FE Spam Horn", "annoying asf", function(state)
+		if state then
+			getgenv().whaterv3 = true -- set to false when you want it to stop and true when you want it to start again
+
+spawn(function()
+    while wait() do
+        if not getgenv().whaterv3 then break end
+	local args = {
+    [1] = "Horn"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Vehicle"):FireServer(unpack(args))
+		end
+	end)
+		else
+			getgenv().whaterv3 = false -- set to false when you want it to stop and true when you want it to start again
+
+spawn(function()
+    while wait() do
+        if not getgenv().whaterv3 then break end
+	local args = {
+    [1] = "Horn"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Vehicle"):FireServer(unpack(args))
+		end
+	end)
+		end
+	end)
+	MainSection:NewButton("FE Trolling GUI", "troll", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau"))()
+	end)
+
+	local Misc23 = Window:NewTab("Misc")
+	local Misc23Section = Misc23:NewSection("Misc")
+	Misc23Section:NewToggle("Backpack Loop", "loops tru all free backpacks", function(state)
+		if state then
+			getgenv().whaterv2 = true -- set to false when you want it to stop and true when you want it to start again
+
+spawn(function()
+    while wait() do
+        if not getgenv().whaterv2 then break end
+		local args = {
+    [1] = "Theme",
+    [2] = "Default"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Backpack"):FireServer(unpack(args))
+local args = {
+    [1] = "Theme",
+    [2] = "Patched"
+}
+wait(0.51)
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Backpack"):FireServer(unpack(args))
+local args = {
+    [1] = "Theme",
+    [2] = "Checkered Luxury"
+}
+wait(0.51)
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Backpack"):FireServer(unpack(args))
+local args = {
+    [1] = "Theme",
+    [2] = "Gingham"
+}
+wait(0.51)
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Backpack"):FireServer(unpack(args))
+local args = {
+    [1] = "Theme",
+    [2] = "Hypebeast"
+}
+wait(0.51)
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Backpack"):FireServer(unpack(args))
+local args = {
+    [1] = "Theme",
+    [2] = "Preppy"
+}
+wait(0.51)
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Backpack"):FireServer(unpack(args))
+
+		end
+	end)
+		else
+			getgenv().whaterv2 = false -- set to false when you want it to stop and true when you want it to start again
+
+spawn(function()
+    while wait() do
+        if not getgenv().whaterv2 then break end
+		local args = {
+    [1] = "Theme",
+    [2] = "Default"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Backpack"):FireServer(unpack(args))
+local args = {
+    [1] = "Theme",
+    [2] = "Patched"
+}
+wait(0.51)
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Backpack"):FireServer(unpack(args))
+local args = {
+    [1] = "Theme",
+    [2] = "Checkered Luxury"
+}
+wait(0.51)
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Backpack"):FireServer(unpack(args))
+local args = {
+    [1] = "Theme",
+    [2] = "Gingham"
+}
+wait(0.51)
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Backpack"):FireServer(unpack(args))
+local args = {
+    [1] = "Theme",
+    [2] = "Hypebeast"
+}
+wait(0.51)
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Backpack"):FireServer(unpack(args))
+local args = {
+    [1] = "Theme",
+    [2] = "Preppy"
+}
+wait(0.51)
+game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Backpack"):FireServer(unpack(args))
+
+		end
+	end)
+		end
+	end)
+	
+	Misc23Section:NewButton("Remove Most House/Dorm Doors", "Client sided ofc", function()
+		for i,v in pairs(workspace:GetDescendants()) do
+			if v.Name == "DormDoor" then
+				v:Destroy()
+			end
+		end
+	end)
+
+	local Discord = Window:NewTab("Discords")
+	local DiscordSection = Discord:NewSection("Discords")
+	DiscordSection:NewButton("Discord Invite", "Copys Discord invite link", function()
+		setclipboard(string)
+	end)
+	DiscordSection:NewButton("Discord Invite OLD", "Copys Discord invite link", function()
+		setclipboard(string2)
+	end)
+	local Admins = Window:NewTab("Admins")
+	local AdminsSection = Admins:NewSection("Admins")
+	AdminsSection:NewButton("Infinite Yield FE", "Admin", function()
+		loadstring(game:HttpGet(_G.infydtype))()
+	end)
+	AdminsSection:NewButton("Infinite Store", "Archived", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Infinite-Store/Infinite-Store/main/main.lua"))()
+	end) 
+												AdminsSection:NewButton("Nameless Admin", "Admin", function()
+													 loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+												  end)
+												 
+												 AdminsSection:NewButton("fates admin", "Admin", function()
+													 loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+												  end)
+												 
+												  AdminsSection:NewButton("Proton Free Admin", "Admin", function()
+													 _G.UI_Id = "default" --set this to "default" for the default ui
+												 loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Proton%20Free'))()
+													  end)
+												 
+													  AdminsSection:NewButton("Proton 2 free Admin", "Admin", function()
+												 -- DEFAULT CMD BAR PREFIX IS ;
+												 -- DEFAULT CHAT PREFIX IS /
+												 _G.UI_Id = "default" --set this to "default" for the default ui
+												 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
+														  end)
+														  AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+															loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+															 end)
+														 
+												local Hubs = Window:NewTab("Hubs")
+												local HubsSection = Hubs:NewSection("Hubs")
+												HubsSection:NewButton("Hoho Hub", "key should be and if not then do it urself", function()
+													loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HohoV2/main/ScriptLoad.lua"))()
+												end)
+												HubsSection:NewButton("Psyhub", "idk", function()
+													loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
+													 end)
+													
+													HubsSection:NewButton("VG Hub", "60+", function()
+													loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+													 end)
+													
+													
+																HubsSection:NewButton("Ezhub", "130+ games", function()
+																	--[[ this is there cmds list
+													https://pastebin.com/CvjkJxAt
+													]]--
+													loadstring(game:HttpGet(('https://raw.githubusercontent.com/debug420/Ez-Industries-Launcher-Data/master/Launcher.lua'),true))()
+													--[[this is there thing idk
+													https://pastebin.com/vavZfexv
+													]]--
+													 end)
+														
+														   HubsSection:NewButton("Owl Hub", "46+ how", function()
+																	loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+																end)
+										
+																HubsSection:NewButton("CocoHub", "idk", function()
+																	loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/CocoHub/master/CocoZHub'),true))()
+																	 end)
+										
+																HubsSection:NewButton("MonkeHub", "idk", function()
+																	loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeHub/main/Loader.lua"))()
+																 end)
+										
+																 local Player = Window:NewTab("Player")
+																 local PlayerSection = Player:NewSection("Player")
+																 PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, function(v) 
+																	 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+																 end)
+														 
+																 PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
+																	 game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+																 end)
+																 local fpsloll = Window:NewTab("FPS")
+																 local fpscapset = fpsloll:NewSection("FPS")
+																 fpscapset:NewButton("Sets FPS Cap to 9999/unlock fps if ur exploit supports function","fps cap/unlock fps", function()
+																	 if setfpscap then
+																		 setfpscap(9999)
+																	 end
+																 end)
+																 fpscapset:NewButton("Anti-Lag","makes less laggy", function()
+																	local Terrain = workspace:FindFirstChildOfClass('Terrain')
+																	Lighting = game:GetService("Lighting")
+																Terrain.WaterWaveSize = 0
+																Terrain.WaterWaveSpeed = 0
+																Terrain.WaterReflectance = 0
+																Terrain.WaterTransparency = 0
+																Lighting.GlobalShadows = false
+																Lighting.FogEnd = 9e9
+																settings().Rendering.QualityLevel = 1
+																for i,v in pairs(game:GetDescendants()) do
+																	if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+																		v.Material = "Plastic"
+																		v.Reflectance = 0
+																	elseif v:IsA("Decal") then
+																		v.Transparency = 1
+																	elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+																		v.Lifetime = NumberRange.new(0)
+																	elseif v:IsA("Explosion") then
+																		v.BlastPressure = 1
+																		v.BlastRadius = 1
+																	end
+																end
+																for i,v in pairs(Lighting:GetDescendants()) do
+																	if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+																		v.Enabled = false
+																	end
+																end
+																workspace.DescendantAdded:Connect(function(child)
+																	task.spawn(function()
+																		if child:IsA('ForceField') then
+																			RunService.Heartbeat:Wait()
+																			child:Destroy()
+																		elseif child:IsA('Sparkles') then
+																			RunService.Heartbeat:Wait()
+																			child:Destroy()
+																		elseif child:IsA('Smoke') or child:IsA('Fire') then
+																			RunService.Heartbeat:Wait()
+																			child:Destroy()
+																		end
+																	end)
+																end)
+																end)
+
 
 	-- Universal
 else
