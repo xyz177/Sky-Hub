@@ -7,7 +7,7 @@ Rebuilt On IllusionHub
 
 Last Updated 2/23/2024
 
-Added Bayside High School
+fixed scripts not doing their actual script
 
 executor ui in fencing and universal made by espresso0069
 
@@ -29,7 +29,7 @@ _G.infydtype = "https://raw.githubusercontent.com/yofriendfromschool1/mobile-del
 _G.guidragtype = "https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Kavolibupdate"
 else
    _G.infydtype = "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"
-   _G.guidragtype = "https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"
+   _G.guidragtype = "https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/kavobackup"
 end
 
 _G.lmao24 = "loo"
@@ -1688,9 +1688,16 @@ local executors2345 = Window:NewTab("Executors")
 	local executorsexec2345 = executors2345:NewSection("Executors")
     -- made by espresso0069
      executorsexec2345:NewButton("Synapse X","only use once/ if ur on pc/emulator Execute Synapse X scripts that use old Synapse X functions or use if syn internal Synapse X UI made by espresso0069", function() 
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Synapse_UI.txt'))()
+		game.StarterGui:SetCore("SendNotification",  {
+			Title = "UI/GUI Made By espresso0069";
+			Text = "this UI/GUI was made by espresso0069";
+			Icon = "";
+			Duration = 5;
+			Callback = NotificationBindable;
+		   })
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Synapse_UI.txt'))()
      end)
-
+-- ^^^ made by espresso0069
 local Player = Window:NewTab("Player")
    local PlayerSection = Player:NewSection("Player")
 PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, function(v) 
@@ -8187,6 +8194,13 @@ elseif game.PlaceId == 3101667897 then
 		local MainSection = Main:NewSection("Main")
 		MainSection:NewButton("GUI made by Ree", "made by Ree", function()
 			-- Made By Ree
+			game.StarterGui:SetCore("SendNotification",  {
+				Title = "Script Made By Ree";
+				Text = "this Script was made by Ree";
+				Icon = "";
+				Duration = 5;
+				Callback = NotificationBindable;
+			   })
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ReeAndArceus/Legends-Of-Speed-Gui/main/Gui"))() 
 		end)
 		MainSection:NewButton("GUI 2", "yuh", function()
@@ -8501,7 +8515,7 @@ end)
 						end)
 						end)
 -- Bedwars
-elseif game.PlaceId == 8560631822 then
+elseif game.PlaceId == 8560631822 or 6872265039 then
 	local Library = loadstring(game:HttpGet(_G.guidragtype))()
 		local Window = Library.CreateLib("SkyHub", OptTheme)
 		local Main = Window:NewTab("Main")
@@ -8509,7 +8523,7 @@ elseif game.PlaceId == 8560631822 then
 		MainSection:NewButton("Ice Hub", "yuh", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMae17/Bedwars/main/IceHub"))()
 		end)
-		MainSection:NewButton("Script", "yuh", function()
+		MainSection:NewButton("VapeV4", "yuh", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
 		end)
 		local Discord = Window:NewTab("Discords")
@@ -8654,7 +8668,7 @@ end)
 							local Main = Window:NewTab("Main")
 							local MainSection = Main:NewSection("Main")
 							MainSection:NewButton("Chaos Admin", "type in chat !kill player or a command", function()
-								loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+								loadstring(game:HttpGet("https://raw.githubusercontent.com/Frizzy04/Chaos-Admin-Script/main/W.lua"))()
 							end)
 							MainSection:NewButton("Astral Hub", "hub", function()
 								loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/AstralHub/main/Loader.lua"))()
@@ -8812,15 +8826,7 @@ elseif game.PlaceId == 3956818381 then
 	MainSection:NewButton("Proxima Hub", "idk", function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua"))()
 	end)
-	MainSection:NewButton("Auto Sell/Farm", "idk", function()
-		while true do wait()
-			local ohString1 = "swingKatana"
-			local plr = game.Players.LocalPlayer
-			game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(ohString1)
-			game.Players.LocalPlayer.Character.Humanoid.Jump = true
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.sellAreaCircles.sellAreaCircle.circleInner.CFrame
-			end
-	end)
+	
 	local Discord = Window:NewTab("Discords")
 	local DiscordSection = Discord:NewSection("Discords")
 	DiscordSection:NewButton("Discord Invite", "Copys Discord invite link", function()
@@ -11541,7 +11547,14 @@ end)
 	local executorsexec2345 = executors2345:NewSection("Executors")
     -- made by espresso0069
      executorsexec2345:NewButton("Synapse X","only use once/ if ur on pc/emulator Execute Synapse X scripts that use old Synapse X functions or use if syn internal Synapse X UI made by espresso0069", function() 
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Synapse_UI.txt'))()
+		game.StarterGui:SetCore("SendNotification",  {
+			Title = "UI/GUI Made By espresso0069";
+			Text = "this UI/GUI was made by espresso0069";
+			Icon = "";
+			Duration = 5;
+			Callback = NotificationBindable;
+		   })
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Synapse_UI.txt'))()
      end)
 -- ^^^ nade by espresso0069
     local fpsloll = Window:NewTab("FPS")
