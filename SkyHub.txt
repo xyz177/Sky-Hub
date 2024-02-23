@@ -1,15 +1,17 @@
 --[[games it supports Da Hood, Arsenal, Tower of Hell, KAT!, Fencing,
 Work At A Pizza Place, VR Hands, Adopt Me, Jailbreak, Prison Life,
 Build A Boat For Treasure, Gorilla Tag Professional, Murder Mystery 2, Blox fruits, Counter Blox, Mic Up, Neighbors, Natural Diaster Survival, Ro-Ghoul, Blade Ball, Pet Simulator X,
-Pet Simulator 99, Legends of Speed, BrookHaven RP, Bedwars, Chaos, Ninja Legends, Bayside High School and Universal.
+Pet Simulator 99, Legends of Speed, BrookHaven RP, Bedwars, Chaos, Ninja Legends, Bayside High School, Big PaintBall, Big PaintBall 2, Muscule Legends, and Road to Grambys and Universal.
 25+ games
 Rebuilt On IllusionHub
 
 Last Updated 2/23/2024
 
-fixed scripts not doing their actual script
+Added Big PaintBall, Big PaintBall 2, Muscule Legends, and Road to Grambys by lua_u
 
 executor ui in fencing and universal made by espresso0069
+
+Road to Gramby scripts by lua_u
 
 IF YOU WANT ME TO ADD A GAME OR REPORT A BUG JOIN MY DISCORD SERVER
 
@@ -8372,6 +8374,9 @@ elseif game.PlaceId == 4924922222 then
 		local Window = Library.CreateLib("SkyHub", OptTheme)
 		local Main = Window:NewTab("Main")
 		local MainSection = Main:NewSection("Main")
+		MainSection:NewButton("FE Trolling GUI", "troll", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau"))()
+		end)
 		MainSection:NewButton("Ice Hub", "yuh", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMae17/NewIceHub/main/Brookhaven"))()
 		end)
@@ -9402,7 +9407,465 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Backp
 																	end)
 																end)
 																end)
+-- Big PaintBall
+elseif game.PlaceId == 3527629287 then
+	local Library = loadstring(game:HttpGet(_G.guidragtype))()
+	local Window = Library.CreateLib("SkyHub", OptTheme)
+	local Main = Window:NewTab("Main")
+	local MainSection = Main:NewSection("Main")
+	MainSection:NewButton("Auto Kill", "super detected", function()
+		if _G.active == nil then      _G.active = true end  local plr = game:GetService("Players").LocalPlayer local round_type = game:GetService("Workspace")["__VARIABLES"].RoundType local guns_folder = game:GetService("Workspace")["__DEBRIS"].Guns local RS = game:GetService("RunService")  local function getPlayer()     local char = plr.Character or plr.CharacterAdded:Wait()     local humr = char:WaitForChild("HumanoidRootPart")      return char, humr end  local function get_target_players()     local current_guns = guns_folder:GetChildren()     local target_players = {}          for i,v in next, current_guns do              local player = game:GetService("Players"):FindFirstChild(v.Name)              if player then                  if round_type.Value:lower():match("tdm") and player.Team ~= plr.Team then                      table.insert(target_players, player)                 elseif round_type.Value:lower():match("ffa") and player.UserId ~= plr.UserId then                      table.insert(target_players, player)                 end             end         end      return target_players end  while RS.RenderStepped:Wait() and _G.active do      local targets = get_target_players()      for i,v in next, targets do          local cam = workspace.CurrentCamera          repeat             local char, humr = getPlayer()             local target_char = v.Character if not target_char then break end             local target_humr = target_char:WaitForChild("HumanoidRootPart")              humr.CFrame = target_humr.CFrame - target_humr.CFrame.lookVector * 5             cam.CFrame = CFrame.new(cam.CFrame.p, target_humr.Position)             RS.RenderStepped:Wait()         until not guns_folder:FindFirstChild(v.Name) or not _G.active     end end
+	end)
+	MainSection:NewButton("GUI","GUI", function()
+		loadstring(game:HttpGet("https://pastebin.com/raw/BdBcr0zs", true))()
+	end)
+	MainSection:NewButton("GUI2","GUI2", function()
+		loadstring(game:HttpGet("https://www.pastebin.com/raw/PuaaGKsT"))()
+	end)
 
+	local Discord = Window:NewTab("Discords")
+	local DiscordSection = Discord:NewSection("Discords")
+	DiscordSection:NewButton("Discord Invite", "Copys Discord invite link", function()
+		setclipboard(string)
+	end)
+	DiscordSection:NewButton("Discord Invite OLD", "Copys Discord invite link", function()
+	setclipboard(string2)
+	end)
+	local Admins = Window:NewTab("Admins")
+	local AdminsSection = Admins:NewSection("Admins")
+																AdminsSection:NewButton("Infinite Yield FE", "Admin", function()
+																	loadstring(game:HttpGet(_G.infydtype))()
+																end)
+																AdminsSection:NewButton("Infinite Store", "Archived", function()
+																	loadstring(game:HttpGet("https://raw.githubusercontent.com/Infinite-Store/Infinite-Store/main/main.lua"))()
+																end) 
+																											AdminsSection:NewButton("Nameless Admin", "Admin", function()
+																												 loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+																											  end)
+																											 
+																											 AdminsSection:NewButton("fates admin", "Admin", function()
+																												 loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+																											  end)
+																											 
+																											  AdminsSection:NewButton("Proton Free Admin", "Admin", function()
+																												 _G.UI_Id = "default" --set this to "default" for the default ui
+																											 loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Proton%20Free'))()
+																												  end)
+																											 
+																												  AdminsSection:NewButton("Proton 2 free Admin", "Admin", function()
+																											 -- DEFAULT CMD BAR PREFIX IS ;
+																											 -- DEFAULT CHAT PREFIX IS /
+																											 _G.UI_Id = "default" --set this to "default" for the default ui
+																											 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
+																													  end)
+																													  AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+																														loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+																														 end)
+																													 
+																											local Hubs = Window:NewTab("Hubs")
+																											local HubsSection = Hubs:NewSection("Hubs")
+																											HubsSection:NewButton("Hoho Hub", "key should be and if not then do it urself", function()
+																												loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HohoV2/main/ScriptLoad.lua"))()
+																											end)
+																											HubsSection:NewButton("Psyhub", "idk", function()
+																												loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
+																												 end)
+																												
+																												HubsSection:NewButton("VG Hub", "60+", function()
+																												loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+																												 end)
+																												
+																												
+																															HubsSection:NewButton("Ezhub", "130+ games", function()
+																																--[[ this is there cmds list
+																												https://pastebin.com/CvjkJxAt
+																												]]--
+																												loadstring(game:HttpGet(('https://raw.githubusercontent.com/debug420/Ez-Industries-Launcher-Data/master/Launcher.lua'),true))()
+																												--[[this is there thing idk
+																												https://pastebin.com/vavZfexv
+																												]]--
+																												 end)
+																													
+																													   MainSection:NewButton("Owl Hub", "46+ how", function()
+																																loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+																															end)
+																									
+																															HubsSection:NewButton("CocoHub", "idk", function()
+																																loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/CocoHub/master/CocoZHub'),true))()
+																																 end)
+																									
+																															HubsSection:NewButton("MonkeHub", "idk", function()
+																																loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeHub/main/Loader.lua"))()
+																															 end)
+																									
+																															 local Player = Window:NewTab("Player")
+																															 local PlayerSection = Player:NewSection("Player")
+																															 PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, function(v) 
+																																 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+																															 end)
+																													 
+																															 PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
+																																 game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+																															 end)
+																															 local fpsloll = Window:NewTab("FPS")
+																															 local fpscapset = fpsloll:NewSection("FPS")
+																															 fpscapset:NewButton("Sets FPS Cap to 9999/unlock fps if ur exploit supports function","fps cap/unlock fps", function()
+																																 if setfpscap then
+																																	 setfpscap(9999)
+																																 end
+																															 end)
+																															 fpscapset:NewButton("Anti-Lag","makes less laggy", function()
+																																local Terrain = workspace:FindFirstChildOfClass('Terrain')
+																																Lighting = game:GetService("Lighting")
+																															Terrain.WaterWaveSize = 0
+																															Terrain.WaterWaveSpeed = 0
+																															Terrain.WaterReflectance = 0
+																															Terrain.WaterTransparency = 0
+																															Lighting.GlobalShadows = false
+																															Lighting.FogEnd = 9e9
+																															settings().Rendering.QualityLevel = 1
+																															for i,v in pairs(game:GetDescendants()) do
+																																if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+																																	v.Material = "Plastic"
+																																	v.Reflectance = 0
+																																elseif v:IsA("Decal") then
+																																	v.Transparency = 1
+																																elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+																																	v.Lifetime = NumberRange.new(0)
+																																elseif v:IsA("Explosion") then
+																																	v.BlastPressure = 1
+																																	v.BlastRadius = 1
+																																end
+																															end
+																															for i,v in pairs(Lighting:GetDescendants()) do
+																																if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+																																	v.Enabled = false
+																																end
+																															end
+																															workspace.DescendantAdded:Connect(function(child)
+																																task.spawn(function()
+																																	if child:IsA('ForceField') then
+																																		RunService.Heartbeat:Wait()
+																																		child:Destroy()
+																																	elseif child:IsA('Sparkles') then
+																																		RunService.Heartbeat:Wait()
+																																		child:Destroy()
+																																	elseif child:IsA('Smoke') or child:IsA('Fire') then
+																																		RunService.Heartbeat:Wait()
+																																		child:Destroy()
+																																	end
+																																end)
+																															end)
+																															end)
+-- Big PaintBall 2
+elseif game.PlaceId == 9865958871 then
+	local Library = loadstring(game:HttpGet(_G.guidragtype))()
+	local Window = Library.CreateLib("SkyHub", OptTheme)
+	local Main = Window:NewTab("Main")
+	local MainSection = Main:NewSection("Main")
+	MainSection:NewButton("Gun Mods", "norecoil/RapidFire", function()
+		_G.noRecoil = true
+_G.rapidFire = true
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xxxloilpxxx/lol/main/bigpenisballgunmods.lua"))()
+	end)
+	MainSection:NewButton("GUI", "GUI", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/Big/main/Paint"))()
+	end)
+	
+
+	local Discord = Window:NewTab("Discords")
+	local DiscordSection = Discord:NewSection("Discords")
+	DiscordSection:NewButton("Discord Invite", "Copys Discord invite link", function()
+		setclipboard(string)
+	end)
+	DiscordSection:NewButton("Discord Invite OLD", "Copys Discord invite link", function()
+	setclipboard(string2)
+	end)
+	local Admins = Window:NewTab("Admins")
+	local AdminsSection = Admins:NewSection("Admins")
+																AdminsSection:NewButton("Infinite Yield FE", "Admin", function()
+																	loadstring(game:HttpGet(_G.infydtype))()
+																end)
+																AdminsSection:NewButton("Infinite Store", "Archived", function()
+																	loadstring(game:HttpGet("https://raw.githubusercontent.com/Infinite-Store/Infinite-Store/main/main.lua"))()
+																end) 
+																											AdminsSection:NewButton("Nameless Admin", "Admin", function()
+																												 loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+																											  end)
+																											 
+																											 AdminsSection:NewButton("fates admin", "Admin", function()
+																												 loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+																											  end)
+																											 
+																											  AdminsSection:NewButton("Proton Free Admin", "Admin", function()
+																												 _G.UI_Id = "default" --set this to "default" for the default ui
+																											 loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Proton%20Free'))()
+																												  end)
+																											 
+																												  AdminsSection:NewButton("Proton 2 free Admin", "Admin", function()
+																											 -- DEFAULT CMD BAR PREFIX IS ;
+																											 -- DEFAULT CHAT PREFIX IS /
+																											 _G.UI_Id = "default" --set this to "default" for the default ui
+																											 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
+																													  end)
+																													  AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+																														loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+																														 end)
+																													 
+																											local Hubs = Window:NewTab("Hubs")
+																											local HubsSection = Hubs:NewSection("Hubs")
+																											HubsSection:NewButton("Hoho Hub", "key should be and if not then do it urself", function()
+																												loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HohoV2/main/ScriptLoad.lua"))()
+																											end)
+																											HubsSection:NewButton("Psyhub", "idk", function()
+																												loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
+																												 end)
+																												
+																												HubsSection:NewButton("VG Hub", "60+", function()
+																												loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+																												 end)
+																												
+																												
+																															HubsSection:NewButton("Ezhub", "130+ games", function()
+																																--[[ this is there cmds list
+																												https://pastebin.com/CvjkJxAt
+																												]]--
+																												loadstring(game:HttpGet(('https://raw.githubusercontent.com/debug420/Ez-Industries-Launcher-Data/master/Launcher.lua'),true))()
+																												--[[this is there thing idk
+																												https://pastebin.com/vavZfexv
+																												]]--
+																												 end)
+																													
+																													   HubsSection:NewButton("Owl Hub", "46+ how", function()
+																																loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+																															end)
+																									
+																															HubsSection:NewButton("CocoHub", "idk", function()
+																																loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/CocoHub/master/CocoZHub'),true))()
+																																 end)
+																									
+																															HubsSection:NewButton("MonkeHub", "idk", function()
+																																loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeHub/main/Loader.lua"))()
+																															 end)
+																									
+																															 local Player = Window:NewTab("Player")
+																															 local PlayerSection = Player:NewSection("Player")
+																															 PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, function(v) 
+																																 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+																															 end)
+																													 
+																															 PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
+																																 game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+																															 end)
+																															 local fpsloll = Window:NewTab("FPS")
+																															 local fpscapset = fpsloll:NewSection("FPS")
+																															 fpscapset:NewButton("Sets FPS Cap to 9999/unlock fps if ur exploit supports function","fps cap/unlock fps", function()
+																																 if setfpscap then
+																																	 setfpscap(9999)
+																																 end
+																															 end)
+																															 fpscapset:NewButton("Anti-Lag","makes less laggy", function()
+																																local Terrain = workspace:FindFirstChildOfClass('Terrain')
+																																Lighting = game:GetService("Lighting")
+																															Terrain.WaterWaveSize = 0
+																															Terrain.WaterWaveSpeed = 0
+																															Terrain.WaterReflectance = 0
+																															Terrain.WaterTransparency = 0
+																															Lighting.GlobalShadows = false
+																															Lighting.FogEnd = 9e9
+																															settings().Rendering.QualityLevel = 1
+																															for i,v in pairs(game:GetDescendants()) do
+																																if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+																																	v.Material = "Plastic"
+																																	v.Reflectance = 0
+																																elseif v:IsA("Decal") then
+																																	v.Transparency = 1
+																																elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+																																	v.Lifetime = NumberRange.new(0)
+																																elseif v:IsA("Explosion") then
+																																	v.BlastPressure = 1
+																																	v.BlastRadius = 1
+																																end
+																															end
+																															for i,v in pairs(Lighting:GetDescendants()) do
+																																if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+																																	v.Enabled = false
+																																end
+																															end
+																															workspace.DescendantAdded:Connect(function(child)
+																																task.spawn(function()
+																																	if child:IsA('ForceField') then
+																																		RunService.Heartbeat:Wait()
+																																		child:Destroy()
+																																	elseif child:IsA('Sparkles') then
+																																		RunService.Heartbeat:Wait()
+																																		child:Destroy()
+																																	elseif child:IsA('Smoke') or child:IsA('Fire') then
+																																		RunService.Heartbeat:Wait()
+																																		child:Destroy()
+																																	end
+																																end)
+																															end)
+																															end)		
+-- Muscle Legends
+elseif game.PlaceId == 3623096087 then
+	local Library = loadstring(game:HttpGet(_G.guidragtype))()
+	local Window = Library.CreateLib("SkyHub", OptTheme)
+	local Main = Window:NewTab("Main")
+	local MainSection = Main:NewSection("Main")
+	MainSection:NewButton("Auto Farm Gui", "read??", function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/jynzl/main/main/Musclas%20Legenos.lua'))()
+	end)
+	MainSection:NewButton("GUI", "read??", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/harisiskandar178/Roblox-Script/main/Muscle%20Legend"))()
+	end)
+	
+
+	local Discord = Window:NewTab("Discords")
+	local DiscordSection = Discord:NewSection("Discords")
+	DiscordSection:NewButton("Discord Invite", "Copys Discord invite link", function()
+		setclipboard(string)
+	end)
+	DiscordSection:NewButton("Discord Invite OLD", "Copys Discord invite link", function()
+	setclipboard(string2)
+	end)
+	local Admins = Window:NewTab("Admins")
+	local AdminsSection = Admins:NewSection("Admins")
+																AdminsSection:NewButton("Infinite Yield FE", "Admin", function()
+																	loadstring(game:HttpGet(_G.infydtype))()
+																end)
+																AdminsSection:NewButton("Infinite Store", "Archived", function()
+																	loadstring(game:HttpGet("https://raw.githubusercontent.com/Infinite-Store/Infinite-Store/main/main.lua"))()
+																end) 
+																											AdminsSection:NewButton("Nameless Admin", "Admin", function()
+																												 loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+																											  end)
+																											 
+																											 AdminsSection:NewButton("fates admin", "Admin", function()
+																												 loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+																											  end)
+																											 
+																											  AdminsSection:NewButton("Proton Free Admin", "Admin", function()
+																												 _G.UI_Id = "default" --set this to "default" for the default ui
+																											 loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Proton%20Free'))()
+																												  end)
+																											 
+																												  AdminsSection:NewButton("Proton 2 free Admin", "Admin", function()
+																											 -- DEFAULT CMD BAR PREFIX IS ;
+																											 -- DEFAULT CHAT PREFIX IS /
+																											 _G.UI_Id = "default" --set this to "default" for the default ui
+																											 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
+																													  end)
+																													  AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+																														loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+																														 end)
+																													 
+																											local Hubs = Window:NewTab("Hubs")
+																											local HubsSection = Hubs:NewSection("Hubs")
+																											HubsSection:NewButton("Hoho Hub", "key should be and if not then do it urself", function()
+																												loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HohoV2/main/ScriptLoad.lua"))()
+																											end)
+																											HubsSection:NewButton("Psyhub", "idk", function()
+																												loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
+																												 end)
+																												
+																												MainSection:NewButton("VG Hub", "60+", function()
+																												loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+																												 end)
+																												
+																												
+																															HubsSection:NewButton("Ezhub", "130+ games", function()
+																																--[[ this is there cmds list
+																												https://pastebin.com/CvjkJxAt
+																												]]--
+																												loadstring(game:HttpGet(('https://raw.githubusercontent.com/debug420/Ez-Industries-Launcher-Data/master/Launcher.lua'),true))()
+																												--[[this is there thing idk
+																												https://pastebin.com/vavZfexv
+																												]]--
+																												 end)
+																													
+																													   HubsSection:NewButton("Owl Hub", "46+ how", function()
+																																loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+																															end)
+																									
+																															HubsSection:NewButton("CocoHub", "idk", function()
+																																loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/CocoHub/master/CocoZHub'),true))()
+																																 end)
+																									
+																															HubsSection:NewButton("MonkeHub", "idk", function()
+																																loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeHub/main/Loader.lua"))()
+																															 end)
+																									
+																															 local Player = Window:NewTab("Player")
+																															 local PlayerSection = Player:NewSection("Player")
+																															 PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, function(v) 
+																																 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+																															 end)
+																													 
+																															 PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
+																																 game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+																															 end)
+																															 local fpsloll = Window:NewTab("FPS")
+																															 local fpscapset = fpsloll:NewSection("FPS")
+																															 fpscapset:NewButton("Sets FPS Cap to 9999/unlock fps if ur exploit supports function","fps cap/unlock fps", function()
+																																 if setfpscap then
+																																	 setfpscap(9999)
+																																 end
+																															 end)
+																															 fpscapset:NewButton("Anti-Lag","makes less laggy", function()
+																																local Terrain = workspace:FindFirstChildOfClass('Terrain')
+																																Lighting = game:GetService("Lighting")
+																															Terrain.WaterWaveSize = 0
+																															Terrain.WaterWaveSpeed = 0
+																															Terrain.WaterReflectance = 0
+																															Terrain.WaterTransparency = 0
+																															Lighting.GlobalShadows = false
+																															Lighting.FogEnd = 9e9
+																															settings().Rendering.QualityLevel = 1
+																															for i,v in pairs(game:GetDescendants()) do
+																																if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+																																	v.Material = "Plastic"
+																																	v.Reflectance = 0
+																																elseif v:IsA("Decal") then
+																																	v.Transparency = 1
+																																elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+																																	v.Lifetime = NumberRange.new(0)
+																																elseif v:IsA("Explosion") then
+																																	v.BlastPressure = 1
+																																	v.BlastRadius = 1
+																																end
+																															end
+																															for i,v in pairs(Lighting:GetDescendants()) do
+																																if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+																																	v.Enabled = false
+																																end
+																															end
+																															workspace.DescendantAdded:Connect(function(child)
+																																task.spawn(function()
+																																	if child:IsA('ForceField') then
+																																		RunService.Heartbeat:Wait()
+																																		child:Destroy()
+																																	elseif child:IsA('Sparkles') then
+																																		RunService.Heartbeat:Wait()
+																																		child:Destroy()
+																																	elseif child:IsA('Smoke') or child:IsA('Fire') then
+																																		RunService.Heartbeat:Wait()
+																																		child:Destroy()
+																																	end
+																																end)
+																															end)
+																															end)
+-- Road to Grambys
+elseif game.PlaceId == 5796917097 then
+	game.StarterGui:SetCore("SendNotification",  {
+		Title = "Coming Soon";
+		Text = "Dropping at around 7:30 PM PST";
+		Icon = "";
+		Duration = 5;
+		Callback = NotificationBindable;
+	   })																															
+																															
 
 	-- Universal
 else
