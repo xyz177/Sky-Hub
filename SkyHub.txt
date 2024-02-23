@@ -8515,7 +8515,7 @@ end)
 						end)
 						end)
 -- Bedwars
-elseif game.PlaceId == 8560631822 or 6872265039 then
+elseif game.PlaceId == 6872265039 then
 	local Library = loadstring(game:HttpGet(_G.guidragtype))()
 		local Window = Library.CreateLib("SkyHub", OptTheme)
 		local Main = Window:NewTab("Main")
