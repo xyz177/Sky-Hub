@@ -1,13 +1,14 @@
 --[[games it supports Da Hood, Arsenal, Tower of Hell, KAT!, Fencing,
 Work At A Pizza Place, VR Hands, Adopt Me, Jailbreak, Prison Life,
 Build A Boat For Treasure, Gorilla Tag Professional, Murder Mystery 2, Blox fruits, Counter Blox, Mic Up, Neighbors, Natural Diaster Survival, Ro-Ghoul, Blade Ball, Pet Simulator X,
-Pet Simulator 99, Legends of Speed, BrookHaven RP, Bedwars, Chaos, and Universal.
+Pet Simulator 99, Legends of Speed, BrookHaven RP, Bedwars, Chaos, Ninja Legends, and Universal.
 25+ games
 Rebuilt On IllusionHub
 
 Last Updated 2/22/2024
 
-Added a Temporary Fix for jailbreak will be better once i get home from school and added chaos hub to legends of speed
+Finally Fixed Jailbreak (sorry for bad gui but its either that or nothing)
+and added swag mode to Da Hood and added Chaos Hub and Astral Hub to universal and added astral hub to brookhaven, prison life, and chaos and added more chaos scripts and added Ninja Legends
 
 executor ui in fencing and universal made by espresso0069
 
@@ -122,6 +123,13 @@ end)
 
 MainSection:NewButton("FE Trolling GUI", "troll", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau"))()
+end)
+
+MainSection:NewButton("Swag Mode", "w", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002'))()
+end)
+MainSection:NewButton("Swag Mode Old", "w", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/OldSwagmode'))()
 end)
 
 MainSection:NewButton("Mobile aimbot", "if ur actually on mobile", function()
@@ -4688,122 +4696,378 @@ PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, functi
 	end)
 -- JailBreak
 elseif game.PlaceId == 606849621 then
-	if IsOnMobile then
-		local Players = game:GetService("Players")
-	local UserInputService = game:GetService("UserInputService")
-	local RunService = game:GetService("RunService")
-	
-	local localPlayer = Players.LocalPlayer
-	local camera = game.Workspace.CurrentCamera
-	local lockOnActive = false
-	local teamCheckActive = false
-	local currentTouch = nil
-	local fovRadius = 125 
-	
-	local screenGui = Instance.new("ScreenGui")
-	screenGui.Parent = game:GetService("CoreGui") 
-	local toggleButton = Instance.new("TextButton")
-	toggleButton.Parent = screenGui
-	toggleButton.Size = UDim2.new(0, 150, 0, 50)
-	toggleButton.Position = UDim2.new(0, 100, 0, 100)
-	toggleButton.Text = "Toggle Lock-On"
-	toggleButton.Draggable = true
-	
-	local toggleTeamButton = Instance.new("TextButton")
-	toggleTeamButton.Parent = screenGui
-	toggleTeamButton.Size = UDim2.new(0, 150, 0, 50)
-	toggleTeamButton.Position = UDim2.new(0, 100, 0, 160)
-	toggleTeamButton.Text = "Toggle Team Check"
-	toggleTeamButton.Draggable = true
-	
-	local fovCircleGui = Instance.new("ImageLabel")
-	fovCircleGui.Parent = screenGui
-	fovCircleGui.AnchorPoint = Vector2.new(0.5, 0.5)
-	fovCircleGui.Size = UDim2.new(0, fovRadius * 2, 0, fovRadius * 2) 
-	fovCircleGui.Image = "rbxassetid://432312433" 
-	fovCircleGui.ImageTransparency = 0.5
-	fovCircleGui.ImageColor3 = Color3.new(1, 1, 1)
-	fovCircleGui.BackgroundTransparency = 1
-	fovCircleGui.Visible = false
-	fovCircleGui.ZIndex = 0 -- Ensure it's behind other GUI elements
-	
-	-- Function to check if a player is within the FOV and not obstructed by walls
-	local function isPlayerVisible(targetPlayer)
-	if not targetPlayer.Character or not targetPlayer.Character:FindFirstChild("Head") then
-	return false
-	end
-	
-	if teamCheckActive and targetPlayer.Team == localPlayer.Team then
-	return false -- Player is on the same team
-	end
-	
-	local targetHeadPosition = targetPlayer.Character.Head.Position
-	local vectorToTarget = (targetHeadPosition - camera.CFrame.Position).unit
-	local ray = Ray.new(camera.CFrame.Position, vectorToTarget * fovRadius)
-	local part, position = game.Workspace:FindPartOnRay(ray, localPlayer.Character, false, true)
-	
-	if part and part:IsDescendantOf(targetPlayer.Character) then
-	local dotProduct = camera.CFrame.LookVector:Dot(vectorToTarget)
-	local angle = math.deg(math.acos(dotProduct))
-	return angle <= (fovRadius / 2) -- Player is within FOV
-	end
-	
-	return false -- Player is obstructed by walls
-	end
-	
-	-- Toggle button functionality
-	toggleButton.MouseButton1Click:Connect(function()
-	lockOnActive = not lockOnActive
-	toggleButton.Text = lockOnActive and "Lock-On Active" or "Toggle Lock-On"
-	fovCircleGui.Visible = lockOnActive
+	-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local sorryforbadui = Instance.new("ScreenGui")
+local scrollframe = Instance.new("ScrollingFrame")
+local close = Instance.new("TextButton")
+local infyieldbutton = Instance.new("TextButton")
+local owlhubbutton = Instance.new("TextButton")
+local skyhublabel = Instance.new("TextLabel")
+local jailmonkeybutton = Instance.new("TextButton")
+local chaoshubbutton = Instance.new("TextButton")
+local fpsunlockbutton = Instance.new("TextButton")
+local sorrylol = Instance.new("TextLabel")
+local discordbutton = Instance.new("TextButton")
+local mobileaim = Instance.new("TextButton")
+
+--Properties:
+
+sorryforbadui.Name = "sorryforbadui"
+sorryforbadui.Parent = game.CoreGui
+sorryforbadui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+scrollframe.Name = "scrollframe"
+scrollframe.Parent = sorryforbadui
+scrollframe.Active = true
+scrollframe.BackgroundColor3 = Color3.fromRGB(45, 62, 82)
+scrollframe.BorderColor3 = Color3.fromRGB(0, 0, 0)
+scrollframe.BorderSizePixel = 0
+scrollframe.Position = UDim2.new(0.399757713, 0, 0.223325059, 0)
+scrollframe.Size = UDim2.new(0, 413, 0, 446)
+
+close.Name = "close"
+close.Parent = scrollframe
+close.BackgroundColor3 = Color3.fromRGB(52, 74, 96)
+close.BorderColor3 = Color3.fromRGB(0, 0, 0)
+close.BorderSizePixel = 0
+close.Position = UDim2.new(0.859564185, 0, 0, 0)
+close.Size = UDim2.new(0, 58, 0, 50)
+close.Font = Enum.Font.SourceSans
+close.Text = "X"
+close.TextColor3 = Color3.fromRGB(255, 255, 255)
+close.TextSize = 42.000
+
+infyieldbutton.Name = "infyieldbutton"
+infyieldbutton.Parent = scrollframe
+infyieldbutton.BackgroundColor3 = Color3.fromRGB(52, 74, 96)
+infyieldbutton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+infyieldbutton.BorderSizePixel = 0
+infyieldbutton.Position = UDim2.new(0.0145278452, 0, 0.0640974492, 0)
+infyieldbutton.Size = UDim2.new(0, 200, 0, 50)
+infyieldbutton.Font = Enum.Font.SourceSans
+infyieldbutton.Text = "Infinite Yield"
+infyieldbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+infyieldbutton.TextSize = 29.000
+
+owlhubbutton.Name = "owlhubbutton"
+owlhubbutton.Parent = scrollframe
+owlhubbutton.BackgroundColor3 = Color3.fromRGB(52, 74, 96)
+owlhubbutton.BorderColor3 = Color3.fromRGB(52, 74, 96)
+owlhubbutton.BorderSizePixel = 0
+owlhubbutton.Position = UDim2.new(0.484261513, 0, 0.0641677901, 0)
+owlhubbutton.Size = UDim2.new(0, 200, 0, 50)
+owlhubbutton.Font = Enum.Font.SourceSans
+owlhubbutton.Text = "Owl Hub"
+owlhubbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+owlhubbutton.TextSize = 29.000
+
+skyhublabel.Name = "skyhublabel"
+skyhublabel.Parent = scrollframe
+skyhublabel.BackgroundColor3 = Color3.fromRGB(52, 74, 96)
+skyhublabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
+skyhublabel.BorderSizePixel = 0
+skyhublabel.Position = UDim2.new(0.256658584, 0, -0.000633479212, 0)
+skyhublabel.Size = UDim2.new(0, 200, 0, 50)
+skyhublabel.Font = Enum.Font.SourceSans
+skyhublabel.Text = "Sky Hub"
+skyhublabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+skyhublabel.TextSize = 40.000
+
+jailmonkeybutton.Name = "jailmonkeybutton"
+jailmonkeybutton.Parent = scrollframe
+jailmonkeybutton.BackgroundColor3 = Color3.fromRGB(52, 74, 96)
+jailmonkeybutton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+jailmonkeybutton.BorderSizePixel = 0
+jailmonkeybutton.Position = UDim2.new(0.0145278452, 0, 0.0941704065, 0)
+jailmonkeybutton.Size = UDim2.new(0, 200, 0, 50)
+jailmonkeybutton.Font = Enum.Font.SourceSans
+jailmonkeybutton.Text = "Jail Monkey"
+jailmonkeybutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+jailmonkeybutton.TextSize = 29.000
+
+chaoshubbutton.Name = "chaoshubbutton"
+chaoshubbutton.Parent = scrollframe
+chaoshubbutton.BackgroundColor3 = Color3.fromRGB(52, 74, 96)
+chaoshubbutton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+chaoshubbutton.BorderSizePixel = 0
+chaoshubbutton.Position = UDim2.new(0.484261513, 0, 0.0941704065, 0)
+chaoshubbutton.Size = UDim2.new(0, 200, 0, 50)
+chaoshubbutton.Font = Enum.Font.SourceSans
+chaoshubbutton.Text = "Chaos Hub"
+chaoshubbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+chaoshubbutton.TextSize = 29.000
+chaoshubbutton.TextWrapped = true
+
+fpsunlockbutton.Name = "fpsunlockbutton"
+fpsunlockbutton.Parent = scrollframe
+fpsunlockbutton.BackgroundColor3 = Color3.fromRGB(52, 74, 96)
+fpsunlockbutton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+fpsunlockbutton.BorderSizePixel = 0
+fpsunlockbutton.Position = UDim2.new(0.288135588, 0, 0.208191186, 0)
+fpsunlockbutton.Size = UDim2.new(0, 200, 0, 50)
+fpsunlockbutton.Font = Enum.Font.SourceSans
+fpsunlockbutton.Text = "Unlock Fps"
+fpsunlockbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+fpsunlockbutton.TextSize = 29.000
+
+sorrylol.Name = "sorrylol"
+sorrylol.Parent = scrollframe
+sorrylol.BackgroundColor3 = Color3.fromRGB(52, 74, 96)
+sorrylol.BorderColor3 = Color3.fromRGB(0, 0, 0)
+sorrylol.BorderSizePixel = 0
+sorrylol.Position = UDim2.new(0.200968519, 0, 0.374271959, 0)
+sorrylol.Size = UDim2.new(0, 272, 0, 153)
+sorrylol.Font = Enum.Font.SourceSans
+sorrylol.Text = "So uh sorry for the bad UI its because the library i use (Kavo) doesnt work for jailbreak for sum reason so i had to make my own so yeah also pls join discord"
+sorrylol.TextColor3 = Color3.fromRGB(255, 255, 255)
+sorrylol.TextScaled = true
+sorrylol.TextSize = 10.000
+sorrylol.TextWrapped = true
+
+discordbutton.Name = "discordbutton"
+discordbutton.Parent = scrollframe
+discordbutton.BackgroundColor3 = Color3.fromRGB(52, 74, 96)
+discordbutton.BorderColor3 = Color3.fromRGB(0, 0, 0)
+discordbutton.BorderSizePixel = 0
+discordbutton.Position = UDim2.new(0.283292979, 0, 0.484304935, 0)
+discordbutton.Size = UDim2.new(0, 200, 0, 50)
+discordbutton.Font = Enum.Font.SourceSans
+discordbutton.Text = "Discord"
+discordbutton.TextColor3 = Color3.fromRGB(255, 255, 255)
+discordbutton.TextSize = 29.000
+
+mobileaim.Name = "mobileaim"
+mobileaim.Parent = scrollframe
+mobileaim.BackgroundColor3 = Color3.fromRGB(52, 74, 96)
+mobileaim.BorderColor3 = Color3.fromRGB(0, 0, 0)
+mobileaim.BorderSizePixel = 0
+mobileaim.Position = UDim2.new(0.283292979, 0, 0.166924864, 0)
+mobileaim.Size = UDim2.new(0, 200, 0, 50)
+mobileaim.Font = Enum.Font.SourceSans
+mobileaim.Text = "Mobile Aimbot"
+mobileaim.TextColor3 = Color3.fromRGB(255, 255, 255)
+mobileaim.TextSize = 29.000
+
+-- Scripts:
+
+local function MUCGJDL_fake_script() -- close.Closebuttonscript 
+	local script = Instance.new('LocalScript', close)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Parent:Destroy()
 	end)
-	
-	toggleTeamButton.MouseButton1Click:Connect(function()
-	teamCheckActive = not teamCheckActive
-	toggleTeamButton.Text = teamCheckActive and "Team Check Active" or "Toggle Team Check"
+end
+coroutine.wrap(MUCGJDL_fake_script)()
+local function YLSH_fake_script() -- infyieldbutton.infyieldbuttonscript 
+	local script = Instance.new('LocalScript', infyieldbutton)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		loadstring(game:HttpGet(_G.infydtype))()
 	end)
-	
-	-- Function to handle touch input
-	local function onTouchStarted(touch)
-	currentTouch = touch.Position
-	fovCircleGui.Position = UDim2.new(0, touch.Position.X - fovRadius, 0, touch.Position.Y - fovRadius)
-	fovCircleGui.Visible = true
-	end
-	
-	-- Function to handle touch ended
-	local function onTouchEnded(touch)
-	if currentTouch and currentTouch == touch.Position then
-	currentTouch = nil
-	fovCircleGui.Visible = false
-	end
-	end
-	
-	-- Connect the touch event handlers
-	UserInputService.TouchStarted:Connect(onTouchStarted)
-	UserInputService.TouchEnded:Connect(onTouchEnded)
-	
-	RunService.RenderStepped:Connect(function()
-	if lockOnActive then
-	for _, player in ipairs(Players:GetPlayers()) do
-	 if player ~= localPlayer and isPlayerVisible(player) then
-		 local head = player.Character.Head
-		 local direction = (head.Position - camera.CFrame.Position).unit
-		 camera.CFrame = CFrame.new(camera.CFrame.Position, camera.CFrame.Position + direction * 10)
-		 break 
-	 end
-	end
-	end
-	end)
-	loadstring(game:HttpGet(_G.infydtype))()
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeyScripts/main/JailMonkey.lua"))()
-	else
+end
+coroutine.wrap(YLSH_fake_script)()
+local function ZROLJQU_fake_script() -- owlhubbutton.owlhubbbuttonscript 
+	local script = Instance.new('LocalScript', owlhubbutton)
+
+	script.Parent.MouseButton1Down:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+	end)
+end
+coroutine.wrap(ZROLJQU_fake_script)()
+local function REAYQ_fake_script() -- jailmonkeybutton.jailmonkeybutton 
+	local script = Instance.new('LocalScript', jailmonkeybutton)
+
+	script.Parent.MouseButton1Down:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeyScripts/main/JailMonkey.lua"))()
+	end)
+end
+coroutine.wrap(REAYQ_fake_script)()
+local function PBEDJU_fake_script() -- chaoshubbutton.chaoshubbuttonscript 
+	local script = Instance.new('LocalScript', chaoshubbutton)
+
+	script.Parent.MouseButton1Down:Connect(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/xChaoticVoid/Chaos-Hub-v1/main/ChaosHub.lua"))()
-			if setfpscap then
+	end)
+end
+coroutine.wrap(PBEDJU_fake_script)()
+local function ORNCRD_fake_script() -- fpsunlockbutton.fpsunlockbuttonscript 
+	local script = Instance.new('LocalScript', fpsunlockbutton)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		if setfpscap then
 			setfpscap(9999)
 		end
+	end)
+end
+coroutine.wrap(ORNCRD_fake_script)()
+local function SNPNCCP_fake_script() -- discordbutton.discordbuttonscript 
+	local script = Instance.new('LocalScript', discordbutton)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		setclipboard(string)
+	end)
+end
+coroutine.wrap(SNPNCCP_fake_script)()
+local function MNUJ_fake_script() -- mobileaim.mobileaimscript 
+	local script = Instance.new('LocalScript', mobileaim)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		local Players = game:GetService("Players")
+		local UserInputService = game:GetService("UserInputService")
+		local RunService = game:GetService("RunService")
+	
+		local localPlayer = Players.LocalPlayer
+		local camera = game.Workspace.CurrentCamera
+		local lockOnActive = false
+		local teamCheckActive = false
+		local currentTouch = nil
+		local fovRadius = 125 
+	
+		local screenGui = Instance.new("ScreenGui")
+		screenGui.Parent = game:GetService("CoreGui") 
+		local toggleButton = Instance.new("TextButton")
+		toggleButton.Parent = screenGui
+		toggleButton.Size = UDim2.new(0, 150, 0, 50)
+		toggleButton.Position = UDim2.new(0, 100, 0, 100)
+		toggleButton.Text = "Toggle Lock-On"
+		toggleButton.Draggable = true
+	
+		local toggleTeamButton = Instance.new("TextButton")
+		toggleTeamButton.Parent = screenGui
+		toggleTeamButton.Size = UDim2.new(0, 150, 0, 50)
+		toggleTeamButton.Position = UDim2.new(0, 100, 0, 160)
+		toggleTeamButton.Text = "Toggle Team Check"
+		toggleTeamButton.Draggable = true
+	
+		local fovCircleGui = Instance.new("ImageLabel")
+		fovCircleGui.Parent = screenGui
+		fovCircleGui.AnchorPoint = Vector2.new(0.5, 0.5)
+		fovCircleGui.Size = UDim2.new(0, fovRadius * 2, 0, fovRadius * 2) 
+		fovCircleGui.Image = "rbxassetid://432312433" 
+		fovCircleGui.ImageTransparency = 0.5
+		fovCircleGui.ImageColor3 = Color3.new(1, 1, 1)
+		fovCircleGui.BackgroundTransparency = 1
+		fovCircleGui.Visible = false
+		fovCircleGui.ZIndex = 0 -- Ensure it's behind other GUI elements
+	
+		-- Function to check if a player is within the FOV and not obstructed by walls
+		local function isPlayerVisible(targetPlayer)
+			if not targetPlayer.Character or not targetPlayer.Character:FindFirstChild("Head") then
+				return false
+			end
+	
+			if teamCheckActive and targetPlayer.Team == localPlayer.Team then
+				return false -- Player is on the same team
+			end
+	
+			local targetHeadPosition = targetPlayer.Character.Head.Position
+			local vectorToTarget = (targetHeadPosition - camera.CFrame.Position).unit
+			local ray = Ray.new(camera.CFrame.Position, vectorToTarget * fovRadius)
+			local part, position = game.Workspace:FindPartOnRay(ray, localPlayer.Character, false, true)
+	
+			if part and part:IsDescendantOf(targetPlayer.Character) then
+				local dotProduct = camera.CFrame.LookVector:Dot(vectorToTarget)
+				local angle = math.deg(math.acos(dotProduct))
+				return angle <= (fovRadius / 2) -- Player is within FOV
+			end
+	
+			return false -- Player is obstructed by walls
+		end
+	
+		-- Toggle button functionality
+		toggleButton.MouseButton1Click:Connect(function()
+			lockOnActive = not lockOnActive
+			toggleButton.Text = lockOnActive and "Lock-On Active" or "Toggle Lock-On"
+			fovCircleGui.Visible = lockOnActive
+		end)
+	
+		toggleTeamButton.MouseButton1Click:Connect(function()
+			teamCheckActive = not teamCheckActive
+			toggleTeamButton.Text = teamCheckActive and "Team Check Active" or "Toggle Team Check"
+		end)
+	
+		-- Function to handle touch input
+		local function onTouchStarted(touch)
+			currentTouch = touch.Position
+			fovCircleGui.Position = UDim2.new(0, touch.Position.X - fovRadius, 0, touch.Position.Y - fovRadius)
+			fovCircleGui.Visible = true
+		end
+	
+		-- Function to handle touch ended
+		local function onTouchEnded(touch)
+			if currentTouch and currentTouch == touch.Position then
+				currentTouch = nil
+				fovCircleGui.Visible = false
+			end
+		end
+	
+		-- Connect the touch event handlers
+		UserInputService.TouchStarted:Connect(onTouchStarted)
+		UserInputService.TouchEnded:Connect(onTouchEnded)
+	
+		RunService.RenderStepped:Connect(function()
+			if lockOnActive then
+				for _, player in ipairs(Players:GetPlayers()) do
+					if player ~= localPlayer and isPlayerVisible(player) then
+						local head = player.Character.Head
+						local direction = (head.Position - camera.CFrame.Position).unit
+						camera.CFrame = CFrame.new(camera.CFrame.Position, camera.CFrame.Position + direction * 10)
+						break 
+					end
+				end
+			end
+		end)
+	end)
+end
+coroutine.wrap(MNUJ_fake_script)()
+local function MLAEHFP_fake_script() -- scrollframe.Dragify 
+	local script = Instance.new('LocalScript', scrollframe)
+
+	local UserInputService = game:GetService("UserInputService")
+	
+	local gui = script.Parent
+	
+	local dragging
+	local dragInput
+	local dragStart
+	local startPos
+	
+	local function update(input)
+		local delta = input.Position - dragStart
+		gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
 	end
+	
+	gui.InputBegan:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+			dragging = true
+			dragStart = input.Position
+			startPos = gui.Position
+	
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragging = false
+				end
+			end)
+		end
+	end)
+	
+	gui.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			dragInput = input
+		end
+	end)
+	
+	UserInputService.InputChanged:Connect(function(input)
+		if input == dragInput and dragging then
+			update(input)
+		end
+	end)
+end
+coroutine.wrap(MLAEHFP_fake_script)()
 --Prison Life
 elseif game.PlaceId == 155615604 then
 local Library = loadstring(game:HttpGet(_G.guidragtype))()
@@ -4893,6 +5157,9 @@ MainSection:NewButton("FE Trolling GUI", "troll", function()
 end)
 MainSection:NewButton("Prisn Life Admin", "idk", function()
     loadstring(game:HttpGet("https://pastefy.app/rEIaHWFH/raw"))()
+end)
+MainSection:NewButton("Astral Hub", "hub", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/AstralHub/main/Loader.lua"))()
 end)
 
 MainSection:NewButton("Mobile VFly", "title explains", function()
@@ -7919,11 +8186,8 @@ elseif game.PlaceId == 3101667897 then
 		local Window = Library.CreateLib("SkyHub", OptTheme)
 		local Main = Window:NewTab("Main")
 		local MainSection = Main:NewSection("Main")
-		MainSection:NewButton("GUI", "yuh", function()
-			--[[
-	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
--- Please Dont Steal The Script. --
+		MainSection:NewButton("GUI made by Ree", "made by Ree", function()
+			-- Made By Ree
 loadstring(game:HttpGet("https://raw.githubusercontent.com/ReeAndArceus/Legends-Of-Speed-Gui/main/Gui"))() 
 		end)
 		MainSection:NewButton("GUI 2", "yuh", function()
@@ -8097,6 +8361,9 @@ elseif game.PlaceId == 4924922222 then
 		local MainSection = Main:NewSection("Main")
 		MainSection:NewButton("Ice Hub", "yuh", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMae17/NewIceHub/main/Brookhaven"))()
+		end)
+		MainSection:NewButton("Astral Hub", "hub", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/AstralHub/main/Loader.lua"))()
 		end)
 		local Discord = Window:NewTab("Discords")
 		local DiscordSection = Discord:NewSection("Discords")
@@ -8390,6 +8657,18 @@ end)
 							MainSection:NewButton("Chaos Admin", "type in chat !kill player or a command", function()
 								loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
 							end)
+							MainSection:NewButton("Astral Hub", "hub", function()
+								loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/AstralHub/main/Loader.lua"))()
+							end)
+							MainSection:NewButton("chaos script", "idk", function()
+								--[[
+	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+loadstring(game:HttpGet('https://raw.githubusercontent.com/1111-ssss/Chaos_Script/main/Chaos_script.txt'))()
+							end)
+							MainSection:NewButton("chaos server crash", "idk", function()
+								loadstring(game:HttpGet("https://raw.githubusercontent.com/aidanlolol/MainScript/main/ChaosScriptVersionTwoPointOne.lua"))()
+							end)
 							local Discord = Window:NewTab("Discords")
 							local DiscordSection = Discord:NewSection("Discords")
 							DiscordSection:NewButton("Discord Invite", "Copys Discord invite link", function()
@@ -8525,6 +8804,158 @@ end)
 												end)
 											end)
 											end)
+-- Ninja Legends
+elseif game.PlaceId == 3956818381 then
+	local Library = loadstring(game:HttpGet(_G.guidragtype))()
+	local Window = Library.CreateLib("SkyHub", OptTheme)
+	local Main = Window:NewTab("Main")
+	local MainSection = Main:NewSection("Main")
+	MainSection:NewButton("Proxima Hub", "idk", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua"))()
+	end)
+	MainSection:NewButton("Auto Sell/Farm", "idk", function()
+		while true do wait()
+			local ohString1 = "swingKatana"
+			local plr = game.Players.LocalPlayer
+			game:GetService("Players").LocalPlayer.ninjaEvent:FireServer(ohString1)
+			game.Players.LocalPlayer.Character.Humanoid.Jump = true
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.sellAreaCircles.sellAreaCircle.circleInner.CFrame
+			end
+	end)
+	local Discord = Window:NewTab("Discords")
+	local DiscordSection = Discord:NewSection("Discords")
+	DiscordSection:NewButton("Discord Invite", "Copys Discord invite link", function()
+		setclipboard(string)
+	end)
+	DiscordSection:NewButton("Discord Invite OLD", "Copys Discord invite link", function()
+		setclipboard(string2)
+	end)
+	local Admins = Window:NewTab("Admins")
+	local AdminsSection = Admins:NewSection("Admins")
+	AdminsSection:NewButton("Infinite Yield FE", "Admin", function()
+		loadstring(game:HttpGet(_G.infydtype))()
+	end)
+	AdminsSection:NewButton("Infinite Store", "Archived", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Infinite-Store/Infinite-Store/main/main.lua"))()
+	end) 
+												AdminsSection:NewButton("Nameless Admin", "Admin", function()
+													 loadstring(game:HttpGet('https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source'))()
+												  end)
+												 
+												 AdminsSection:NewButton("fates admin", "Admin", function()
+													 loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+												  end)
+												 
+												  AdminsSection:NewButton("Proton Free Admin", "Admin", function()
+													 _G.UI_Id = "default" --set this to "default" for the default ui
+												 loadstring(game:HttpGet('https://raw.githubusercontent.com/DigitalityScripts/roblox-scripts/main/Proton%20Free'))()
+													  end)
+												 
+													  AdminsSection:NewButton("Proton 2 free Admin", "Admin", function()
+												 -- DEFAULT CMD BAR PREFIX IS ;
+												 -- DEFAULT CHAT PREFIX IS /
+												 _G.UI_Id = "default" --set this to "default" for the default ui
+												 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
+														  end)
+														  AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+															loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+															 end)
+														 
+												local Hubs = Window:NewTab("Hubs")
+												local HubsSection = Hubs:NewSection("Hubs")
+												HubsSection:NewButton("Hoho Hub", "key should be and if not then do it urself", function()
+													loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HohoV2/main/ScriptLoad.lua"))()
+												end)
+												HubsSection:NewButton("Psyhub", "idk", function()
+													loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
+													 end)
+													
+													HubsSection:NewButton("VG Hub", "60+", function()
+													loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+													 end)
+													
+													
+																HubsSection:NewButton("Ezhub", "130+ games", function()
+																	--[[ this is there cmds list
+													https://pastebin.com/CvjkJxAt
+													]]--
+													loadstring(game:HttpGet(('https://raw.githubusercontent.com/debug420/Ez-Industries-Launcher-Data/master/Launcher.lua'),true))()
+													--[[this is there thing idk
+													https://pastebin.com/vavZfexv
+													]]--
+													 end)
+														
+														   HubsSection:NewButton("Owl Hub", "46+ how", function()
+																	loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+																end)
+										
+																HubsSection:NewButton("CocoHub", "idk", function()
+																	loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/CocoHub/master/CocoZHub'),true))()
+																	 end)
+										
+																HubsSection:NewButton("MonkeHub", "idk", function()
+																	loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeHub/main/Loader.lua"))()
+																 end)
+										
+																 local Player = Window:NewTab("Player")
+																 local PlayerSection = Player:NewSection("Player")
+																 PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, function(v) 
+																	 game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = v
+																 end)
+														 
+																 PlayerSection:NewSlider("Jumppower", "Changes how high you jump", 500, 1, function(v) 
+																	 game.Players.LocalPlayer.Character.Humanoid.JumpPower = v
+																 end)
+																 local fpsloll = Window:NewTab("FPS")
+																 local fpscapset = fpsloll:NewSection("FPS")
+																 fpscapset:NewButton("Sets FPS Cap to 9999/unlock fps if ur exploit supports function","fps cap/unlock fps", function()
+																	 if setfpscap then
+																		 setfpscap(9999)
+																	 end
+																 end)
+																 fpscapset:NewButton("Anti-Lag","makes less laggy", function()
+																	local Terrain = workspace:FindFirstChildOfClass('Terrain')
+																	Lighting = game:GetService("Lighting")
+																Terrain.WaterWaveSize = 0
+																Terrain.WaterWaveSpeed = 0
+																Terrain.WaterReflectance = 0
+																Terrain.WaterTransparency = 0
+																Lighting.GlobalShadows = false
+																Lighting.FogEnd = 9e9
+																settings().Rendering.QualityLevel = 1
+																for i,v in pairs(game:GetDescendants()) do
+																	if v:IsA("Part") or v:IsA("UnionOperation") or v:IsA("MeshPart") or v:IsA("CornerWedgePart") or v:IsA("TrussPart") then
+																		v.Material = "Plastic"
+																		v.Reflectance = 0
+																	elseif v:IsA("Decal") then
+																		v.Transparency = 1
+																	elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then
+																		v.Lifetime = NumberRange.new(0)
+																	elseif v:IsA("Explosion") then
+																		v.BlastPressure = 1
+																		v.BlastRadius = 1
+																	end
+																end
+																for i,v in pairs(Lighting:GetDescendants()) do
+																	if v:IsA("BlurEffect") or v:IsA("SunRaysEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("BloomEffect") or v:IsA("DepthOfFieldEffect") then
+																		v.Enabled = false
+																	end
+																end
+																workspace.DescendantAdded:Connect(function(child)
+																	task.spawn(function()
+																		if child:IsA('ForceField') then
+																			RunService.Heartbeat:Wait()
+																			child:Destroy()
+																		elseif child:IsA('Sparkles') then
+																			RunService.Heartbeat:Wait()
+																			child:Destroy()
+																		elseif child:IsA('Smoke') or child:IsA('Fire') then
+																			RunService.Heartbeat:Wait()
+																			child:Destroy()
+																		end
+																	end)
+																end)
+																end)
 
 	-- Universal
 else
@@ -8698,6 +9129,13 @@ local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or
 	end)
 						HubsSection:NewButton("Ice Hub", "hub", function()
 							loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMae17/NewIceHub/main/Brookhaven"))()
+						end)
+
+						MainSection:NewButton("Chaos Hub", "hub", function()
+							loadstring(game:HttpGet("https://raw.githubusercontent.com/xChaoticVoid/Chaos-Hub-v1/main/ChaosHub.lua"))()
+						end)
+						MainSection:NewButton("Astral Hub", "hub", function()
+							loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/AstralHub/main/Loader.lua"))()
 						end)
 					   
 						HubsSection:NewButton("Hat Hub", "need hats for this or items", function()
