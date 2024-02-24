@@ -1,6 +1,6 @@
 --[[
 Last Updated on 2/24/2024 
-added FE Car Tornado
+added Universal FE hub thing
 ]]--
 local OptTheme = "Midnight"
 local string = "https://discord.gg/xwy5Cu62Vw"
@@ -57,6 +57,10 @@ local Library = loadstring(game:HttpGet(_G.guidragtype))()
 			 _G.UI_Id = "default" --set this to "default" for the default ui
 			 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
 					  end)
+
+					  MainSection:NewButton("FE Universal Script hub or sum", "hella stuff", function()
+						loadstring(game:HttpGet('https://gist.githubusercontent.com/Dvrknvss/e2a906135f9e55d0d2ae7aaf337d8937/raw/dc055592803f8418ddf8ba7b84286f47638849d4/noidea'))()
+					 end)
 					  MainSection:NewButton("System Broken FE", "w", function()
 						local credits = "SystemBroken made by system_calix"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/script"))()
