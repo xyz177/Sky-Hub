@@ -5,7 +5,7 @@ Pet Simulator 99, Legends of Speed, BrookHaven RP, Bedwars, Chaos, Ninja Legends
 30+ games
 Rebuilt On IllusionHub
 
-Last Updated 2/23/2024
+Last Updated 2/24/2024
 
 Added Big PaintBall, Big PaintBall 2, Muscule Legends, and Road to Grambys by lua_u
 
@@ -9872,7 +9872,7 @@ elseif game.PlaceId == 5796917097 then
 	local Main = Window:NewTab("Main")
             local MainSection = Main:NewSection("Main")
 			MainSection:NewButton("God mode by lua_u", "god mode", function()
-				loadstring(game:HttpGet("https://github.com/yofriendfromschool1/Sky-Hub/blob/main/godga"))()
+				loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/godga"))()
 			end)		
 			MainSection:NewToggle("no clip ", "go tru walls", function(state)
 				if state then
