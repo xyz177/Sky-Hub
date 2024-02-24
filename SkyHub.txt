@@ -2,7 +2,7 @@
 Work At A Pizza Place, VR Hands, Adopt Me, Jailbreak, Prison Life,
 Build A Boat For Treasure, Gorilla Tag Professional, Murder Mystery 2, Blox fruits, Counter Blox, Mic Up, Neighbors, Natural Diaster Survival, Ro-Ghoul, Blade Ball, Pet Simulator X,
 Pet Simulator 99, Legends of Speed, BrookHaven RP, Bedwars, Chaos, Ninja Legends, Bayside High School, Big PaintBall, Big PaintBall 2, Muscule Legends, and Road to Grambys and Universal.
-25+ games
+30+ games
 Rebuilt On IllusionHub
 
 Last Updated 2/23/2024
@@ -9858,14 +9858,116 @@ elseif game.PlaceId == 3623096087 then
 																															end)
 -- Road to Grambys
 elseif game.PlaceId == 5796917097 then
-	game.StarterGui:SetCore("SendNotification",  {
-		Title = "Coming Soon";
-		Text = "Dropping at around 7:30 PM PST";
-		Icon = "";
-		Duration = 5;
-		Callback = NotificationBindable;
-	   })																															
-																															
+	-- dont expect much kinda annoying game to script
+	local Library = loadstring(game:HttpGet(_G.guidragtype))()
+	local Window = Library.CreateLib("SkyHub Universal", OptTheme)
+	local Discord = Window:NewTab("Discords")
+	local DiscordSection = Discord:NewSection("Discords")
+	DiscordSection:NewButton("Discord Invite", "Copys Discord invite link", function()
+		setclipboard(string)
+	end)
+	DiscordSection:NewButton("Discord Invite OLD", "Copys Discord invite link", function()
+		setclipboard(string2)
+	end)
+	local Main = Window:NewTab("Main")
+            local MainSection = Main:NewSection("Main")
+			MainSection:NewButton("God mode by lua_u", "god mode", function()
+				while task.wait(0.1) do
+					game:GetService("ReplicatedStorage").Networking.NetworkingEvent:FireServer("UseItem",false,true,workspace:FindFirstChild("Tooth",true))
+					end
+			end)		
+			MainSection:NewToggle("no clip ", "go tru walls", function(state)
+				if state then
+				local charpath 
+
+for _, v in pairs(workspace.WorldObjects:GetDescendants()) do
+    if v:IsA("BasePart") then
+        if v.Name == "Head" and v.Transparency == 1 then
+              charpath = v.Parent.Parent
+        end
+    end
+end
+for i,v in pairs(charpath:GetDescendants()) do
+    if v:IsA("BasePart") then
+    v.CanCollide = false -- false for no clip and true for clip
+    end
+end
+else
+	local charpath 
+
+for _, v in pairs(workspace.WorldObjects:GetDescendants()) do
+    if v:IsA("BasePart") then
+        if v.Name == "Head" and v.Transparency == 1 then
+              charpath = v.Parent.Parent
+        end
+    end
+end
+for i,v in pairs(charpath:GetDescendants()) do
+    if v:IsA("BasePart") then
+    v.CanCollide = true -- false for no clip and true for clip
+    end
+end
+end
+			end)	
+			MainSection:NewButton("Speed by lua_u", "fast", function()
+				--!optimize 2
+--!native
+local function getchar()
+    for _, v in pairs(workspace.WorldObjects:GetDescendants()) do
+        if v:IsA("BasePart") then
+            if v.Name == "Head" and v.Transparency == 1 then
+                return v.Parent
+            end
+        end
+    end
+    --this code runs if your not in first person
+    local camera = workspace.CurrentCamera
+    local params = RaycastParams.new()
+    params.FilterDescendantsInstances = {workspace.Characters, workspace.Structures, workspace.Terrain, workspace.World}
+
+    local result = workspace:Raycast(camera.CFrame.Position, camera.CFrame.LookVector * 1000, params)
+    return result.Instance.Parent
+end
+local char = getchar()
+local force = char.Body.VectorForce
+local newforce = Instance.new("VectorForce", char.Body)
+local spd = 20 - 1
+newforce.Name = "SpeedOverride"
+newforce.RelativeTo = "World"
+newforce.Attachment0 = Instance.new("Attachment", char.Body)
+
+function UpdateForce()
+    newforce.Force = Vector3.new(char.Body.VectorForce.Force.X * spd, 0, char.Body.VectorForce.Force.Z * spd)
+end
+
+while task.wait() do
+    UpdateForce()
+end
+			end)
+			MainSection:NewToggle("FE VR all players by lua_u", "vr all", function(state)
+				if state then
+				for i, v in pairs(game.Workspace:GetDescendants()) do
+					if v.Name == "Fricklet" then
+				  game.ReplicatedStorage.Networking.NetworkingEvent:FireServer("Character_SetVREnabled", v, true)
+				  end
+				  end
+				else
+					for i, v in pairs(game.Workspace:GetDescendants()) do
+						if v.Name == "Fricklet" then
+					  game.ReplicatedStorage.Networking.NetworkingEvent:FireServer("Character_SetVREnabled", v, false)
+					  end
+					  end
+					end
+			end)
+			MainSection:NewTextBox("Teleport to player put full user here", "have to put full user not display name", function(txt)
+				local targ = txt
+local char = game.Players.LocalPlayer.ReplicationFocus.Parent
+local targetchar = game.Players[targ].ReplicationFocus.Parent
+for i, v in pairs(char:GetChildren()) do
+  if v:IsA("BasePart") then v.CFrame = targetchar.HumanoidRootPart.CFrame end
+end
+			end)
+
 
 	-- Universal
 else
