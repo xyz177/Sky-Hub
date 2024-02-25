@@ -8972,7 +8972,7 @@ elseif game.PlaceId == 12640491155 then
 	local Window = Library.CreateLib("SkyHub", OptTheme)
 	local Main = Window:NewTab("Main")
 	local MainSection = Main:NewSection("Main")
-	MainSection:NewDropdown("Teleports", "Teleports to Place", {"School", "Dorms", "Floor 1", "Floor 2", "Floor 3", "Floor 4", "Floor 5", "Penthouse", "Party", "Football Field", "Gym", "Principle Office", "Science/Boys Bathroom", "History/Girls Bathroom", "English", "Math", "Computer Lab", "Art", "Music", "Library", "Bus", "Aquatic Center"}, function(currentOption)
+	MainSection:NewDropdown("Teleports", "Teleports to Place", {"School", "Dorms", "Floor 1", "Floor 2", "Floor 3", "Floor 4", "Floor 5", "Penthouse", "Party", "Football Field", "Gym", "Principle Office", "Science/Boys Bathroom", "History", "English", "Math/Girls Bathroom", "Computer Lab", "Art", "Music", "Library", "Bus", "Aquatic Center"}, function(currentOption)
 		if currentOption == "School" then
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-511, 13, -24)
 		elseif currentOption == "Dorms" then
@@ -9003,11 +9003,11 @@ elseif game.PlaceId == 12640491155 then
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-635, 17, -15)
 		elseif currentOption == "Science/Boys Bathroom" then
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-640, 46, -122)
-		elseif currentOption == "History/Girls Bathroom" then
+		elseif currentOption == "History" then
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-379, 46, -49)
 		elseif currentOption == "English" then
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-641, 46, -48)
-		elseif currentOption == "Math" then
+		elseif currentOption == "Math/Girls Bathroom" then
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-379, 46, -122)
 		elseif currentOption == "Computer Lab" then
 			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-580, 46, -114)
