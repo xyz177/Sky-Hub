@@ -360,6 +360,13 @@ MainSection:NewButton("FE Chat Bypass", "bypasses chat filter can cuss", functio
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Synergy-Networks/products/main/BetterBypasser/loader.lua",true))()
  end)
 
+ MainSection:NewButton("FE Chat Bypass 3", "bypasses chat filter can cuss", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/ChainGotStucked/a55af82d82574/main/Eminence%20Hub"))()
+	 end)
+	 MainSection:NewButton("FE Chat Bypass 4", "bypasses chat filter can cuss", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/wspo23e/SDL-Roblox-ChatBypasser/main/SDL-NoFilterV2.5"))()
+		 end)
+
 MainSection:NewButton("BackDoor.exe", "scan for backdoors", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/iK4oS/backdoor.exe/master/source.lua"))()
  end)
