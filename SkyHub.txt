@@ -7,11 +7,13 @@ Rebuilt On IllusionHub
 
 Last Updated 2/24/2024
 
-Added Big PaintBall, Big PaintBall 2, Muscule Legends, and Road to Grambys by lua_u
+Added Rainbow Sunlock by therealxora
 
 executor ui in fencing and universal made by espresso0069
 
 Road to Gramby scripts by lua_u
+
+Rainbow Sunlock by therealxora https://discord.gg/iosexploiters
 
 IF YOU WANT ME TO ADD A GAME OR REPORT A BUG JOIN MY DISCORD SERVER
 
@@ -131,6 +133,15 @@ MainSection:NewButton("Swag Mode", "w", function()
 end)
 MainSection:NewButton("Swag Mode Old", "w", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/OldSwagmode'))()
+end)
+MainSection:NewButton("Rainbow Sun Aimlock by therealxora", "by therealxora", function()
+	setclipboard("https://discord.gg/iosexploiters")
+	print("https://discord.gg/iosexploiters")
+	print("https://discord.gg/iosexploiters Copied to clipboard")
+	-- https://discord.gg/iosexploiters
+	-- made by therealxora
+   -- Rainbow Sun Aimlock [ Works on 80-90% of dahood games ]
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TheRealXORA/Roblox-Scripts/main/Rainbow%20Sun%20Aimlock.lua", true))()
 end)
 
 MainSection:NewButton("Mobile aimbot", "if ur actually on mobile", function()
