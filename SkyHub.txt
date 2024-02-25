@@ -5,7 +5,7 @@ Pet Simulator 99, Legends of Speed, BrookHaven RP, Bedwars, Chaos, Ninja Legends
 30+ games
 Rebuilt On IllusionHub
 
-Last Updated 2/24/2024
+Last Updated 2/25/2024
 
 Added Rainbow Sunlock by therealxora
 
@@ -10158,10 +10158,10 @@ local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or
 							loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMae17/NewIceHub/main/Brookhaven"))()
 						end)
 
-						MainSection:NewButton("Chaos Hub", "hub", function()
+						HubsSection:NewButton("Chaos Hub", "hub", function()
 							loadstring(game:HttpGet("https://raw.githubusercontent.com/xChaoticVoid/Chaos-Hub-v1/main/ChaosHub.lua"))()
 						end)
-						MainSection:NewButton("Astral Hub", "hub", function()
+						HubsSection:NewButton("Astral Hub", "hub", function()
 							loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/AstralHub/main/Loader.lua"))()
 						end)
 					   
