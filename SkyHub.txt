@@ -2,12 +2,12 @@
 Work At A Pizza Place, VR Hands, Adopt Me, Jailbreak, Prison Life,
 Build A Boat For Treasure, Gorilla Tag Professional, Murder Mystery 2, Blox fruits, Counter Blox, Mic Up, Neighbors, Natural Diaster Survival, Ro-Ghoul, Blade Ball, Pet Simulator X,
 Pet Simulator 99, Legends of Speed, BrookHaven RP, Bedwars, Chaos, Ninja Legends, Bayside High School, Big PaintBall, Big PaintBall 2, Muscule Legends, and Road to Grambys and Universal.
-30+ games
+30+ games (Including some obbys)
 Rebuilt On IllusionHub
 
 Last Updated 2/25/2024
 
-Added more hubs and stuff and just a lot more scripts and fixed some errors/scripts not loading/being in right spot
+Added auto obby finish in universal
 
 executor ui in fencing and universal made by espresso0069
 
@@ -10227,6 +10227,170 @@ local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or
 						 local SearchSection = Search:NewSection("Search")
 						 SearchSection:NewButton("Search", "Searches online for scripts using scriptblox.com", function()
 							loadstring(game:HttpGet("https://raw.githubusercontent.com/AZYsGithub/chillz-workshop/main/ScriptSearcher"))()
+						 end)
+						 local Obbys = Window:NewTab("Obbys")
+						 local ObbysSection = Obbys:NewSection("Obbys")
+						 ObbysSection:NewButton("Method 1", "auto farm/tp to end if supported game", function()
+							if game.PlaceId == 5972698540 then -- easy obby
+								game.StarterGui:SetCore("SendNotification",  {
+								 Title = "Working";
+								 Text = "its working just please wait";
+								 Icon = "";
+								 Duration = 5;
+								 Callback = NotificationBindable;
+								})
+								wait(15)
+								game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Stages.Stage130.Checkpoint.Checkpoint.CFrame
+								wait(2)
+								game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Stages.END["The End Obby..!!"].Checkpoint.CFrame
+							elseif game.PlaceId == 13413789725 then -- emo obby
+								getgenv().collectOrbsToggle = true
+							
+								spawn(function()
+									local checkpoints = game:GetService("Workspace").Checkpoints:GetChildren()
+									table.sort(checkpoints, function(a, b)
+										return tonumber(a.Name) < tonumber(b.Name)
+									end)
+								
+									while wait() do
+										if not getgenv().collectOrbsToggle then 
+											break 
+										end
+									
+										for i, checkpoint in ipairs(checkpoints) do
+											game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = checkpoint.CFrame
+											wait(0.05) -- Adjust the wait time as needed
+										end
+										wait(3)
+										game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.Rebirth.CFrame
+										wait(7.8)
+										fireproximityprompt(game.workspace.Rebirth.Prompt)
+										wait(2)
+									end
+								end)
+							elseif game.PlaceId == 11364184405 then -- 725 obby
+								while true do wait()
+									game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Checkpoints.Floor8["725"].Detector.CFrame
+									wait(2)
+									game:GetService("ReplicatedStorage"):WaitForChild("Honeypot"):WaitForChild("Internal"):WaitForChild("RemoteStorage"):WaitForChild("Rebirth - RemoteEvent"):FireServer()
+								end
+							elseif game.PlaceId == 10760024537 then -- ultimate easy obby
+								game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Checkpoints["50"].DetectorPart.CFrame
+							elseif game.PlaceId == 3587619225 then -- mega easy obby 825 stages
+								local checkpoints = game:GetService("Workspace").Checkpoints:GetChildren()
+								table.sort(checkpoints, function(a, b)
+									return tonumber(a.Name) < tonumber(b.Name)
+								end)
+								
+									
+								for i, checkpoint in ipairs(checkpoints) do
+									game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = checkpoint.CFrame + Vector3.new(0, 5, 0)
+									wait(0.5) -- Adjust the wait time as needed
+								end
+							elseif game.PlaceId == 8472851459 then -- really easy obby
+								local checkpoints = game:GetService("Workspace").Checkpoints:GetChildren()
+								table.sort(checkpoints, function(a, b)
+									return tonumber(a.Name) < tonumber(b.Name)
+								end)
+								
+									
+								for i, checkpoint in ipairs(checkpoints) do
+									game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = checkpoint.CFrame + Vector3.new(0, 5, 0)
+									wait(0.5) -- Adjust the wait time as needed
+								end
+							elseif game.PlaceId == 12961669859 then -- Easy Fun Obby
+								game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-301, 236, 78)
+							elseif game.PlaceId == 8712817601 then -- barrys prison
+								game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-3781, 1072, -502)
+							elseif game.PlaceId == 14184086618 then -- obby but bike
+								loadstring(game:HttpGet("https://github.com/KhSaeed90/Roblox/raw/workspace/14184086618"))()
+							elseif game.PlaceId == 13326256431 then -- obby but no jump
+								game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Checkpoints["48"].CFrame
+							elseif game.PlaceId == 1946695497 then -- escape butcher obby
+								local checkpoints = game:GetService("Workspace").Stages:GetChildren()
+								table.sort(checkpoints, function(a, b)
+									return tonumber(a.Name) < tonumber(b.Name)
+								end)
+								
+									
+								for i, checkpoint in ipairs(checkpoints) do
+									game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = checkpoint.CFrame + Vector3.new(0, 5, 0)
+									wait(0.5) -- Adjust the wait time as needed
+								end
+							elseif game.PlaceId == 12357508217 then
+								game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Checkpoints["60"].Detector.CFrame
+							else -- universal
+								game.StarterGui:SetCore("SendNotification",  {
+								 Title = "Game Not Supported";
+								 Text = "game not supported so it may be trash or not work at all";
+								 Icon = "";
+								 Duration = 5;
+								 Callback = NotificationBindable;
+								})
+								if workspace:FindFirstChild('Checkpoints') then
+									local checkpoints = game:GetService("Workspace").Checkpoints:GetChildren()
+									table.sort(checkpoints, function(a, b)
+										return tonumber(a.Name) < tonumber(b.Name)
+									end)
+									
+									for i, checkpoint in ipairs(checkpoints) do
+											game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = checkpoint.CFrame
+											wait(6) -- Adjust the wait time as needed
+									end
+								elseif workspace:FindFirstChild('Stages') then
+									local checkpoints = game:GetService("Workspace").Stages:GetChildren()
+									table.sort(checkpoints, function(a, b)
+										return tonumber(a.Name) < tonumber(b.Name)
+									end)
+									
+									for i, checkpoint in ipairs(checkpoints) do
+											game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = checkpoint.CFrame
+											wait(6) -- Adjust the wait time as needed
+									end
+								else
+									game.StarterGui:SetCore("SendNotification",  {
+								 Title = "Could not find path";
+								 Text = "Could not find path including all the stages/checkpoints try the other method";
+								 Icon = "";
+								 Duration = 5;
+								 Callback = NotificationBindable;
+								})
+								end
+							end
+						 end)
+						 ObbysSection:NewButton("Method 2", "fire all touchinterests", function()
+							function getRoot(char)
+								game.StarterGui:SetCore("SendNotification",  {
+									Title = "if this doesnt work for you join the discord and open a ticket";
+									Text = "executing in 5 seconds";
+									Icon = "";
+									Duration = 5;
+									Callback = NotificationBindable;
+								   })
+								   wait(5)
+								local rootPart = char:FindFirstChild('HumanoidRootPart') or char:FindFirstChild('Torso') or char:FindFirstChild('UpperTorso')
+								return rootPart
+							end
+							local root = getRoot(game.Players.LocalPlayer.Character) or game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("BasePart")
+							
+								local function touch(x)
+									x = x:FindFirstAncestorWhichIsA("Part")
+									if x then
+										if firetouchinterest then
+											task.spawn(function()
+												firetouchinterest(x, root, 1)
+												wait()
+												firetouchinterest(x, root, 0)
+											end)
+										end
+										x.CFrame = root.CFrame
+									end
+								end
+								for _, descendant in ipairs(workspace:GetDescendants()) do
+									if descendant:IsA("TouchTransmitter") then
+										touch(descendant)
+									end
+								end
 						 end)
 			
 
