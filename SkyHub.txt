@@ -7869,12 +7869,11 @@ end)
 		MainSection:NewButton("Hoho Hub", "key should be and if not then do it urself", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HohoV2/main/ScriptLoad.lua"))()
 		end)
+		MainSection:NewButton("VG Hub", "60+", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+			 end)
 		HubsSection:NewButton("Psyhub", "idk", function()
 			loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
-			 end)
-			
-			HubsSection:NewButton("VG Hub", "60+", function()
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
 			 end)
 			
 			
@@ -10107,7 +10106,6 @@ local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or
 								 end)
 
 								 HubsSection:NewButton("Trap hub", "idk", function()
-									MainSection:NewButton("Trap Hub", "yuh", function()
 										local repo = "https://raw.githubusercontent.com/TrapstarKSSKSKSKKS/Main/main/"
 										local Id = game.PlaceId
 										local GameId = game.GameId
@@ -10153,7 +10151,6 @@ local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or
 											end
 										end
 									end)
-	end)
 						HubsSection:NewButton("Ice Hub", "hub", function()
 							loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMae17/NewIceHub/main/Brookhaven"))()
 						end)
