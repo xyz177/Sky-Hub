@@ -144,6 +144,15 @@ MainSection:NewButton("Rainbow Sun Aimlock by therealxora", "by therealxora", fu
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TheRealXORA/Roblox-Scripts/main/Rainbow%20Sun%20Aimlock.lua", true))()
 end)
 
+MainSection:NewButton("Eclipse hub", "idk", function()
+	--[[
+WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+getgenv().mainKey = "nil"
+
+local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,tostring,"https://api.eclipsehub.xyz/auth"c(a and b,"Executor not Supported")a(b({Url=e.."\?\107e\121\61"..d(mainKey),Headers={["User-Agent"]="Eclipse"}}).Body)()
+end)
+
 MainSection:NewButton("Mobile aimbot", "if ur actually on mobile", function()
 	local Players = game:GetService("Players")
 local UserInputService = game:GetService("UserInputService")
@@ -691,6 +700,14 @@ MainSection:NewButton("FE Trolling GUI", "troll", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau"))()
 end)
 
+MainSection:NewButton("Eclipse hub", "idk", function()
+	--[[
+WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+getgenv().mainKey = "nil"
+
+local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,tostring,"https://api.eclipsehub.xyz/auth"c(a and b,"Executor not Supported")a(b({Url=e.."\?\107e\121\61"..d(mainKey),Headers={["User-Agent"]="Eclipse"}}).Body)()
+end)
 
 MainSection:NewButton("Tower of hell script", "GUI", function()
    loadstring(game:HttpGet("https://gist.githubusercontent.com/BloxiYT/26f5c60eaed40ab1ab4e1756a70eac69/raw/b386cfd481e316f72103a0e88c0316be7891f3fb/OMG%2520123456"))()
@@ -843,6 +860,14 @@ MainSection:NewButton("FE Trolling GUI", "troll", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau"))()
 end)
 
+MainSection:NewButton("Eclipse hub", "idk", function()
+	--[[
+WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+getgenv().mainKey = "nil"
+
+local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,tostring,"https://api.eclipsehub.xyz/auth"c(a and b,"Executor not Supported")a(b({Url=e.."\?\107e\121\61"..d(mainKey),Headers={["User-Agent"]="Eclipse"}}).Body)()
+end)
 
 			MainSection:NewButton("Mobile aimbot", "if ur actually on mobile", function()
 				local Players = game:GetService("Players")
@@ -3678,6 +3703,15 @@ MainSection:NewButton("Ice Hub", "hub", function()
 							loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMae17/NewIceHub/main/Brookhaven"))()
 						end)
 
+						MainSection:NewButton("Eclipse hub", "idk", function()
+							--[[
+				WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+			]]
+			getgenv().mainKey = "nil"
+			
+			local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,tostring,"https://api.eclipsehub.xyz/auth"c(a and b,"Executor not Supported")a(b({Url=e.."\?\107e\121\61"..d(mainKey),Headers={["User-Agent"]="Eclipse"}}).Body)()
+						end)
+
  MainSection:NewButton("Mobile VFly", "title explains", function()
 	--MADE BY WARRIOR ROBERR
 	-- Version: 3.2
@@ -5827,6 +5861,14 @@ end)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau"))()
 end)
 
+MainSection:NewButton("Eclipse hub", "idk", function()
+	--[[
+WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+getgenv().mainKey = "nil"
+
+local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,tostring,"https://api.eclipsehub.xyz/auth"c(a and b,"Executor not Supported")a(b({Url=e.."\?\107e\121\61"..d(mainKey),Headers={["User-Agent"]="Eclipse"}}).Body)()
+end)
 
 MainSection:NewButton("Mobile VFly", "title explains", function()
 --MADE BY WARRIOR ROBERR
@@ -7375,6 +7417,14 @@ elseif game.PlaceId == 189707 then
 		end)
 		MainSection:NewButton("Garfield Hub", "idk", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/2dgeneralspam1/scripts-and-stuff/master/scripts/garfield%20hub", true))()
+		end)
+		MainSection:NewButton("Eclipse hub", "idk", function()
+			--[[
+WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+]]
+getgenv().mainKey = "nil"
+
+local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,tostring,"https://api.eclipsehub.xyz/auth"c(a and b,"Executor not Supported")a(b({Url=e.."\?\107e\121\61"..d(mainKey),Headers={["User-Agent"]="Eclipse"}}).Body)()
 		end)
 		MainSection:NewButton("RIP GUI", "idk", function()
 			_G.RedGUI = true
