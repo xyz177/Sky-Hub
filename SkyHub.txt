@@ -396,7 +396,7 @@ end)
 	   ]]--
 		end)
 		   
-			  HubsSection:NewButton("Owl Hub", "46+ how", function()
+			  MainSection:NewButton("Owl Hub", "46+ how", function()
 					   loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
 				   end)
 	   
@@ -842,9 +842,6 @@ end)
 				]]--
 				 end)
 					
-					   HubsSection:NewButton("Owl Hub", "46+ how", function()
-								loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
-							end)
 
                             HubsSection:NewButton("CocoHub", "idk", function()
                                 loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/CocoHub/master/CocoZHub'),true))()
@@ -858,6 +855,10 @@ end)
 
 MainSection:NewButton("FE Trolling GUI", "troll", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau"))()
+end)
+
+MainSection:NewButton("Owl Hub", "46+ how", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
 end)
 
 MainSection:NewButton("Eclipse hub", "idk", function()
@@ -5190,10 +5191,7 @@ end)
 				https://pastebin.com/vavZfexv
 				]]--
 				 end)
-					
-					   HubsSection:NewButton("Owl Hub", "46+ how", function()
-								loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
-							end)
+			
 
                             HubsSection:NewButton("CocoHub", "idk", function()
                                 loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/CocoHub/master/CocoZHub'),true))()
@@ -5213,6 +5211,10 @@ MainSection:NewButton("Prisn Life Admin", "idk", function()
 end)
 MainSection:NewButton("Astral Hub", "hub", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/AstralHub/main/Loader.lua"))()
+end)
+
+MainSection:NewButton("Owl Hub", "46+ how", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
 end)
 
 MainSection:NewButton("Mobile VFly", "title explains", function()
@@ -6966,6 +6968,9 @@ elseif game.PlaceId == 301549746 then
 		MainSection:NewButton("Counter Blox Script", "Idk", function()
 			loadstring(game:HttpGet('https://raw.githubusercontent.com/Pawel12d/hexagon/main/scripts/CounterBlox.lua', true))()
 		end)
+		MainSection:NewButton("Owl Hub", "46+ how", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+		end)
 		local Discord = Window:NewTab("Discords")
 		local DiscordSection = Discord:NewSection("Discords")
 		DiscordSection:NewButton("Discord Invite", "Copys Discord invite link", function()
@@ -7030,9 +7035,6 @@ end)
 			]]--
 			 end)
 				
-				   HubsSection:NewButton("Owl Hub", "46+ how", function()
-							loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
-						end)
 
 						HubsSection:NewButton("CocoHub", "idk", function()
 							loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/CocoHub/master/CocoZHub'),true))()
@@ -9781,6 +9783,10 @@ elseif game.PlaceId == 3623096087 then
 	MainSection:NewButton("GUI", "read??", function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/harisiskandar178/Roblox-Script/main/Muscle%20Legend"))()
 	end)
+
+	MainSection:NewButton("Owl Hub", "46+ how", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+	end)
 	
 
 	local Discord = Window:NewTab("Discords")
@@ -9846,9 +9852,6 @@ elseif game.PlaceId == 3623096087 then
 																												]]--
 																												 end)
 																													
-																													   HubsSection:NewButton("Owl Hub", "46+ how", function()
-																																loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
-																															end)
 																									
 																															HubsSection:NewButton("CocoHub", "idk", function()
 																																loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/CocoHub/master/CocoZHub'),true))()
