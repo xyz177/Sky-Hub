@@ -160,10 +160,19 @@ TPS:TeleportToPlaceInstance(_place,Server.id,game.Players.LocalPlayer)
 					 MainSection:NewButton("Server Browser", "hella stuff", function()
 						loadstring(game:HttpGet("https://www.scriptblox.com/raw/Server-Browser_80", true))();
 					 end)
+					 MainSection:NewButton("Eclipse hub/Sniper to join", "sniper join ppls", function()
+						--[[
+					WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
+					]]
+					getgenv().mainKey = "nil"
+					
+					local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,tostring,"https://api.eclipsehub.xyz/auth"c(a and b,"Executor not Supported")a(b({Url=e.."\?\107e\121\61"..d(mainKey),Headers={["User-Agent"]="Eclipse"}}).Body)()
+					end)
 					  MainSection:NewButton("System Broken FE", "w", function()
 						local credits = "SystemBroken made by system_calix"
 loadstring(game:HttpGet("https://raw.githubusercontent.com/H20CalibreYT/SystemBroken/main/script"))()
 					 end)
+					 
 					 MainSection:NewButton("FE Car Tornado", "w", function()
 -- Scripted on mobile
 -- Fe Vehicle Fling Alpha
