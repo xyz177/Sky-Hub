@@ -1,6 +1,6 @@
 --[[
-Last Updated on 2/24/2024 
-added server searchers/finders and server crashers/laggers
+Last Updated on 2/25/2024 
+added server searchers/finders and server crashers/laggers and reviz admin
 ]]--
 local OptTheme = "Midnight"
 local string = "https://discord.gg/xwy5Cu62Vw"
@@ -57,6 +57,9 @@ local Library = loadstring(game:HttpGet(_G.guidragtype))()
 			 _G.UI_Id = "default" --set this to "default" for the default ui
 			 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/5e6e6cc1bb32fd926764d064e2c60a3b.lua"))()
 					  end)
+					  AdminsSection:NewButton("Reviz Admin V2", "Admin", function()
+						loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/Reviz%20AdminV2"))()
+						 end)
 
 					  MainSection:NewButton("FE Universal Script hub or sum", "hella stuff", function()
 						loadstring(game:HttpGet('https://gist.githubusercontent.com/Dvrknvss/e2a906135f9e55d0d2ae7aaf337d8937/raw/dc055592803f8418ddf8ba7b84286f47638849d4/noidea'))()
