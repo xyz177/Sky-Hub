@@ -6543,9 +6543,7 @@ end)
 				]]--
 				 end)
 					
-					   HubsSection:NewButton("Owl Hub", "46+ how", function()
-								loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
-							end)
+					   
 
                             HubsSection:NewButton("CocoHub", "idk", function()
                                 loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/CocoHub/master/CocoZHub'),true))()
@@ -6555,7 +6553,9 @@ end)
                                 loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeHub/main/Loader.lua"))()
                              end)
 				
-					   
+							 MainSection:NewButton("Owl Hub", "46+ how", function()
+								loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+							end)
 
             MainSection:NewButton("MM2 Admin Panel", "not real admin stu", function()
 				loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/ScriptHubScripts/master/MM2%20Admin%20Panel'),true))()
