@@ -7,7 +7,7 @@ Rebuilt On IllusionHub
 
 Last Updated 2/25/2024
 
-Added Rainbow Sunlock by therealxora
+Added more hubs and stuff and just a lot more scripts and fixed some errors/scripts not loading/being in right spot
 
 executor ui in fencing and universal made by espresso0069
 
@@ -142,6 +142,14 @@ MainSection:NewButton("Rainbow Sun Aimlock by therealxora", "by therealxora", fu
 	-- made by therealxora
    -- Rainbow Sun Aimlock [ Works on 80-90% of dahood games ]
 loadstring(game:HttpGet("https://raw.githubusercontent.com/TheRealXORA/Roblox-Scripts/main/Rainbow%20Sun%20Aimlock.lua", true))()
+end)
+
+MainSection:NewButton("Hydro Hub", "Hub", function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/FRX397/Hydrohub/main/Hydro_hub", true))()
+end)
+
+MainSection:NewButton("Frozen Hub", "Hub", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/FrozenScripts/frozenhubb/main/frozen777", true))()
 end)
 
 MainSection:NewButton("Eclipse hub", "idk", function()
@@ -6869,6 +6877,11 @@ end)
 		MainSection:NewButton("Hoho Hub", "key should be and if not then do it urself", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/acsu123/HohoV2/main/ScriptLoad.lua"))()
 		end)
+
+		MainSection:NewButton("Hydro Hub", "Hub", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/FRX397/Hydrohub/main/Hydro_hub", true))()
+		end)
+		
 		HubsSection:NewButton("Psyhub", "idk", function()
 			loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
 			 end)
@@ -7824,6 +7837,23 @@ elseif game.PlaceId == 13772394625 then
 				end
 			end
 		end)
+
+		MainSection:NewButton("Hydro Hub", "Hub", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/FRX397/Hydrohub/main/Hydro_hub", true))()
+		end)
+
+		MainSection:NewButton("Bedol V2 Premium", "Hub", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/3345-c-a-t-s-u-s/-beta-/main/AutoParry.lua"))()
+		end)
+
+		MainSection:NewButton("Blade Ball Scripts", "idk", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/zippy6349/Blade_Ball/main/Blade%20Ball.txt"))()
+		end)
+
+		MainSection:NewButton("auto parry", "idk", function()
+			loadstring(game:HttpGet("https://scriptblox.com/raw/Blade-Ball-Decent-LEGIT-Auto-Parry-8381"))()
+		end)
+
 		local Discord = Window:NewTab("Discords")
 		local DiscordSection = Discord:NewSection("Discords")
 		DiscordSection:NewButton("Discord Invite", "Copys Discord invite link", function()
@@ -9485,6 +9515,10 @@ elseif game.PlaceId == 3527629287 then
 		loadstring(game:HttpGet("https://www.pastebin.com/raw/PuaaGKsT"))()
 	end)
 
+	MainSection:NewButton("Lemonade Hub","hub", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/xMintix/Lemonade-Hub/main/BigPaintballString.lua"))()
+	end)
+
 	local Discord = Window:NewTab("Discords")
 	local DiscordSection = Discord:NewSection("Discords")
 	DiscordSection:NewButton("Discord Invite", "Copys Discord invite link", function()
@@ -10160,6 +10194,30 @@ local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or
 						end)
 						HubsSection:NewButton("Astral Hub", "hub", function()
 							loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/AstralHub/main/Loader.lua"))()
+						end)
+
+						HubsSection:NewButton("Hydro Hub", "Hub", function()
+							loadstring(game:HttpGet("https://raw.githubusercontent.com/FRX397/Hydrohub/main/Hydro_hub", true))()
+						end)
+						
+						HubsSection:NewButton("Lemonade Hub", "Hub", function()
+							local RHS2GameId = 2098516465
+							local TreasureHuntSimGameId = 1345139196
+							local BigPaintBallGameId = 3527629287
+
+							if game.PlaceId == RHS2GameId then
+   								loadstring(game:HttpGet("https://raw.githubusercontent.com/xMintix/Lemonade-Hub/main/RHS2String.lua"))()
+							elseif game.PlaceId == TreasureHuntSimGameId then
+   							 	loadstring(game:HttpGet("https://raw.githubusercontent.com/xMintix/Lemonade-Hub/main/Treasure%20Hunt%20Sim/TreasureHuntString.lua"))()
+							elseif game.PlaceId == BigPaintBallGameId then
+    							loadstring(game:HttpGet("https://raw.githubusercontent.com/xMintix/Lemonade-Hub/main/BigPaintballString.lua"))()
+							else
+    							loadstring(game:HttpGet("https://raw.githubusercontent.com/xMintix/Lemonade-Hub/main/Universal.lua"))()
+							end
+						end)
+
+						HubsSection:NewButton("Frozen Hub", "Hub", function()
+							loadstring(game:HttpGet("https://raw.githubusercontent.com/FrozenScripts/frozenhubb/main/frozen777", true))()
 						end)
 					   
 						HubsSection:NewButton("Hat Hub", "need hats for this or items", function()
