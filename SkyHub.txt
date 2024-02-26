@@ -9383,7 +9383,6 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Backp
 	end)
 		end
 	end)
-	
 	Misc23Section:NewButton("Remove Most House/Dorm Doors", "Client sided ofc", function()
 		for i,v in pairs(workspace:GetDescendants()) do
 			if v.Name == "DormDoor" then
