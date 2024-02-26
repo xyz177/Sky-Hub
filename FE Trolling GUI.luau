@@ -1,6 +1,6 @@
 --[[
 Last Updated on 2/25/2024 
-added server searchers/finders and server crashers/laggers and reviz admin and another bypass
+Added fe upside down player r6 script
 ]]--
 local OptTheme = "Midnight"
 local string = "https://discord.gg/xwy5Cu62Vw"
@@ -6587,6 +6587,26 @@ end
  !! SCRIPT HAS BEEN FIXED SORRY IF IT DIDNT WORK PREVIOUSLY !!
  --]]
   loadstring(game:HttpGet("https://gist.githubusercontent.com/dark-modz/74581bf579eea6313bc234d2808a14bc/raw/8a38ca0f328c91b6f358ad9df2413fabed213b2a/ppscriptv2", true))()
+ end)
+
+ MainSection:NewButton("FE upside down R6", "cant see on ur side but everyone else can", function()
+	local lp = game:GetService("Players").LocalPlayer
+	local c = lp.Character
+	local hrp0 = c:FindFirstChild("HumanoidRootPart")
+	local hrp1 = hrp0:Clone()
+	c.Parent = nil
+	hrp0.Parent = hrp1
+	hrp0.RootJoint.Part0 = nil
+	hrp1.Parent = c
+	c.Parent = workspace
+	local h = game:GetService("RunService").Heartbeat
+	hrp0.Transparency = 0.5
+	while h:Wait() and c and c.Parent do
+		hrp0.CFrame = hrp1.CFrame
+		hrp0.Orientation += Vector3.new(0, 0, 180)
+		hrp0.Position -= Vector3.new(0, 1, 0)
+		hrp0.Velocity = hrp1.Velocity
+	end
  end)
 
 
