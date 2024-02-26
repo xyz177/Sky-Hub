@@ -1,13 +1,13 @@
 --[[games it supports Da Hood, Arsenal, Tower of Hell, KAT!, Fencing,
 Work At A Pizza Place, VR Hands, Adopt Me, Jailbreak, Prison Life,
 Build A Boat For Treasure, Gorilla Tag Professional, Murder Mystery 2, Blox fruits, Counter Blox, Mic Up, Neighbors, Natural Diaster Survival, Ro-Ghoul, Blade Ball, Pet Simulator X,
-Pet Simulator 99, Legends of Speed, BrookHaven RP, Bedwars, Chaos, Ninja Legends, Bayside High School, Big PaintBall, Big PaintBall 2, Muscule Legends, and Road to Grambys and Universal.
+Pet Simulator 99, Legends of Speed, BrookHaven RP, Bedwars, Chaos, Ninja Legends, Bayside High School, Big PaintBall, Big PaintBall 2, Muscule Legends, Road to Grambys, Bloxburg and Universal.
 30+ games (Including some obbys)
 Rebuilt On IllusionHub
 
 Last Updated 2/25/2024
 
-Added auto obby finish in universal
+Added bloxburg
 
 executor ui in fencing and universal made by espresso0069
 
@@ -10042,6 +10042,24 @@ for i, v in pairs(char:GetChildren()) do
 end
 			end)
 
+-- Bloxburg
+elseif game.PlaceId == 185655149 then
+-- dont expect much kinda annoying game to script
+local Library = loadstring(game:HttpGet(_G.guidragtype))()
+local Window = Library.CreateLib("SkyHub Universal", OptTheme)
+local Discord = Window:NewTab("Discords")
+local DiscordSection = Discord:NewSection("Discords")
+DiscordSection:NewButton("Discord Invite", "Copys Discord invite link", function()
+	setclipboard(string)
+end)
+DiscordSection:NewButton("Discord Invite OLD", "Copys Discord invite link", function()
+	setclipboard(string2)
+end)
+local Main = Window:NewTab("Main")
+		local MainSection = Main:NewSection("Main")
+		MainSection:NewButton("Vedrox Free", "Free", function()
+			loadstring(game:HttpGet("https://vedrox.com/data/scripts/free/script.lua"))()
+		end)
 
 	-- Universal
 else
