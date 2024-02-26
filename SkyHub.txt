@@ -10392,6 +10392,27 @@ local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or
 									end
 								end
 						 end)
+						 ObbysSection:NewButton("Method 3", "fire all touchinterests", function()
+							function getRoot(char)
+								game.StarterGui:SetCore("SendNotification",  {
+									Title = "if this doesnt work for you join the discord and open a ticket";
+									Text = "executing in 5 seconds";
+									Icon = "";
+									Duration = 5;
+									Callback = NotificationBindable;
+								   })
+								   wait(5)
+								   local ftiamount = 0
+ 
+								   for _,v in pairs(workspace:GetDescendants()) do
+								   if v:IsA("TouchTransmitter") then
+													  ftiamount = ftiamount + 1
+								   firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0) --0 is touch
+								   wait()
+								   firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1) -- 1 is untouch
+								   end
+								   end
+						 end)
 			
 
 			MainSection:NewButton("Mobile VFly", "title explains", function()
