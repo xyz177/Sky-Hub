@@ -9150,6 +9150,33 @@ elseif game.PlaceId == 12640491155 then
 		game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Vehicle"):FireServer(unpack(args))
 		end
 	end)	
+	MainSection:NewTextBox("Teleport in players car", "puts you in players passenger of car", function(txt)
+	local stop 
+			for i,v in pairs(workspace.Vehicles:GetDescendants()) do
+				if stop == 1 then break end
+				if v.Name == "VehicleSeat" and v.Parent.Parent.Name == txt then
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
+					for i,v in pairs(v:GetDescendants()) do
+						wait(0.001)
+						if v:IsA("ProximityPrompt") then
+							fireproximityprompt(v)
+							game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Parent.CFrame
+							stop = stop + 1
+						end
+					end
+				elseif workspace:FindFirstChild(txt) == nil then
+					game.StarterGui:SetCore("SendNotification",  {
+						Title = "Could not find player";
+						Text = "please put their real full user not display name";
+						Icon = "";
+						Duration = 5;
+						Callback = NotificationBindable;
+					   })
+					break
+				end
+			end
+		end)
+
 	local VehicleMods = Window:NewTab("Vehicle Mods")
 	local VehicleModsSection = VehicleMods:NewSection("Vehicle Mods")
 	VehicleModsSection:NewSlider("Vehicle Max Speed", "laggy idk why, Sets max speed of vehicle", 9999, 1, function(lol86)
@@ -10361,7 +10388,7 @@ local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or
 						 ObbysSection:NewButton("Method 2", "fire all touchinterests", function()
 							function getRoot(char)
 								game.StarterGui:SetCore("SendNotification",  {
-									Title = "if this doesnt work for you join the discord and open a ticket";
+									Title = "if this doesnt work for you try method 3";
 									Text = "executing in 5 seconds";
 									Icon = "";
 									Duration = 5;
@@ -10392,7 +10419,7 @@ local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or
 									end
 								end
 						 end)
-						 ObbysSection:NewButton("Method 3", "fire all touchinterests", function()
+						 ObbysSection:NewButton("Method 3", "fire all touchinterests pt2", function()
 								game.StarterGui:SetCore("SendNotification",  {
 									Title = "if this doesnt work for you join the discord and open a ticket";
 									Text = "executing in 5 seconds";
