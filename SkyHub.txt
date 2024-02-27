@@ -1,13 +1,13 @@
 --[[games it supports Da Hood, Arsenal, Tower of Hell, KAT!, Fencing,
 Work At A Pizza Place, VR Hands, Adopt Me, Jailbreak, Prison Life,
 Build A Boat For Treasure, Gorilla Tag Professional, Murder Mystery 2, Blox fruits, Counter Blox, Mic Up, Neighbors, Natural Diaster Survival, Ro-Ghoul, Blade Ball, Pet Simulator X,
-Pet Simulator 99, Legends of Speed, BrookHaven RP, Bedwars, Chaos, Ninja Legends, Bayside High School, Big PaintBall, Big PaintBall 2, Muscule Legends, Road to Grambys, Bloxburg and Universal.
+Pet Simulator 99, Legends of Speed, BrookHaven RP, Bedwars, Chaos, Ninja Legends, Bayside High School, Big PaintBall, Big PaintBall 2, Muscle Legends, Road to Grambys, Bloxburg and Universal.
 30+ games (Including some obbys)
 Rebuilt On IllusionHub
 
-Last Updated 2/25/2024
+Last Updated 2/26/2024
 
-Added bloxburg
+Sorted through what hub supported what games and deleted not working scripts
 
 executor ui in fencing and universal made by espresso0069
 
@@ -100,9 +100,7 @@ end)
 				loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
 				 end)
 				
-				HubsSection:NewButton("VG Hub", "60+", function()
-				loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
-				 end)
+				
 				
 				
 							HubsSection:NewButton("Ezhub", "130+ games", function()
@@ -127,6 +125,10 @@ end)
 MainSection:NewButton("FE Trolling GUI", "troll", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau"))()
 end)
+
+MainSection:NewButton("VG Hub", "60+", function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+	 end)
 
 MainSection:NewButton("Swag Mode", "w", function()
     loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002'))()
@@ -389,9 +391,6 @@ end)
 	   loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
 		end)
 	   
-	   HubsSection:NewButton("VG Hub", "60+", function()
-	   loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
-		end)
 	   
 	   
 				   HubsSection:NewButton("Ezhub", "130+ games", function()
@@ -407,7 +406,9 @@ end)
 			  MainSection:NewButton("Owl Hub", "46+ how", function()
 					   loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
 				   end)
-	   
+				   MainSection:NewButton("VG Hub", "60+", function()
+					loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+					 end)
 			  
 			  
 MainSection:NewButton("Unfair Hub", "idk", function()
@@ -676,9 +677,6 @@ end)
 				loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
 				 end)
 				
-				HubsSection:NewButton("VG Hub", "60+", function()
-				loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
-				 end)
 				
 				
 							HubsSection:NewButton("Ezhub", "130+ games", function()
@@ -707,6 +705,10 @@ end)
 MainSection:NewButton("FE Trolling GUI", "troll", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau"))()
 end)
+
+MainSection:NewButton("VG Hub", "60+", function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+	 end)
 
 MainSection:NewButton("Eclipse hub", "idk", function()
 	--[[
@@ -835,9 +837,6 @@ end)
 				loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
 				 end)
 				
-				HubsSection:NewButton("VG Hub", "60+", function()
-				loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
-				 end)
 				
 				
 							HubsSection:NewButton("Ezhub", "130+ games", function()
@@ -864,6 +863,10 @@ end)
 MainSection:NewButton("FE Trolling GUI", "troll", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub/main/FE%20Trolling%20GUI.luau"))()
 end)
+
+MainSection:NewButton("VG Hub", "60+", function()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+	 end)
 
 MainSection:NewButton("Owl Hub", "46+ how", function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
@@ -3677,10 +3680,6 @@ end)
 	   loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
 		end)
 	   
-	   HubsSection:NewButton("VG Hub", "60+", function()
-	   loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
-		end)
-	   
 	   
 				   HubsSection:NewButton("Ezhub", "130+ games", function()
 					   --[[ this is there cmds list
@@ -3711,6 +3710,10 @@ end)
 MainSection:NewButton("Ice Hub", "hub", function()
 							loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMae17/NewIceHub/main/Brookhaven"))()
 						end)
+
+						MainSection:NewButton("VG Hub", "60+", function()
+							loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+							 end)
 
 						MainSection:NewButton("Eclipse hub", "idk", function()
 							--[[
@@ -5694,34 +5697,15 @@ end)
  end)
 
 
-MainSection:NewButton("Prison Destroyer V2", "Jake11Price", function()
-                loadstring(game:HttpGet("https://pastebin.com/raw/DTi4fbKh"))();
-end)
-
 MainSection:NewButton("Prison Life Anti Abusers GUI", "Jake11Price", function()
                 loadstring(game:HttpGet("https://pastebin.com/raw/6mhZBAkh",true))()
 end)
 
-MainSection:NewButton("Prison Destroyer", "Jake11Price", function()
-                loadstring(game:HttpGet("https://pastebin.com/raw/08z0DUDE",true))()
-end)
-
-MainSection:NewButton("Kick Player", "Jake11Price", function()
-                loadstring(game:HttpGet("https://pastebin.com/raw/5iyrwLSH",true))()
-end)
 
 MainSection:NewButton("Prison Destroyer V1.6", "Jake11Price", function()
                 loadstring(game:HttpGet("https://pastebin.com/raw/4rkRHviN",true))()
 end)
 
-MainSection:NewButton("Loop Bring All", "Jake11Price", function()
-                loadstring(game:HttpGet("https://pastebin.com/raw/j80DG72a",true))()
-end)
-
-MainSection:NewButton("Bring All/Crim", "Jake11Price", function()
-                loadstring(game:HttpGet("https://pastebin.com/raw/aiNDd7Js",true))()
-end)
-game.Players.LocalPlayer.PlayerGui.Home.fadeFrame:Destroy()
         local Player = Window:NewTab("Player")
    local PlayerSection = Player:NewSection("Player")
 PlayerSection:NewSlider("WalkSpeed", "Changes how fast you walk", 500, 1, function(v) 
@@ -5836,10 +5820,6 @@ end)
 				loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
 				 end)
 				
-				HubsSection:NewButton("VG Hub", "60+", function()
-				loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
-				 end)
-				
 				
 							HubsSection:NewButton("Ezhub", "130+ games", function()
 								--[[ this is there cmds list
@@ -5863,7 +5843,10 @@ end)
                                 loadstring(game:HttpGet("https://raw.githubusercontent.com/KuriWasTaken/MonkeHub/main/Loader.lua"))()
                              end)
 				
-					   
+							 MainSection:NewButton("VG Hub", "60+", function()
+								loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+								 end)
+
 							 MainSection:NewButton("Unfair Hub", "idk", function()
 								loadstring(game:HttpGet(('https://raw.githubusercontent.com/rblxscriptsnet/unfair/main/rblxhub.lua'),true))()
 							end)
@@ -6538,9 +6521,6 @@ end)
 				loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
 				 end)
 				
-				HubsSection:NewButton("VG Hub", "60+", function()
-				loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
-				 end)
 				
 				
 							HubsSection:NewButton("Ezhub", "130+ games", function()
@@ -6566,6 +6546,9 @@ end)
 							 MainSection:NewButton("Owl Hub", "46+ how", function()
 								loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
 							end)
+							MainSection:NewButton("VG Hub", "60+", function()
+								loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+								 end)
 
             MainSection:NewButton("MM2 Admin Panel", "not real admin stu", function()
 				loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/ScriptHubScripts/master/MM2%20Admin%20Panel'),true))()
@@ -6881,14 +6864,14 @@ end)
 		MainSection:NewButton("Hydro Hub", "Hub", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/FRX397/Hydrohub/main/Hydro_hub", true))()
 		end)
+		MainSection:NewButton("VG Hub", "60+", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+			 end)
 		
 		HubsSection:NewButton("Psyhub", "idk", function()
 			loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
 			 end)
 			
-			HubsSection:NewButton("VG Hub", "60+", function()
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
-			 end)
 			
 			
 						HubsSection:NewButton("Ezhub", "130+ games", function()
@@ -6984,6 +6967,9 @@ elseif game.PlaceId == 301549746 then
 		MainSection:NewButton("Owl Hub", "46+ how", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
 		end)
+		MainSection:NewButton("VG Hub", "60+", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+			 end)
 		local Discord = Window:NewTab("Discords")
 		local DiscordSection = Discord:NewSection("Discords")
 		DiscordSection:NewButton("Discord Invite", "Copys Discord invite link", function()
@@ -7033,9 +7019,7 @@ end)
 			loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
 			 end)
 			
-			HubsSection:NewButton("VG Hub", "60+", function()
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
-			 end)
+		
 			
 			
 						HubsSection:NewButton("Ezhub", "130+ games", function()
@@ -7454,6 +7438,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/CasperFlyModz/discord
 		MainSection:NewButton("NDS Gui", "idk", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/2dgeneralspam1/scripts-and-stuff/master/scripts/LoadstringUjHI6RQpz2o8", true))()
 		end)
+		MainSection:NewButton("VG Hub", "60+", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+			 end)
 		local Discord = Window:NewTab("Discords")
 		local DiscordSection = Discord:NewSection("Discords")
 		DiscordSection:NewButton("Discord Invite", "Copys Discord invite link", function()
@@ -7503,9 +7490,6 @@ end)
 			loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
 			 end)
 			
-			HubsSection:NewButton("VG Hub", "60+", function()
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
-			 end)
 			
 			
 						HubsSection:NewButton("Ezhub", "130+ games", function()
@@ -8143,6 +8127,9 @@ elseif game.PlaceId == 8737899170 then
 		MainSection:NewButton("RedZ Hub BETA", "yuh", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/PetSimulator99/main/redz9999.lua"))()
 		end)
+		MainSection:NewButton("VG Hub", "60+", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+			 end)
 		local Discord = Window:NewTab("Discords")
 		local DiscordSection = Discord:NewSection("Discords")
 		DiscordSection:NewButton("Discord Invite", "Copys Discord invite link", function()
@@ -8192,9 +8179,7 @@ end)
 			loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
 			 end)
 			
-			HubsSection:NewButton("VG Hub", "60+", function()
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
-			 end)
+		
 			
 			
 						HubsSection:NewButton("Ezhub", "130+ games", function()
@@ -8303,6 +8288,10 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/ReeAndArceus/Legends-
 		MainSection:NewButton("Chaos Hub", "yuh", function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/xChaoticVoid/Chaos-Hub-v1/main/ChaosHub.lua"))()
 		end)
+		MainSection:NewButton("VG Hub", "60+", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+			 end)
+
 		MainSection:NewButton("fire all orb touch interests", "yuh", function()
 			getgenv().collectOrbsToggle = true
 
@@ -8372,9 +8361,6 @@ end)
 			loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
 			 end)
 			
-			HubsSection:NewButton("VG Hub", "60+", function()
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
-			 end)
 			
 			
 						HubsSection:NewButton("Ezhub", "130+ games", function()
@@ -8923,6 +8909,12 @@ elseif game.PlaceId == 3956818381 then
 	MainSection:NewButton("Proxima Hub", "idk", function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua"))()
 	end)
+	MainSection:NewButton("VG Hub", "60+", function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+		 end)
+		 MainSection:NewButton("Owl Hub", "46+ how", function()
+			loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+		end)
 	
 	local Discord = Window:NewTab("Discords")
 	local DiscordSection = Discord:NewSection("Discords")
@@ -8972,10 +8964,6 @@ elseif game.PlaceId == 3956818381 then
 													loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
 													 end)
 													
-													HubsSection:NewButton("VG Hub", "60+", function()
-													loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
-													 end)
-													
 													
 																HubsSection:NewButton("Ezhub", "130+ games", function()
 																	--[[ this is there cmds list
@@ -8987,9 +8975,6 @@ elseif game.PlaceId == 3956818381 then
 													]]--
 													 end)
 														
-														   HubsSection:NewButton("Owl Hub", "46+ how", function()
-																	loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
-																end)
 										
 																HubsSection:NewButton("CocoHub", "idk", function()
 																	loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/CocoHub/master/CocoZHub'),true))()
@@ -9843,6 +9828,10 @@ elseif game.PlaceId == 3623096087 then
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/harisiskandar178/Roblox-Script/main/Muscle%20Legend"))()
 	end)
 
+	MainSection:NewButton("VG Hub", "60+", function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+		 end)
+
 	MainSection:NewButton("Owl Hub", "46+ how", function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
 	end)
@@ -9896,9 +9885,6 @@ elseif game.PlaceId == 3623096087 then
 																												loadstring(game:GetObjects("rbxassetid://3014051754")[1].Source)()
 																												 end)
 																												
-																												MainSection:NewButton("VG Hub", "60+", function()
-																												loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
-																												 end)
 																												
 																												
 																															HubsSection:NewButton("Ezhub", "130+ games", function()
@@ -10060,6 +10046,9 @@ local Main = Window:NewTab("Main")
 		MainSection:NewButton("Vedrox Free", "Free", function()
 			loadstring(game:HttpGet("https://vedrox.com/data/scripts/free/script.lua"))()
 		end)
+		MainSection:NewButton("VG Hub", "60+", function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
+			 end)
 
 	-- Universal
 else
