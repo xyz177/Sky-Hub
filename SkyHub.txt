@@ -9526,9 +9526,9 @@ else
 						wait(0.05) -- Adjust the wait time as needed
 					end
 					wait(3)
-					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.Rebirth.CFrame
+					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(160, 285, 371)
 					wait(7.8)
-					fireproximityprompt(game.workspace.Rebirth.Prompt)
+					fireproximityprompt(workspace.endlobby.Rebirth.Prompt)
 					wait(2)
 				end
 			end)
