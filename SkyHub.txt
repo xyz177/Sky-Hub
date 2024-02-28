@@ -5,9 +5,9 @@ Pet Simulator 99, Legends of Speed, BrookHaven RP, Bedwars, Chaos, Ninja Legends
 30+ games (Including some obbys)
 Rebuilt On IllusionHub
 
-Last Updated 2/26/2024
+Last Updated 2/27/2024
 
-Sorted through what hub supported what games and deleted not working scripts
+Added Thunder Client to Arsenal
 
 executor ui in fencing and universal made by espresso0069
 
@@ -470,6 +470,9 @@ elseif game.PlaceId == 286090429 then
 	end)
 	MainSection:NewButton("Owl Hub", "46+ how", function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+	end)
+	MainSection:NewButton("Thunder Client", "OP ASF", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/AndrewDarkyy/ThunderClient/main/main.lua", true))()
 	end)
 	MainSection:NewButton("Arsenal FE audio + more!", "NOTE: you can get banned from some of these scripts", function()
 		value = "2038227137" --song id here
