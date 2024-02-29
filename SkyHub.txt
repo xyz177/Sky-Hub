@@ -362,6 +362,9 @@ elseif game.PlaceId == 286090429 then
 	MainSection:NewButton("Unfair Hub", "idk", function()
 		loadstring(game:HttpGet(('https://raw.githubusercontent.com/rblxscriptsnet/unfair/main/rblxhub.lua'), true))()
 	end)
+	MainSection:NewButton("Hydro Hub", "Hub", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/FRX397/Hydrohub/main/Hydro_hub", true))()
+	end)
 	MainSection:NewButton("Mobile aimbot", "if ur actually on mobile", function()
 		local Players = game:GetService("Players")
 		local UserInputService = game:GetService("UserInputService")
@@ -6080,6 +6083,9 @@ elseif game.PlaceId == 142823291 then
 	MainSection:NewButton("VG Hub", "60+", function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
 	end)
+	MainSection:NewButton("Hydro Hub", "Hub", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/FRX397/Hydrohub/main/Hydro_hub", true))()
+	end)
 	MainSection:NewButton("MM2 Admin Panel", "not real admin stu", function()
 		loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/ScriptHubScripts/master/MM2%20Admin%20Panel'), true))()
 	end)
@@ -7420,6 +7426,9 @@ elseif game.PlaceId == 6284583030 then
 	MainSection:NewButton("VG Hub", "60+", function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
 	end)
+	MainSection:NewButton("Hydro Hub", "Hub", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/FRX397/Hydrohub/main/Hydro_hub", true))()
+	end)
 	HubsSection:NewButton("Ezhub", "130+ games", function()--
 		loadstring(game:HttpGet(('https://raw.githubusercontent.com/debug420/Ez-Industries-Launcher-Data/master/Launcher.lua'), true))()--
 	end)
@@ -7793,6 +7802,9 @@ elseif game.PlaceId == 4924922222 then
 	MainSection:NewButton("Astral Hub", "hub", function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/Vcsk/AstralHub/main/Loader.lua"))()
 	end)
+	MainSection:NewButton("Hydro Hub", "Hub", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/FRX397/Hydrohub/main/Hydro_hub", true))()
+	end)
 	local Discord = Window:NewTab("Discords")
 	local DiscordSection = Discord:NewSection("Discords")
 	DiscordSection:NewButton("Discord Invite", "Copys Discord invite link", function()
@@ -7920,6 +7932,9 @@ elseif game.PlaceId == 6872265039 then
 	end)
 	MainSection:NewButton("VapeV4", "yuh", function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+	end)
+	MainSection:NewButton("Hydro Hub", "Hub", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/FRX397/Hydrohub/main/Hydro_hub", true))()
 	end)
 	local Discord = Window:NewTab("Discords")
 	local DiscordSection = Discord:NewSection("Discords")
@@ -9219,7 +9234,7 @@ elseif game.PlaceId == 3623096087 then
 elseif game.PlaceId == 5796917097 then
 	-- dont expect much kinda annoying game to script
 	local Library = loadstring(game:HttpGet(_G.guidragtype))()
-	local Window = Library.CreateLib("SkyHub Universal", OptTheme)
+	local Window = Library.CreateLib("SkyHub", OptTheme)
 	local Discord = Window:NewTab("Discords")
 	local DiscordSection = Discord:NewSection("Discords")
 	DiscordSection:NewButton("Discord Invite", "Copys Discord invite link", function()
@@ -9282,7 +9297,7 @@ elseif game.PlaceId == 5796917097 then
 elseif game.PlaceId == 185655149 then
 -- dont expect much kinda annoying game to script
 	local Library = loadstring(game:HttpGet(_G.guidragtype))()
-	local Window = Library.CreateLib("SkyHub Universal", OptTheme)
+	local Window = Library.CreateLib("SkyHub", OptTheme)
 	local Discord = Window:NewTab("Discords")
 	local DiscordSection = Discord:NewSection("Discords")
 	DiscordSection:NewButton("Discord Invite", "Copys Discord invite link", function()
