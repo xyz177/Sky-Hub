@@ -1,7 +1,28 @@
 --[[
-Last Updated on 2/25/2024 
-Added fe upside down player r6 script
+Last Updated on 2/29/2024 
+Added auto invite to discord server
 ]]--
+local req = (type(syn) == "table" and syn.request) or (type(http) == "table" and http.request) or (type(fluxus) == "table" and fluxus.request) or http_request or request 
+
+if req~=nil then
+pcall(function()
+req({
+   Url = "http://127.0.0.1:6463/rpc?v=1",
+   Method = "POST",
+   Headers = {
+       ["Content-Type"] = "application/json",
+       ["Origin"] = "https://discord.com"
+   },
+   Body = game:GetService("HttpService"):JSONEncode({
+       cmd = "INVITE_BROWSER",
+       args = {
+           code = "xwy5Cu62Vw"
+       },
+       nonce = game:GetService("HttpService"):GenerateGUID(false)
+   }),
+})
+end)
+end
 local OptTheme = "Midnight"
 local string = "https://discord.gg/xwy5Cu62Vw"
 local string2 = "https://discord.com/invite/jVf7eSrED9"
