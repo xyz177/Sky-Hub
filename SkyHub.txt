@@ -7,7 +7,7 @@ Rebuilt On IllusionHub
 
 Last Updated 2/29/2024
 
-Added auto invite to discord server
+Added auto invite to discord server and added fix to emo obby
 
 executor ui in fencing and universal made by espresso0069
 
@@ -9562,9 +9562,8 @@ else
 						game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = checkpoint.CFrame
 						wait(0.05) -- Adjust the wait time as needed
 					end
-					wait(3)
 					game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(160, 285, 371)
-					wait(7.8)
+					wait(10.8)
 					fireproximityprompt(workspace.endlobby.Rebirth.Prompt)
 					wait(2)
 				end
