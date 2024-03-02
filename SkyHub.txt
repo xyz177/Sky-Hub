@@ -5,9 +5,9 @@ Pet Simulator 99, Legends of Speed, BrookHaven RP, Bedwars, Chaos, Ninja Legends
 30+ games (Including some obbys)
 Rebuilt On IllusionHub
 
-Last Updated 2/29/2024
+Last Updated 3/2/2024
 
-Added auto invite to discord server and added fix to emo obby
+added unfair hub to more supported games
 
 executor ui in fencing and universal made by espresso0069
 
@@ -137,6 +137,9 @@ if game.PlaceId == 2788229376 then
 	end)
 	MainSection:NewButton("Swag Mode Old", "w", function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/lerkermer/lua-projects/master/OldSwagmode'))()
+	end)
+	MainSection:NewButton("Unfair hub", "unfair", function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/rbIxscriptsnet/unfair/main/rblxhub.lua'),true))()
 	end)
 	MainSection:NewButton("Rainbow Sun Aimlock by therealxora", "by therealxora", function()
 		setclipboard("https://discord.gg/iosexploiters")
@@ -951,6 +954,9 @@ elseif game.PlaceId == 621129760 then
 			wait()
 			init()
 		end)
+	end)
+	MainSection:NewButton("Unfair hub", "unfair", function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/rbIxscriptsnet/unfair/main/rblxhub.lua'),true))()
 	end)
 	local Player = Window:NewTab("Player")
 	local PlayerSection = Player:NewSection("Player")
@@ -3463,6 +3469,9 @@ elseif game.PlaceId == 920587237 then
 	end)
 	MainSection:NewButton("Ice Hub", "hub", function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMae17/NewIceHub/main/Brookhaven"))()
+	end)
+	MainSection:NewButton("Unfair hub", "unfair", function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/rbIxscriptsnet/unfair/main/rblxhub.lua'),true))()
 	end)
 	MainSection:NewButton("VG Hub", "60+", function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
@@ -7402,6 +7411,9 @@ elseif game.PlaceId == 6284583030 then
 	MainSection:NewButton("Auto farm", "yuh", function()
 		loadstring(game:HttpGet('https://pastebin.com/raw/2uF3iQAf', true))()
 	end)
+	MainSection:NewButton("Unfair hub", "unfair", function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/rbIxscriptsnet/unfair/main/rblxhub.lua'),true))()
+	end)
 	local Discord = Window:NewTab("Discords")
 	local DiscordSection = Discord:NewSection("Discords")
 	DiscordSection:NewButton("Discord Invite", "Copys Discord invite link", function()
@@ -7674,6 +7686,9 @@ elseif game.PlaceId == 3101667897 then
 	MainSection:NewButton("VG Hub", "60+", function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
 	end)
+	MainSection:NewButton("Unfair hub", "unfair", function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/rbIxscriptsnet/unfair/main/rblxhub.lua'),true))()
+	end)
 	MainSection:NewButton("fire all orb touch interests", "yuh", function()
 		getgenv().collectOrbsToggle = true
 		spawn(function()
@@ -7827,6 +7842,9 @@ elseif game.PlaceId == 4924922222 then
 	MainSection:NewButton("Hydro Hub", "Hub", function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/FRX397/Hydrohub/main/Hydro_hub", true))()
 	end)
+	MainSection:NewButton("Unfair hub", "unfair", function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/rbIxscriptsnet/unfair/main/rblxhub.lua'),true))()
+	end)
 	local Discord = Window:NewTab("Discords")
 	local DiscordSection = Discord:NewSection("Discords")
 	DiscordSection:NewButton("Discord Invite", "Copys Discord invite link", function()
@@ -7957,6 +7975,9 @@ elseif game.PlaceId == 6872265039 then
 	end)
 	MainSection:NewButton("Hydro Hub", "Hub", function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/FRX397/Hydrohub/main/Hydro_hub", true))()
+	end)
+	MainSection:NewButton("Unfair hub", "unfair", function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/rbIxscriptsnet/unfair/main/rblxhub.lua'),true))()
 	end)
 	local Discord = Window:NewTab("Discords")
 	local DiscordSection = Discord:NewSection("Discords")
@@ -8867,7 +8888,9 @@ elseif game.PlaceId == 3527629287 then
 	MainSection:NewButton("GUI2", "GUI2", function()
 		loadstring(game:HttpGet("https://www.pastebin.com/raw/PuaaGKsT"))()
 	end)
-
+	MainSection:NewButton("Unfair hub", "unfair", function()
+		loadstring(game:HttpGet(('https://raw.githubusercontent.com/rbIxscriptsnet/unfair/main/rblxhub.lua'),true))()
+	end)
 	MainSection:NewButton("Lemonade Hub", "hub", function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/xMintix/Lemonade-Hub/main/BigPaintballString.lua"))()
 	end)
