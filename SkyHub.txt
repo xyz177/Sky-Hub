@@ -6098,6 +6098,12 @@ elseif game.PlaceId == 142823291 then
 	MainSection:NewButton("MM2 Admin Panel", "not real admin stu", function()
 		loadstring(game:HttpGet(('https://raw.githubusercontent.com/MarsQQ/ScriptHubScripts/master/MM2%20Admin%20Panel'), true))()
 	end)
+	MainSection:NewButton("MM2 Spray Size", "need spray obv", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Bac0nHck/Scripts/main/MM2SpraySize"))()
+	end)
+	MainSection:NewButton("MM2 nuke spray decal whole map", "need spray obv", function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Bac0nHck/Scripts/main/Nuke%20MM2"))()
+	end)
 	MainSection:NewButton("Eclipse hub", "idk", function()
 		getgenv().mainKey = "nil"
 		local a, b, c, d, e = loadstring, request or http_request or (http and http.request) or (syn and syn.request), assert, tostring, "https://api.eclipsehub.xyz/auth"
