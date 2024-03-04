@@ -6384,6 +6384,20 @@ elseif game.PlaceId == 2753915549 then
 	MainSection:NewButton("Hydro Hub", "Hub", function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/FRX397/Hydrohub/main/Hydro_hub", true))()
 	end)
+	MainSection:NewButton("dakii hub auto chest", "Hub", function()
+		getgenv().Setting = {
+			["Team"] = "Marines", -- Start With Team Pirates, Marines
+			["WhiteScreen"] = false, -- White Screen
+			["FpsBoost"] = false, -- Fps Boost
+			["AutoRejoin"] = true, -- AutoRejoin
+			["RST"] = 1.5, -- Time Reset Character
+			["Settings"] = {
+				["StopItems"] = true, -- Stop Item Legendary
+				["SMKD"] = true -- Summon And Kill Dark Beard
+			},
+		}
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/m1M-Plqer819/dakiiuem/main/main/autochest.lua", true))()
+	end)
 	MainSection:NewButton("VG Hub", "60+", function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/V.G-Hub/main/V.Ghub'))()
 	end)
