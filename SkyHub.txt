@@ -5,9 +5,9 @@ Pet Simulator 99, Legends of Speed, BrookHaven RP, Bedwars, Chaos, Ninja Legends
 30+ games (Including some obbys)
 Rebuilt On IllusionHub
 
-Last Updated 3/6/2024
+Last Updated 3/8/2024
 
-Rewrote Jailbreak Section using fluent library and more scripts including autorob and removed least imporant stuff like fps stuff also added fluent lib to universal
+Added shattervast admin to universal
 
 executor ui in fencing and universal made by espresso0069
 
@@ -3065,6 +3065,13 @@ elseif game.PlaceId == 606849621 then
 		Description = "Fates Admin",
 		Callback = function()
 			loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))();
+		end
+	})
+	Admins:AddButton({
+		Title = "Shattervast Admin",
+		Description = "Shattervast Admin",
+		Callback = function()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/yofriendfromschool1/Sky-Hub-Backup/main/%5BFE%5D%20Shattervast.lua'))()
 		end
 	})
 	Admins:AddButton({
