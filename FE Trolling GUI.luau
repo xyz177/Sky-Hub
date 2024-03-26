@@ -30038,7 +30038,7 @@ GUIS:AddButton({
 	end
 })
 local GENESIS = Window:AddTab({
-	Title = "GENSIS",
+	Title = "GENESIS",
 	Icon = "globe"
 })
 GENESIS:AddParagraph({
