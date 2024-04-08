@@ -3,9 +3,9 @@ FE Trolling GUI
 
 By Sky/dsgdfs
 
-Last Updated 4/4/2024
+Last Updated 4/7/2024
 
-added FE lag switch, FE Lag.
+added FE Attach to Part made by joshclark756#7155
 
 If you want me to add anything let me know in the discord or dm me
 
