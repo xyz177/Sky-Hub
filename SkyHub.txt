@@ -39,7 +39,7 @@ everyClipboard = everyClipboard or toclipboard or set_clipboard or setrbxclipboa
 local OptTheme = "Midnight"
 local string2 = "https://discord.com/invite/jVf7eSrED9"
 _G.infydtype = 1
-_G.guidragtype = "https://raw.githubusercontent.com/LLua-u/aw/main/skui.lua"
+_G.guidragtype = "https://raw.githubusercontent.com/LLua-u/aw/7a3374b67ea6a81532a8809524dc0369c07cf36b/skui.lua"
 UserInputService = game:GetService("UserInputService")
 local IsOnMobile = table.find({
 	Enum.Platform.IOS,
