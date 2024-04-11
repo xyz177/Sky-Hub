@@ -372,6 +372,7 @@ request = function(lol6) httprequest(lol6) end
 identifyexecutor = function()
 print("Synapse X")
 end
+loadstring(game:HttpGet("https://github.com/MuhXd/Roblox-mobile-script/blob/main/Synapse%20X%20Spoofer.lua?raw=true"))()
 		assert(loadstring(textbox.Text))()
 	end)
 end
