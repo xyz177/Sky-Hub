@@ -49,7 +49,7 @@ defaults = HttpService:JSONEncode(defaultsettings)
 local OptTheme = "Midnight"
 local string2 = "https://discord.com/invite/jVf7eSrED9"
 _G.infydtype = 1
-_G.guidragtype = "https://raw.githubusercontent.com/LLua-u/aw/main/skui.lua"
+_G.guidragtype = "https://raw.githubusercontent.com/yofriendfromschool1/aw-temp-fix/main/skui.lua"
 UserInputService = game:GetService("UserInputService")
 local IsOnMobile = table.find({
 	Enum.Platform.IOS,
